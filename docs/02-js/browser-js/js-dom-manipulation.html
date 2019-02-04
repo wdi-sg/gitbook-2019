@@ -1,0 +1,3037 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DOM Manipulation · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="js-dom-events.html" />
+    
+    
+    <link rel="prev" href="readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../01-tools/readme.html">
+            
+                <a href="../../01-tools/readme.html">
+            
+                    
+                    Basic Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../01-tools/command-line/01readme.html">
+            
+                <a href="../../01-tools/command-line/01readme.html">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../01-tools/command-line/02intro-terminal.html">
+            
+                <a href="../../01-tools/command-line/02intro-terminal.html">
+            
+                    
+                    The Terminal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../01-tools/command-line/03navigating.html">
+            
+                <a href="../../01-tools/command-line/03navigating.html">
+            
+                    
+                    Filesystem Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../01-tools/command-line/04file-manipulation.html">
+            
+                <a href="../../01-tools/command-line/04file-manipulation.html">
+            
+                    
+                    File Manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../01-tools/command-line/command-line-lab.html">
+            
+                <a href="../../01-tools/command-line/command-line-lab.html">
+            
+                    
+                    Command Line Lab
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../01-tools/pseudocode/readme.html">
+            
+                <a href="../../01-tools/pseudocode/readme.html">
+            
+                    
+                    Pseudocode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../01-tools/pseudocode/pseudocode-highlevel.html">
+            
+                <a href="../../01-tools/pseudocode/pseudocode-highlevel.html">
+            
+                    
+                    High Level Pseudocode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../01-tools/pseudocode/pseudocode-lowlevel.html">
+            
+                <a href="../../01-tools/pseudocode/pseudocode-lowlevel.html">
+            
+                    
+                    Low Level Pseudocode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../01-tools/intro-git/readme.html">
+            
+                <a href="../../01-tools/intro-git/readme.html">
+            
+                    
+                    Intro to Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../01-tools/intro-git/02vcs.html">
+            
+                <a href="../../01-tools/intro-git/02vcs.html">
+            
+                    
+                    Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../01-tools/intro-git/03localgit.html">
+            
+                <a href="../../01-tools/intro-git/03localgit.html">
+            
+                    
+                    Local Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../01-tools/intro-git/04remotegit.html">
+            
+                <a href="../../01-tools/intro-git/04remotegit.html">
+            
+                    
+                    Remote Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../01-tools/intro-git/06remotefork.html">
+            
+                <a href="../../01-tools/intro-git/06remotefork.html">
+            
+                    
+                    Github Forking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../01-tools/intro-git/git-recipes.html">
+            
+                <a href="../../01-tools/intro-git/git-recipes.html">
+            
+                    
+                    Git Recipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../01-tools/chrome-dev-tools/readme.html">
+            
+                <a href="../../01-tools/chrome-dev-tools/readme.html">
+            
+                    
+                    Chrome Dev Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../03-html-css/readme.html">
+            
+                <a href="../../03-html-css/readme.html">
+            
+                    
+                    HTML & CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../03-html-css/html-review.html">
+            
+                <a href="../../03-html-css/html-review.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../03-html-css/css-selectors/readme.html">
+            
+                <a href="../../03-html-css/css-selectors/readme.html">
+            
+                    
+                    CSS Selectors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../03-html-css/css-selectors/03pseudo.html">
+            
+                <a href="../../03-html-css/css-selectors/03pseudo.html">
+            
+                    
+                    Pseudo-Classes\/Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../03-html-css/css-selectors/04vendorprefixes.html">
+            
+                <a href="../../03-html-css/css-selectors/04vendorprefixes.html">
+            
+                    
+                    Vendor Prefixes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../03-html-css/positioning/readme.html">
+            
+                <a href="../../03-html-css/positioning/readme.html">
+            
+                    
+                    CSS Box Model and Positioning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../03-html-css/positioning/02box-model.html">
+            
+                <a href="../../03-html-css/positioning/02box-model.html">
+            
+                    
+                    Box Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../03-html-css/positioning/03display-positioning.html">
+            
+                <a href="../../03-html-css/positioning/03display-positioning.html">
+            
+                    
+                    Display and Positioning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../03-html-css/positioning/04floats-clears.html">
+            
+                <a href="../../03-html-css/positioning/04floats-clears.html">
+            
+                    
+                    Floats and Clears
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../03-html-css/positioning/07layout.html">
+            
+                <a href="../../03-html-css/positioning/07layout.html">
+            
+                    
+                    Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../../03-html-css/positioning/02responsivedesign.html">
+            
+                <a href="../../03-html-css/positioning/02responsivedesign.html">
+            
+                    
+                    Responsive Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../../03-html-css/positioning/05additional.html">
+            
+                <a href="../../03-html-css/positioning/05additional.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../../03-html-css/positioning/05additional.html">
+            
+                <a href="../../03-html-css/positioning/05additional.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../03-html-css/css-bootstrap/bootstrap.html">
+            
+                <a href="../../03-html-css/css-bootstrap/bootstrap.html">
+            
+                    
+                    Bootstrap
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../03-html-css/css-bootstrap/06flexbox.html">
+            
+                <a href="../../03-html-css/css-bootstrap/06flexbox.html">
+            
+                    
+                    Flexbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../03-html-css/html-page-template/readme.html">
+            
+                <a href="../../03-html-css/html-page-template/readme.html">
+            
+                    
+                    Page Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../03-html-css/animation.html">
+            
+                <a href="../../03-html-css/animation.html">
+            
+                    
+                    Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../03-html-css/deploy-github-pages.html">
+            
+                <a href="../../03-html-css/deploy-github-pages.html">
+            
+                    
+                    Deploy - github pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../javascript.html">
+            
+                <a href="../javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../js-intro/readme.html">
+            
+                <a href="../js-intro/readme.html">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../js-intro/data-type-and-collections.html">
+            
+                <a href="../js-intro/data-type-and-collections.html">
+            
+                    
+                    Data Types / Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../js-intro/js-control-flow/readme.html">
+            
+                <a href="../js-intro/js-control-flow/readme.html">
+            
+                    
+                    Conditionals and Loops
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../js-intro/js-control-flow/03booleans-and-conditionals.html">
+            
+                <a href="../js-intro/js-control-flow/03booleans-and-conditionals.html">
+            
+                    
+                    Boolean Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../js-intro/js-control-flow/04loops.html">
+            
+                <a href="../js-intro/js-control-flow/04loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../js-intro/js-control-flow/06-iterating-over-arrays.html">
+            
+                <a href="../js-intro/js-control-flow/06-iterating-over-arrays.html">
+            
+                    
+                    Iterating Over Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../js-intro/js-control-flow/05chrome-dev-tools.html">
+            
+                <a href="../js-intro/js-control-flow/05chrome-dev-tools.html">
+            
+                    
+                    Dev Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../js-functions/readme.html">
+            
+                <a href="../js-functions/readme.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Browser Side Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.5.1" data-path="js-dom-manipulation.html">
+            
+                <a href="js-dom-manipulation.html">
+            
+                    
+                    DOM Manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="js-dom-events.html">
+            
+                <a href="js-dom-events.html">
+            
+                    
+                    DOM and Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="scope.html">
+            
+                <a href="scope.html">
+            
+                    
+                    Fixing Scope Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="ajax.html">
+            
+                <a href="ajax.html">
+            
+                    
+                    AJAX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../js-callbacks-iterators/readme.html">
+            
+                <a href="../js-callbacks-iterators/readme.html">
+            
+                    
+                    Callbacks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../js-callbacks-iterators/callbacks2.html">
+            
+                <a href="../js-callbacks-iterators/callbacks2.html">
+            
+                    
+                    Callbacks and Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../code-quality.html">
+            
+                <a href="../code-quality.html">
+            
+                    
+                    Code Quality
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../04-server/readme.html">
+            
+                <a href="../../04-server/readme.html">
+            
+                    
+                    Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../04-server/00node.html">
+            
+                <a href="../../04-server/00node.html">
+            
+                    
+                    Intro to Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../04-server/00es6.html">
+            
+                <a href="../../04-server/00es6.html">
+            
+                    
+                    New ES6 Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../04-server/01modules.html">
+            
+                <a href="../../04-server/01modules.html">
+            
+                    
+                    Node Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../04-server/01npm.html">
+            
+                <a href="../../04-server/01npm.html">
+            
+                    
+                    Package Management with npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../04-server/02flatfile.html">
+            
+                <a href="../../04-server/02flatfile.html">
+            
+                    
+                    Disk Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../04-server/how-the-internet-works.html">
+            
+                <a href="../../04-server/how-the-internet-works.html">
+            
+                    
+                    Internet Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../04-server/internet-lab.html">
+            
+                <a href="../../04-server/internet-lab.html">
+            
+                    
+                    Internet Lab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../04-server/internet-lab-2.html">
+            
+                <a href="../../04-server/internet-lab-2.html">
+            
+                    
+                    Internet Lab 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../05-express/readme.html">
+            
+                <a href="../../05-express/readme.html">
+            
+                    
+                    Express.js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../05-express/express-intro/readme.html">
+            
+                <a href="../../05-express/express-intro/readme.html">
+            
+                    
+                    Intro to Express
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../05-express/express-intro/00express-http-server.html">
+            
+                <a href="../../05-express/express-intro/00express-http-server.html">
+            
+                    
+                    Express Internet 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../05-express/express-intro/02internet.html">
+            
+                <a href="../../05-express/express-intro/02internet.html">
+            
+                    
+                    Express Internet 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../05-express/express-intro/03expressurls.html">
+            
+                <a href="../../05-express/express-intro/03expressurls.html">
+            
+                    
+                    Express URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../../05-express/express-intro/04views.html">
+            
+                <a href="../../05-express/express-intro/04views.html">
+            
+                    
+                    Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../../05-express/express-intro/06views-advanced.html">
+            
+                <a href="../../05-express/express-intro/06views-advanced.html">
+            
+                    
+                    Advanced Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="../../05-express/express-intro/components.html">
+            
+                <a href="../../05-express/express-intro/components.html">
+            
+                    
+                    React Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../05-express/express-crud/readme.html">
+            
+                <a href="../../05-express/express-crud/readme.html">
+            
+                    
+                    CRUD in Express
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../05-express/express-crud/post.html">
+            
+                <a href="../../05-express/express-crud/post.html">
+            
+                    
+                    CRUD in Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../05-express/express-crud/08update-delete.html">
+            
+                <a href="../../05-express/express-crud/08update-delete.html">
+            
+                    
+                    Update and Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../05-express/express-auth/readme.html">
+            
+                <a href="../../05-express/express-auth/readme.html">
+            
+                    
+                    Express Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../05-express/express-auth/cookies.html">
+            
+                <a href="../../05-express/express-auth/cookies.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../../05-express/express-auth/password.html">
+            
+                <a href="../../05-express/express-auth/password.html">
+            
+                    
+                    Login Cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../../05-express/express-auth/password2.html">
+            
+                <a href="../../05-express/express-auth/password2.html">
+            
+                    
+                    Password Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../../05-express/express-auth/session.html">
+            
+                <a href="../../05-express/express-auth/session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.5" data-path="../../05-express/express-auth/passport.html">
+            
+                <a href="../../05-express/express-auth/passport.html">
+            
+                    
+                    passport.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../05-express/express-mvc/readme.html">
+            
+                <a href="../../05-express/express-mvc/readme.html">
+            
+                    
+                    MVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="../../05-express/express-mvc/routes.html">
+            
+                <a href="../../05-express/express-mvc/routes.html">
+            
+                    
+                    Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="../../05-express/express-mvc/controllers.html">
+            
+                <a href="../../05-express/express-mvc/controllers.html">
+            
+                    
+                    Controllers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3" data-path="../../05-express/express-mvc/models.html">
+            
+                <a href="../../05-express/express-mvc/models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../05-express/ajax.html">
+            
+                <a href="../../05-express/ajax.html">
+            
+                    
+                    AJAX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../05-express/node-deploy.html">
+            
+                <a href="../../05-express/node-deploy.html">
+            
+                    
+                    Deploy - Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../05-express/additional-topics/readme.html">
+            
+                <a href="../../05-express/additional-topics/readme.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.7.1" data-path="../../05-express/additional-topics/express-apis/03apis.html">
+            
+                <a href="../../05-express/additional-topics/express-apis/03apis.html">
+            
+                    
+                    APIs with Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.2" data-path="../../05-express/additional-topics/express-geocode/readme.html">
+            
+                <a href="../../05-express/additional-topics/express-geocode/readme.html">
+            
+                    
+                    Geocoding and Google Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.3" data-path="../../05-express/additional-topics/express-cloudinary/readme.html">
+            
+                <a href="../../05-express/additional-topics/express-cloudinary/readme.html">
+            
+                    
+                    Cloudinary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.4" data-path="../../05-express/additional-topics/express-socket-io/readme.html">
+            
+                <a href="../../05-express/additional-topics/express-socket-io/readme.html">
+            
+                    
+                    Websockets with Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../04-databases/readme.html">
+            
+                <a href="../../04-databases/readme.html">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../04-databases/sql-intro/readme.html">
+            
+                <a href="../../04-databases/sql-intro/readme.html">
+            
+                    
+                    SQL Language
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../04-databases/sql-intro/sql.html">
+            
+                <a href="../../04-databases/sql-intro/sql.html">
+            
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../04-databases/sql-intro/additional-topics/readme.html">
+            
+                <a href="../../04-databases/sql-intro/additional-topics/readme.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.2.1" data-path="../../04-databases/sql-intro/additional-topics/sql-advanced.html">
+            
+                <a href="../../04-databases/sql-intro/additional-topics/sql-advanced.html">
+            
+                    
+                    Advanced SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2.2" data-path="../../04-databases/sql-intro/additional-topics/lazy_db_normalization.html">
+            
+                <a href="../../04-databases/sql-intro/additional-topics/lazy_db_normalization.html">
+            
+                    
+                    Lazy Normalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../04-databases/postgres/readme.html">
+            
+                <a href="../../04-databases/postgres/readme.html">
+            
+                    
+                    Postgres & Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../04-databases/postgres/sql-node.html">
+            
+                <a href="../../04-databases/postgres/sql-node.html">
+            
+                    
+                    Postgres & Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../04-databases/postgres/sql-working.html">
+            
+                <a href="../../04-databases/postgres/sql-working.html">
+            
+                    
+                    DB Manegement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../04-databases/postgres/sql-working.html">
+            
+                <a href="../../04-databases/postgres/sql-working.html">
+            
+                    
+                    Returning & Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../04-databases/postgres/additional-topics/readme.html">
+            
+                <a href="../../04-databases/postgres/additional-topics/readme.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.4.1" data-path="../../04-databases/postgres/additional-topics/dbadmin.html">
+            
+                <a href="../../04-databases/postgres/additional-topics/dbadmin.html">
+            
+                    
+                    Database Administration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4.2" data-path="../../04-databases/postgres/additional-topics/sqlcheatsheet.html">
+            
+                <a href="../../04-databases/postgres/additional-topics/sqlcheatsheet.html">
+            
+                    
+                    PostgreSQL Cheat Sheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../04-databases/postgres/CRUD-postgres.html">
+            
+                <a href="../../04-databases/postgres/CRUD-postgres.html">
+            
+                    
+                    Express & Postgres
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../04-databases/relational/readme.html">
+            
+                <a href="../../04-databases/relational/readme.html">
+            
+                    
+                    Relational Tables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../../04-databases/relational/relational.html">
+            
+                <a href="../../04-databases/relational/relational.html">
+            
+                    
+                    Relational SQL Tables - 1 - to - many
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../../04-databases/relational/many-many.html">
+            
+                <a href="../../04-databases/relational/many-many.html">
+            
+                    
+                    Relational SQL Tables - many - to - many
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../04-databases/additional-topics/readme.html">
+            
+                <a href="../../04-databases/additional-topics/readme.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../../04-databases/additional-topics/mongo-intro/intro-nosql.html">
+            
+                <a href="../../04-databases/additional-topics/mongo-intro/intro-nosql.html">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1.1" data-path="../../04-databases/additional-topics/mongo-intro/crud.html">
+            
+                <a href="../../04-databases/additional-topics/mongo-intro/crud.html">
+            
+                    
+                    CRUD in MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.1.2" data-path="../../04-databases/additional-topics/mongo-intro/data-modeling.html">
+            
+                <a href="../../04-databases/additional-topics/mongo-intro/data-modeling.html">
+            
+                    
+                    Data Modeling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../06-ruby-rails/ruby.html">
+            
+                <a href="../../06-ruby-rails/ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../06-ruby-rails/ruby-intro/readme.html">
+            
+                <a href="../../06-ruby-rails/ruby-intro/readme.html">
+            
+                    
+                    Intro to Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../06-ruby-rails/ruby-classes/readme.html">
+            
+                <a href="../../06-ruby-rails/ruby-classes/readme.html">
+            
+                    
+                    Ruby Classes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../06-ruby-rails/ruby-classes/oop.html">
+            
+                <a href="../../06-ruby-rails/ruby-classes/oop.html">
+            
+                    
+                    Object Oriented Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../06-ruby-rails/ruby-classes/class-details.html">
+            
+                <a href="../../06-ruby-rails/ruby-classes/class-details.html">
+            
+                    
+                    More About Ruby Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="../../06-ruby-rails/ruby-classes/inheritance.html">
+            
+                <a href="../../06-ruby-rails/ruby-classes/inheritance.html">
+            
+                    
+                    Ruby Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../06-ruby-rails/ruby-intro/additional-topics/exceptions.html">
+            
+                <a href="../../06-ruby-rails/ruby-intro/additional-topics/exceptions.html">
+            
+                    
+                    Ruby Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../06-ruby-rails/rails.html">
+            
+                <a href="../../06-ruby-rails/rails.html">
+            
+                    
+                    Ruby on Rails
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../06-ruby-rails/rails-intro/readme.html">
+            
+                <a href="../../06-ruby-rails/rails-intro/readme.html">
+            
+                    
+                    Intro to Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../06-ruby-rails/rails-intro/rails-demo.html">
+            
+                <a href="../../06-ruby-rails/rails-intro/rails-demo.html">
+            
+                    
+                    Rails Demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../06-ruby-rails/rails-intro/views.html">
+            
+                <a href="../../06-ruby-rails/rails-intro/views.html">
+            
+                    
+                    Views, Layouts & Partials
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../06-ruby-rails/rails-assets-frontend/readme.html">
+            
+                <a href="../../06-ruby-rails/rails-assets-frontend/readme.html">
+            
+                    
+                    Asset Pipeline
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../../06-ruby-rails/rails-assets-frontend/asset-pipeline.html">
+            
+                <a href="../../06-ruby-rails/rails-assets-frontend/asset-pipeline.html">
+            
+                    
+                    Asset Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../../06-ruby-rails/rails-assets-frontend/sass.html">
+            
+                <a href="../../06-ruby-rails/rails-assets-frontend/sass.html">
+            
+                    
+                    SASS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../06-ruby-rails/active-record/readme.html">
+            
+                <a href="../../06-ruby-rails/active-record/readme.html">
+            
+                    
+                    ActiveRecord
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.5.1" data-path="../../06-ruby-rails/active-record/readme.html">
+            
+                <a href="../../06-ruby-rails/active-record/readme.html">
+            
+                    
+                    Intro to ActiveRecord
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.2" data-path="../../06-ruby-rails/active-record/activerecord-assoc.html">
+            
+                <a href="../../06-ruby-rails/active-record/activerecord-assoc.html">
+            
+                    
+                    ActiveRecord Associations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.3" data-path="../../06-ruby-rails/active-record/rails-1-M/readme.html">
+            
+                <a href="../../06-ruby-rails/active-record/rails-1-M/readme.html">
+            
+                    
+                    Rails 1-M
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.4" data-path="../../06-ruby-rails/active-record/rails-M-M/readme.html">
+            
+                <a href="../../06-ruby-rails/active-record/rails-M-M/readme.html">
+            
+                    
+                    Rails M:M
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../06-ruby-rails/rails-security/devise.html">
+            
+                <a href="../../06-ruby-rails/rails-security/devise.html">
+            
+                    
+                    Rails Auth with Devise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../06-ruby-rails/rails-security/readme.html">
+            
+                <a href="../../06-ruby-rails/rails-security/readme.html">
+            
+                    
+                    Rails Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../06-ruby-rails/rails-validation/readme.html">
+            
+                <a href="../../06-ruby-rails/rails-validation/readme.html">
+            
+                    
+                    Rails Validations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../06-ruby-rails/rails-deploy.html">
+            
+                <a href="../../06-ruby-rails/rails-deploy.html">
+            
+                    
+                    Deploy - Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../06-ruby-rails/additional-topics/readme.html">
+            
+                <a href="../../06-ruby-rails/additional-topics/readme.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.10.1" data-path="../../06-ruby-rails/additional-topics/rails-auth-1-M/readme.html">
+            
+                <a href="../../06-ruby-rails/additional-topics/rails-auth-1-M/readme.html">
+            
+                    
+                    Rails Auth and 1-M
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10.2" data-path="../../06-ruby-rails/additional-topics/rails-oauth/readme.html">
+            
+                <a href="../../06-ruby-rails/additional-topics/rails-oauth/readme.html">
+            
+                    
+                    oAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10.3" data-path="../../06-ruby-rails/additional-topics/rails-mailers.html">
+            
+                <a href="../../06-ruby-rails/additional-topics/rails-mailers.html">
+            
+                    
+                    Rails Mailers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10.4" data-path="../../06-ruby-rails/additional-topics/rails-cloudinary.html">
+            
+                <a href="../../06-ruby-rails/additional-topics/rails-cloudinary.html">
+            
+                    
+                    Cloudinary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10.5" data-path="../../06-ruby-rails/additional-topics/ruby-tdd.html">
+            
+                <a href="../../06-ruby-rails/additional-topics/ruby-tdd.html">
+            
+                    
+                    TDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../10-react/readme.html">
+            
+                <a href="../../10-react/readme.html">
+            
+                    
+                    ReactJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../10-react/react-intro/readme.html">
+            
+                <a href="../../10-react/react-intro/readme.html">
+            
+                    
+                    Intro to React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../10-react/react-intro/components.html">
+            
+                <a href="../../10-react/react-intro/components.html">
+            
+                    
+                    React Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../10-react/react-intro/bind.html">
+            
+                <a href="../../10-react/react-intro/bind.html">
+            
+                    
+                    Click Events / Bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../10-react/react-intro/state.html">
+            
+                <a href="../../10-react/react-intro/state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../10-react/react-intro/forms.html">
+            
+                <a href="../../10-react/react-intro/forms.html">
+            
+                    
+                    Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../10-react/react-intro/lifting.html">
+            
+                <a href="../../10-react/react-intro/lifting.html">
+            
+                    
+                    Lifting Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../10-react/react-webpack/readme.html">
+            
+                <a href="../../10-react/react-webpack/readme.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../10-react/react-webpack/webpacker.html">
+            
+                <a href="../../10-react/react-webpack/webpacker.html">
+            
+                    
+                    rails-webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../10-react/additional-topics/readme.html">
+            
+                <a href="../../10-react/additional-topics/readme.html">
+            
+                    
+                    Additional Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.9.1" data-path="../../10-react/additional-topics/lifecycle.html">
+            
+                <a href="../../10-react/additional-topics/lifecycle.html">
+            
+                    
+                    Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9.2" data-path="../../10-react/additional-topics/readme.html">
+            
+                <a href="../../10-react/additional-topics/readme.html">
+            
+                    
+                    Router
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../00-config-deployment/installfest/readme.html">
+            
+                <a href="../../00-config-deployment/installfest/readme.html">
+            
+                    
+                    Installfest
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../00-config-deployment/installfest/osx/readme.html">
+            
+                <a href="../../00-config-deployment/installfest/osx/readme.html">
+            
+                    
+                    Mac OSX - 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../00-config-deployment/installfest/osx/install2.html">
+            
+                <a href="../../00-config-deployment/installfest/osx/install2.html">
+            
+                    
+                    Mac OSX - 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../00-config-deployment/installfest/osx/install3.html">
+            
+                <a href="../../00-config-deployment/installfest/osx/install3.html">
+            
+                    
+                    Mac OSX - 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../00-config-deployment/installfest/windows/readme.html">
+            
+                <a href="../../00-config-deployment/installfest/windows/readme.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../00-config-deployment/installfest/windows/install2.html">
+            
+                <a href="../../00-config-deployment/installfest/windows/install2.html">
+            
+                    
+                    Windows - 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../../00-config-deployment/installfest/windows/install3.html">
+            
+                <a href="../../00-config-deployment/installfest/windows/install3.html">
+            
+                    
+                    Windows - 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../../00-config-deployment/installfest/linux/readme.html">
+            
+                <a href="../../00-config-deployment/installfest/linux/readme.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../11-groups/01readme.html">
+            
+                <a href="../../11-groups/01readme.html">
+            
+                    
+                    Group Collaboration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../11-groups/03rolestools.html">
+            
+                <a href="../../11-groups/03rolestools.html">
+            
+                    
+                    Project Roles and Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../01-workflow/readme.html">
+            
+                <a href="../../01-workflow/readme.html">
+            
+                    
+                    Development Workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../01-workflow/pairing.html">
+            
+                <a href="../../01-workflow/pairing.html">
+            
+                    
+                    Pairing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../01-workflow/standup.html">
+            
+                <a href="../../01-workflow/standup.html">
+            
+                    
+                    Standup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../01-workflow/user-stories-wireframing/readme.html">
+            
+                <a href="../../01-workflow/user-stories-wireframing/readme.html">
+            
+                    
+                    User Stories and Wireframing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.3.1" data-path="../../01-workflow/user-stories-wireframing/exercise.html">
+            
+                <a href="../../01-workflow/user-stories-wireframing/exercise.html">
+            
+                    
+                    Agile Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.2" data-path="../../01-workflow/user-stories-wireframing/game-exercise.html">
+            
+                <a href="../../01-workflow/user-stories-wireframing/game-exercise.html">
+            
+                    
+                    User Stories for Games
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../01-workflow/how-to-practice.html">
+            
+                <a href="../../01-workflow/how-to-practice.html">
+            
+                    
+                    Practice Work How To
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../01-workflow/review.html">
+            
+                <a href="../../01-workflow/review.html">
+            
+                    
+                    Code Practices Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../01-workflow/js-styleguide.html">
+            
+                <a href="../../01-workflow/js-styleguide.html">
+            
+                    
+                    Javascript Style Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../01-workflow/code-review.html">
+            
+                <a href="../../01-workflow/code-review.html">
+            
+                    
+                    Code Reading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >DOM Manipulation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="intro-to-dom">Intro to DOM</h1>
+<h2 id="dom-manipulation">DOM Manipulation</h2>
+<hr>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>Select elements from the DOM using selectors</li>
+</ul>
+<hr>
+<h2 id="dom-manipulation-with-javascript">DOM Manipulation with JavaScript</h2>
+<p><strong>Review:</strong> What is the DOM?</p>
+<p>Open up the <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Website</a></p>
+<p>Go to Developer Console. Look at DOM in <em>Elements</em>, then look at the DOM in <em>Console</em>. The object &apos;document&apos; represents the DOM in JavaScript. We can change the DOM, i.e. the page, by changing the <strong>document object</strong>.</p>
+<p>Review <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">DOM on MDN</a></p>
+<hr>
+<p>Now, inspect a few properties, for example:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">document</span>.URL
+<span class="hljs-built_in">document</span>.head
+<span class="hljs-built_in">document</span>.links (what does it <span class="hljs-keyword">return</span>?)
+</code></pre>
+<hr>
+<p>How to change the DOM? Select elements and manipulate them.</p>
+<p><strong>Select by tag id:</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> searchForm = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;home-q&quot;</span>);
+</code></pre>
+<p>What&apos;s inside?</p>
+<pre><code class="lang-js">searchForm.innerHTML;
+</code></pre>
+<p>Also, try <code>textContent</code> too! (you may also see this as <code>innerText</code>, but this is not supported by all browsers)</p>
+<hr>
+<p>Change styling:</p>
+<pre><code class="lang-js">searchForm.style.backgroundColor = <span class="hljs-string">&quot;yellow&quot;</span>;
+searchForm.style.color = <span class="hljs-string">&quot;red&quot;</span>;
+searchForm.style.height = <span class="hljs-string">&quot;100px&quot;</span>;
+</code></pre>
+<hr>
+<p>Properties can be a getter and setter. What does this mean?</p>
+<p><strong>Select by class</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> content_div = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&quot;center&quot;</span>);
+</code></pre>
+<p><strong>Select by tag name</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> allListElements = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&quot;li&quot;</span>)
+</code></pre>
+<hr>
+<p><strong>Preferred: select using CSS selectors</strong></p>
+<p>Get elements by tag name or class is very unspecific. You can go after specific CSS selectors, just like you would in stylesheets:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;li&quot;</span>);
+<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;li.nav-main-item&quot;</span>);
+<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;.center &gt; h1&quot;</span>);
+</code></pre>
+<hr>
+<p><strong>Accessing and changing element attributes</strong></p>
+<p>There are 2 ways to get and set attributes of a DOM element. You can access the properties directly or use use get/setAttribute methods. It&apos;s important that you know both exist, but generally accessing the properties directly is more consistent across browsers.</p>
+<pre><code class="lang-js"><span class="hljs-comment">//set using property</span>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;a&quot;</span>).href = <span class="hljs-string">&apos; http://www.google.com&apos;</span>;
+
+<span class="hljs-comment">//get using property</span>
+<span class="hljs-keyword">var</span> href = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;a&quot;</span>).href;
+
+<span class="hljs-comment">//get using getAttribute method</span>
+<span class="hljs-keyword">var</span> href = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;a&quot;</span>).getAttribute(<span class="hljs-string">&quot;href&quot;</span>);
+
+<span class="hljs-comment">//set using setAttribute method</span>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;a&quot;</span>).setAttribute(<span class="hljs-string">&quot;href&quot;</span>,<span class="hljs-string">&quot;http://www.google.com&quot;</span>)
+</code></pre>
+<hr>
+<h2 id="css-classes">CSS Classes</h2>
+<p>Acessing, getting, setting CSS classes is slightly different than other properties.</p>
+<hr>
+<h2 id="classname">className</h2>
+<p>First you can directly access the class attribute by using the <code>className</code> property of a DOM element. This works fine, but since elements can have multiple classes (separated by spaces) this often leads to needing to do some string parsing.</p>
+<hr>
+<h2 id="classlist">classList</h2>
+<p>To solve the problem of not wanting to do string parsing of the <code>className</code> property browsers support the <code>classList</code> attribute which gives us an array of classes.</p>
+<p>Additionally, the classList attribute has some special methods attached to it.</p>
+<ul>
+<li>add - add a class</li>
+<li>remove - removes a class</li>
+<li>contains - checks if an item has a class</li>
+</ul>
+<hr>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-js"><span class="hljs-comment">//list classes</span>
+item.classList
+
+<span class="hljs-comment">//add a class</span>
+item.classList.add(<span class="hljs-string">&apos;my-new-class&apos;</span>);
+
+<span class="hljs-comment">//remove a class</span>
+item.classList.remove(<span class="hljs-string">&apos;my-new-class&apos;</span>);
+
+<span class="hljs-comment">//check if an item has a class (returns true or false)</span>
+item.classList.contains(<span class="hljs-string">&apos;my-new-class&apos;</span>);
+</code></pre>
+<hr>
+<h2 id="compare-and-contrast">Compare and Contrast</h2>
+<p>Compare and contrast the following selectors. Why can&apos;t we use querySelector/querySelectorAll for everything?</p>
+<ul>
+<li>getElementById</li>
+<li>getElementsByClassName</li>
+<li>getElementsByTagName</li>
+<li>querySelector</li>
+<li>querySelectorAll</li>
+</ul>
+<hr>
+<h3 id="pairing-exercise-15-minutes">Pairing Exercise (15 minutes)</h3>
+<ul>
+<li>Open up your browser and go to the MDN Website.</li>
+<li>Repeat all of the exercies up to this point in the console.</li>
+<li>Create a set of styles for a header tag: <code>&lt;h1&gt;</code> that you create with javascript. (example: font-size, color, background color)</li>
+<li>Use <code>setTimeout</code> to apply those styles 4 seconds later. (add the class to the element)</li>
+</ul>
+<hr>
+<h2 id="dom---creation-and-deletion">DOM - Creation and Deletion</h2>
+<p>So far we&apos;ve only seen examples of how to change properties of the DOM
+and do things like:</p>
+<ul>
+<li>change the <code>textContent</code> of an element</li>
+<li>swap an existing image tag with another</li>
+<li>attach click listeners</li>
+<li>add/remove CSS classes</li>
+<li>modify CSS</li>
+</ul>
+<p>We haven&apos;t seen the true power of DOM manipulation. The power to create and
+destroy DOM elements!!</p>
+<hr>
+<h2 id="creating-dom-elements">Creating DOM Elements</h2>
+<p>The DOM allows us to create elements (make and add new HTML elements to our page).
+We can create any HTML tag we want. We can make <code>&lt;a&gt;</code> tags, <code>&lt;p&gt;</code> tags, <code>&lt;div&gt;</code>&apos;s.
+Really anything.</p>
+<p>To create any new element we follow three basic steps:</p>
+<ol>
+<li><strong>create</strong> a new element and save it to a variable</li>
+<li><strong>modify</strong> any properties of the element</li>
+<li><strong>attach</strong> the element to an existing element on the page</li>
+</ol>
+<p>Let&apos;s look at an example of how to create a new element in JavaScript and add it to a page.</p>
+<hr>
+<h3 id="adding-a-new-link-to-the-bottom-of-a-page">Adding A New Link to the Bottom of a Page</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;a&quot;</span>);
+a.href = <span class="hljs-string">&quot;http://thefair.com/&quot;</span>;
+a.textContent = <span class="hljs-string">&quot;thefair.com&quot;</span>;
+
+<span class="hljs-built_in">document</span>.body.appendChild(a);
+</code></pre>
+<hr>
+<p>First, we use <code>document.createElement</code> and pass a string representing the tag we
+want to create. In this case we pass <code>&quot;a&quot;</code> to say we want to make a new link anchor
+tag. Save the result of the function into a variable.</p>
+<p><code>document.createElement</code> returns a new anchor tag. The element saved in our var
+has properties like any other anchor tag on the page, except they&apos;re all empty
+because it was just created. We must manually add <code>href</code> and <code>textContent</code> to
+set the link and display text.</p>
+<p>Finally, we add the new anchor tag to the <code>&lt;body&gt;</code> with <code>document.body.appendChild</code>.
+This adds the anchor to the bottom of the page.</p>
+<hr>
+<h4 id="appendchild">.appendChild()</h4>
+<p>The <code>appendChild()</code> function exists for all HTML elements. It&apos;s easy to show how to
+add things to the end of the body of the page because body is a property on the
+global document variable.</p>
+<hr>
+<p>In order to append a new element to any other element, simply obtain a reference
+to it first. Here&apos;s an example showing how to add a new list item to an unordered
+list of my favorite movies.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;my-favorite-movies&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Rushmore<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Star Trek VI: Undiscovered Country<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Anchorman<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// obtain a reference to where we&apos;ll add it</span>
+<span class="hljs-keyword">var</span> list = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;my-favorite-movies&quot;</span>);
+
+<span class="hljs-comment">// CREATE</span>
+<span class="hljs-keyword">var</span> newMovie = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;li&quot;</span>);
+
+<span class="hljs-comment">// MODIFY</span>
+newMovie.textContent = <span class="hljs-string">&quot;Pirates of Silicon Valley&quot;</span>;
+
+<span class="hljs-comment">// ATTACH</span>
+list.appendChild(newMovie);
+</code></pre>
+<hr>
+<h4 id="insertbefore">.insertBefore()</h4>
+<pre><code> ____________
+|            |
+|  [=====]   |
+|  [=====]   |
+|  [=====]   |
+|          &lt;=|==== append
+ ------------
+</code></pre><pre><code>parent node
+ ____________
+|            |
+|  [=====]   |
+|          &lt;=|==== insertBefore
+|  [=====] &lt;=|==== reference node
+|  [=====]   |
+|  [=====]   |
+|            |
+ ------------
+</code></pre><p>It&apos;s easy to add things to the end of the body, at the bottom of a div, or at the
+end of a list. We have to do slightly more work if we want to add a new element
+at the beginning or in the middle of an existing element.</p>
+<hr>
+<p>Use the following syntax:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> insertedNode = parentNode.insertBefore(newNode, referenceNode);
+</code></pre>
+<ul>
+<li><code>parentNode</code> refers to the container (like body, or a div, or a list)</li>
+<li><code>newNode</code> refers to the element we&apos;re adding</li>
+<li><code>referenceNode</code> referes to an element that already exists in the <code>parentNode</code></li>
+</ul>
+<p>We can obtain a reference to all of the elements attached to a <code>parentNode</code>
+by accessing the <code>children</code> property.</p>
+<hr>
+<p>Here&apos;s what it looks like all together:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> list = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;my-favorite-movies&quot;</span>);
+
+<span class="hljs-keyword">var</span> newMovie = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;li&quot;</span>);
+newMovie.textContent = <span class="hljs-string">&quot;Dr. Strangelove&quot;</span>;
+
+<span class="hljs-comment">// get a reference to the first element inside the list</span>
+<span class="hljs-keyword">var</span> first = list.children[<span class="hljs-number">0</span>];
+
+<span class="hljs-comment">// use insertBefore to add newMovie just before the first element.</span>
+list.insertBefore(newMovie, first);
+</code></pre>
+<hr>
+<p>Of course, you can choose any of the children of an element as a <code>referenceNode</code>
+for <code>insertBefore</code>. The new element will simply be added in the spot just before
+whatever you choose.</p>
+<hr>
+<h2 id="creating-complex-dom-elements">Creating Complex DOM Elements</h2>
+<p>It&apos;s possible to build up complex arrangements of HTML elements in JavaScript
+and add them to the page.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;chat-message&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;profile-pic&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;netizen42.png&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>netizen42<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;timestamp&quot;</span>&gt;</span>10:34 PM<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span>I&apos;m hacking into the mainframe now. You better be ready.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="lang-js"><span class="hljs-comment">// create a new div for each container div</span>
+<span class="hljs-keyword">var</span> chat = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>);
+<span class="hljs-keyword">var</span> info = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>);
+
+<span class="hljs-comment">// create elements inside the info container</span>
+<span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
+<span class="hljs-keyword">var</span> user = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>);
+<span class="hljs-keyword">var</span> time = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>);
+
+<span class="hljs-comment">// create the div for the simple chat message</span>
+<span class="hljs-keyword">var</span> msg = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>);
+
+img.classList.add(<span class="hljs-string">&quot;profile-pic&quot;</span>);
+img.src = <span class="hljs-string">&quot;netizen42.png&quot;</span>;
+
+user.classList.add(<span class="hljs-string">&quot;username&quot;</span>);
+user.textContent = <span class="hljs-string">&quot;netizen42&quot;</span>;
+
+time.classList.add(<span class="hljs-string">&quot;timestamp&quot;</span>);
+time.textContent = <span class="hljs-string">&quot;10:34 PM&quot;</span>;
+
+
+msg.classList.add(<span class="hljs-string">&quot;message&quot;</span>);
+msg.textContent = <span class="hljs-string">&quot;I&apos;m hacking into the mainframe now. You better be ready.&quot;</span>;
+
+<span class="hljs-comment">// add the image, the user and the timestamp to the info container</span>
+info.appendChild(img);
+info.appendChild(user);
+info.appendChild(time);
+
+chat.classList.add(<span class="hljs-string">&quot;chat-message&quot;</span>);
+
+<span class="hljs-comment">// add the info container and the message to the total chat container</span>
+chat.appendChild(info);
+chat.appendChild(msg);
+
+<span class="hljs-comment">// finally, attach the entire new structure to some container on the page.</span>
+<span class="hljs-keyword">var</span> parent = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;some-container&quot;</span>);
+parent.appendChild(chat);
+</code></pre>
+<hr>
+<h2 id="destroying-dom-elements">Destroying DOM Elements</h2>
+<p>It&apos;s way easier to remove elements than it is to add them. Use this syntax:</p>
+<pre><code>// straight up remove an element without remorse.
+parent.removeChild(child);
+
+// you may optional save a reference to the element that was removed.
+var oldChild = parent.removeChild(child);
+</code></pre><p><code>.removeChild()</code> allows you to remove any element you have reference
+to. Notice that it returns a reference to the node you removed. You
+may choose to save this to a variable or not. If you save a removed
+element to a variable then you have access to it and can add it to
+somewhere else on the page.</p>
+<hr>
+<p>From the examples above:</p>
+<pre><code>info.removeChild(time);
+</code></pre><hr>
+<h2 id="moving-elements">Moving Elements</h2>
+<p>Practice saving the return value of <code>.removeChild()</code> and passing it to
+<code>.appendChild()</code> to move elements from one list to another.</p>
+<p>Hook the functionality up to a button so you move one brunch item to the
+lunch list every time it is clicked. Prevent any errors from occuring
+if there&apos;s nothing left in the breakfast list.</p>
+<pre><code>&lt;button id=&quot;brunch&quot;&gt;move to brunch&lt;/button&gt;
+
+&lt;h1&gt;Breakfast&lt;/h1&gt;
+&lt;ul id=&quot;breakfast-foods&quot;&gt;
+  &lt;li&gt;Pancakes&lt;/li&gt;
+  &lt;li&gt;Waffles&lt;/li&gt;
+  &lt;li&gt;French Toast&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Lunch&lt;/h1&gt;
+&lt;ul id=&quot;lunch-foods&quot;&gt;
+  &lt;li&gt;Hamburger&lt;/li&gt;
+  &lt;li&gt;Sandwich&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><hr>
+<h3 id="optimization-to-domcontentloaded--windowonload">Optimization to <code>DOMContentLoaded</code> : <code>window.onload</code></h3>
+<pre><code>document.addEventListener(&apos;DOMContentLoaded&apos;,function(){
+  // all yur code goes here
+});
+</code></pre><pre><code>window.onload = function(){
+  // all your code goes here
+};
+</code></pre><hr>
+<h2 id="dom-manipulation-reference"><a href="#reference">DOM Manipulation Reference</a>:</h2>
+<ul>
+<li>document.createElement(&quot;a&quot;);</li>
+<li>document.body.appendChild(a);</li>
+<li>element.appendChild(newElement);</li>
+<li>var insertedNode = parentNode.insertBefore(newNode, referenceNode);</li>
+<li>parent.removeChild(child);</li>
+</ul>
+<h2 id="pairing-exercise">Pairing Exercise:</h2>
+<ul>
+<li>Begin with an HTML file with an empty <code>body</code> tag. Create and include a <code>script.js</code> file.</li>
+<li>Repeat all of the DOM manipulation examples shown.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="readme.html" class="navigation navigation-prev " aria-label="Previous page: Browser Side Javascript">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="js-dom-events.html" class="navigation navigation-next " aria-label="Next page: DOM and Events">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DOM Manipulation","level":"1.4.5.1","depth":3,"next":{"title":"DOM and Events","level":"1.4.5.2","depth":3,"path":"02-js/browser-js/js-dom-events.md","ref":"02-js/browser-js/js-dom-events.md","articles":[]},"previous":{"title":"Browser Side Javascript","level":"1.4.5","depth":2,"path":"02-js/browser-js/readme.md","ref":"02-js/browser-js/readme.md","articles":[{"title":"DOM Manipulation","level":"1.4.5.1","depth":3,"path":"02-js/browser-js/js-dom-manipulation.md","ref":"02-js/browser-js/js-dom-manipulation.md","articles":[]},{"title":"DOM and Events","level":"1.4.5.2","depth":3,"path":"02-js/browser-js/js-dom-events.md","ref":"02-js/browser-js/js-dom-events.md","articles":[]},{"title":"Fixing Scope Errors","level":"1.4.5.3","depth":3,"path":"02-js/browser-js/scope.md","ref":"02-js/browser-js/scope.md","articles":[]},{"title":"AJAX","level":"1.4.5.4","depth":3,"path":"02-js/browser-js/ajax.md","ref":"02-js/browser-js/ajax.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"index.html#fig1.1.1","level":"1.1","list_caption":"Figure: placeholder","alt":"placeholder","nro":1,"url":"http://assets.amuniversal.com/22a5ace06d6501301d80001dd8b71c47","index":1,"caption_template":"Figure: _CAPTION_","label":"placeholder","attributes":{},"skip":false,"key":"1.1.1"},{"backlink":"01-tools/command-line/02intro-terminal.html#fig1.2.1.1.1","level":"1.2.1.1","list_caption":"Figure: Terminal Window","alt":"Terminal Window","nro":2,"url":"http://i.stack.imgur.com/DjFOZ.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Terminal Window","attributes":{},"skip":false,"key":"1.2.1.1.1"},{"backlink":"01-tools/command-line/03navigating.html#fig1.2.1.2.1","level":"1.2.1.2","list_caption":"Figure: Filesystem image","alt":"Filesystem image","nro":3,"url":"http://www.qnx.com/developers/docs/qnx_4.25_docs/qnx4/user_guide/images/files.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"Filesystem image","attributes":{},"skip":false,"key":"1.2.1.2.1"},{"backlink":"01-tools/intro-git/02vcs.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: DVCS diagram","alt":"DVCS diagram","nro":4,"url":"http://git-scm.com/figures/18333fig0103-tn.png","index":1,"caption_template":"Figure: _CAPTION_","label":"DVCS diagram","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"01-tools/intro-git/04remotegit.html#fig1.2.3.3.1","level":"1.2.3.3","list_caption":"Figure: https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","alt":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","nro":5,"url":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","index":1,"caption_template":"Figure: _CAPTION_","label":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","attributes":{},"skip":false,"key":"1.2.3.3.1"},{"backlink":"01-tools/chrome-dev-tools/index.html#fig1.2.4.1","level":"1.2.4","list_caption":"Figure: screenshot","alt":"screenshot","nro":6,"url":"https://i.imgur.com/5ruzGhc.png","index":1,"caption_template":"Figure: _CAPTION_","label":"screenshot","attributes":{},"skip":false,"key":"1.2.4.1"},{"backlink":"03-html-css/positioning/02box-model.html#fig1.3.3.1.1","level":"1.3.3.1","list_caption":"Figure: box-model","alt":"box-model","nro":7,"url":"http://s6.postimg.org/gi8r6c341/css_box_model.png","index":1,"caption_template":"Figure: _CAPTION_","label":"box-model","attributes":{},"skip":false,"key":"1.3.3.1.1"},{"backlink":"03-html-css/positioning/03display-positioning.html#fig1.3.3.2.1","level":"1.3.3.2","list_caption":"Figure: https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","alt":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","nro":8,"url":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","attributes":{},"skip":false,"key":"1.3.3.2.1"},{"backlink":"03-html-css/positioning/03display-positioning.html#fig1.3.3.2.2","level":"1.3.3.2","list_caption":"Figure: Imgur","alt":"Imgur","nro":9,"url":"https://i.imgur.com/I22mFsc.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.3.2.2"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.1","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","nro":10,"url":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.1"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.2","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","nro":11,"url":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.2"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.3","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","nro":12,"url":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.3"},{"backlink":"03-html-css/positioning/02responsivedesign.html#fig1.3.3.5.1","level":"1.3.3.5","list_caption":"Figure: No Viewport Meta Tag","alt":"No Viewport Meta Tag","nro":13,"url":"http://developers.google.com/speed/docs/insights/images/viewport/iphone_no_viewport.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"No Viewport Meta Tag","attributes":{},"skip":false,"key":"1.3.3.5.1"},{"backlink":"03-html-css/positioning/02responsivedesign.html#fig1.3.3.5.2","level":"1.3.3.5","list_caption":"Figure: Viewport Meta Tag","alt":"Viewport Meta Tag","nro":14,"url":"https://developers.google.com/speed/docs/insights/images/viewport/iphone_viewport.jpg","index":2,"caption_template":"Figure: _CAPTION_","label":"Viewport Meta Tag","attributes":{},"skip":false,"key":"1.3.3.5.2"},{"backlink":"03-html-css/css-bootstrap/bootstrap.html#fig1.3.4.1","level":"1.3.4","list_caption":"Figure: Imgur","alt":"Imgur","nro":15,"url":"https://i.imgur.com/6IcKOjZ.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.4.1"},{"backlink":"03-html-css/css-bootstrap/bootstrap.html#fig1.3.4.2","level":"1.3.4","list_caption":"Figure: Imgur","alt":"Imgur","nro":16,"url":"https://i.imgur.com/cnaI0rc.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.4.2"},{"backlink":"02-js/js-intro/js-control-flow/03booleans-and-conditionals.html#fig1.4.3.1.1","level":"1.4.3.1","list_caption":"Figure: control flow wd40","alt":"control flow wd40","nro":17,"url":"https://i.imgur.com/v4W1xwD.png","index":1,"caption_template":"Figure: _CAPTION_","label":"control flow wd40","attributes":{},"skip":false,"key":"1.4.3.1.1"},{"backlink":"02-js/js-intro/js-control-flow/04loops.html#fig1.4.3.2.1","level":"1.4.3.2","list_caption":"Figure: control flow wd40","alt":"control flow wd40","nro":18,"url":"https://i.imgur.com/v4W1xwD.png","index":1,"caption_template":"Figure: _CAPTION_","label":"control flow wd40","attributes":{},"skip":false,"key":"1.4.3.2.1"},{"backlink":"04-server/00node.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","nro":19,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","attributes":{},"skip":false,"key":"1.5.1.1"},{"backlink":"04-server/01npm.html#fig1.5.4.1","level":"1.5.4","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","nro":20,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","attributes":{},"skip":false,"key":"1.5.4.1"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.1","level":"1.5.6","list_caption":"Figure: https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","alt":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","nro":21,"url":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","attributes":{},"skip":false,"key":"1.5.6.1"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.2","level":"1.5.6","list_caption":"Figure: http://www.escotal.com/Images/Network%20parts/osi.gif","alt":"http://www.escotal.com/Images/Network%20parts/osi.gif","nro":22,"url":"http://www.escotal.com/Images/Network%20parts/osi.gif","index":2,"caption_template":"Figure: _CAPTION_","label":"http://www.escotal.com/Images/Network%20parts/osi.gif","attributes":{},"skip":false,"key":"1.5.6.2"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.3","level":"1.5.6","list_caption":"Figure: http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","alt":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","nro":23,"url":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","attributes":{},"skip":false,"key":"1.5.6.3"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.4","level":"1.5.6","list_caption":"Figure: http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","alt":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","nro":24,"url":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","index":4,"caption_template":"Figure: _CAPTION_","label":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","attributes":{},"skip":false,"key":"1.5.6.4"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.5","level":"1.5.6","list_caption":"Figure: http://www.aiatopten.org/sites/default/files/styles/popup/public/RCA%20Awards%20Drawings12.jpg","alt":"http://www.aiatopten.org/sites/default/files/styles/popup/public/RCA%20Awards%20Drawings12.jpg","nro":25,"url":"http://www.aiatopten.org/sites/default/files/styles/popup/public/RCA%20Awards%20Drawings12.jpg","index":5,"caption_template":"Figure: _CAPTION_","label":"http://www.aiatopten.org/sites/default/files/styles/popup/public/RCA%20Awards%20Drawings12.jpg","attributes":{},"skip":false,"key":"1.5.6.5"},{"backlink":"05-express/index.html#fig1.6.1","level":"1.6","list_caption":"Figure: 3-Tier Express Application","alt":"3-Tier Express Application","nro":26,"url":"images/3-tier-application.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"3-Tier Express Application","attributes":{},"skip":false,"key":"1.6.1"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.6.1","level":"1.6.1.6","list_caption":"Figure: https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","alt":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","nro":27,"url":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","attributes":{},"skip":false,"key":"1.6.1.6.1"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.6.2","level":"1.6.1.6","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","nro":28,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","attributes":{},"skip":false,"key":"1.6.1.6.2"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.6.3","level":"1.6.1.6","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","nro":29,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","attributes":{},"skip":false,"key":"1.6.1.6.3"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.6.4","level":"1.6.1.6","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","nro":30,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":4,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","attributes":{},"skip":false,"key":"1.6.1.6.4"},{"backlink":"05-express/express-auth/cookies.html#fig1.6.3.1.1","level":"1.6.3.1","list_caption":"Figure: https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","alt":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","nro":31,"url":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","attributes":{},"skip":false,"key":"1.6.3.1.1"},{"backlink":"05-express/express-auth/password2.html#fig1.6.3.3.1","level":"1.6.3.3","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","nro":32,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","attributes":{},"skip":false,"key":"1.6.3.3.1"},{"backlink":"05-express/additional-topics/express-socket-io/index.html#fig1.6.7.4.1","level":"1.6.7.4","list_caption":"Figure: Websockets","alt":"Websockets","nro":33,"url":"./sockets.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Websockets","attributes":{},"skip":false,"key":"1.6.7.4.1"},{"backlink":"04-databases/index.html#fig1.7.1","level":"1.7","list_caption":"Figure: https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","alt":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","nro":34,"url":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","index":1,"caption_template":"Figure: _CAPTION_","label":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","attributes":{},"skip":false,"key":"1.7.1"},{"backlink":"04-databases/sql-intro/index.html#fig1.7.1.1","level":"1.7.1","list_caption":"Figure: image","alt":"image","nro":35,"url":"Postgres.png","index":1,"caption_template":"Figure: _CAPTION_","label":"image","attributes":{},"skip":false,"key":"1.7.1.1"},{"backlink":"04-databases/sql-intro/additional-topics/sql-advanced.html#fig1.7.1.2.1.1","level":"1.7.1.2.1","list_caption":"Figure: SQL Joins","alt":"SQL Joins","nro":36,"url":"http://www.dofactory.com/Images/sql-joins.png","index":1,"caption_template":"Figure: _CAPTION_","label":"SQL Joins","attributes":{},"skip":false,"key":"1.7.1.2.1.1"},{"backlink":"04-databases/postgres/additional-topics/sqlcheatsheet.html#fig1.7.2.4.2.1","level":"1.7.2.4.2","list_caption":"Figure: SQL Joins","alt":"SQL Joins","nro":37,"url":"http://www.dofactory.com/Images/sql-joins.png","index":1,"caption_template":"Figure: _CAPTION_","label":"SQL Joins","attributes":{},"skip":false,"key":"1.7.2.4.2.1"},{"backlink":"04-databases/postgres/CRUD-postgres.html#fig1.7.3.1","level":"1.7.3","list_caption":"Figure: 3-Tier Express Application","alt":"3-Tier Express Application","nro":38,"url":"images/3-tier-application.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"3-Tier Express Application","attributes":{},"skip":false,"key":"1.7.3.1"},{"backlink":"04-databases/additional-topics/mongo-intro/intro-nosql.html#fig1.7.5.1.1","level":"1.7.5.1","list_caption":"Figure: MongoDB vs Relational Databases","alt":"MongoDB vs Relational Databases","nro":39,"url":"http://4.bp.blogspot.com/-edz2_QrFvCE/UnzBhKZE3FI/AAAAAAAAAEs/bTEsqnZFTXw/s1600/SQL-MongoDB+Correspondence.PNG","index":1,"caption_template":"Figure: _CAPTION_","label":"MongoDB vs Relational Databases","attributes":{},"skip":false,"key":"1.7.5.1.1"},{"backlink":"06-ruby-rails/ruby-intro/index.html#fig1.8.1.1","level":"1.8.1","list_caption":"Figure: Yukihiro Matsumoto","alt":"Matz-san","nro":40,"url":"http://image.gihyo.co.jp/assets/images/dev/serial/01/software_designers/0034/0034-01.JPG","index":1,"caption_template":"Figure: _CAPTION_","label":"Yukihiro Matsumoto","attributes":{},"title":"Yukihiro Matsumoto","skip":false,"key":"1.8.1.1"},{"backlink":"06-ruby-rails/rails-intro/index.html#fig1.9.1.1","level":"1.9.1","list_caption":"Figure: MVC Diagram","alt":"MVC Diagram","nro":41,"url":"http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png","index":1,"caption_template":"Figure: _CAPTION_","label":"MVC Diagram","attributes":{},"skip":false,"key":"1.9.1.1"},{"backlink":"06-ruby-rails/rails-intro/index.html#fig1.9.1.2","level":"1.9.1","list_caption":"Figure: Rails File Structure","alt":"Rails File Structure","nro":42,"url":"http://i.imgur.com/whOL4DQ.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Rails File Structure","attributes":{},"skip":false,"key":"1.9.1.2"},{"backlink":"06-ruby-rails/active-record/index.html#fig1.9.5.1","level":"1.9.5","list_caption":"Figure: ORM-ActiveRecord","alt":"ORM-ActiveRecord","nro":43,"url":"https://github.com/wdi-sg/activerecord-intro/blob/master/orm.jpg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"ORM-ActiveRecord","attributes":{},"skip":false,"key":"1.9.5.1"},{"backlink":"06-ruby-rails/active-record/index.html#fig1.9.5.1.1","level":"1.9.5.1","list_caption":"Figure: ORM-ActiveRecord","alt":"ORM-ActiveRecord","nro":44,"url":"https://github.com/wdi-sg/activerecord-intro/blob/master/orm.jpg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"ORM-ActiveRecord","attributes":{},"skip":false,"key":"1.9.5.1.1"},{"backlink":"06-ruby-rails/additional-topics/rails-oauth/index.html#fig1.9.10.2.1","level":"1.9.10.2","list_caption":"Figure: OAuth from Oracle","alt":"OAuth from Oracle","nro":45,"url":"https://docs.oracle.com/cd/E50612_01/doc.11122/oauth_guide/content/images/oauth/oauth_overview.png","index":1,"caption_template":"Figure: _CAPTION_","label":"OAuth from Oracle","attributes":{},"skip":false,"key":"1.9.10.2.1"},{"backlink":"10-react/index.html#fig1.10.1","level":"1.10","list_caption":"Figure: ReactJS","alt":"ReactJS","nro":46,"url":"https://facebook.github.io/react/img/logo_og.png","index":1,"caption_template":"Figure: _CAPTION_","label":"ReactJS","attributes":{},"skip":false,"key":"1.10.1"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.1","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","alt":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","nro":47,"url":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","attributes":{},"skip":false,"key":"1.10.2.1"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.2","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","nro":48,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","attributes":{},"skip":false,"key":"1.10.2.2"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.3","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","nro":49,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","attributes":{},"skip":false,"key":"1.10.2.3"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.4","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","nro":50,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":4,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","attributes":{},"skip":false,"key":"1.10.2.4"},{"backlink":"10-react/react-intro/state.html#fig1.10.4.1","level":"1.10.4","list_caption":"Figure: https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","alt":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","nro":51,"url":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","index":1,"caption_template":"Figure: _CAPTION_","label":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","attributes":{},"skip":false,"key":"1.10.4.1"},{"backlink":"10-react/react-intro/state.html#fig1.10.4.2","level":"1.10.4","list_caption":"Figure: https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","alt":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","nro":52,"url":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","index":2,"caption_template":"Figure: _CAPTION_","label":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","attributes":{},"skip":false,"key":"1.10.4.2"},{"backlink":"10-react/react-intro/lifting.html#fig1.10.6.1","level":"1.10.6","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","nro":53,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","attributes":{},"skip":false,"key":"1.10.6.1"},{"backlink":"10-react/additional-topics/lifecycle.html#fig1.10.9.1.1","level":"1.10.9.1","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","nro":54,"url":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","attributes":{},"skip":false,"key":"1.10.9.1.1"},{"backlink":"11-groups/01index.html#fig1.12.1","level":"1.12","list_caption":"Figure: Git Branch Diagram","alt":"Git Branch Diagram","nro":55,"url":"https://git.generalassemb.ly/dc-wdi-fundamentals/git-branching/raw/master/images/branching.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Git Branch Diagram","attributes":{},"skip":false,"key":"1.12.1"},{"backlink":"11-groups/01index.html#fig1.12.2","level":"1.12","list_caption":"Figure: before-merge","alt":"before-merge","nro":56,"url":"https://git.generalassemb.ly/dc-wdi-fundamentals/git-branching/raw/master/images/merging.png","index":2,"caption_template":"Figure: _CAPTION_","label":"before-merge","attributes":{},"skip":false,"key":"1.12.2"},{"backlink":"11-groups/01index.html#fig1.12.3","level":"1.12","list_caption":"Figure: Github Workflows","alt":"Github Workflows","nro":57,"url":"https://git.generalassemb.ly/dc-wdi-fundamentals/git-branching/raw/master/images/github_workflows.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"Github Workflows","attributes":{},"skip":false,"key":"1.12.3"},{"backlink":"11-groups/03rolestools.html#fig1.12.1.1","level":"1.12.1","list_caption":"Figure: Kanban","alt":"Kanban","nro":58,"url":"https://olemortenamundsen.files.wordpress.com/2010/03/kanban_illustration.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Kanban","attributes":{},"skip":false,"key":"1.12.1.1"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.1","level":"1.13.3","list_caption":"Figure: https://i.imgur.com/NUNBEwW.png","alt":"https://i.imgur.com/NUNBEwW.png","nro":59,"url":"https://i.imgur.com/NUNBEwW.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://i.imgur.com/NUNBEwW.png","attributes":{},"skip":false,"key":"1.13.3.1"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.2","level":"1.13.3","list_caption":"Figure: Waterfall model","alt":"Waterfall model","nro":60,"url":"https://i.imgur.com/yJMVO91.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Waterfall model","attributes":{},"skip":false,"key":"1.13.3.2"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.3","level":"1.13.3","list_caption":"Figure: Youtube Balsamiq","alt":"Youtube Balsamiq","nro":61,"url":"http://3.bp.blogspot.com/-8e_J8hkX_kM/TbSz0jywljI/AAAAAAAAAY4/Nei-hnfPGaI/s1600/Balsamiq+myTube+example.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"Youtube Balsamiq","attributes":{},"skip":false,"key":"1.13.3.3"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.4","level":"1.13.3","list_caption":"Figure: Youtube actual","alt":"Youtube actual","nro":62,"url":"https://make.wordpress.org/support/wp-content/blogs.dir/21/files/2012/10/embed-youtube-page.jpg","index":4,"caption_template":"Figure: _CAPTION_","label":"Youtube actual","attributes":{},"skip":false,"key":"1.13.3.4"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.5","level":"1.13.3","list_caption":"Figure: https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/1f0a8dc5-e08f-4e3f-8eac-b9712085dc30/design-principles-large-opt.jpg","alt":"https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/1f0a8dc5-e08f-4e3f-8eac-b9712085dc30/design-principles-large-opt.jpg","nro":63,"url":"https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/1f0a8dc5-e08f-4e3f-8eac-b9712085dc30/design-principles-large-opt.jpg","index":5,"caption_template":"Figure: _CAPTION_","label":"https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/1f0a8dc5-e08f-4e3f-8eac-b9712085dc30/design-principles-large-opt.jpg","attributes":{},"skip":false,"key":"1.13.3.5"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.6","level":"1.13.3","list_caption":"Figure: https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/60840162882221.5a9ed0ddae45f.png","alt":"https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/60840162882221.5a9ed0ddae45f.png","nro":64,"url":"https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/60840162882221.5a9ed0ddae45f.png","index":6,"caption_template":"Figure: _CAPTION_","label":"https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/60840162882221.5a9ed0ddae45f.png","attributes":{},"skip":false,"key":"1.13.3.6"},{"backlink":"01-workflow/user-stories-wireframing/game-exercise.html#fig1.13.3.2.1","level":"1.13.3.2","list_caption":"Figure: https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","alt":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","nro":65,"url":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","attributes":{},"skip":false,"key":"1.13.3.2.1"},{"backlink":"01-workflow/user-stories-wireframing/game-exercise.html#fig1.13.3.2.2","level":"1.13.3.2","list_caption":"Figure: https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","alt":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","nro":66,"url":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","index":2,"caption_template":"Figure: _CAPTION_","label":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","attributes":{},"skip":false,"key":"1.13.3.2.2"},{"backlink":"01-workflow/review.html#fig1.13.5.1","level":"1.13.5","list_caption":"Figure: https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","alt":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","nro":67,"url":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","attributes":{},"skip":false,"key":"1.13.5.1"},{"backlink":"01-workflow/js-styleguide.html#fig1.13.6.1","level":"1.13.6","list_caption":"Figure: Gitter","alt":"Gitter","nro":68,"url":"https://badges.gitter.im/Join Chat.svg","index":1,"caption_template":"Figure: _CAPTION_","label":"Gitter","attributes":{},"skip":false,"key":"1.13.6.1"}]},"plugins":["advanced-emoji","toggle-chapters","codeblock-disable-glossary","youtube","image-captions"],"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"image-captions":{"variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-js/browser-js/js-dom-manipulation.md","mtime":"2018-09-10T07:34:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T11:30:12.456Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codeblock-disable-glossary/disable-glossary.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
