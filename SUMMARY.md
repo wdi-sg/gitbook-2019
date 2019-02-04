@@ -35,6 +35,7 @@
       * [Flexbox](03-html-css/css-bootstrap/06flexbox.md)
   * [Page Template](03-html-css/html-page-template/readme.md)
   * [Animation](03-html-css/animation.md)
+  * [Deploy - github pages](03-html-css/deploy-github-pages.md)
 
 * [JavaScript](02-js/javascript.md)
   * [Primitives](02-js/js-intro/primitives.md)
@@ -84,6 +85,7 @@
     * [Controllers](05-express/mvc/controllers.md)
     * [Models](05-express/mvc/models.md)
   * [AJAX](05-express/ajax.md)
+  * [Deploy - Node](05-express/node-deploy.md)
   * [Additional Topics](05-express/additional-topics/readme.md)
     * [APIs with Express](05-express/additional-topics/express-apis/03apis.md)
     * [Geocoding and Google Maps](05-express/additional-topics/express-geocode/readme.md)
@@ -113,7 +115,6 @@
       * [CRUD in MongoDB](04-databases/additional-topics/mongo-intro/crud.md)
       * [Data Modeling](04-databases/additional-topics/mongo-intro/data-modeling.md)
 
-  * [Deploy - Node](04-databases/node-deploy.md)
 * [Ruby](06-ruby-rails/ruby.md)
   * [Intro to Ruby](06-ruby-rails/ruby-intro/readme.md)
   * [Ruby Classes](06-ruby-rails/ruby-classes/readme.md)
