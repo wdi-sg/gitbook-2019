@@ -9,7 +9,7 @@
 
 ## Create the app:
 ```bash
-rails new parkng -d postgresql
+rails new parkng -d postgresql --skip-turbolinks --skip-coffee
 ```
 
 ## What we need

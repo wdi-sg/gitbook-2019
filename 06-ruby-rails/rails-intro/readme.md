@@ -47,7 +47,7 @@ rails new name_of_the_app
 If we want to use a different database (such as PostgreSQL) we need to specify the database using the `-d` flag followed by the database. By default, Rails uses SQLite, which is unideal for web applications deployed to ephemeral file systems. We'll specify `postgresql` for our Rails apps.
 
 ```bash
-rails new name_of_the_app -d postgresql
+rails new name_of_app -d postgresql --skip-turbolinks --skip--coffee
 ```
 
 ***SPECIAL NOTE FOR UBUNTU/DEBIAN USERS***

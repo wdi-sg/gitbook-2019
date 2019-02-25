@@ -1,7 +1,7 @@
 ## Install Rails
 ```
 gem install rails
-rails new blog -d postgresql
+rails new blog -d postgresql --skip-turbolinks --skip--coffee
 cd blog
 rails db:create
 ```

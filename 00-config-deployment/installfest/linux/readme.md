@@ -163,30 +163,6 @@ alias pgserver="sudo -u postgres service postgresql start"
 
 **psql** will be used to access the psql termainal
 
-While we're here, add these two functions and environment variables to make it easier to access, change and refresh our ZSH configuration file in the future. Copy and paste these to the end of the file.
-
-```
-export VISUAL=subl
-export EDITOR="$VISUAL"
-
-function zedit() {
-  subl ~/.bashrc
-}
-
-function zrefresh() {
-  echo "Refreshing your ZSH configuration."
-  source ~/.bashrc
-}
-```
-
-Save the file, close Sublime, and restart your terminal.
-
-### Install Postgres GUI
-
-```
-sudo apt-get install pgadmin3
-```
-
 ### Testing Postgres Setup
 
 Quit terminal and reopen it before testing.
