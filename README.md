@@ -99,9 +99,11 @@ Sometimes pointing out that someone broke a social rule can be challenging or fe
 
 | Time          | Activity
 | ---           | ---
-| 09:00 - 9:15  | Standup
-| 09:25 - 10:30 | Warmup
-| 10:30 - lunch | Main Topic
+| 09:00 - 10:00 | Warmup
+| 10:00 - 10:10 | Standup Prompt
+| 10:10 - 10:30 | Assignment Review
+| 10:30 - 10:40 | Standup
+| 10:40 - lunch | Main Topic
 | Lunch         |
 | Lunch - 02:30 | Lab / Other Topic
 | 03:00 onwards | Lab + Homework

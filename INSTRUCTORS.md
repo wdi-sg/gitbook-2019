@@ -13,32 +13,3 @@ Build book from root
 ```
 gitbook build . docs
 ```
-
-
-#### Using reveal.js slides
-Install http-server
-```
-npm install -g http-server
-```
-
-run http-server from root
-
-open slide picker: [http://localhost:8080/slides/index.html](http://localhost:8080/slides/index.html)
-
-## TODO
-
-css positioning
-
-css animation - flesh out
-
-react templates / components - clarity
-
-post / edit diagrams
-
-mvc separate controller and model
-
-db timestamp / js date
-
-ruby - enumberable
-
-rails - email
