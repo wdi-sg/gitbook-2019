@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-  
+
 * [Basic Tools](01-tools/readme.md)
   * [Command Line](01-tools/command-line/01readme.md)
     * [The Terminal](01-tools/command-line/02intro-terminal.md)
@@ -29,7 +29,6 @@
     * [Floats and Clears](03-html-css/positioning/04floats-clears.md)
     * [Layout](03-html-css/positioning/07layout.md)
     * [Responsive Design](03-html-css/positioning/02responsivedesign.md)
-    * [Additional Topics](03-html-css/positioning/05additional.md)
     * [Additional Topics](03-html-css/positioning/05additional.md)
   * [Bootstrap](03-html-css/css-bootstrap/bootstrap.md)
       * [Flexbox](03-html-css/css-bootstrap/06flexbox.md)

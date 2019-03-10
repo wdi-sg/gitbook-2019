@@ -1,7 +1,4 @@
-# Iterating Over Arrays
-
-*After this lesson, you will be able to:*
-- Iterate over an array
+# Arrays and Iteration
 
 ## What is iterating over an array?
 

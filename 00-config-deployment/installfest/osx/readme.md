@@ -57,11 +57,30 @@ git config --global push.default simple
 git config --global credential.helper osxkeychain
 ```
 
-### Setting up the bash shell
+## Sublime
+
+We'll be running **Sublime**, as our text editor of choice.
+
+Download and install the latest version [https://www.sublimetext.com/](https://www.sublimetext.com/)
+
+### Run sublime from your command line
+
+#### Setting up the bash shell for sublime (and other stuff)
 > do you have any other shell configuration files in your home directory?
 > `ls -la ~`
 > If you have something named `.zshrc`, `.bashrc`, `.bash_profile`
 > Take the contents out of this file and put it in the new one we are creating. Then delete the old file.
+
+Find the location of your copy of sublime from the terminal:
+```
+ls -la /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl`
+```
+
+Should run without errors.
+
+If not, make sure to change this location reference in the code below, or move your copy of sublime to the correct location.
+
+#### File Setup
 
 Create a new shell config file.
 ```
@@ -73,38 +92,7 @@ Put this code inside:
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-```
-
-## Sublime
-We'll be running **Sublime**, as our text editor of choice.
-
-Download and install the latest version [https://www.sublimetext.com/](https://www.sublimetext.com/)
-
-#### Run sublime from your command line
-
-Create a bash alias and put it in your profile config file:
-```
-echo 'alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"' >> ~/.profile
-```
-
-**Testing**
-Open a Terminal window and run:
-```
-sublime ~/Documents
-```
-**to open the entire current directory**
-```
-sublime .
-```
-
-#### set sublime as your command line default editor:
-
-Open your ~/.profile file using sublime.
-
-Add the code below:
-
-**this also allows you to refresh changes to your shell config**
-```
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 export VISUAL=sublime
 export EDITOR="$VISUAL"
 
@@ -116,6 +104,16 @@ function profilerefresh() {
   echo "Refreshing your configuration."
   source ~/.profile
 }
+```
+
+**Testing**
+Open a *NEW* Terminal window and run:
+```
+sublime ~/Documents
+```
+**to open the entire current directory**
+```
+sublime .
 ```
 
 ### Install the sublime `packagecontrol` library
@@ -168,17 +166,17 @@ Paste the contents from the above link into the file.
 
 #### BEFORE YOU RUN THIS, MAKE SURE THE PATH / LOCATION OF YOUR SUBLIME APP IS CORRECT
 ```
-which sublime
+ls -la /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl`
 ```
 
-Should say: `/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl`
+Should run without errors.
 
 Then:
 ```
 git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w"
 ```
 
-## Install some other sublime packages:
+## Optional: install some other sublime packages:
   * ColorPicker (pick colors by typing `COMMAND + SHIFT + c`, handy for CSS)
   * Color Highlighter (visually displays colors for hex/rgb values)
   * GitGutter (shows git additions/deletions)

@@ -73,7 +73,7 @@ A 64-bit version of Windows 10 is absolutely needed here as we will be using the
 
 - Install your text editor of choice in Windows, e.g. Sublime Text (https://www.sublimetext.com/3) or VSCode (https://code.visualstudio.com/download). 
 
-- Create an alias for your text editor in WSL so that you can launch it from the WSL's CLI. For Sublime Text, if you had installed it at the default location, run `echo 'alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"' >> ~/.profile` at your WSL's CLI. Then, close and re-open WSL, or run `source ~/.bashrc` to reload the configuration, and test it out by typeing `subl` and pressing enter in WSL.
+- Create an alias for your text editor in WSL so that you can launch it from the WSL's CLI. For Sublime Text, if you had installed it at the default location, run `echo 'alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"' >> ~/.bashrc` at your WSL's CLI. Then, close and re-open WSL, or run `source ~/.bashrc` to reload the configuration, and test it out by typeing `subl` and pressing enter in WSL.
 
 ## (Optional) Speeding up WSL's I/O Performance
 

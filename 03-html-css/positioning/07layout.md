@@ -66,6 +66,13 @@ Cards with visual elements inside can be absolutely positioned when the width is
   ...
 ```
 
+### Box Model For Layouts
+One problem people consisteintly run into is the fact that percentage box widths for layout *DO NOT* take into account margin or padding.
+
+A div that has 50% width and also 20px of left and right margin will end up being 50% width *PLUS* 40px of width to account for the margins. One approach is to also make the margins and padding of those divs percentage measurements.
+
+Another thing to note is that you can't (and shouldn't) set any heights as percentages. The box model [doesn't really take percentage heights.](https://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work)
+
 ### Pairing Exercise
 
 Create a web layout.

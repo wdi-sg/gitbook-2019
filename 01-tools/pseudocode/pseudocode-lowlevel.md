@@ -28,7 +28,7 @@ Modeling: How do we represent our data?
   - do we use an array or an object? A string or a number?
 
 Encapsulation: How do we package the concepts of the problem together in a way that makes sense?
-  - Does the peanut butter belong with the jelly? Or does it belong with bread slice 1?
+  - Does the peanut butter belong with the jelly? Or does it belong with bread slice 1 & 2?
 
 Abstraction: What do we use to generalize parts of our problem? How general do we make our program?
   - Can we generalize our system for all kinds of jelly? What about jam, or even mustard?
@@ -81,9 +81,8 @@ When we first approach a problem, we see the big picture. "Break it down" first 
 Pseudocoding proves that we have *identified* the problem, understand it *conceptually*, and have *broken it down* into *small steps* that we can follow.
 
 
----
 
-#### Example 1
+#### Example
 We want to know if a number is even or odd:
 
 High-level pseudo code:
@@ -105,22 +104,60 @@ PROGRAM IsEvenOrOdd:
   > We started with a problem statement. We turned it into a number of steps we thought we might need to complete. The last pseudo code step is to map out which specific code steps are needed to accomplish the problem.
 
 </details>
+#### Example
+A driver drives through an ERP gantry. What is the amount charged?
 
----
+High-level pseudo code:
+1. Check if we are charging or not yes/no
+2. Check what kind of vehicle it is
+3. Check what the time is to determine the exact charge.
 
+Low-level:
+```
+PROGRAM ERPCharge:
+  IF charge on this day
+      if car
+        if time is before noon
+          charge $1.00
+        otherwise
+          charge $0.50
 
-## You Do: Pseudocode Concentration (15 minutes / 0:50)
+      if truck
+        if time is before noon
+          charge $1.00
+        otherwise
+          charge $0.50
+```
 
-Take 10 minutes to pseudocode the game Concentration with a partner.
+## You Do: Pseudocode (15 minutes / 0:50)
 
-The user should see a grid of cards. Clicking a card reveals it and allows them
-to click another card. If they match, the cards stay up and if not they flip
-back over. Users get a point for every pair they flip. The game ends after 1
-minute or all cards have been matched.
+Lazada is having a big sale. Your task is to write the pseudo code logic for calculating the final price of an item after GST, shipping and the different discounts have been applied.
 
-Afterwards, we'll spend 5 minutes sharing approaches as a class.
+Note: You don't have to worry about where a particular piece of data is coming from. Any number or quantity mentioned can assumed to be assigned to a variable. This exercise is about logic.
 
----
+Part 1:
+Shipping is flat rate $10 except for people buying bulky items, or if it is being shipped to east coast. (both of these are a $10 extra fee)
+
+When you buy over $40 of stuff, shipping is free.
+
+Shipping is also taxed.
+
+Any sofa is %10 off and free shipping.
+
+Part 2:
+iPhones come with a discount voucher of $20 off your entire purchase.
+
+Part 3:
+When you buy any nike product, you get a 15% discount (this special discount is inclusive of GST)
+
+Part 4:
+Current members of the Lazada frequent buyers club get an extra %5 off any clothing up to $50 in discounts.
+
+Part 5:
+When paying with Visa your order is tax free.
+
+Part 6:
+Change the pseudo code so that only the first 2 applicable discounts can be combined.
 
 
 ## Conclusion

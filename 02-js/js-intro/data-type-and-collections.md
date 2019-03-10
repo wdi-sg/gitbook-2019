@@ -1,23 +1,16 @@
 # Data Types and Structures
 
----
-
 ## Learning Objectives
 
-- List and describe the primitive data types and common complex data types
+- List and describe primitive data types and common complex data types
 - Practice proper JS syntax and semantic variable naming
 - Describe uses of mathematical operators in Javascript
 - Define type coercion
 
 ## Framing
-- data is the first thing we learn in any programming language. This is how javascript does it.
-
+Data is the first thing we learn in any programming language.
 
 Primitive data types are the building blocks of Javascript. Whenever you do anything in Javascript, you are creating and changing these basic pieces of information.
-
-
----
-
 
 ### Comments
 You write comments in your code for yourself and for anyone reading your code in the future.
@@ -41,8 +34,6 @@ Comments come in two forms
 
 ```
 
----
-
 ## Primitive Data Types
 
 There are five primitive data types that are used most commonly used in Javascript.
@@ -52,8 +43,6 @@ There are five primitive data types that are used most commonly used in Javascri
   3. Booleans
   4. Undefined
   5. Null
-
----
 
 ## Variables
 
@@ -72,8 +61,6 @@ After declaration you can then reference variables by just their name, without "
 myClass
 // => "WDI16"
 ```
-
----
 
 ## Operations
 
@@ -98,8 +85,6 @@ Math in Javascript follows the same rules you've known since elementary school m
 // => 5
 ```
 
----
-
 Like normal math, Javascript follows the traditional order of operations: P.E.M.D.A.S. or "Please Excuse My Dear Aunt Sally." Mathematical operations are executed in the following order...
   1. Parenthetical expressions
   2. Exponentiation
@@ -117,8 +102,6 @@ Like normal math, Javascript follows the traditional order of operations: P.E.M.
 // => (2 * 2) + 1
 // => 5
 ```
-
----
 
 ### % (Modulus)
 
@@ -138,9 +121,9 @@ Modulus has a pretty handy use case: to check if a number is even. We can do thi
 5 % 2
 // => , because 5 is odd. When 5 is divided by 2, the remainder is 1.
 ```
+## Non-Value Values
 
-
----
+`Nan`, `undefined` and `null` are values that indicate the lack of a meaningful value.
 
 ### NaN ("Not a number")
 
@@ -158,16 +141,6 @@ You usually get `NaN` when the result of a math operation is not real (e.g., div
 // => NaN
 ```
 
----
-
-## Undefined & Null
-
-`undefined` and `null` are values that indicate the lack of a meaningful value.
-- Anybody else find that weird? How is there more than one data type for nothing?
-- Q: What's the difference?
-
----
-
 ### Undefined
 
 `undefined` is automatically applied to any variable with no value.
@@ -184,59 +157,14 @@ var nothing
 ```
 
 
----
-
 ### Null
 
 `null` is an explicitly-assigned non-value.
 (undefined is an implicity assigned non-value)
 - Javascript will never set anything to `null` by itself. `null` only appears when you tell it to.
 - It is useful as a placeholder for a variable that you know will be replaced with an actual value later on
----
 
 > So the main difference between `undefined` and `null` is intention. Other than that, they're both...nothing.
-
----
-
-## Type Coercion
-
-Javascript will try to make sense of any strange operations you throw at it.
-- Examples of "strange": subtracting a number from a string, multiplying `null` by 100
-- It does this by converting data types using a process called "type coercion"
-
-You might encounter this when dealing with numerical values but for whatever reason some of them are in string form.
-
-```js
-// In some cases Javascript is helpful and converts strings to numbers in the correct way.
-"3" - "2"
-// => 1
-
-// ...but sometimes it doesn't. In this example, the + operator acts as if it's concatenating two strings.
-"3" + "2"
-// => 32
-
-// And this?
-"five" * 5
-// => NaN
-```
-
----
-
-When in doubt, convert data types that should be numbers using `parseInt()`.
-
-```js
-parseInt("3")
-// => 3
-// parseInt converts a string to a number value, if available.
-
-parseInt("burrito")
-// => NaN, because "burrito" cannot be converted into a number
-```
-
-There are other examples of type coercion, but the point here isn't to remember them all. Just be aware that sometimes Javascript will fire weird results back at you with no explanation. Sometimes, type coercion might be the culprit.
-
-
----
 
 ## Strings
 
@@ -249,8 +177,6 @@ var greeting = 'Hello!'
 /// ...or double quotes.
 var greeting = "Hi there!"
 ```
-
----
 
 ### Concatenation
 
@@ -274,18 +200,52 @@ You can't, however, use other math operators on strings...
 // => NaN
 ```
 
----
+## Type Coercion
+
+Types mean that each of the kinds of data described above is distinct. As far as the computer is concerned `2` and `"2"` are different and unrelated values. The programmer has to tell javascript to relate two values of different data types.
+
+Javascript will try to make sense of any strange operations you throw at it.
+- Examples of "strange": subtracting a number from a string, multiplying `null` by 100
+- It does this by converting data types using a process called "type coercion"
+
+You might encounter this when dealing with numerical values but for whatever reason some of them are in string form.
+
+```js
+// In some cases Javascript is helpful and converts strings to numbers in the correct way.
+"3" - "2"
+// => 1
+
+// ...but sometimes it doesn't. In this example, the + operator acts as if it's concatenating two strings.
+"3" + "2"
+// => 32
+
+// And this?
+"five" * 5
+// => NaN
+```
+
+
+When in doubt, convert data types that should be numbers using `parseInt()`.
+
+```js
+parseInt("3")
+// => 3
+// parseInt converts a string to a number value, if available.
+
+parseInt("burrito")
+// => NaN, because "burrito" cannot be converted into a number
+```
+
+There are other examples of type coercion, but the point here isn't to remember them all. Just be aware that sometimes Javascript will fire weird results back at you with no explanation. Sometimes, type coercion might be the culprit.
 
 ## Data Structures
 
----
 
 ### Arrays
 
 Arrays are ordered collection of related data types and are organized by index.
 - Indexing begins at 0 (e.g., first element in an array has an index of 0, the second has an index of 1, and so on).
 
----
 
 We instantiate an array like this...
 
@@ -320,8 +280,6 @@ letters[1][2]
 // => "f"
 ```
 
----
-
 ### Array Methods
 
 There are a lot of useful methods that come with Javascript we can use to inspect and modify arrays. To learn what some of them are...
@@ -331,24 +289,29 @@ There are a lot of useful methods that come with Javascript we can use to inspec
 
 > There are many more, but these are the most widely-used.
 
----
-
 
 ### Objects
 Objects use "keys" instead of indexes to store data.
 
 Why use objects to store `key` and `value` pairs? They are like arrays except that data is not stored in any sorted order and keys do not have to numbered indexes.
 
----
+Objects are useful because we can specify/name the keys to represent the data we want to hold.
+
+```js
+var person = {
+  name: 'Chee Kean',
+  weight: 231,
+  height: 1.7
+};
+```
+
+Thus we are most likely saying that a second person will contain the same types of data, (the same keys) but with different values (a different name)
 
 #### Creating
 
 ```js
 var friend = {firstName: "Jane", lastName: "Doe"}
 ```
-
-
----
 
 #### Accessing
 
@@ -360,8 +323,12 @@ friend['firstName']
 friend['lastName']
 ```
 
----
+```js
+var myKey = 'firsdtName';
+friend[myKey]
 
+// friend.myKey *will not* work
+```
 ### Documentation
 
 Navigating documentation is a great skill to have. Some sets of documentation are harder to navigate than others, but if you have a sense of how to dig through a massive trove of information like MDN or RubyDocs, you'll become a much more efficient programmer.
@@ -369,7 +336,6 @@ Navigating documentation is a great skill to have. Some sets of documentation ar
 > [MDN Array Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 > [https://github.com/wdi-sg/js-primitives](https://github.com/wdi-sg/js-primitives)
-
 
 
 ## Exercises
