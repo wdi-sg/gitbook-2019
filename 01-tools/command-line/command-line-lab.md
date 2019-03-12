@@ -2,8 +2,6 @@
 
 ## Introduction
 
-> ***Note:*** _This can be a pair programming activity or done independently._
-
 Developing web apps requires a degree of comfort navigating and interacting with your operating system through the command line, and similar to how you'll be practicing writing and running Ruby and JavaScript later in the course, we'll be practicing creating, modifying, and moving files and folders in your terminal to get you practicing Unix commands.
 
 For your first lab, you're going to create files and folders to organize your favorite books, movies, and music - then, you're going to reorganize them.
@@ -103,4 +101,3 @@ Be sure you open up your "my-favorite-things" directory in Sublime/Atom, so you 
 ## Additional Resources
 
 - A list of [CLI Shortcuts](https://gist.github.com/alexpchin/01caa027b825d5f98871)
-- An awesome Unix command [cheat

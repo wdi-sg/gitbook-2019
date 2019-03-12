@@ -8,6 +8,7 @@
     * [Filesystem Navigation](01-tools/command-line/03navigating.md)
     * [File Manipulation](01-tools/command-line/04file-manipulation.md)
     * [Command Line Lab](01-tools/command-line/command-line-lab.md)
+    * [Additional Topics](01-tools/command-line/05additional-topics.md)
   * [Pseudocode](01-tools/pseudocode/readme.md)
     * [High Level Pseudocode](01-tools/pseudocode/pseudocode-highlevel.md)
     * [Low Level Pseudocode](01-tools/pseudocode/pseudocode-lowlevel.md)
