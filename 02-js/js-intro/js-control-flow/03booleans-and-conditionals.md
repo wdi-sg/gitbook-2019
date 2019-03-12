@@ -1,6 +1,7 @@
 # Intro to Conditionals
 
-![](https://assets.hongkiat.com/uploads/programming-jokes/joke-programmers-butters.jpg)
+![control flow wd40](https://i.imgur.com/v4W1xwD.png)
+
 
 ### Lesson Objectives
 _After this lesson, students will be able to:_
@@ -51,8 +52,6 @@ if (BOOLEAN EXPRESSION){
 };
 ```
 If the boolean expression within our condition is `true`, a branch will execute. If it is `false`, it will not execute. This is an example of `control flow`.
-
-![control flow wd40](https://i.imgur.com/v4W1xwD.png)
 
 Before we write in some control flow, let's take a closer look at the boolean logic that will drive our conditionals.
 
