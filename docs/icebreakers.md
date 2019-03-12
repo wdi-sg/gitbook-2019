@@ -1,14 +1,3 @@
-### Agreement circle (10-15mins)
-
-- Stand in the middle of a circle
-- Call out something about you
-- People that agree with you will have to switch spots with someone who also agrees
-- if one person is left in the middle, they share something.
-
-
----
-
-
 ### Find Partners (20 mins)
 - print out cards
 - 1 side has a question
@@ -18,14 +7,8 @@
 - See how many of the forms can be filled out.
 - Share your cards
 
-
----
-
 ### Self Learning (15 mins)
 - write on the board some skill you gained from studying yourself, or where the work to aquire the skill was done on your own.
-
-
----
 
 
 ### About You(20 mins)
