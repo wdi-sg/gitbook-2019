@@ -121,3 +121,28 @@ div {
   padding: 3px 1px 0 9px;
 }
 ```
+
+#### Height and Width
+Generally speaking, width is a property of CSS that's easily managed and controlled. Height is *not*.
+
+In plain vanilla CSS, height is a very hard attribute to control. Setting `height` style on an attribute won't work a lot of the time.
+
+The original intention of the browser is to display variable-length text-based content. The screen on which this content is displayed is also variable. As the screen gets wider or narrower, HTML and CSS want to contract and expand the height of the element to fit all of the content.
+
+Usually this means that explicitly setting the height of an element can cause unintended consequences.
+
+#### Gotchas
+
+The model of how the dimensions of a box are calculated in CSS can be confusing.
+
+This is a property called `box-sizing`. The default value set by the browser is called `content-box`.
+
+This property says that the width and height of a box is the content or dimensions set by CSS, *plus* the padding or any other property that affects the final size of the box.
+
+You might think that setting the `width` of a box to 200px means that the box will be 200px wide, but with `box-sizing:content-box`, it might not be.
+
+For more details see here: [https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+
+
+### Exercise
+[https://github.com/wdi-sg/box-model-lab](https://github.com/wdi-sg/box-model-lab)
