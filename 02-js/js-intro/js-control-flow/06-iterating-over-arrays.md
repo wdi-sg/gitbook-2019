@@ -32,7 +32,7 @@ Notice that this for loop correctly won't print anything out for an empty array.
 var a = [1,4,2,3,6];
 
 for (var i = 0; i < a.length; i++) {
-  console.log((a[i]);
+  console.log(a[i]);
 }
 ```
 
@@ -198,7 +198,7 @@ Set up a variable outside the for loop to keep track of the final result.
 
   var result = "";
 
-  for (var i = s.length(); i >= 0; i--) {
+  for (var i = s.length; i >= 0; i--) {
     result += s.charAt(i);
   }
 
