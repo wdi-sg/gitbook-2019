@@ -14,25 +14,10 @@ The first task of creating a layout is to decide what boxes the layout is compos
 
 Let's look at a couple of CSS techniques that you can use to create common web layouts:
 
-## Column Widths
+## Fixed Width Layout
+Explicitly set the width of the main part of the site to, for example, 800px.
 
-
-Column widths use percentages to split up inline-block divs into equal (or offset to predetermined dinmension) columns.
-
-`display:inlne-block` makes the divs sit next to each other.
-
-In this example we set a proportional width and margin so that we can have 2 columns that are equal width.
-
-In this layout the text will flow to whatever height it wants.
-
-```
-.column{
-  display:inline-block;
-  width:48%;
-  margin-left:1%;
-  margin-right:1%;
-}
-```
+Set the margins to this div to auto to center it on the page.
 
 ## Variable Count Card Row
 
@@ -66,6 +51,54 @@ Cards with visual elements inside can be absolutely positioned when the width is
   ...
 ```
 
+## Float Column Layout
+
+One way to make a column layout is floats. This is an old technique that is being replaced by newer layout techniques built into modern browsers. (i.e., flexbox)
+
+Column widths use percentages to split up inline-block divs into equal (or offset to predetermined dinmension) columns.
+
+`display:inlne-block` makes the divs sit next to each other.
+
+In this example we set a proportional width so that we can have 2 columns that are equal width.
+
+In this layout the text will flow to whatever height it wants.
+
+We also set `float` on the columns so that they stick together.
+
+We need the clear to make sure there are no other elements that are affected.
+
+```
+<div class="column-container">
+  <div class="column">stuff</div>
+  <div class="column">stuff</div>
+</div>
+```
+
+```
+.column{
+  display:inline-block;
+  width:50%;
+  background-color:pink;
+  box-sizing:border-box;
+  float:left;
+  padding:10px;
+}
+
+.column-container:after{
+  display: table;
+  clear: both;
+  content: '';
+}
+```
+
+
+#### Border Box
+In order to have the layout boxes be exactly 50%, you can also set the `box-sizing` property to `border-box`.
+
+This means that you are specifying the final width of the box, *including* the margins.
+
+For more details see here: [https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+
 ### Box Model For Layouts
 One problem people consisteintly run into is the fact that percentage box widths for layout *DO NOT* take into account margin or padding.
 
@@ -85,7 +118,7 @@ Some suggestions:
 - a dentist office
 - or you can just use [lorem ipsum](https://www.lipsum.com/)
 
-1. Create a 2 column layout using percentage widths.
+1. Create a 2 column floated layout using percentage widths.
 ![https://github.com/wdi-sg/gitbook-2018/blob/master/images/basic.png?raw=true](https://github.com/wdi-sg/gitbook-2018/blob/master/images/basic.png?raw=true)
 
 2. Add a header.
@@ -99,4 +132,4 @@ Some suggestions:
 5. Use position absolute/relative to put this smiley emoji in the upper right corner of the card.
 [https://github.com/wdi-sg/gitbook-2018/blob/master/images/smile.png?raw=true](https://github.com/wdi-sg/gitbook-2018/blob/master/images/smile.png?raw=true)
 
-5. Create new content for a 3 column layout.
+6. Create new content for a 3 column layout.
