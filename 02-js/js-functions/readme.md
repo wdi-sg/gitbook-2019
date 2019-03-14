@@ -30,7 +30,7 @@ When we create our PB&J sandwiches, we don't worry about how the bread is baked,
 ## Define a Function
 
 We've been using functions already without knowing it:
-```
+```js
 alert('hello');
 ```
 
@@ -63,7 +63,7 @@ We can also create functions that accept **parameters**, and use those parameter
 
 ## Defining a function with a parameter
 ```js
-function greeting(taco) {
+var greeting = function(taco) {
 	// anything inside of here will execute when called
 	console.log("Good morning", taco);
 }
@@ -81,7 +81,7 @@ greeting(name2);
 Functions can have multiple parameters, separated by commas.
 
 ```js
-function greeting(person, stuff) {
+var greeting = function(person, stuff) {
 	// anything inside of here will execute when called
 	console.log("Good morning", person, stuff);
 	console.log("person:", person);
@@ -127,7 +127,7 @@ var add = function(a,b){
 
 With console.log
 
-```
+```js
 // With a return value
 var returnHello = function(name) {
 	return("Hello, " + name);
@@ -172,7 +172,7 @@ console.log(firstNum + " multiplied by " + secNum + " is " + taco );
 Generally we will prefer that our functions operate as discreet parts.
 
 If we want to add two numbers we can write:
-```
+```js
 var result = 0;
 
 var add = function(num1, num2){
@@ -185,7 +185,7 @@ This function acts on some value defined outside of itself.
 In javascript it allows you to do this and might seem tempting, but for a variety of reasons it is much better to explicitly define the inputs and outputs of a set of code. (this applies to things beyond functions as well)
 
 The prefered way would be:
-```
+```js
 var add = function(num1, num2){
   return num1 + num2;
 };
@@ -197,7 +197,7 @@ This is only possible with the return keyword.
 
 ### Functions as sub-routines
 Given this code that adds 2 numbers then multiplies it, then adds a string to it:
-```
+```js
 // inputs
 var num1 = 2;
 var num2 = 4;
@@ -256,18 +256,18 @@ Despite being more flexible, the former declaration that assigns the function to
 
 ## Functions as values
 Since we can assign a function to a variable, we can also assign a function anywhere else any other value would go.
-```
+```js
 var multiply = function(a, b) {
     return a * b;
 };
 ```
 Then:
-```
+```js
 var banana = [1,multiply,3,4,5,6];
 banana[1](2,3);
 ```
 Or:
-```
+```js
 var monkey = {
   bar : "hello",
   doMultiply : multiply
@@ -362,7 +362,7 @@ Using the chrome debugger, what is the value of the result inside the function w
   - create a function named hello that prints out 'Hello World'
   - call that function
 
-```
+```js
 var example = function() {
   \\ your code goes here
 };
@@ -389,8 +389,8 @@ example();
 1.1.6
 
   given an array:
-  
-  ```
+
+  ```js
   var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
   ```
   - create a function that takes in an array of numbers as a parameter:

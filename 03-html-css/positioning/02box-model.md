@@ -122,6 +122,11 @@ div {
 }
 ```
 
+#### Margin Auto
+One technique to horizontally center something is to set the left and right margins to `auto`.
+
+However, you can't set `margin-top` or `margin-bottom` to `auto`. (see below)
+
 #### Height and Width
 Generally speaking, width is a property of CSS that's easily managed and controlled. Height is *not*.
 

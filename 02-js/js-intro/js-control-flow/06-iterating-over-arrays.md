@@ -232,15 +232,19 @@ are common for loop variable names.
 
 ```js
 
+  // let's see if there are duplicate values in the array
+  var a = [2,3,4,5,1,2,3,9];
+
   // look in every index
   for (var i = 0; i < a.length; i++) {
 
     // compare this index against every other index
     for (var j = 0; j < a.length; j++) {
 
-      // do the comparison
+      // make sure we are not comparing to itself
       if (j !== i) {
 
+        // do the comparison
         if (a[i] === a[j]) {
           console.log("double!: "+a[i]);
         }
