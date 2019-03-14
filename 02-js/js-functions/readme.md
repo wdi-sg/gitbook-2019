@@ -340,6 +340,7 @@ var doMaths = function(a,b){
   result = a + b;
   result = result + b + b + 3;
 
+  return result;
 }
 
 var total = doMaths( 2, 3 );
