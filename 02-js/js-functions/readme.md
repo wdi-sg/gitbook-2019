@@ -293,13 +293,13 @@ console.log("here is the answer: "+sum);
 ```
 
 ```js
-var add2 = function(a,b){
+var addition = function(a,b){
   return a + b;
 };
 
-var sum2 = add(2,2);
+var anotherSum = addition(2,2);
 
-console.log("Answer: "+sum2);
+console.log("Answer: "+anotherSum);
 ```
 
 

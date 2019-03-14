@@ -365,4 +365,4 @@ Run the above code for position relative / absolute.
 Using the chrome console, apply position fixed to an element.
 
 ##### Further
-Recreate the examples shown on the CSS layout page.
+Open up generalassembly.com or any other page. Open the chrome dev tools. Try applying `display` `block` or `inline-block` to some elements. Try applying `position` `fixed` or `absolute`. Before you apply the style, try to predict how the page will change.
