@@ -48,9 +48,9 @@ From here: [https://stackoverflow.com/questions/9189810/css-display-inline-vs-in
 
 ### Block elements:
 
-    - respect left & right margins and padding & top & bottom
-    - force a line break after the block element
-    - acquires full-width if width not defined
+- respect left & right margins and padding & top & bottom
+- force a line break after the block element
+- acquires full-width if width not defined
 
 Example: Layout rows:
 ```css
