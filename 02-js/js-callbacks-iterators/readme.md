@@ -1,8 +1,5 @@
-#Functional Programming
+# Callback Functions
 
-Programming with functions! Weren't we already doing that? Well yes, but we can use functions more heavily, especially in place of loops.
-
----
 
 ##Objectives
 
@@ -22,8 +19,6 @@ add(1, 2);
 Functions are **first-class citizens** in JavaScript. This means that we can create functions, store them into variables, and pass functions into other functions. Functions are only executed when called. Try this to illustrate:
 
 
----
-
 Try running the following. What is printed to the screen?
 
 ```js
@@ -40,7 +35,6 @@ We can take advantage of this behavior by defining **callback functions**. Callb
 
 ## Do something later: Callbacks
 
----
 
 ### setTimeout
 
@@ -58,7 +52,6 @@ var threeSecondTimeout = setTimeout(announce, 3000);
 
 Under the hood the function is being executed just like the one we wrote.
 
----
 
 This can be done via **anonymous functions** as well. Anonymous functions are functions that are not stored to a variable. They are great for functions you only need to define once. Here's an example.
 
@@ -68,7 +61,6 @@ var fiveSecondTimeoutReference = setTimeout(function() {
 }, 5000);
 ```
 
----
 
 The `setInterval()` function takes a function and a delay in
 milliseconds, and executes that function as closely as possible each
@@ -82,7 +74,6 @@ var annoy = function(){
 var oneSecondIntervalReference = setInterval(annoy, 1000);
 ```
 
----
 
 Things to be careful of: you need to know what the function expects as parameters. Javascript is forgiving, but not a mind-reader.
 
