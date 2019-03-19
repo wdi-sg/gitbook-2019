@@ -139,4 +139,4 @@ setTimeout(firstThing, 2000);
 
 9. if the user enters a number that's larger than 10, reduce the amount of time between console.logs
 
-10. nest the set interval inside a set timeout- if the user doesn't enter anything after 10 seconds, don't run the set interval.
+10. Set a proportional interval so that no matter what, all of the console.logs happen within 30 seconds max.
