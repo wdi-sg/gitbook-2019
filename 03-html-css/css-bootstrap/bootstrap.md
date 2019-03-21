@@ -249,11 +249,19 @@ Bootstrap can also do some nifty things for you with it's JavaScript plugins. Th
 
 ### Pairing Exercise:
 Using this HTML:
-```HTML
-<!DOCTYPE html>
-<html>
+
+
+```
+<!doctype html>
+<html lang="en">
   <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <style>
         .left-col{
             background-color:red;
@@ -301,3 +309,4 @@ Your final page should naturally collapse down when the browser size gets narrow
 ![Imgur](https://i.imgur.com/cnaI0rc.png)
 
 If you get done with that, try adding more columns and rows, and then change the responsive breakpoint. (sm, md, lg, etc.)
+

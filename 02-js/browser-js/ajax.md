@@ -1,7 +1,5 @@
 # The Internet
 
----
-
 ### Context
 
 Before we can describe the internet from a javascript perspective, we have to talk about what the internet is.
@@ -10,7 +8,7 @@ Before we can describe the internet from a javascript perspective, we have to ta
 - sending things across the network
 - just computers talking to computers
 
----
+
 
 #### Objectives
 - Learn about how things get transported over the internet
@@ -18,7 +16,7 @@ Before we can describe the internet from a javascript perspective, we have to ta
 - See some different responses after requesting things over the internet
 - Implement a request and deal with the response in javascript
 
----
+
 
 ## Demo: How to send things over the internet:
 Real-life recreation with paper. (One person pretends to be the backend)
@@ -30,7 +28,7 @@ Real-life recreation with paper. (One person pretends to be the backend)
 - If it's good, display the output to the user
 - If it's bad, do nothing, or display an error to the user
 
----
+
 
 ### Demo: Actually Getting Things
 1. Open your browser
@@ -41,7 +39,7 @@ Real-life recreation with paper. (One person pretends to be the backend)
 #### Dev Console Network Tab
 - clicking on the network tab, you will be able to see all other requests the browser makes when loading a page.
 
----
+
 
 ## Getting web pages on "the web"
 
@@ -57,7 +55,7 @@ Real-life recreation with paper. (One person pretends to be the backend)
 - There is a root path, ans then a set of resources
 - Each web dev chooses a way to format the order of a URL
 
----
+
 
 #### The Web Is a Big Collection of HTML Pages on the Internet
 
@@ -65,7 +63,7 @@ The World Wide Web, or "Web" for short, is a massive collection of digital pages
 
 - Taken from [About Tech](http://netforbeginners.about.com/od/i/f/What-Is-The-Internet.htm)
 
----
+
 
 
 #### Elements of a URL
@@ -89,7 +87,7 @@ Let's breakdown the contents of a URL:
 protocol|host/domain name|port|      path         | querystring   | hash/fragment
 ```
 
----
+
 
 
 Element | About
@@ -103,7 +101,6 @@ hash/fragment | the URI fragment is generally used by the client to identify som
 <br>
 _The Schema above is from [Tuts +](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)_
 
----
 
 ## HTTP
 - a **structured** protocol for sending and recieving HTML (or other data)
@@ -112,7 +109,7 @@ _The Schema above is from [Tuts +](http://code.tutsplus.com/tutorials/http-the-p
 - we are using `GET` method to **get** things. We'll learn others in Unit 2.
 - HTTP status codes: [https://en.wikipedia.org/wiki/List_of_HTTP_status_codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
----
+
 
 #### Anti-demo: Not getting things
 1. Open your browser
@@ -120,7 +117,43 @@ _The Schema above is from [Tuts +](http://code.tutsplus.com/tutorials/http-the-p
 1. Hit enter (You request the page from google.com)
 1. Your browser recieves the response and displays the result
 
----
+
+
+### Pairing Exercises
+
+##### Dev Console
+- open a new tab
+- open the dev console
+- click to the network tab
+- if there are any requests, clear them with the clear button
+- open up [generealassemb.ly](http://www.generalassemb.ly)
+- watch the requests happen inside the console
+- note the order of the requests
+- click on a couple of the indiuvidual requests to see the details-
+  - detail tab: General -> Request URL, Request Headers, etc.
+  - click to the `Preview` tab to see a preview of the request response
+
+##### Your Own Page
+- create an index.html page
+- create some elements that create requests - `a` `img` `link` `script`
+- set each of these to real assets that exist on the internet:
+  - set `a` to google.com or similar
+  - set `img` to an image found on google image search
+  - set `link` to the bootstrap library
+  - set `script` to the bootstrap javascript library
+- watch these requests in the network tab
+- change your html code so that these requests *will not* work.
+- reload the page to see what happens
+
+##### Javascript
+
+1. write a function that adds an img to the page (with a src from above). Open the dev tools so that the console and the network tab is visible. In the console, call your function.
+
+2. Create an array of image urls. Use a `setInterval` to add a new `img` tag to the page every 2 seconds with a different source from the array. Watch the network tab of the browser.
+
+3. Add some non-valid image urls to your array. Run your code again and watch the metwork tab.
+
+## AJAX
 
 ### In Javascript
 
@@ -144,7 +177,7 @@ request.open("GET", "https://swapi.co/api/people/1");
 // send the request
 request.send();
 ```
----
+
 
 Change it from a string type into a javascript object
 
@@ -156,7 +189,7 @@ var responseHandler = function() {
 };
 ```
 
----
+
 
 - Note: `new` keyword creates a new `XMLHttpRequest`
 - Note: `JSON` is built-in functionality that deals with JSON.
@@ -166,12 +199,12 @@ From: [MDN](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Usin
 From: [Moar MDN](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 https://github.com/toddmotto/public-apis
 
----
+
 
 - why do we need to use callbacks?
 - we don't want to freeze the user experience while the user loads a slow request
 
----
+
 
 ### Handling Errors
 
@@ -185,9 +218,24 @@ var requestFailed = function(){
 
 request.addEventListener("error", requestFailed);
 ```
----
+
 
 ### Pairing Exercises
+
+##### Dev Console
+- open a new tab
+- open the dev console
+- click to the network tab
+- if there are any requests, clear them with the clear button
+- open up [generealassemb.ly](http://www.generalassemb.ly)
+- watch the requests happen inside the console
+- note the order of the requests
+- click on a couple of the indiuvidual requests to see the details-
+  - detail tab: General -> Request URL, Request Headers, etc.
+  - click to the `Preview` tab to see a preview of the request response
+
+
+##### AJAX
 - Create a new `index.html` file with an empty `body` tag.
 - Create an empty `script.js` file
 - Put the above code in a `window.onload` function callback.
