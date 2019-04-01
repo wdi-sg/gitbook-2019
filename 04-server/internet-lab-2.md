@@ -86,6 +86,13 @@ Serve the file.
 1. Send it to friends outside of class.
 1. Browse the files in that directory.
 
+### Step 5: Ports
+1. Open a new terminal (leave the other one open)
+1. `cd` to the directory with your files
+1. run `http-server` on a different port: `http-server -p 7655`
+1. See it on your computer: `http://127.0.0.1:7655`
+1. Send the new IP port to people
+
 #### Extra:
 What other files can you put in that directory and serve?
 You can't make a curl request for an image, but what files can you make a curl request for?

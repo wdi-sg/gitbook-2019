@@ -189,22 +189,27 @@ node index.js
 
 1. Write a basic node program that takes user input and `console.log`s it back out to the user:
 
-So writing this on the command line:
 
+Run this on the command line:
 ```
-node index.js yourArgumentHere
-```
-
-Should result in:
-
-```
-yourArgumentHere
+node index.js pizza
 ```
 
-In your `index.js` file, in order to get your first argument, you will need:
+Look at `process.argv` - it's an array. How do you access `pizza` ?
 
+Console log just that part, it should look like:
+```
+pizza
+```
+
+In your code, in order to get the command argument (pizza), you will need:
 ```
 process.argv[2]
+```
+
+What happens when you run this:
+```
+node index.js noodles
 ```
 
 ##### Further:

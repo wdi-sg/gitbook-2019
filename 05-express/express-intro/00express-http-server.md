@@ -3,23 +3,21 @@
 ## HTTP 102 (Application Layer)
 The HT in HTTP: Getting HTML pages over the internet.
 
----
+
 
 ### Objectives
 - learn in-depth the parts of an HTTP request
 - learn about the parts of a URL
 - review status codes
 
----
+
 
 ## The World Wide Web vs. The Internet
 Let's look one (network) level up to the kinds of things we are requesting over the internet.
 
----
 
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg)
 
----
 
 - request and response cycle between a client and a host
 - stateless ( no matter how many times something is requested, we will do the same thing )
@@ -27,14 +25,11 @@ Let's look one (network) level up to the kinds of things we are requesting over 
 - has a response header (we will be looking at that this week)
 - comes back with a status code
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
-
 HTTP is the most common protocol we'll work with. It stands for "Hyper Text Transfer Protocol", it allows for communication between a variety of different computers and supports a ton of different network configurations. To make this possible, it assumes very little about a particular system, and does not keep state between different message exchanges.
 
 Read this as: "HTTP makes it easy for many different computers to talk to each other."
 
-This makes HTTP a stateless protocol.
+This makes HTTP a *stateless* protocol.
 
 Let's define the following vocabulary:
 
@@ -52,19 +47,17 @@ _Text From [Tuts +](http://code.tutsplus.com/tutorials/http-the-protocol-every-w
 
 Note that you will have seen HTTPS used on websites, this is the secure version of the http protocol and is used when transmitting sensitive data. It uses encryption and is more secure but is slower.
 
----
+
 
 ### Responding to a request: Status codes
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
 
 
 Once this request reaches the server, then this server will return a response to the requester.
 
 HTTP responses are similar to HTTP requests in the way that they are text based and contain HTTP headers and status. Look on the first line above, again - the HTTP response returns the HTTP status code. This code is very useful for developers working with request/response cycles.
 
----
+
 
 The response codes come as three digit numbers and dictate whether a specific HTTP requests has been successfully completed. Responses are grouped in five classes, with the first digit determining the higher-level categorization:
 
@@ -74,7 +67,7 @@ The response codes come as three digit numbers and dictate whether a specific HT
 - 4xx Client Error
 - 5xx Server Error
 
----
+
 
 ## Demo: How to send things over the internet: HTTP
 Real-life recreation with paper. (One person pretends to be the backend)
@@ -92,12 +85,10 @@ Real-life recreation with paper. (One person pretends to be the backend)
 - If it's bad, do nothing, or display an error to the user
 
 
----
+
 
 ## The Web Is a Big Collection of HTML Pages / resources on the Internet
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
 
 We've seen how the network of the internet transports things, but what is it transporting?
 
