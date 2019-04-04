@@ -8,7 +8,7 @@ This is part of CRUD (Create, Read, Update, Destroy).
 
 [Formal definition on wiki](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
----
+
 
 We will need several pieces to do this:
 1. an HTML form
@@ -17,7 +17,7 @@ We will need several pieces to do this:
 1. and, an HTML page to show the user
 
 First, let's talk about how to send data from the browser to the server.
----
+
 
 ### HTTP Post
 
@@ -36,13 +36,13 @@ Real-life recreation with paper. (One person pretends to be the backend)
 - If it's good, display the output to the user
 - If it's bad, do nothing, or display an error to the user
 
----
+
 
 Important Points:
 - the parameters for the request are in the headers, the data itself is in the body of the request (inside the envelope)
 - the point of a post request isn't always to save something, but a request where something is saved is almost always a post request
 
----
+
 
 ### How to make a POST request in the browser
 - one of the main default behaviors of HTML in the browser is that `<a>` tags create `GET` requests and `form` tags create POST requests.
@@ -60,7 +60,7 @@ Given:
 
 When the submit button is clicked, this form will produce a POST request to the server.
 
----
+
 
 
 #### RESTful Routing
@@ -69,33 +69,33 @@ RESTful routing is a scheme to structure your URLS that removes duplication, and
 
 We don't need to rename the route animals, because express will separate things out depending on the HTTP method we use.
 
-| **URL** | **HTTP Verb** |  **Action**|
-|------------|-------------|------------|
-| /photos/         | GET       | index
-| /photos/new      | GET       | new
-| /photos          | POST      | create
-| /photos/:id      | GET       | show
-| /photos/:id/edit | GET       | edit
-| /photos/:id      | PATCH/PUT | update
-| /photos/:id      | DELETE    | destroy
+| **URL** | **HTTP Verb** |  **Action**| **Description** |
+|------------|-------------|------------|----------------|
+| /photos/         | GET       | index | Display a list of all photos |
+| /photos/new      | GET       | new   | Display a form for creating a photo |
+| /photos          | POST      | create | Accept a request for creating a photo |
+| /photos/:id      | GET       | show | Display a page for a single photo |
+| /photos/:id/edit | GET       | edit | Display a form for editing a specific photo |
+| /photos/:id      | PATCH/PUT | update | Accept a request for new data for a specific photo |
+| /photos/:id      | DELETE    | destroy | Accept a request to delete a specific photo |
 
 
 [Read more on wiki](http://en.wikipedia.org/wiki/Representational_state_transfer)
 
----
+
 
 ## CRUD in action
 
 To receive this data we need to create a `POST` route in express.
 
----
+
 
 
 ### Parsing Form Data
 
 Parsing parameters from a form needs a built-in express middleware function.
 
----
+
 
 **index.js**
 ```js
@@ -108,13 +108,13 @@ app.use(express.urlencoded({
   extended: true
 }));
 ```
----
+
 
 Note that we set an attribute `extended` to `true` when telling our app to use the body parser. This attribute determines which library is used to parse data. Discussion on extended [here](https://expressjs.com/en/api.html#express.urlencoded).
 
 Now, if we try to add this backend route, calling `req.body` should contain the form input.
 
----
+
 
 **backend - express route**
 ```js
@@ -125,7 +125,7 @@ app.post('/animals', function(req, res) {
 });
 ```
 
----
+
 
 ### Pairing Exercise
 
@@ -194,16 +194,29 @@ app.get('/', (request, response) => {
 app.listen(3000, () => console.log('~~~ Tuning in to the waves of port 3000 ~~~'));
 ```
 
-use a CURL command to make a POST request to your server
+##### POST with CURL
+Use a CURL command to make a POST request to your server
+
+(We can use CURL to create the request, without having to construct anything else)
 ```
 curl -d "monkey=banana&koala=eucalyptus" -X POST http://localhost:3000/animals
 ```
 
-#### write the html form to make the post request
-- create your form and put it in the public directory
+##### POST From the Browser
 
-- set the action of the form to the path of the POST route
+Write the html form to make the post request:
 
-- create a GET route request handler in your express app
+- Make a `GET` route (`app.get`) at `/myform`
 
+- Send back this HTML form in the response:
+
+```
+<form method="POST" action="/animals">
+  Animal Name:
+  <input type="text" name="name">
+  <input type="submit" value="Submit">
+</form>
+```
 - try out your form
+
+- watch the network tab to see the request go out.

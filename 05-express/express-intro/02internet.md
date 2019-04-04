@@ -1,4 +1,4 @@
-## Internet Part 4:
+## HTTP URLs
 
 Let's add the idea that we want to get specific things over the internet. This is essentially what a web app is. It gets information but formatted in a specific way beyond just spitting out static files. In order to take more specific input, we need to specify what we want in a more complex way. The getting and formatting of this data is what this class is all about.
 

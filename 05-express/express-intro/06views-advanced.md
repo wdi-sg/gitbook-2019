@@ -1,6 +1,4 @@
-# Advanced View and Templates
-
-### Layouts
+# View Layouts
 Sometimes you want the same surrounding HTML for each template - for example your head or body tags don't change with each different page.
 
 First, pass the relevant props to a layout component.
@@ -38,46 +36,6 @@ class HelloMessage extends React.Component {
       <DefaultLayout title={this.props.title}>
         <div>Hello {this.props.name}</div>
       </DefaultLayout>
-    );
-  }
-}
-
-module.exports = HelloMessage;
-```
-
-### Sub Component Files
-
-Components can be used to modularize views and reduce repetition. A common pattern is to move the header and footer of a page into separate views, or partials, then render them on each page.
-
-#### Example
-
-**views/components/header.jsx**
-```
-var React = require('react');
-
-class Header extends React.Component {
-  render() {
-    return (
-      <div class="header">
-        <h1>This is the header</h1>
-      </div>
-    );
-  }
-}
-
-module.exports = Header;
-```
-
-**views/hello-message.jsx**
-```
-var React = require('react');
-var Header = require('./components/header');
-
-class HelloMessage extends React.Component {
-  render() {
-    return (
-      <Header/>
-      <div>Hello {this.props.name}</div>
     );
   }
 }

@@ -2,6 +2,18 @@
 
 Putting things on the internet.
 
+
+## The Web Is a Big Collection of HTML Pages / resources on the Internet
+
+We've seen how the network of the internet transports things, but what is it transporting?
+
+The World Wide Web, or "Web" for short, is a massive collection of digital pages: that large software subset of the Internet dedicated to broadcasting content in the form of HTML pages. The Web is viewed by using free software called web browsers.
+
+Born in 1989, the Web is based on hypertext transfer protocol, the language which allows you and me to "jump" (hyperlink) to any other public web page. There are over 65 billion public web pages on the Web today."
+
+- Taken from [About Tech](http://netforbeginners.about.com/od/i/f/What-Is-The-Internet.htm)
+
+
 ### Step 1: Checkout the local network.
 
 When you connect to the wifi you are connected to the local network.

@@ -105,7 +105,7 @@ Add the get route form that creates the request:
 app.get('/editsomething',(request, response) => {
 
   let html = '<form method="POST" action="/putrequest?_method=delete">'+
-      '<input name="id" type="hidden" value="'+pokemon.id+'"/>'+
+      '<input name="id" type="hidden" value="something"/>'+
       '<input type="submit" value="delete this"/>'+
   '</form>';
 
@@ -116,6 +116,7 @@ app.get('/editsomething',(request, response) => {
 Add the put method route to your app:
 ```js
 app.put("/putrequest", (request, response) => {
+  console.log(request.body);
   //read the file in and write out to it
   response.send('yes');
 });

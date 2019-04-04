@@ -24,7 +24,7 @@ Then we need an express app. This express app will allow users to create an acco
 ### Register and Login
 
 ### Logged In Cookies
-We will ask the user to verufy their identity once, at the begining of their session, and after that we can give them a cookie that will tell us they logged in at the beggining of their session.
+We will ask the user to verify their identity once, at the begining of their session, and after that we can give them a cookie that will tell us they logged in at the beggining of their session.
 
 There are 2 situations that we will have verified the user- when they register and when the log in.
 

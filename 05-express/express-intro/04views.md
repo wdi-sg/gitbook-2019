@@ -1,5 +1,4 @@
 # Views and Templates
----
 
 ### Views
 
@@ -7,7 +6,7 @@ We cannot keep using `response.send` to send a response. Ultimately, we'll want 
 
 We want to have this page's HTML be different for each request. How do we do this??
 
----
+
 
 ### Templating with React
 
@@ -15,9 +14,9 @@ If we want to customize what's on the page? We're going to set up a template eng
 
 React is used on the front end of lots of sites, but it's __JSX__ component can also be used to simply create HTML.
 
-We need to do a couple steps to get the template engine working.
+##### Note: the server-side react is not the same as browser-side react. Be careful when googling. If a resouce makes reference to DOM or browser events then it is discussing browser react, and may or may not be helpful.
 
----
+We need to do a couple steps to get the template engine working:
 
 First, install [`express-react-views`](https://github.com/reactjs/express-react-views)
 
@@ -25,7 +24,9 @@ First, install [`express-react-views`](https://github.com/reactjs/express-react-
 npm install express-react-views react react-dom
 ```
 
-Then, prepare this directory structure on your `node` project.
+Then, prepare this directory structure on your `node` project:
+
+Run these two commands: `mkdir views` `touch views/home.jsx` to create this structure:
 
 ```
 .
@@ -36,7 +37,7 @@ Then, prepare this directory structure on your `node` project.
 1 directories, 2 files
 ```
 
----
+
 
 Once structure is setup, you can setup the `express` view engine to `jsx` in this manner.
 
@@ -61,19 +62,25 @@ app.get('/', (req, res) => {
 })
 ```
 
----
+
 ### JSX
 
-JSX is javascript and HTML. It looks like this:
+JSX is javascript and HTML.
+
+Start by using it to simply render an HTML page.
 ```
 var React = require('react');
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello</h1>
-      </div>
+      <html>
+        <body>
+          <div>
+            <h1>Hello</h1>
+          </div>
+        </body>
+      </html>
     );
   }
 }
@@ -103,31 +110,33 @@ app.engine('jsx', reactEngine);
 // this tells express where to look for the view files
 app.set('views', __dirname + '/views');
 
-// this line sets handlebars to be the default view engine
+// this line sets react to be the default view engine
 app.set('view engine', 'jsx');
 
 app.get('/', (req, res) => {
   // giving home.jsx file an object/context with `name` as a property
-  res.render('home', {name: "Sterling Archer"});
+  const data = {name: "Sterling Archer"};
+  res.render('home', data);
 });
 
 app.listen(3000);
 ```
-
----
 
 then we need to update our `home.jsx` to use a templating variable.
 
 **views/home.jsx**
 ```html
 var React = require('react');
-
 class Home extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello, { this.props.name }!</h1>
-      </div>
+      <html>
+        <body>
+          <div>
+            <h1>Hello, { this.props.name }!</h1>
+          </div>
+        </body>
+      </html>
     );
   }
 }
@@ -135,11 +144,66 @@ class Home extends React.Component {
 module.exports = Home;
 ```
 
-
 The JavaScript being embedded is enclosed by the `{ }` tags.
 
 
----
+### Pairing Exercise:
+
+Start from scratch.
+
+#### Create your app
+
+```
+mkdir react-v
+cd react-v
+npm init
+npm install express
+npm install express-react-views react react-dom
+touch index.js
+mkdir views
+touch views/home.jsx
+```
+
+Follow the examples above to get some HTML to render.
+
+Use `this.props` to render some dynamic data in the HTML. (the `Sterling Archer` example)
+
+Change the name value in the object to see the changes: `{name: "Sterling Archer"}` to `{name: "Susan Chan"}`
+
+Add more keys into the object: `weight: 12324`.
+
+Output the name as well as the weight.
+
+### further With Data
+
+Paste the google shopping variable / object into the top of your file: [https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js](https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js)
+
+You should be able to access the data from anywhere.
+
+Make sure it worked ok, put this in your app.get:
+```
+console.log( products.items[0].id );
+```
+
+Which should log an item id for you out to the terminal. This ensures you have proper access to the products.
+
+#### Render a single product object in react
+
+Implement an express route `/first` - it creates an HTML page with the first user in the array `products.items[0]`.
+
+This template should display at least 2 data fields for this item.
+
+##### further
+Implement a route with params:  `/items/:id`
+
+Use `:id` to get the user according to it's index in the array
+
+##### further
+Change your code so that the param will be used to get the item by it's `googleId`.
+
+For example: (127.0.0.1/items/11180453840663864493)[127.0.0.1/items/11180453840663864493]
+
+### Rendering With Logic
 
 #### Conditional Rendering
 Sometimes we want to decide to render something based on a variable.
@@ -208,7 +272,7 @@ class Home extends React.Component {
 
 module.exports = Home;
 ```
----
+
 
 ### HTML Attributes
 
@@ -233,69 +297,28 @@ CSS class names are set with `className` instead of `class`
 ```
 
 
----
+## Pairing Exercise
 
-### Pairing Exercise:
+Use the above to render items:
 
-Start from scratch.
+##### Render Multiple Items in a Loop
 
-#### Create your app
+Implement an express route `/items` - it creates an HTML page with all of the items.
 
-```
-mkdir react-v
-cd react-v
-npm init
-npm install express
-npm install express-react-views react react-dom
-touch index.js
-```
-
-#### Create a dummy data file:
-
-Go to this URL: [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
-
-Since this is just for rendering, let's just put all of this data into a file, and use `require` to get it.
-
-users.js:
-
-```
-module.exports = // paste the contents of the file here
-```
-
-Require the file into your app:
-
-index.js:
-
-```
-const users = require('./users.js')
-```
-
-#### Render a single user object in react
-
-Implement an express route `/firstuser` - it creates an HTML page with the first user in the array `users[0]`.
-
-This template should display at least 2 data fields for this user.
-
-##### further
-Implement a route with params:  `/users/:id`
-
-Use `:id` to get the user according to it's index in the array
-
-##### further
-Fix the above to search through the array and get the user according to their *actual* id
-
-##### further
-
-Implement an express route `/users` - it creates an HTML page with all of the users.
-
-This will be a `<ul>` with an `<li>` for each user.
+This will be a `<ul>` with an `<li>` for each item.
 
 Use the `map` syntax above to render the list.
 
-This template should display at least 2 data fields for each user.
+This template should display the title for each item.
 
-##### further
-Display the nested pieces of data in the user objects.
+##### Render More Data
+Display the title, description and the inventory stock availability.
 
-*note*: don't use `for in` to display the nexted data, or any data in the user object.
+##### Conditionals
+Also display the tax of the stock availablity:
 
+```
+<p>Tax: {tax}</p>
+```
+
+Some of the `inventories` records will not have a tax field. If the inventory is missing the `tax` field, don't render the `p` tag at all.

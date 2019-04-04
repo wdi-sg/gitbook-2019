@@ -1,9 +1,5 @@
-# Internet part 3: Servers and Sending HTML over the Internet
-
-## HTTP 102 (Application Layer)
+# HTTP
 The HT in HTTP: Getting HTML pages over the internet.
-
-
 
 ### Objectives
 - learn in-depth the parts of an HTTP request
@@ -11,10 +7,8 @@ The HT in HTTP: Getting HTML pages over the internet.
 - review status codes
 
 
-
 ## The World Wide Web vs. The Internet
 Let's look one (network) level up to the kinds of things we are requesting over the internet.
-
 
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg)
 
@@ -67,7 +61,24 @@ The response codes come as three digit numbers and dictate whether a specific HT
 - 4xx Client Error
 - 5xx Server Error
 
+##### 4xx
 
+Set the status code to 404.
+```
+response.status(404).send('not found. banana.');
+```
+
+##### 3xx
+Redirect the user.
+```
+response.redirect(301, 'http://example.com');
+```
+
+##### 5xx
+Set the status code to 503.
+```
+response.status(503).send('Oooh something went wrong :(');
+```
 
 ## Demo: How to send things over the internet: HTTP
 Real-life recreation with paper. (One person pretends to be the backend)
@@ -84,16 +95,3 @@ Real-life recreation with paper. (One person pretends to be the backend)
 - If it's good, display the output to the user
 - If it's bad, do nothing, or display an error to the user
 
-
-
-
-## The Web Is a Big Collection of HTML Pages / resources on the Internet
-
-
-We've seen how the network of the internet transports things, but what is it transporting?
-
-The World Wide Web, or "Web" for short, is a massive collection of digital pages: that large software subset of the Internet dedicated to broadcasting content in the form of HTML pages. The Web is viewed by using free software called web browsers.
-
-Born in 1989, the Web is based on hypertext transfer protocol, the language which allows you and me to "jump" (hyperlink) to any other public web page. There are over 65 billion public web pages on the Web today."
-
-- Taken from [About Tech](http://netforbeginners.about.com/od/i/f/What-Is-The-Internet.htm)

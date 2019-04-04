@@ -1,27 +1,25 @@
 # React Components
 
-We saw a bit of how react works, and how babel works with react.
-
-Now we will see one of the main concepts of React, the Component.
+We rendered some HTML with react, now we will see one of the main concepts of React, the Component Class.
 
 In the last example we saw that we can use react to render things just like we did in express and rails- where the HTML template is a kind of code mad-lib- You fill in the data where it needs to go in the page.
 
 React does this at the base level, but we can also sub-divide each part of a page into `Component`s.
 
 These are the sepearate logical pieces of any page.
----
+
 
 ![https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png](https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png)
----
+
 
 ![https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png](https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true)
----
+
 
 ![https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png](https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true)
----
+
 
 ![https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png](https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true)
----
+
 
 
 ### Properties of Components
@@ -33,7 +31,7 @@ These are the sepearate logical pieces of any page.
 - S small
 - T testable
 
----
+
 
 ## Writing a component
 ```
@@ -51,7 +49,7 @@ class List extends React.Component {
 - `List` is a js "class" that inherits from React
 - a component has certain methods like `render` that allow you to control it
 
----
+
 
 ### Component Properties
 In react, a component takes data in and renders itself based on that data.
@@ -60,7 +58,7 @@ The data is passed from above in the parent component.
 
 Let's start rendering a real list from data coming from outside the list itself.
 
----
+
 
 ```
 class List extends React.Component {
@@ -90,7 +88,7 @@ const listOfItems = [
 <List items={listOfItems} />,
 ```
 
----
+
 
 #### Props
 Props are the react way of passing data into your component.
@@ -102,7 +100,7 @@ When you specify your component you specify it's `props` just like an HTML attri
 
 You can then access them from within the component using `this.props`
 
----
+
 
 ### Nesting Components
 We mentioned that it's the nested structure of components using components that really makes react special.
@@ -145,7 +143,42 @@ const listOfItems = [
 <List items={listOfItems} />,
 ```
 
----
+### Separate Files with require
+
+**views/components/header.jsx**
+```
+var React = require('react');
+
+class Header extends React.Component {
+  render() {
+    return (
+      <div class="header">
+        <h1>This is the header</h1>
+      </div>
+    );
+  }
+}
+
+module.exports = Header;
+```
+
+**views/hello-message.jsx**
+```
+var React = require('react');
+var Header = require('./components/header');
+
+class HelloMessage extends React.Component {
+  render() {
+    return (
+      <Header/>
+      <div>Hello {this.props.name}</div>
+    );
+  }
+}
+
+module.exports = HelloMessage;
+```
+
 
 ### Exercise
 
