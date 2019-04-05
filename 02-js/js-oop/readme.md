@@ -446,17 +446,23 @@ class Monster{
   }
 
 }
-var player = new Person();
+const player = new Person();
 
-var monster = new Monster();
+const monster = new Monster();
 
-while( monster.hp > 0 ){
+// you have 10 turns to win the game
+var turns = 0;
+
+while( turns < 10 ){
 
   alert("currently "+monster.hp+" points");
   var damagePoints = Math.random() * 10;
   monster.damage( damagePoints );
   alert( "monster lost "+damagePoints+" points.");
+  turns++;
 }
+
+alert("done with game");
 ```
 
 Run this code. It damages the monster / enemy for each "turn".
@@ -492,6 +498,40 @@ const monsterChoice = prompt("How many monsters do you want to fight?");
 let monsterNum = parseInt( monsterChoice );
 ```
 
-Use a loop to fill a dynamic number of monsters into the array before the game starts.
+Use a loop to fill a dynamic number of monsters into the array before the game starts, using the `monsterNum` variable.
 
 ##### further
+You can currently just keep attacking all the monsters no matter the hit points they have left. (i.e., if the HP is zero or below)
+
+Add logic to take the monster out of the array if it's HP is 0 or below.
+
+##### further
+Change the loop logic so that the game ends when all the monsters are dead.
+
+
+##### further
+Add a monster truck to the game.
+
+This is a truck that carries all the monsters.
+
+The truck has armor that has hit points as well.
+
+As long as the truck armor is more than 0, the player's attacks affect the truck first.
+
+Hint: the truck is a new class that can contain monster class instances and has HP.
+
+You can write a method inside the truck class that creates the monsters inside of it.
+
+##### further
+Display our the complete state of the game for each turn.
+
+##### further
+Give the player hit points.
+
+After the player's attack on the monster, that monster gets to attack the player, unless the player killed the monster.
+
+End the game if either the player kills all the monsters or they die.
+
+##### further
+Create a variable number of trucks at the beggining of the game, each with a random number of monsters inside.
+
