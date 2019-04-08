@@ -1,6 +1,5 @@
 # Databases
 
-
 Now we'll be seeing a complete system for storing data on the disk.
 
 No more reading in a file in order to edit it. No more managing which key is unique- name, id, etc.

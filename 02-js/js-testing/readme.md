@@ -216,10 +216,6 @@ add : function(a,b){
 }
 ```
 
-![Screenshot](assets/passing_test.png)
-
-**This test is passing**!
-
 Every block of code that starts with `it()` represents a single **test**.  Each test is performed in sequence, one after the other, in a queue.
 
 ##### Write Code

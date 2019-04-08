@@ -15,19 +15,19 @@ Differences:
   - what if two users both post the same thing
   - what if the name of the file changes
 
----
+
 
 ### How to connect to the DB:
 Configure the client to connect to the DB server
 
----
+
 
 1. require the library
 ```
 const pg = require('pg');
 ```
 
----
+
 
 2. set all of the configuration in an object
 ```
@@ -39,7 +39,7 @@ const configs = {
 };
 ```
 
----
+
 
 3. create a new instance of the client
 ```
@@ -47,7 +47,7 @@ const client = new pg.Client(configs);
 ```
 (this is the client you will be using for this single web server instance)
 
----
+
 
 ### Using the client in your app
 1. setup the query text and the values you want to work with

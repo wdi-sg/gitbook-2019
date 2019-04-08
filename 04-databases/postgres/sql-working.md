@@ -4,7 +4,7 @@ When working with your app it is helpful to be able to deal with all of your dat
 
 We'll create a workflow to easily wipe away your development data and start fresh.
 
----
+
 
 ### Note: Create a database - easy way
 
@@ -19,7 +19,7 @@ Create a DB called pokemons
 createdb pokemons -U akira
 ```
 
----
+
 
 ### Save your DB tables:
 When you want to add a table (including the first table in your DB we will be writing that sql in a file: **tables.sql**
@@ -41,7 +41,7 @@ To run the file on the command line:
 psql -d DATABASE_NAME -U USERNAME -f tables.sql
 ```
 
----
+
 
 ### Start the db with some dummy data - seed.sql
 Write some lines of SQL that will populate the db with some small data.
@@ -62,7 +62,7 @@ Run the file:
 psql -d DATABASE_NAME -U USERNAME -f tables.sql
 ```
 
----
+
 
 ### Clear away your changes:
 In development it can be very useful to clear away the data you are writing into your db easily- just run this sql, then run your tables.sql above.
@@ -90,7 +90,7 @@ Return the result of the insert.
 INSERT INTO movies (title, description, rating) VALUES('Cars', 'a movie', 9) RETURNING *;
 ```
 
----
+
 
 #### Date Data Type
 
