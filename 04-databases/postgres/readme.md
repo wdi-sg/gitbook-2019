@@ -1,4 +1,61 @@
-# PostgreSQL
+# Database Systems
+
+## Objectives
+* Understand the data storage landscape and where SQL RDBMS fit.
+* Understand the added compexity of the DB system
+* Connect to a PostgreSQL database using `psql`
+
+
+## What is a database?
+
+- It is a program that enforces structure on your data and allows a computer to quickly retreive data.
+- A database should support CRUD operations
+
+
+![https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493](https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493)
+
+
+## Why Use a Database?
+
+* Data is structured
+* Databases are transactional
+* Data retrevial is fast
+* Has a system for remote access
+* Has a system for backup
+
+
+## Types of Databases
+
+**RDBMS** (Relational Database Management System) The most common type of database today is a **relational database**.  Relational databases have tabular data with rows for each instance of data and columns for each attribut of that data. Tables may refer to one another. Relational databases typically use **SQL** (Structured Query Language).
+
+
+###Brands of Relational Databases
+* Postgres
+* MySQL
+* Oracle (Commercial Product with lots of features)
+* Sybase
+* Microsoft SQL Server
+* SQLite (Good for mobile development/very small applications)
+
+## How are databases used in the wild?
+Every app needs to store data. The most popular data store by a wide margin is still something that runs SQL queries. These come in many different forms, but postgres is the DB we will be using in Rails and has been gaining popularity over mySql (it's main open source sql competitor) for the last 5 years. Other non-open source database systems include: Oracle, Microsoft SQL Server, Sybase, etc.
+
+#### Data Storage:
+
+##### Order of speed, reliability (least-to-most)
+- memory (memcache, redis)
+- noSQL (mongoDB, firebase)
+- SQL (postgres)
+- disk (jsonfile)
+
+##### Order of sturcture, least-to-most
+- disk (jsonfile, CSV)
+- memory (memcache, redis)
+- noSQL - (mongoDB, cassandra, firebase)
+- SQL (postgres)
+
+
+## PostgreSQL
 Postgres is the DB system we will be working with.
 
 If you installed Postgres.app you have access to psql from the elephant icon at the top of the screen:
@@ -97,7 +154,6 @@ List our tables in a database:
 ```
 \dt
 ```
-
 
 ### Pairing Exercise
 

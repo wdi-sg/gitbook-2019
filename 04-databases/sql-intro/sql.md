@@ -7,7 +7,6 @@ For this lesson, how to design a complete database system is out of scope. We wi
 The **schema** of the database is the set of create table commands that specify what the tables are and how they relate to each other. For our very simple database example, here is the schema:
 
 ```
-testdb=# \d+ students
                                                     Table "public.students"
  Column |         Type          |                       Modifiers
 --------+-----------------------+-------------------------------------------------------
@@ -61,33 +60,6 @@ CREATE TABLE students (
     email TEXT
 );
 
-```
-
-##### Note:
-For the pairing exercise the primary key is declared with `id INTEGER PRIMARY KEY`
-
-```sql
-CREATE TABLE students (
-    id INTEGER PRIMARY KEY,
-    name TEXT,
-    phone VARCHAR(15),
-    email TEXT
-);
-
-```
-
-
-
-
-
-Check that it's there:
-```
-\dt
-```
-
-Look at the table structure
-```
- \d+ students
 ```
 
 
@@ -187,36 +159,25 @@ Make the CREATE TABLE command and execute it.
 
 Once you're satisfied that the table is there, get rid of it using the DROP TABLE command.
 
-## Selecting
-
-A select statement allows you to get data from the database. Postgres has a good [tutorial on select](http://www.postgresql.org/docs/7.3/static/tutorial-select.html). I'd recommend looking at the tutorial sometime after the lesson.
-
-Create a new database to hold a movies table:
-
-```sql
-CREATE DATABASE testdb;
-```
-
-Connect to the new database:
-```sql
-\connect testdb;
-```
-
-Given this table:
-
-```sql
-CREATE TABLE movies (
-  id INTEGER PRIMARY KEY,
-  title TEXT,
-  description TEXT,
-  rating INTEGER
-);
-```
-
 ###### Note:
 Table creation usually uses a *serial* primary key: `id SERIAL PRIMARY KEY`
 
-The SQL we are running for this exercise is different in this detail.
+The SQL we are running for this exercise is different in this detail. `SERIAL` changes to `INTEGER`.
+
+For the pairing exercise the primary key is declared with `id INTEGER PRIMARY KEY`
+
+```sql
+CREATE TABLE students (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    phone VARCHAR(15),
+    email TEXT
+);
+```
+
+
+
+### Inserting
 
 And these insert statements:
 
@@ -229,6 +190,12 @@ INSERT INTO movies (title, description, rating) VALUES('Mystic River', 'did not 
 INSERT INTO movies (title, description, rating) VALUES('Argo', 'a movie', 8);
 INSERT INTO movies (title, description, rating) VALUES('Gigli', 'really bad movie', 1);
 ```
+
+### Selecting
+
+A select statement allows you to get data from the database. Postgres has a good [tutorial on select](http://www.postgresql.org/docs/7.3/static/tutorial-select.html). I'd recommend looking at the tutorial sometime after the lesson.
+
+
 
 This will select all the attributes from the movies table unconditionally.  Make sure not to forget the ; at the end of each statement. In SQL, semi colons are required to terminate statements.
 
@@ -275,11 +242,9 @@ We've gotten a list of movies back, but it's way too long for our uses.  Let's i
 SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5;
 ```
 
-### Pairing Exercise
-
 Write a query on the movie table to return the worst movie of all time.  There should be only 1 result returned. The result should include the title, description and rating of the movie.
 
-## Updating
+### Updating
 
 The update statement is defined [here](http://www.postgresql.org/docs/9.1/static/sql-update.html) in the postgres docs. It is used to change existing data in our database.
 
@@ -289,7 +254,7 @@ For example, if we do not think Gigli was actually that bad, and we want to chan
 UPDATE movies SET rating=2 WHERE title='Gigli';
 ```
 
-## Deleting
+### Deleting
 
 Deleting works similarly to a select statement. Here are the [docs on delete](http://www.postgresql.org/docs/8.1/static/sql-delete.html)
 

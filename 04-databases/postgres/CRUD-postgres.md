@@ -2,7 +2,7 @@
 
 Now we'll integrate our node.js code into an express app.
 
-![3-Tier Express Application](images/3-tier-application.jpg)
+![3-Tier Express Application](../images/3-tier-application.jpg)
 
 #### RESTful Routing
 
