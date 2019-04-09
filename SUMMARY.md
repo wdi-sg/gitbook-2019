@@ -103,7 +103,7 @@
       * [Lazy Normalization](04-databases/sql-intro/additional-topics/lazy_db_normalization.md)
   * [Postgres & Node](04-databases/postgres/readme.md)
     * [Postgres & Javascript](04-databases/postgres/sql-node.md)
-    * [DB Manegement](04-databases/postgres/sql-working.md)
+    * [DB Management](04-databases/postgres/sql-working.md)
     * [Returning & Types](04-databases/postgres/sql-working.md)
     * [Additional Topics](04-databases/postgres/additional-topics/readme.md)
       * [Database Administration](04-databases/postgres/additional-topics/dbadmin.md)
