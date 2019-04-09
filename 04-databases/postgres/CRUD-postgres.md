@@ -2,7 +2,7 @@
 
 Now we'll integrate our node.js code into an express app.
 
-![3-Tier Express Application](../images/3-tier-application.jpg)
+![3-Tier Express Application](https://wdi-sg.github.io/gitbook-2019/05-express/images/3-tier-application.jpg)
 
 #### RESTful Routing
 
@@ -63,6 +63,8 @@ pool.query(queryString, (err, result) => {
 
 ### Pairing Exercise
 
+###### Note that you don't need to run any of these SQL-related commands from within psql anymore.
+
 create a new dir
 ```
 mkdir poke-sql
@@ -84,7 +86,7 @@ add pg
 npm install pg
 ```
 
-create your db
+create your db on the terminal:
 ```
 createdb pokemons -U akira
 ```
@@ -103,7 +105,12 @@ CREATE TABLE IF NOT EXISTS pokemons (
 );
 ```
 
-Use some seed data:
+create a seed.sql
+```
+touch seed.sql
+```
+
+Add some seed data into `seed.sql`:
 ```
 INSERT INTO pokemon
 (name, img, weight, height)
@@ -121,7 +128,7 @@ VALUES
 ('Venusaur', 'http://www.serebii.net/pokemongo/pokemon/003.png', '100.0 kg', '2.01 m');
 ```
 
-run  the tables.sql and seed.sql
+run  the tables.sql and seed.sql on the terminal. (replace DATABSE_NAME and USERNAME with your own)
 ```
 psql -d DATABASE_NAME -U USERNAME -f tables.sql
 psql -d DATABASE_NAME -U USERNAME -f seed.sql
@@ -162,13 +169,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-// Set react-views to be the default view engine
-const reactEngine = require('express-react-views').createEngine();
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jsx');
-app.engine('jsx', reactEngine);
-
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
   // query database for all pokemon
 
   // respond with text that lists the names of all the pokemons
@@ -194,6 +195,13 @@ let onClose = function(){
 process.on('SIGTERM', onClose);
 process.on('SIGINT', onClose);
 ```
+
+test it: [http://127.0.0.1/hello](http://127.0.0.1/hello)
+
+##### Instructions
+Once the code above runs without errors, add a `pool.query` `SELECT` statement inside of `app.get` `/hello`.
+
+(Copy the `pool.query` DB code from above into the `app.get`.
 
 #### Further
 Write the code necessary to do an INSERT.

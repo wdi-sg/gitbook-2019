@@ -60,7 +60,9 @@ client.connect((err) => {
     console.log( "error", err.message );
   }
 
-  client.query(text, values, (err, res) => {
+  const text = 'SELECT * FROM students'
+
+  client.query(text, (err, res) => {
     if (err) {
       console.log("query error", err.message);
     } else {

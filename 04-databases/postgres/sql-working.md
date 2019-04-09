@@ -147,6 +147,8 @@ touch index.js
 touch tables.sql
 touch seed.sql
 createdb testdb -U USERNAME
+psql -d DATABASE_NAME -U USERNAME -f tables.sql
+psql -d DATABASE_NAME -U USERNAME -f seed.sql
 ```
 
 Use tables.sql to record the tables you need.
