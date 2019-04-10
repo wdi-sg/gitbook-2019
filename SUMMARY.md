@@ -110,8 +110,9 @@
       * [PostgreSQL Cheat Sheet](04-databases/postgres/additional-topics/sqlcheatsheet.md)
   * [Express & Postgres](04-databases/postgres/CRUD-postgres.md)
   * [Relational Tables](04-databases/relational/readme.md)
-    * [Relational SQL Tables - 1 - to - many](04-databases/relational/relational.md)
-    * [Relational SQL Tables - many - to - many](04-databases/relational/many-many.md)
+    * [1 - to - many](04-databases/relational/relational.md)
+    * [many - to - many](04-databases/relational/many-many.md)
+    * [SQL DB Modeling](04-databases/relational/erd.md)
 
   * [Additional Topics](04-databases/additional-topics/readme.md)
     * [MongoDB](04-databases/additional-topics/mongo-intro/intro-nosql.md)
