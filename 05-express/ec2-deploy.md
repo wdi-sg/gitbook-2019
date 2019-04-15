@@ -12,7 +12,9 @@
 
 3. Choose the default image. You can click through the "Qick Start" options. It should indicate "free tier eligible".
 
-4. Click "Launch"
+4. Click to `Configure Security Group`. Add `http` - it will configure to port 80 automatically.
+
+5. Click to "Launch"
 
 6. After that a modal window will prompt you to either create or choose an
    existing `.pem` file. 
@@ -30,28 +32,6 @@ need a new one, do the following:
 8. Eventually you'll see a green dot next to your instance, letting you know
    it's ready. Take note of of the "Public DNS" line. You'll use that url to
 [[SSH|SSH]] into your instance.
-
-## Uploading your files
-
-Go to your [EC2 Dashboard](https://console.aws.amazon.com/ec2/v2/home).
-
-Click on '# Running Instances' ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-1.png))
-**NOTE**: If you need to create an instance, click [[here|Creating-an-EC2-Instance]]
-
-Click the checkbox of the instance in question ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-2.png))
-
-Copy the Public DNS to your clipboard ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-3.png))
-
-### SCP from your computer to EC2
-
-In your terminal, navigate to the directory your .pem file is in
-
-```bash
-cd THE-DIR-YOUR-PEM-FILE-IS-LOCATED/
-scp -i YOUR-PEM-FILE.pem THE-FILE-YOU-WANT-TO-SCP.csv ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE:~/
-```
-
-**NOTE**: The `:~/` at the end of the DNS specifies which directory on the EC2 instance you want to transfer to. In this case, you're wanting your file to live in the home directory (hence the tilde).
 
 ## ssh
 
@@ -109,3 +89,49 @@ chmod 400 YOUR-PEM-FILE.pem
 ```
 
 After that, try the `ssh` command again.
+
+Once you can log into the instance, prepare it for the express app:
+
+```
+sudo yum update
+sudo yum install git
+sudo su - root
+```
+
+Install nvm - instructions from here: [https://github.com/creationix/nvm](https://github.com/creationix/nvm)
+
+```
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+```
+
+```
+source ~/.bashrc
+```
+
+```
+nvm install node
+```
+
+#### Setting up your own App
+
+Fork this express basic app on github: [https://github.com/wdi-sg/express-basic](https://github.com/wdi-sg/express-basic)
+
+Clone it to your computer.
+
+So that you know that it's yours, make a single change in the app. `response.send` something different. Commit those changes and push them to your github repo.
+
+Then inside the AWS instance, clone it, install the dependencies and start the app.
+
+```
+git clone [https://github.com/<YOUR USER>/express-basic.git]
+cd express-basic
+npm install
+node index.js 80
+```
+
+Copy the "Public DNS" from the AWS console. Paste it into the browser to see your running app.
+
+See the request handler `console.log` in the ssh terminal.
+
+### pairing exercise
+Repeat the above steps
