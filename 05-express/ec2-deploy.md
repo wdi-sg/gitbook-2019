@@ -63,8 +63,7 @@ Copy the Public DNS to your clipboard.
 In terminal, navigate to the directory your .pem file is in
 
 ```bash
-cd the-directory-your-pem-file-is-located/
-ssh -i YOUR-PEM-FILE.pem ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE
+ssh -i the-directory-your-pem-file-is-located/YOUR-PEM-FILE.pem ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE
 ```
 
 You've successfully SSH'ed if you see the following:
