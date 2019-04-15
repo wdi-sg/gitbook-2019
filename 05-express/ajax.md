@@ -66,8 +66,6 @@ class Hello extends React.Component {
 
 module.exports = Hello;
 ```
-app.use(express.static('public'))
-
 
 
 #### Run the app
@@ -76,8 +74,19 @@ app.use(express.static('public'))
 
 #### Create some javascript that runs in the browser
 
+Allow express to serve static files from the `public` directory.
+
+index.js
+```
+app.use(express.static('public'))
+```
+
 ```shell
 mkdir public
+```
+
+Make a js file:
+```
 cd public
 touch script.js
 ```
@@ -119,7 +128,12 @@ Make sure that you can answer all of these questions.
 - Find all of the relevant requests in the chrome dev tools network tab.
 
 
-##### AJAX
+## AJAX
+
+We've covered an app from before unit 1, up to the beggining of unit 1.
+
+Let's look back at the AJAX javascript from the *end* of unit 1:
+
 Change the `script.js` file to include the code below:
 
 ```
@@ -179,3 +193,24 @@ app.get('/banana', (request, response) => {
   response.send(data);
 });
 ```
+
+#### pairing exercise
+
+Run the above code.
+
+##### further
+
+Render the response of the request in the browser using DOM manipulation.
+
+##### further
+
+Install `pg` and make the `pool` variable. Hook the route `banana` up to a DB `SELECT` query. In the response of the request, send back the query result data.
+
+##### further
+
+Change the query to the DB to be dynamic depending on what was requested by the user:
+
+- collect input from the user using an event in the DOM. (input event?)
+- get this input and put it in the AJAX request
+- use that part of the request to make your SQL query dynamic
+- send the result back to the browser in the response and render it in the DOM
