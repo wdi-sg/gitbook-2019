@@ -18,10 +18,8 @@
 5. Click to "Launch"
 
 6. After that a modal window will prompt you to either create or choose an
-   existing `.pem` file. 
-  - If you have one you'd like to use, choose that. 
-  - If you
-need a new one, do the following:
+   existing `.pem` file.  
+  - Create a new one:
     1. Choose "Create a new key pair"
     2. Ideally give it a lower case name with no spaces.
     3. Click "Download key pair". AWS won't let you click "Launch Instances" until you download your key pair
@@ -47,8 +45,7 @@ Copy the Public DNS to your clipboard.
 In terminal, navigate to the directory your .pem file is in
 
 ```bash
-cd the-directory-your-pem-file-is-located/
-ssh -i YOUR-PEM-FILE.pem ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE
+ssh -i the-directory-your-pem-file-is-located/YOUR-PEM-FILE.pem ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE
 ```
 
 You've successfully SSH'ed if you see the following:
