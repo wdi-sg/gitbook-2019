@@ -4,11 +4,11 @@
 
 1. From your [AWS Console](https://console.aws.amazon.com/console/home), type `EC2` in the search bar. This will send you to the EC2 dashboard.
 
-![](images/ec2-search-bar.png)
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-search-bar.png?raw=true)
 
 2. From the EC2 Dashboard, click "Launch Instance"
 
-![](images/ec2-launch-instance-btn.png)
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-launch-instance-btn.png)
 
 3. Choose the default image. You can click through the "Qick Start" options. It should indicate "free tier eligible".
 
@@ -35,12 +35,12 @@ need a new one, do the following:
 
 Go to your [EC2 Dashboard](https://console.aws.amazon.com/ec2/v2/home).
 
-Click on '# Running Instances' ([Screenshot](ec2-1.png))
+Click on '# Running Instances' ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-1.png))
 **NOTE**: If you need to create an instance, click [[here|Creating-an-EC2-Instance]]
 
-Click the checkbox of the instance in question ([Screenshot](ec2-2.png))
+Click the checkbox of the instance in question ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-2.png))
 
-Copy the Public DNS to your clipboard ([Screenshot](ec2-3.png))
+Copy the Public DNS to your clipboard ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-3.png))
 
 ### SCP from your computer to EC2
 
@@ -59,7 +59,7 @@ Go to your [EC2 Dashboard](https://console.aws.amazon.com/ec2/v2/home).
 
 Click on '# Running Instances' 
 
-Click the checkbox of the instance you want to SSH in to ([Screenshot](ec2-4.png))
+Click the checkbox of the instance you want to SSH in to ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-4.png))
 
 Copy the Public DNS to your clipboard.
 
