@@ -47,8 +47,7 @@ Copy the Public DNS to your clipboard ([Screenshot](https://github.com/wdi-sg/gi
 In your terminal, navigate to the directory your .pem file is in
 
 ```bash
-cd THE-DIR-YOUR-PEM-FILE-IS-LOCATED/
-scp -i YOUR-PEM-FILE.pem THE-FILE-YOU-WANT-TO-SCP.csv ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE:~/
+scp -i THE-DIR-YOUR-PEM-FILE-IS-LOCATED/YOUR-PEM-FILE.pem THE-FILE-YOU-WANT-TO-SCP.csv ec2-user@PASTE-YOUR-PUBLIC-DNS-HERE:~/
 ```
 
 **NOTE**: The `:~/` at the end of the DNS specifies which directory on the EC2 instance you want to transfer to. In this case, you're wanting your file to live in the home directory (hence the tilde).
