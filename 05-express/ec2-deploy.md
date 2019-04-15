@@ -4,15 +4,16 @@
 
 1. From your [AWS Console](https://console.aws.amazon.com/console/home), type `EC2` in the search bar. This will send you to the EC2 dashboard.
 
-![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-search-bar.png?raw=true)
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-a.png?raw=true)
 
 2. From the EC2 Dashboard, click "Launch Instance"
 
-![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-launch-instance-btn.png)
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-b.png?raw=true)
 
 3. Choose the default image. You can click through the "Qick Start" options. It should indicate "free tier eligible".
 
 4. Click to `Configure Security Group`. Add `http` - it will configure to port 80 automatically.
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-5.png?raw=true)
 
 5. Click to "Launch"
 
@@ -39,7 +40,7 @@ Go to your [EC2 Dashboard](https://console.aws.amazon.com/ec2/v2/home).
 
 Click on '# Running Instances' 
 
-Click the checkbox of the instance you want to SSH in to ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-4.png))
+Click the checkbox of the instance you want to SSH in to ([Screenshot](https://github.com/wdi-sg/gitbook-2019/blob/master/images/ec2-4.png?raw=true))
 
 Copy the Public DNS to your clipboard.
 
