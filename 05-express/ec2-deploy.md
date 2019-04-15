@@ -15,10 +15,8 @@
 4. Click "Launch"
 
 6. After that a modal window will prompt you to either create or choose an
-   existing `.pem` file. 
-  - If you have one you'd like to use, choose that. 
-  - If you
-need a new one, do the following:
+   existing `.pem` file.  
+  - Create a new one:
     1. Choose "Create a new key pair"
     2. Ideally give it a lower case name with no spaces.
     3. Click "Download key pair". AWS won't let you click "Launch Instances" until you download your key pair
