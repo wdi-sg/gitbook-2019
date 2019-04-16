@@ -1,5 +1,8 @@
 # AWS EC2
 
+## Sign Up for AWS
+[https://aws.amazon.com/](https://aws.amazon.com/)
+
 ## Create Your Instance
 
 1. From your [AWS Console](https://console.aws.amazon.com/console/home), type `EC2` in the search bar. This will send you to the EC2 dashboard.
