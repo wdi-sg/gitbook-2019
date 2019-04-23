@@ -21,6 +21,19 @@ In Ruby, multiline comments exist, but we generally use line comments with hasht
 # of comments
 # for you to read
 ```
+
+### Output
+
+javascript:
+```
+console.log("hello");
+```
+
+ruby:
+```
+puts "hello"
+```
+
 ## Data Types
 
 ### Nothingness
@@ -46,6 +59,8 @@ Datatypes used to represent a number
 
 ### Strings
 A primative datatype used to represent a string of characters
+
+Note that string in ruby have *very* many methods you can call on them to manipulate strings in common ways. If you needed to transform a string in some way, ruby probably has a method for it.
 
 #### Methods
 ```ruby
@@ -96,6 +111,8 @@ person.length
 
 ## Conditionals
 
+Conditionals work the same way in ruby. The only difference is the `end` syntax and the absence of "*truthy*/*falsy*".
+
 ```ruby
 if
 elsif
@@ -145,6 +162,8 @@ arr = [1,2,3]
 ```
 
 #### Array Methods
+
+Just like strings arrays have a huge list of methods that can be used to manipulate them.
 
 ```ruby
 .sort
@@ -246,7 +265,7 @@ cat[:fav_food]
 ```
 
 ### Symbols
-Used in the place of a string, almost always as a key in a hash (object)
+This is a datatype that doesn't exist in JS. Used in the place of a string, almost always as a key in a hash (object)
 
 javascript:
 ```js
@@ -272,7 +291,16 @@ my_hash[:foo] # -> "bar"
 
 
 ### Enumerables and Collections
-Enumberables are a kind of module that you use to manipluate **collections**
+Enumberables are a kind of module that you use to manipluate **collections** (collections are arrays and hashes)
+
+A collection has methods that you can call on it that does the same job as a `for` loop: visits every value so that you can do something at each value.
+
+Like the other plain data *types*, ruby gives many different kinds of iteration methods on collections- most types of repeating actions you want to do on a collection of things, ruby has it.
+
+
+#### Each
+
+The simplest example is `each` which replaces a for loop (or the JS forEach function)
 
 `.each` is a module method implemented for every kind of collection (array and hash)
 
@@ -283,21 +311,29 @@ ark.each do |animal|
 end
 ```
 
-### do end blocks
+##### do end blocks
 These keywords denote the beggining and end of a block. `do end` is specifically used to specify the block for an enumberable
 
 `def end` are used to specify a function
 
 These are a kind of replacement for curly braces.
 
-javascript:
+In javascript:
 ```js
 for( var item in my_object ){
   console.log( item );
 }
 ```
 
-ruby:
+or
+
+```
+my_array.forEach(function(item){
+  console.log( item );
+});
+```
+
+In ruby:
 ```ruby
 my_hash.each do |item|
   puts item
@@ -309,7 +345,7 @@ You can't set anything to happen at a later time with anonymous functions.
 
 ## Functions
 
-#### In Javascript
+### In Javascript
 
 * anonymous: `function (param1, [..param2, [...]]){...}`,
 * named: `function Name(param1, [..param2, [...]]){...}`
@@ -449,11 +485,48 @@ By default, when you install a gem, that code is available anywhere on your comp
 `Gemfile` is the `package.json` of ruby.
 
 ##### bundler
-In ruby you must manually add libraries you want in your projects to the `Gemfile`.
+In ruby you must manually add library dependencies you want in your projects to the `Gemfile`.
 
 Installing those libraries on your system runs through a different command, one just for projects using a `Gemfile`.
 
 ```
 bundle install
 ```
+
+### Pairing Exercise
+
+Take input from the user using `ARGV`:
+
+```
+touch banana.rb
+```
+
+Edit the file to `puts` the command line arguments:
+```
+puts "hi world"
+puts "helloe world "+ARGV[0]
+```
+
+Run it
+```
+ruby banana.rb monkey
+```
+
+`ARGV` is an array of all the aruments to the command.
+
+Take in a number. If it's odd, print out that number * 34. Otherwise print out the number plus 5.
+
+##### further
+Take the number and print out count up to that number. Example: for 5- (1,2,3,4,5)
+
+Then print out that count number * 3. If that number is odd, print it out * 8.
+
+Hint: for the enumerable use `times` - see the ruby guide in this gitbook.
+
+##### further
+validate the input. if it's not a number let the user know.
+
+##### further
+Implement a command line calculator. Example: `ruby calculator.rb add 8 7` => should output 15.
+
 

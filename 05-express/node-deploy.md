@@ -74,7 +74,6 @@ It is also best practice to include the version on node you are using. You can d
 ```json
   "engines" : {
     "node" : "^6.6.0"
-    }
   },
 ```
 

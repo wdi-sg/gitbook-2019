@@ -122,7 +122,8 @@
       * [Data Modeling](04-databases/additional-topics/mongo-intro/data-modeling.md)
 
 * [Ruby](06-ruby-rails/ruby.md)
-  * [Intro to Ruby](06-ruby-rails/ruby-intro/readme.md)
+  * [Ruby vs JS](06-ruby-rails/ruby-intro/ruby-js.md)
+  * [Basic Ruby Guide](06-ruby-rails/ruby-intro/readme.md)
   * [Ruby Classes](06-ruby-rails/ruby-classes/readme.md)
     * [Object Oriented Ruby](06-ruby-rails/ruby-classes/oop.md)
     * [More About Ruby Classes](06-ruby-rails/ruby-classes/class-details.md)

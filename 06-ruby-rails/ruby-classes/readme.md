@@ -1,6 +1,5 @@
 # Intro to Classes
 
-
 ## Objectives
 * Understand difference between objects and classes
 * Understand instance variables and instance methods

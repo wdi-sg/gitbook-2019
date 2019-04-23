@@ -724,6 +724,3 @@ The thing you get is one big string, so you need to parse it:
 ```
 data = JSON.parse(file)
 ```
-
-### Pairing Exercise
-Run each ruby example above.
