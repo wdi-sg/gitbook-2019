@@ -92,11 +92,11 @@ john.set_name("john")
 
 Both values we created are instances of the same class, but contain different data.
 
----
+
 
 ## Operating on class instance data
 
----
+
 ```
 class Person
 
@@ -133,12 +133,12 @@ john.salad
 jane.bacon_cheeseburger
 ```
 
----
+
 
 
 The idea behind object oriented programming is that we encapsulate some attributes / data of the thing we are modeling, and then write class methods that operate on that data.
 
----
+
 
 
 Another example:
@@ -168,14 +168,14 @@ jane.set_name("jane")
 jane.birthday
 ```
 
----
+
 
 ## Specifying Objects
 OOP is a method for organizing our data and functions / actions on that data. It's meant to try to model real-world processes and data as close as possible.
 
 It's not the only solution or always fit to the problem, but for CRUD type web systems it tends to work well.
 
----
+
 
 ### How to specify / model data
 
@@ -185,10 +185,8 @@ In the real world an ERD sits somewhere between a table-level database specficat
 
 Note: *This ERD has nothing to do with DB tables. You are specifying a set of classes, and the data and methods in each class.*
 
----
 
-#### Let's create an ERD:
-This will be an app for a hospital.
+#### Hospital Patient ERD
 
 We want to record patients in the hospital.
 
@@ -206,7 +204,76 @@ We want to record patients in the hospital.
 
 - Etc.
 
----
+```ruby
+class Patient
+  def initialize( name, age, weight )
+    @name = name
+    @age = age
+    @weight = weight
+
+    @doctors = []
+    @medications = []
+  end
+
+  def name
+    @name
+  end
+
+  def age
+    @age
+  end
+
+  def add_doctor( doctor )
+    @doctors.push( doctor )
+  end
+
+  def doctors
+    @doctors
+  end
+
+  # add medication methods
+end
+
+class Doctor
+  def initialize( name )
+    @name = name
+  end
+
+  def name
+    @name
+  end
+end
+
+class Medication
+
+  def initialize( name, doctor )
+    @name = name
+    @doctor = doctor
+  end
+
+  def name
+    @name
+  end
+
+  def doctor
+    @doctor
+  end
+
+  # prescription details methods
+
+end
+
+susan = Patient.new('susan', 23, 23)
+
+bill = Doctor.new('bill')
+
+susan.add_doctor( bill )
+
+panodol = Medication.new('panodol', bill)
+
+# susan.add_medication( panodol )
+```
+
 
 #### Over-fitting objects
 You can make everything an object in your system, but be careful, because each object you add also adds complexity. Can your data be a class attribute instead?
