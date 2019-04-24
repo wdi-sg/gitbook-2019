@@ -494,39 +494,4 @@ bundle install
 ```
 
 ### Pairing Exercise
-
-Take input from the user using `ARGV`:
-
-```
-touch banana.rb
-```
-
-Edit the file to `puts` the command line arguments:
-```
-puts "hi world"
-puts "helloe world "+ARGV[0]
-```
-
-Run it
-```
-ruby banana.rb monkey
-```
-
-`ARGV` is an array of all the aruments to the command.
-
-Take in a number. If it's odd, print out that number * 34. Otherwise print out the number plus 5.
-
-##### further
-Take the number and print out count up to that number. Example: for 5- (1,2,3,4,5)
-
-Then print out that count number * 3. If that number is odd, print it out * 8.
-
-Hint: for the enumerable use `times` - see the ruby guide in this gitbook.
-
-##### further
-validate the input. if it's not a number let the user know.
-
-##### further
-Implement a command line calculator. Example: `ruby calculator.rb add 8 7` => should output 15.
-
-
+(ruby for begginers)
