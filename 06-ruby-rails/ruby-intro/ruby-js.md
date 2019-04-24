@@ -58,9 +58,9 @@ Datatypes used to represent a number
 * Float: `23.23`
 
 ### Strings
-A primative datatype used to represent a string of characters
+A primitive datatype used to represent a string of characters
 
-Note that string in ruby have *very* many methods you can call on them to manipulate strings in common ways. If you needed to transform a string in some way, ruby probably has a method for it.
+Note that strings in ruby have *many* methods you can call that manipulates them in common ways. If you needed to transform a string in some way, ruby probably has a method for it.
 
 #### Methods
 ```ruby
