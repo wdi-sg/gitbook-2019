@@ -137,8 +137,6 @@
     * [Asset Pipeline](06-ruby-rails/rails-assets-frontend/asset-pipeline.md)
     * [SASS](06-ruby-rails/rails-assets-frontend/sass.md)
   * [ActiveRecord](06-ruby-rails/active-record/readme.md)
-    * [Intro to ActiveRecord](06-ruby-rails/active-record/readme.md)
-    * [ActiveRecord Associations](06-ruby-rails/active-record/activerecord-assoc.md)
     * [Rails 1-M](06-ruby-rails/active-record/rails-1-M/readme.md)
     * [Rails M:M](06-ruby-rails/active-record/rails-M-M/readme.md)
   * [Rails Auth with Devise](06-ruby-rails/rails-security/devise.md)

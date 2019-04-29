@@ -1,8 +1,5 @@
 # Active Record
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
-
 ## Screen Casts for code
 - [Part 1](https://youtu.be/wbAPxnuIXck)
 - [Part 2](https://youtu.be/J9w1CDXrOXc)
@@ -53,8 +50,6 @@ More concretely ORM's:
 
 It just so happens you will be learning one of the best ORM's on the market. It has some of the best documentation and best syntax (because Ruby is awesome). This ORM is Active Record.
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
 
 > Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database. It is an implementation of the Active Record pattern which itself is a description of an Object Relational Mapping system. (from AR docs)
 
@@ -64,8 +59,6 @@ It just so happens you will be learning one of the best ORM's on the market. It 
 
 Active Record is an ORM (packaged in a Ruby gem) that allows us to translate database records into objects that we can use in our Ruby applications.
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
 
 In order to use Active Record in our Ruby code to manipulate data in a database, we need to be able to talk about the **models** of our data.
 
@@ -110,11 +103,6 @@ With the help of Active Record, we can begin to write programs that follow this 
 ### Convention Over Configuration (10 min / 0:30)
 
 Before we get started with code, let's highlight a reoccurring theme with Active Record, Rails, and frameworks in general. You'll often hear us say, "Convention Over Configuration."
-
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
-
 
 
 
@@ -232,8 +220,6 @@ byebug
 
 puts "end of application"
 ```
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
 
 
 <details>
@@ -448,9 +434,6 @@ kanye.destroy
 # goodbye kanye you're gone forever
 ```
 
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
-<span class="non-slide"></span><span class="non-slide"></span>
 
 > This is exciting stuff by the way, imagine, while we do these things, that our artists model is instead a post on Facebook, or a comment on Facebook. So the next time you comment on someone's Facebook page you have an idea now of whats happening on the database layer. Maybe not the whole picture, but you have an idea. We're going to build on that idea in the coming week and half, and thats really exciting.
 
