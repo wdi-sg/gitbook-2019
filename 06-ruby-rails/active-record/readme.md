@@ -1,13 +1,5 @@
 # Active Record
 
-## Screen Casts for code
-- [Part 1](https://youtu.be/wbAPxnuIXck)
-- [Part 2](https://youtu.be/J9w1CDXrOXc)
-- [Part 3](https://youtu.be/NQNBnmpG5tE)
-- [Part 4](https://youtu.be/EkD5LEyALvM)
-- [Part 5](https://youtu.be/VOH26fAzc4o)
----
-
 ## Learning Objectives
 
 - Define the term "ORM" and why we use it over a database language
@@ -17,7 +9,7 @@
 - Utilize Active Record to perform CRUD actions on a database
 - Differentiate between class and instance methods in Active Record classes/objects
 
----
+
 
 ## Framing (5 min / 0:05)
 
@@ -25,7 +17,7 @@ So far, we've learned principles of object-oriented programming and how to get d
 
 It'd be **really** nice if a bunch of genius programmers had already worked out some kind of way to interface between the database and our servers/applications in order to streamline the process of reading and writing data to and from a database. Enter **ORMs** and [The Active Record pattern](https://en.wikipedia.org/wiki/Active_record_pattern).
 
----
+
 
 ## ORM's & Active Record (10 min / 0:20)
 
@@ -33,11 +25,8 @@ It'd be **really** nice if a bunch of genius programmers had already worked out 
 
 We need a way to encapsulate the data from our databases into objects so that we can use them in our server applications. ORM's serve that purpose. Remember those tables we created in SQL? Well, now those rows of data are objects (instances of classes) on our server now. That's what ORM's do.
 
----
-
 ![ORM-ActiveRecord](https://github.com/wdi-sg/activerecord-intro/blob/master/orm.jpg?raw=true)
 
----
 
 More concretely ORM's:
 
@@ -53,7 +42,7 @@ It just so happens you will be learning one of the best ORM's on the market. It 
 
 > Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database. It is an implementation of the Active Record pattern which itself is a description of an Object Relational Mapping system. (from AR docs)
 
----
+
 
 ## Active Record
 
@@ -76,12 +65,12 @@ Programmers are constantly modeling domains, real world, fictional, abstract, ma
 </details>
 <br>
 
----
+
 
 When we model data, we tend to be talking about the **Nouns** in our application. These are the names of the *tables* in our database and the names of our Ruby *classes*.
 
 Likewise when we write queries, we use **Verbs** to describe the specific data we want.
----
+
 
 Essentially, in order to store and retrieve information, a lot of what we do today in Ruby will look like some form of the equation:
 
@@ -97,7 +86,7 @@ Essentially, in order to store and retrieve information, a lot of what we do tod
 
 With the help of Active Record, we can begin to write programs that follow this simple pattern to manipulate data.
 
----
+
 
 
 ### Convention Over Configuration (10 min / 0:30)
@@ -112,11 +101,11 @@ Before we discuss the concept as a class, take 30 seconds to think about what th
 <summary><strong>Question:</strong>  Without getting into the specifics of AR, what do you think we mean by convention over configuration?</summary>
 <br>
 
----
+
 
 > Active Record, Rails, and other frameworks have a whole bunch of conventions that they follow so that you do not have to mess with different configuration details later. These conventions exist because developers arrive at a consensus on best practices. These road-tested conventions allow us to spend less time trying to configure when there already is an accepted way to do things. Thanks to the programmers who have come before us, we inherit a well-designed, default configuration that spares us from many headaches that we'd encounter if we were building things from scratch (yikes!).
 
----
+
 >
 > Some of the common ones we will encounter are naming conventions such as:
   - plural vs single
@@ -131,17 +120,17 @@ Before we discuss the concept as a class, take 30 seconds to think about what th
 
 </details>
 
----
+
 
 #### If you don't follow the conventions, you're going to have a bad time.
 
 Obeying the naming conventions in Active Record saves you a good deal of headaches.
 
----
+
 
 # Coding Time!
 
----
+
 
 ### Gemfiles
 To install ruby library packages, we use `gem`. The `gem` command is equivalent to `npm install`.
@@ -166,7 +155,7 @@ Install all the gems specified in the gem file with the command:
 bundle install
 ```
 
----
+
 #### Defining our Models
 
 In the `artist.rb` file, we define our `artist` model:
@@ -179,7 +168,7 @@ end
 
 > In this Ruby file, we create a class of Artist that inherits from `ActiveRecord::Base`. Essentially, when we inherit from `ActiveRecord::Base`, it gives this class a whole bunch of functionality that maps the Ruby `Artist` class to the `artists` table in Postgres.
 
----
+
 
 
 ## Inheritance
@@ -192,7 +181,6 @@ This means we can use Artist class in much the same way we would use an ActiveRe
 
 If you want a bit more detail on inheritance in ruby check the [gitbook.](../../ruby-inheritance/readme.html)
 
----
 
 
 ### app.rb
@@ -200,7 +188,7 @@ Let's setup the main file.
 
 We need to use require a bunch of times to gather together all the libs.
 
----
+
 ```
 require "bundler/setup" # require all the gems we'll be using for this app from the Gemfile. Obviates the need for `bundle exec`
 require "pg" # postgres db library
@@ -234,19 +222,19 @@ Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
 Then run this command: `$ bundle update`
 </details>
 
----
+
 
 
 ### Setting up the db
 
----
+
 
 ### schema.sql
 In rails `tables.sql` is called `schema.sql`
 
 (We will see tomorrow that there is more to the rails system of db manegement)
 
----
+
 ```sql
 DROP TABLE IF EXISTS songs;
 DROP TABLE IF EXISTS artists;
@@ -267,13 +255,13 @@ CREATE TABLE songs(
 );
 ```
 
----
+
 
 ### seeds.sql
 Is the same as it was before. It contains sql for each row.
 (we will be getting rid of this format for seed soon)
 
----
+
 
 ### running the db configs:
 
@@ -287,7 +275,7 @@ psql -d tunr_db < seeds.sql
 
 Check you did everything correctly.
 
----
+
 
 ## Using Active Record
 
@@ -304,7 +292,7 @@ pry(main)> pry(main)> Artist.first
  nationality: "American">
 ```
 
----
+
 
 Great! We've got everything done that we need to get setup with single model CRUD in our application. Let's run it in the terminal:
 
@@ -317,7 +305,7 @@ If we want to see the output of the active record class as it works, we can drop
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 ```
 
----
+
 
 When we run this app, we can see that it drops us into byebug. Let's write some code in byebug to update our database... **IN REALTIME!!!**
 
@@ -335,7 +323,7 @@ To save our instance to the database we use `.save`:
 kanye.save
 ```
 
----
+
 
 If we want to initialize an instance of an object AND save it to the database we use `.create`:
 
@@ -370,7 +358,7 @@ kanye.save
 
 > **Note:** Should be noted that when we set the attribute using a setter, it doesn't automatically save to the database, it's not until we call `.save` on the object that it saves to the database
 
----
+
 
 To get all of the artists we use `.all`:
 
@@ -378,7 +366,6 @@ To get all of the artists we use `.all`:
 Artist.all
 ```
 
----
 
 We can also find an artist by its ID using `.find`:
 
@@ -396,7 +383,7 @@ SELECT * FROM artists WHERE id = 1 LIMIT 1;
 
 <br>
 
----
+
 Additionally we can also find an artist by an attribute using `.find_by`:
 
 ```ruby
@@ -405,7 +392,7 @@ Artist.find_by(name: "Elvis Presley")
 
 > Note that find_by only returns the first object that meets the requirements of the arguments
 
----
+
 
 If you want all artists that meet a certain query then we use `.where`:
 
@@ -413,7 +400,7 @@ If you want all artists that meet a certain query then we use `.where`:
 Artist.where(nationality: "American")
 ```
 
----
+
 
 We can also update attributes and save at the same time using the `.update` method:
 
@@ -424,7 +411,7 @@ elvis.update(nationality: "Canadian")
 
 > If we want to update the attribute and not save we would have to use something from this [post](http://www.davidverhasselt.com/set-attributes-in-activerecord/)
 
----
+
 
 Finally we can also just destroy/delete rows in our database with the `.destroy` method:
 
@@ -452,7 +439,6 @@ We will use `byebug` in your ruby app to test out ActiveRecord class and instanc
 
 ### Appendix
 
----
 
 #### Instance vs Class Methods
 | method              | instance | class    |
