@@ -50,7 +50,11 @@ end
 ```
 
 ### Self-Referencing Foreign Key
-If you have a join table where more than one column in the join table references the same primary key column in the same table, you can name the foreign keys:
+If you have a join table where more than one column in the join table references the same primary key column in the same table, you can name the foreign keys.
+
+Note that getting the correct behavior in active record requires 2 sets of references in the model.
+
+From: (https://medium.com/@esmerycornielle/making-a-followers-feature-with-ruby-on-rails-and-active-record-ddb3d1dda060)[https://medium.com/@esmerycornielle/making-a-followers-feature-with-ruby-on-rails-and-active-record-ddb3d1dda060]
 
 
 ##### Following
