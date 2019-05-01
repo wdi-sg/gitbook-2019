@@ -33,8 +33,6 @@ For example, if we had a file called `importantScript.js` in our `javascripts` d
 #### Blame Turbolinks
 Rails includes a package called Turbolinks, which provides some optimization for our sites by minimising the amount of the page that is redrawn between requests. It's clever but can cause issues if we are expecting js/jquery page ready events to fire.
 
-Let's [remove Turbolinks](http://blog.steveklabnik.com/posts/2013-06-25-removing-turbolinks-from-rails-4)
-
 ##Stylesheets
 
 Rails uses SASS, which is a preprocessor for CSS that allows us to use some additional features that standard CSS doesn't support. These files end with the `.scss` file extension and are processed on the server (back-end) before they are sent to the user/browser as plain CSS.
@@ -71,84 +69,14 @@ We also have access to a `image_url` helper method in `scss` files. It will be u
 
 **NOTE:** make sure the file is named `scss` and not just `css`. The `css` files are served to the browser as-is (no pre-processing), but `scss` are run through the sass pre-proccessor first which will run the `image_url` method and insert the correct image path.
 
+### Pairing Exercise
+Add SASS and Javascript to one of your rails apps.
 
-##Passing data to the front-end (gon)
+#### further
+Add the official bootstrap gem to your app: (https://github.com/twbs/bootstrap-rubygem)[https://github.com/twbs/bootstrap-rubygem]
 
-We can pass data from a controller to front-end JavaScript using a gem called "gon" which allows us to easily pass any data from the back-end to the front-end.
 
-####gon setup
-
-To use gon (just like any other gem) we need to add it to our `GemFile`. After adding it remember to run `bundle install` and then restart your server with `rails s`
-
-**in GemFile**
-
-```ruby
-gem 'gon'
-```
-
-Then we need to add a tag inside of our `<head>` tag that will load the backend values as javascript so we can use them in our frontend.
-
-**in layouts/application.html.erb**
-
-```html
-<%= include_gon %>
-```
-
-Be sure to add this line BEFORE  `javascript_include_tag` that way the variables it defines will be available in your `.js` files.
-
-####Using gon
-
-gon is very simple to use. It exposes a variable called `gon` the controller. `gon` is a hash that we can add any values to and they will be available on the front-end automatically.
-
-**In controller**
-
-```ruby
-def index
-  gon.something = "hello"
-  gon.people = ['Lenny', 'Brian', 'Daniel']
-  gon.tasks = Task.all
-end
-```
-
-**In JS**
-
-```javascript
-console.log(gon.something);
-//outputs: "hello"
-
-console.log(gon.people);
-//output: ['Lenny', 'Brian', 'Daniel']
-
-console.log(gon.tasks);
-//outputs: an array of objects for all tasks in the database
-```
-
-####Pitfalls
-
-There is only one major "gotcha" with `gon` and that is that `gon` won't be defined in JavaScript unless you assign something to it in the controller.
-
-Assume we didn't assign any values to `gon` in the controller...
-
-**in JS**
-
-```javascript
-console.log(gon.taco);
-```
-
-This would throw an error because `gon` is undefined. To avoid this problem we just need to check it using `typeof`.
-
-```javascript
-if (typeof gon !== 'undefined') {
-  console.log('taco is', gon.taco);
-} else {
-  console.log('there is no gon (or taco)');
-}
-```
-
-### Exercise:
-[asset pipeline exercise](https://github.com/wdi-sg/user-songs/tree/asset-pipeline)
-
-##Additional Reading
+## Additional Reading
 
 * [Rails Guides - Assets Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
 * [Rails API - Asset Tag Helpers](http://api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html)
