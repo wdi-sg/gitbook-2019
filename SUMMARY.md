@@ -172,7 +172,9 @@
   * [Windows - 3](00-config-deployment/installfest/windows/install3.md)
   * [Linux](00-config-deployment/installfest/linux/readme.md)
 
-* [Group Collaboration](11-groups/01readme.md)
+* [Group Collaboration](11-groups/readme.md)
+  * [Git Branching](11-groups/00branching.md)
+  * [Git Workflow](11-groups/01readme.md)
   * [Project Roles and Tools](11-groups/03rolestools.md)
 
 * [Development Workflow](01-workflow/readme.md)

@@ -1,6 +1,4 @@
-# Group Collaboration With Git
-
-#### GitHub Workflow
+# Collaboration With Github Workflow
 
 > From [Github Guides](https://guides.github.com/introduction/flow/)
 
@@ -8,7 +6,7 @@ We're going to have an entire class on team workflows with Git and GitHub before
 
 
 
-![Github Workflows](https://git.generalassemb.ly/dc-wdi-fundamentals/git-branching/raw/master/images/github_workflows.jpg)
+![Github Workflows](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/github_workflows.jpg)
 
 
 #### Create an Issue
