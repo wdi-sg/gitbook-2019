@@ -43,12 +43,12 @@ git push heroku master
 
 ##Production Database Setup
 
-You can run any command on heroku by using `heroku run` followed by the command you want to execute. This will work for any command you'd normally run on your local development environment. This means that we can run `rake db:migrate` on the server.
+You can run any command on heroku by using `heroku run` followed by the command you want to execute. This will work for any command you'd normally run on your local development environment. This means that we can run `rails db:migrate` on the server.
 
 **migrate the database**
 
 ```
-heroku run rake db:migrate
+heroku run rails db:migrate
 ```
 
 You can also run `db:reset` or `db:seed` if you need to reset your database.
