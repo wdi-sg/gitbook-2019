@@ -7,7 +7,6 @@ Let's change some attribute of the class, a counter that gets incremented.
 ```
 constructor(){
   super()
-  this.clickHandler = this.clickHandler.bind( this );
   this.counter = 0;
 }
 
@@ -20,7 +19,7 @@ render() {
     console.log("rendering");
     return (
       <div className="item">
-        <button onClick={this.clickHandler}>YAY</button>
+        <button onClick={()=>{this.clickHandler()}}>YAY</button>
       </div>
     );
 }
@@ -69,7 +68,6 @@ class Item extends React.Component {
     constructor(){
       console.log("constructing");
       super()
-      this.handleClick = this.handleClick.bind(this);
     }
 
     state = {
@@ -92,7 +90,7 @@ class Item extends React.Component {
         return (
           <div>
             <span>{this.state.counter}</span>
-            <button onClick={this.handleClick}>click me!</button>
+            <button onClick={()=>{this.handleClick()}}>click me!</button>
           </div>
         );
     }

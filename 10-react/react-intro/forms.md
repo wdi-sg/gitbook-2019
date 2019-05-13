@@ -7,7 +7,6 @@ Let's change the button to a form input.
 ```
 constructor(){
   super()
-  this.changeHandler = this.changeHandler.bind( this );
 }
 
 state = {
@@ -24,7 +23,7 @@ render() {
     return (
       <div className="item">
         {this.state.word}
-        <input onChange={this.changeHandler}/>
+        <input onChange={(event)=>{this.changeHandler(event);}}/>
       </div>
     );
 }
@@ -35,7 +34,7 @@ Now what if we want to control what the user sees in the input when they type?
 We can update the input using `value`.
 
 ```
-<input onChange={this.changeHandler} value={this.state.word.toUpperCase()}/>
+<input onChange={(event)=>{this.changeHandler(event);}} value={this.state.word.toUpperCase()}/>
 ```
 
 This is using a pattern called [Controlled Components](https://reactjs.org/docs/forms.html).

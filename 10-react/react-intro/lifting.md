@@ -42,7 +42,6 @@ class App extends React.Component{
 			station : "banana"
 		};
 
-		this.setCurrentStation = this.setCurrentStation.bind( this );
 	}
 
   setCurrentStation(station){
@@ -52,7 +51,7 @@ class App extends React.Component{
   render(){
     return (
       <div>
-        <Line setCurrentStation={this.setCurrentStation} station={this.state.station}/>
+        <Line setCurrentStation={(s)=>{this.setCurrentStation(s)}} station={this.state.station}/>
         <Trains station={this.state.station}/>
       </div>
     );
@@ -102,8 +101,6 @@ This form exists in a `Form` component.
 
 Implement a sibling component that displays the number of yen you would get for the number entered in the `Form` component.
 
-
-
 This sample shows the hierarchy of the components you should end up with: (this is not actual code)
 ```
   <Exchanger>
@@ -111,6 +108,14 @@ This sample shows the hierarchy of the components you should end up with: (this 
     <Yen sgd={this.state.sgd} />
   </Exchanger>
 ```
+
+The `sgd` state is stored inside the `Exchanger` component.
+
+`sgd` is given as props to a `Yen` component.
+
+This component contains the logic / formula to convert from `sgd` to yen.
+
+`Form` component contains an input that the user enters an amount of sgd in.
 
 Don't forget to use `http-server`
 
@@ -126,7 +131,7 @@ Don't forget to include the required libraries:
 Implement components for other currencies. (US Dollars, Ringet, Thai Baht, etc.)
 
 ##### further
-Refactor the form so that you can select the currency in the form. Then the user enters the number of that currency in the form.
+Refactor the form so that you can select the currency in the form. Then the user enters the amount in that currency into the form.
 
 Change each currency component to take 2 properties instead:
 ```
