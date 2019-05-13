@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Click Events / Bind · GitBook</title>
+        <title>Router · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="state.html" />
+    <link rel="next" href="../../00-config-deployment/installfest/readme.html" />
     
     
-    <link rel="prev" href="components.html" />
+    <link rel="prev" href="lifecycle.html" />
     
 
     </head>
@@ -2210,9 +2210,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="readme.html">
+        <li class="chapter " data-level="1.10.1" data-path="../react-intro/readme.html">
             
-                <a href="readme.html">
+                <a href="../react-intro/readme.html">
             
                     
                     Intro to React
@@ -2223,9 +2223,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="components.html">
+        <li class="chapter " data-level="1.10.2" data-path="../react-intro/components.html">
             
-                <a href="components.html">
+                <a href="../react-intro/components.html">
             
                     
                     React Components
@@ -2236,22 +2236,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10.3" data-path="bind.html">
+        <li class="chapter " data-level="1.10.3" data-path="../react-intro/state.html">
             
-                <a href="bind.html">
-            
-                    
-                    Click Events / Bind
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10.4" data-path="state.html">
-            
-                <a href="state.html">
+                <a href="../react-intro/state.html">
             
                     
                     State
@@ -2262,9 +2249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.5" data-path="forms.html">
+        <li class="chapter " data-level="1.10.4" data-path="../react-intro/forms.html">
             
-                <a href="forms.html">
+                <a href="../react-intro/forms.html">
             
                     
                     Forms
@@ -2275,9 +2262,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.6" data-path="lifting.html">
+        <li class="chapter " data-level="1.10.5" data-path="../react-intro/lifting.html">
             
-                <a href="lifting.html">
+                <a href="../react-intro/lifting.html">
             
                     
                     Lifting Functions
@@ -2288,7 +2275,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.7" data-path="../react-webpack/readme.html">
+        <li class="chapter " data-level="1.10.6" data-path="../react-webpack/readme.html">
             
                 <a href="../react-webpack/readme.html">
             
@@ -2301,7 +2288,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.8" data-path="../react-webpack/webpacker.html">
+        <li class="chapter " data-level="1.10.7" data-path="../react-webpack/webpacker.html">
             
                 <a href="../react-webpack/webpacker.html">
             
@@ -2314,9 +2301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.9" data-path="../additional-topics/readme.html">
+        <li class="chapter " data-level="1.10.8" data-path="readme.html">
             
-                <a href="../additional-topics/readme.html">
+                <a href="readme.html">
             
                     
                     Additional Topics
@@ -2328,9 +2315,22 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.9.1" data-path="../additional-topics/lifecycle.html">
+        <li class="chapter " data-level="1.10.8.1" data-path="bind.html">
             
-                <a href="../additional-topics/lifecycle.html">
+                <a href="bind.html">
+            
+                    
+                    Click Events / Bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8.2" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
             
                     
                     Lifecycle
@@ -2341,9 +2341,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.9.2" data-path="../additional-topics/readme.html">
+        <li class="chapter active" data-level="1.10.8.3" data-path="router.html">
             
-                <a href="../additional-topics/readme.html">
+                <a href="router.html">
             
                     
                     Router
@@ -2704,7 +2704,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Click Events / Bind</a>
+        <a href="../.." >Router</a>
     </h1>
 </div>
 
@@ -2719,156 +2719,129 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="bind-for-react-classes">Bind for React Classes</h1>
-<h2 id="click-handlers">Click Handlers</h2>
-<p>First, let&apos;s see what a click handler looks like in react.</p>
-<pre><code>&lt;button onClick={this.handleClick}&gt;click me!&lt;/button&gt;
-</code></pre><p>Then we can write the handler in the class:</p>
-<pre><code>// our click method
-handleClick(){
-  console.log( &quot;yay&quot; );
+                                <h1 id="react-router">React Router</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Review importing and using third-party node modules into React using npm</li>
+<li>Use React Router&apos;s <code>BrowserRouter</code>, <code>Link</code>, <code>Route</code>, <code>Redirect</code>, and <code>Switch</code> components to add navigation to a React application</li>
+<li>Review the React component lifecycle and use component methods to time API calls</li>
+</ul>
+<h2 id="framing-5-min--005">Framing (5 min / 0:05)</h2>
+<p>Up to this point, our React applications have been limited in size, allowing us to use basic control flow in our components&apos; render methods to determine what gets rendered to our users. However, as our React applications grow in size and scope, we need an easier and more robust way of rendering different components. Additionally, we will want the ability to set information in the url parameters to make it easier for users to identify where they are in the application.</p>
+<p>React Router, while not the only, is the most commonly-used routing library for React. It is relatively straightforward to configure and integrates with the component architecture nicely (itself being nothing but a collection of components). Once configured, it essentially serves as the root component in a React application and renders other application components within itself depending on the path in the url.</p>
+<h2 id="react-webpack-boilerplate-setup-5-min--010"><a href="https://github.com/wdi-sg/react-express-webpack" target="_blank">React Webpack Boilerplate</a> Setup (5 min / 0:10)</h2>
+<h2 id="react-router-setup-10-min--040">React Router Setup (10 min / 0:40)</h2>
+<h3 id="importing-dependencies">Importing Dependencies</h3>
+<p>First, we need to install <code>react-router-dom</code> and save it as a dependency to <code>package.json</code>...</p>
+<pre><code class="lang-sh">npm install --save react-router-dom
+</code></pre>
+<p>To configure our current application to use React Router, we need to modify the root rendering of our app in <code>index.js</code>. We need to bring in the <code>Router</code> component and allow it to be the root component of our application. <code>Router</code> will, in turn, render <code>App</code> through which all the rest of our components will be rendered:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// index.js</span>
+
+<span class="hljs-keyword">import</span> { BrowserRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+
+<span class="hljs-comment">// ...</span>
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">BrowserRouter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">BrowserRouter</span>&gt;</span>,
+  document.getElementById(&quot;app&quot;)
+);
+</span></code></pre>
+<p>By making <code>BrowserRouter</code> the root component of our app, all child components, including <code>App</code> will have access to a <code>history</code> object through which information like the current location and url can be accessed or changed. Additionally, in order to use the other routing components provided by React Router, a <code>Router</code> ancestor component is necessary.</p>
+<p>Next, in <code>App.js</code>, we need to import all of the other components we want to use from React Router...</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/components/App/App.js</span>
+
+<span class="hljs-keyword">import</span> { Route, Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+</code></pre>
+<h3 id="modifying-apps-render-method">Modifying App&apos;s render method</h3>
+<p>Now that we have access to these components, we need to modify the <code>App</code> component&apos;s <code>render()</code> method to set up navigation. The basic structure we will use is...</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/components/App.jsx</span>
+
+render() {
+  <span class="hljs-keyword">return</span>(
+    &lt;div&gt;
+      &lt;nav&gt;
+        &lt;h1&gt;React Router&lt;/h1&gt;
+        &lt;Link to=&quot;/bananas&quot;&gt;Bananas&lt;/Link&gt;
+        &lt;Link to=&quot;/oranges&quot;&gt;Oranges&lt;/Link&gt;
+      &lt;/nav&gt;
+      &lt;main&gt;
+        &lt;Route
+          path=&apos;/bananas&apos;
+          render={() =&gt; (
+            &lt;Bananas/&gt;
+          )}
+        /&gt;
+        &lt;Route
+          path=&apos;/oranges&apos;
+          render={() =&gt; (
+            &lt;Oranges/&gt;
+          )}
+        /&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  )
 }
-</code></pre><p>This works just like normal js.</p>
-<p><em>But</em> what happens if we start doing stuff- for example we want to access things we did in normal javascript:</p>
-<p><code>this</code> refered to the button being clicked on.</p>
-<p>If we <code>console.log</code> it, we can see that it&apos;s undefined. This also means we have no way of accessing the other attributes within the class.</p>
-<p>Under the hood, what happens with any click handler (not just those in react) is that the window grabs the clikc handler for itself. That is why <code>this</code> in a click handler is the element being clicked on.</p>
-<p>How do we set the context / value of this to the current class?</p>
-<h2 id="javascript-bind">Javascript Bind</h2>
-<h5 id="this-keyword-review"><code>this</code> keyword: (review)</h5>
-<p>In javascript we use <code>this</code> keyowrd to refer to the current context of the function.</p>
-<p>Given this ES5 JS:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> saySomething = {
-  message : <span class="hljs-string">&quot;hello&quot;</span>,
-  speak : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-    alert( <span class="hljs-keyword">this</span>.message );
-  }
-};
-
-saySomething.speak();
 </code></pre>
-<p>When we look at <code>this.message</code>, it refers to the message key <em>inside the current object</em>.</p>
-<p>Given this code:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-</code></pre>
-<pre><code class="lang-js"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#submit&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);
-});
-</code></pre>
-<p><code>this</code> keyword refers to the button being clicked, or, the current context of execution.</p>
-<h4 id="js-execution-context">JS Execution Context</h4>
-<p>What would happen if we used our speak method as a click callback?</p>
-<pre><code class="lang-js"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#submit&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,saySomething.speak);
-</code></pre>
-<p>What is actually happening is that when you set a callback is that the DOM holds onto your callback function- <em>the context of the execution</em> changes.</p>
-<h4 id="why-we-need-bind">Why we need bind:</h4>
-<p>With <code>bind</code> javascript gives us an explicit way to set the function context before the function gets executed.</p>
-<pre><code class="lang-js">saySomething.speak = saySomething.speak.bind( saySomething );
-</code></pre>
-<p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind" target="_blank">MDN:</a></p>
 <blockquote>
-<p>The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</p>
+<p><strong>Link</strong> - a component for setting the URL and providing navigation between different components in our app without triggering a page refresh. It takes a <code>to</code> property, which sets the URL to whatever path is defined within it. Link can also be used inside of any component that is connected to a <code>Route</code>.</p>
+<p><strong>Route</strong> - a component that connects a certain <code>path</code> in the URL with the relevant component to <code>render</code> at that location (similar to <code>body</code> from handlebars).</p>
+<p>Notice that we are writing an anonymous callback function in the value for the <code>Route</code>&apos;s render property. This callback function <strong>must return a React component</strong>.</p>
+<p>So long as we use an ES6 arrow function, this callback will preserve context (i.e. the value of <code>this</code>), allowing us to pass down data and functions into <code>Search</code> from <code>App</code>. You can use an ES5 anonymous function, but you will then need to use <code>.bind()</code> to preserve context.</p>
 </blockquote>
-<p>When we say:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleClick}</span>&gt;</span>click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-</code></pre>
-<p>React isn&apos;t doing any magic to fix the above problem.</p>
-<p>We need to bind our handleClick method to the current component.</p>
-<h3 id="exercise-js-bind">Exercise: JS bind</h3>
-<p>Start a new <code>index.html</code> file:</p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;script&gt;
-  &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>In the script tag:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> saySomething = {
-  message : <span class="hljs-string">&quot;hello&quot;</span>,
-  speak : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-    alert( <span class="hljs-keyword">this</span>.message );
+<p>See more about the route component <a href="https://reacttraining.com/react-router/web/example/url-params" target="_blank">here.</a></p>
+<h2 id="redirecting-15-min--110">Redirecting (15 min / 1:10)</h2>
+<p>Sometimes you want to change the path of the app in response to the actions that happen within the app.</p>
+<p>If you want to change the path after getting and displaying some info (as opposed to rendering a component from a top level router/link) you can do that by manually <strong>pushing</strong> into the browser history.</p>
+<p>This utility is given to you as a library that is used within react router.</p>
+<pre><code>import React from &apos;react&apos;;
+import { withRouter } from &apos;react-router-dom&apos;;
+
+class Bananas extends React.Component {
+  constructor(){
+    super();
+    this.clickHandler = this.clickHandler.bind(this);
   }
-};
 
-saySomething.speak();
-</code></pre>
-<p>Call <code>saySomething.speak()</code> from the dev console to make sure it works.</p>
-<p>Add a button into the body html</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-</code></pre>
-<p>Set a click handler to the saySomething method.</p>
-<pre><code class="lang-js"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#submit&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,saySomething.speak);
-</code></pre>
-<p>The message will be undefined.</p>
-<p>See the return value of bind</p>
-<pre><code>saySomething.speak.bind( saySomething );
-</code></pre><p>Fix it by doing a <code>bind</code> before you set the click handler.</p>
-<pre><code>saySomething.speak = saySomething.speak.bind( saySomething );
-</code></pre><h4 id="further">Further</h4>
-<p>Does this work instead? Why?</p>
-<pre><code class="lang-js"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#submit&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,saySomething.speak.bind(saySomething));
-</code></pre>
-<h4 id="bind-in-react">Bind in react:</h4>
-<p>Run this code:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;title&gt;Bind&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  clickHandler(){
+    setTimeout(()=&gt;{
+      this.props.history.push(&apos;/results&apos;);
+    },1000);
+  }
 
-  &lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://unpkg.com/babel-standalone@6.15.0/babel.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
-  &lt;script type=&quot;text/babel&quot;&gt;
-
-    class List extends React.Component {
-
-        constructor(){
-          super();
-          this.yay = &quot;banana&quot;;
-        }
-
-        // our click method
-        handleClick(){
-          console.log( &quot;yay&quot; );
-          console.log( this.yay );
-        }
-
-        render() {
-            return (
-              &lt;div&gt;
-                &lt;button onClick={this.handleClick}&gt;click me!&lt;/button&gt;
-                &lt;ul&gt;
-                  &lt;li&gt;Hello world&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/div&gt;
-            );
-        }
-    }
-
-    ReactDOM.render(
-        &lt;List /&gt;,
-        document.getElementById(&apos;root&apos;)
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Bananas&lt;/p&gt;
+        &lt;button onClick={this.clickHandler}&gt;Click Me!&lt;/button&gt;
+      &lt;/div&gt;
     );
+  }
+}
 
-  &lt;/script&gt;
+export default withRouter(Bananas);
+</code></pre><p>We&apos;re using a setTimeout again to simulate an ajax request.</p>
+<p>When the &quot;request&quot; is done, we can change the current path of the browser.</p>
+<p>Note that the back button of the browser still works the way we have set things up.</p>
+<p>Also note that we are including react router at the top of the file and using it at the bottom with <code>export default withRouter(Bananas);</code></p>
+<p>From the react router docs:</p>
+<pre><code>You can get access to the history object&apos;s properties and the closest &lt;Route&gt;&apos;s match via the withRouter higher-order component. withRouter will pass updated match, location, and history props to the wrapped component whenever it renders.
+</code></pre><h2 id="see-also">See Also:</h2>
+<p><a href="https://reacttraining.com/react-router/web/guides/philosophy" target="_blank">React Router Website Docs</a>
+<a href="https://github.com/ReactTraining/react-router/tree/master/packages/react-router/docs" target="_blank">React Router Repo Docs</a></p>
+<h2 id="exercise">Exercise</h2>
+<p>Run some code with react router:</p>
+<p>Clone another copy of <a href="https://github.com/wdi-sg/react-express-webpack" target="_blank">react-express-webpack</a></p>
+<p>Install the react router npm package:</p>
+<pre><code>npm install --save react-router-dom
+</code></pre><p>Copy the above code from <code>App.jsx</code> and <code>index.jsx</code>.</p>
+<p>You can create and <code>import</code> the <code>oranges</code> and <code>bananas</code> components, or you can use the <code>form</code> and <code>counter</code> components that are already there.</p>
+<p>Make sure to do a lot of console.logs in the render to understand what is happening.</p>
+<p>Here is a working <a href="https://github.com/wdi-sg/react-express-webpack/tree/router" target="_blank">solution.</a></p>
+<p>If you want to see another <code>history.push</code> example, here is one that <a href="https://github.com/wdi-sg/react-express-webpack/tree/router-history-push" target="_blank">increments infinite scroll pages.</a></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>Add bind in the consturctor to make it work:</p>
-<pre><code>this.handleClick = this.handleClick.bind(this);
-</code></pre>
                                 
                                 </section>
                             
@@ -2895,12 +2868,12 @@ saySomething.speak();
 
             
                 
-                <a href="components.html" class="navigation navigation-prev " aria-label="Previous page: React Components">
+                <a href="lifecycle.html" class="navigation navigation-prev " aria-label="Previous page: Lifecycle">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="state.html" class="navigation navigation-next " aria-label="Next page: State">
+                <a href="../../00-config-deployment/installfest/readme.html" class="navigation navigation-next " aria-label="Next page: Installfest">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2911,7 +2884,7 @@ saySomething.speak();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Click Events / Bind","level":"1.10.3","depth":2,"next":{"title":"State","level":"1.10.4","depth":2,"path":"10-react/react-intro/state.md","ref":"10-react/react-intro/state.md","articles":[]},"previous":{"title":"React Components","level":"1.10.2","depth":2,"path":"10-react/react-intro/components.md","ref":"10-react/react-intro/components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"01-tools/command-line/02intro-terminal.html#fig1.2.1.1.1","level":"1.2.1.1","list_caption":"Figure: Terminal Window","alt":"Terminal Window","nro":1,"url":"http://i.stack.imgur.com/DjFOZ.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Terminal Window","attributes":{},"skip":false,"key":"1.2.1.1.1"},{"backlink":"01-tools/command-line/03navigating.html#fig1.2.1.2.1","level":"1.2.1.2","list_caption":"Figure: Filesystem image","alt":"Filesystem image","nro":2,"url":"http://www.qnx.com/developers/docs/qnx_4.25_docs/qnx4/user_guide/images/files.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"Filesystem image","attributes":{},"skip":false,"key":"1.2.1.2.1"},{"backlink":"01-tools/intro-git/02vcs.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: DVCS diagram","alt":"DVCS diagram","nro":3,"url":"http://git-scm.com/figures/18333fig0103-tn.png","index":1,"caption_template":"Figure: _CAPTION_","label":"DVCS diagram","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"01-tools/intro-git/04remotegit.html#fig1.2.3.3.1","level":"1.2.3.3","list_caption":"Figure: https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","alt":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","nro":4,"url":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","index":1,"caption_template":"Figure: _CAPTION_","label":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","attributes":{},"skip":false,"key":"1.2.3.3.1"},{"backlink":"01-tools/chrome-dev-tools/index.html#fig1.2.4.1","level":"1.2.4","list_caption":"Figure: screenshot","alt":"screenshot","nro":5,"url":"https://i.imgur.com/5ruzGhc.png","index":1,"caption_template":"Figure: _CAPTION_","label":"screenshot","attributes":{},"skip":false,"key":"1.2.4.1"},{"backlink":"03-html-css/positioning/02box-model.html#fig1.3.3.1.1","level":"1.3.3.1","list_caption":"Figure: box-model","alt":"box-model","nro":6,"url":"http://s6.postimg.org/gi8r6c341/css_box_model.png","index":1,"caption_template":"Figure: _CAPTION_","label":"box-model","attributes":{},"skip":false,"key":"1.3.3.1.1"},{"backlink":"03-html-css/positioning/03display-positioning.html#fig1.3.3.2.1","level":"1.3.3.2","list_caption":"Figure: https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","alt":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","nro":7,"url":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","attributes":{},"skip":false,"key":"1.3.3.2.1"},{"backlink":"03-html-css/positioning/03display-positioning.html#fig1.3.3.2.2","level":"1.3.3.2","list_caption":"Figure: Imgur","alt":"Imgur","nro":8,"url":"https://i.imgur.com/I22mFsc.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.3.2.2"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.1","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","nro":9,"url":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.1"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.2","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","nro":10,"url":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.2"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.3","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","nro":11,"url":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.3"},{"backlink":"03-html-css/positioning/02responsivedesign.html#fig1.3.3.5.1","level":"1.3.3.5","list_caption":"Figure: No Viewport Meta Tag","alt":"No Viewport Meta Tag","nro":12,"url":"http://developers.google.com/speed/docs/insights/images/viewport/iphone_no_viewport.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"No Viewport Meta Tag","attributes":{},"skip":false,"key":"1.3.3.5.1"},{"backlink":"03-html-css/positioning/02responsivedesign.html#fig1.3.3.5.2","level":"1.3.3.5","list_caption":"Figure: Viewport Meta Tag","alt":"Viewport Meta Tag","nro":13,"url":"https://developers.google.com/speed/docs/insights/images/viewport/iphone_viewport.jpg","index":2,"caption_template":"Figure: _CAPTION_","label":"Viewport Meta Tag","attributes":{},"skip":false,"key":"1.3.3.5.2"},{"backlink":"03-html-css/css-bootstrap/bootstrap.html#fig1.3.4.1","level":"1.3.4","list_caption":"Figure: Imgur","alt":"Imgur","nro":14,"url":"https://i.imgur.com/6IcKOjZ.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.4.1"},{"backlink":"03-html-css/css-bootstrap/bootstrap.html#fig1.3.4.2","level":"1.3.4","list_caption":"Figure: Imgur","alt":"Imgur","nro":15,"url":"https://i.imgur.com/cnaI0rc.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.4.2"},{"backlink":"02-js/js-intro/js-control-flow/03booleans-and-conditionals.html#fig1.4.3.1.1","level":"1.4.3.1","list_caption":"Figure: control flow wd40","alt":"control flow wd40","nro":16,"url":"https://i.imgur.com/v4W1xwD.png","index":1,"caption_template":"Figure: _CAPTION_","label":"control flow wd40","attributes":{},"skip":false,"key":"1.4.3.1.1"},{"backlink":"02-js/js-intro/js-control-flow/04loops.html#fig1.4.3.2.1","level":"1.4.3.2","list_caption":"Figure: control flow wd40","alt":"control flow wd40","nro":17,"url":"https://i.imgur.com/v4W1xwD.png","index":1,"caption_template":"Figure: _CAPTION_","label":"control flow wd40","attributes":{},"skip":false,"key":"1.4.3.2.1"},{"backlink":"04-server/00node.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","nro":18,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","attributes":{},"skip":false,"key":"1.5.1.1"},{"backlink":"04-server/01npm.html#fig1.5.4.1","level":"1.5.4","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","nro":19,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","attributes":{},"skip":false,"key":"1.5.4.1"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.1","level":"1.5.6","list_caption":"Figure: https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","alt":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","nro":20,"url":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","attributes":{},"skip":false,"key":"1.5.6.1"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.2","level":"1.5.6","list_caption":"Figure: http://www.escotal.com/Images/Network%20parts/osi.gif","alt":"http://www.escotal.com/Images/Network%20parts/osi.gif","nro":21,"url":"http://www.escotal.com/Images/Network%20parts/osi.gif","index":2,"caption_template":"Figure: _CAPTION_","label":"http://www.escotal.com/Images/Network%20parts/osi.gif","attributes":{},"skip":false,"key":"1.5.6.2"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.3","level":"1.5.6","list_caption":"Figure: http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","alt":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","nro":22,"url":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","attributes":{},"skip":false,"key":"1.5.6.3"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.4","level":"1.5.6","list_caption":"Figure: http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","alt":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","nro":23,"url":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","index":4,"caption_template":"Figure: _CAPTION_","label":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","attributes":{},"skip":false,"key":"1.5.6.4"},{"backlink":"05-express/index.html#fig1.6.1","level":"1.6","list_caption":"Figure: 3-Tier Express Application","alt":"3-Tier Express Application","nro":24,"url":"images/3-tier-application.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"3-Tier Express Application","attributes":{},"skip":false,"key":"1.6.1"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.1","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","alt":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","nro":25,"url":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","attributes":{},"skip":false,"key":"1.6.1.5.1"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.2","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","nro":26,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","attributes":{},"skip":false,"key":"1.6.1.5.2"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.3","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","nro":27,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","attributes":{},"skip":false,"key":"1.6.1.5.3"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.4","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","nro":28,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":4,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","attributes":{},"skip":false,"key":"1.6.1.5.4"},{"backlink":"05-express/express-auth/cookies.html#fig1.6.3.1.1","level":"1.6.3.1","list_caption":"Figure: https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","alt":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","nro":29,"url":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","attributes":{},"skip":false,"key":"1.6.3.1.1"},{"backlink":"05-express/express-auth/password2.html#fig1.6.3.3.1","level":"1.6.3.3","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","nro":30,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","attributes":{},"skip":false,"key":"1.6.3.3.1"},{"backlink":"05-express/additional-topics/express-socket-io/index.html#fig1.6.8.4.1","level":"1.6.8.4","list_caption":"Figure: Websockets","alt":"Websockets","nro":31,"url":"./sockets.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Websockets","attributes":{},"skip":false,"key":"1.6.8.4.1"},{"backlink":"04-databases/sql-intro/additional-topics/sql-advanced.html#fig1.7.1.2.1.1","level":"1.7.1.2.1","list_caption":"Figure: SQL Joins","alt":"SQL Joins","nro":32,"url":"http://www.dofactory.com/Images/sql-joins.png","index":1,"caption_template":"Figure: _CAPTION_","label":"SQL Joins","attributes":{},"skip":false,"key":"1.7.1.2.1.1"},{"backlink":"04-databases/postgres/index.html#fig1.7.2.1","level":"1.7.2","list_caption":"Figure: https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","alt":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","nro":33,"url":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","index":1,"caption_template":"Figure: _CAPTION_","label":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","attributes":{},"skip":false,"key":"1.7.2.1"},{"backlink":"04-databases/postgres/index.html#fig1.7.2.2","level":"1.7.2","list_caption":"Figure: image","alt":"image","nro":34,"url":"Postgres.png","index":2,"caption_template":"Figure: _CAPTION_","label":"image","attributes":{},"skip":false,"key":"1.7.2.2"},{"backlink":"04-databases/postgres/additional-topics/sqlcheatsheet.html#fig1.7.2.4.2.1","level":"1.7.2.4.2","list_caption":"Figure: SQL Joins","alt":"SQL Joins","nro":35,"url":"http://www.dofactory.com/Images/sql-joins.png","index":1,"caption_template":"Figure: _CAPTION_","label":"SQL Joins","attributes":{},"skip":false,"key":"1.7.2.4.2.1"},{"backlink":"04-databases/postgres/CRUD-postgres.html#fig1.7.3.1","level":"1.7.3","list_caption":"Figure: 3-Tier Express Application","alt":"3-Tier Express Application","nro":36,"url":"https://wdi-sg.github.io/gitbook-2019/05-express/images/3-tier-application.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"3-Tier Express Application","attributes":{},"skip":false,"key":"1.7.3.1"},{"backlink":"04-databases/additional-topics/mongo-intro/intro-nosql.html#fig1.7.5.1.1","level":"1.7.5.1","list_caption":"Figure: MongoDB vs Relational Databases","alt":"MongoDB vs Relational Databases","nro":37,"url":"http://4.bp.blogspot.com/-edz2_QrFvCE/UnzBhKZE3FI/AAAAAAAAAEs/bTEsqnZFTXw/s1600/SQL-MongoDB+Correspondence.PNG","index":1,"caption_template":"Figure: _CAPTION_","label":"MongoDB vs Relational Databases","attributes":{},"skip":false,"key":"1.7.5.1.1"},{"backlink":"06-ruby-rails/ruby-intro/index.html#fig1.8.2.1","level":"1.8.2","list_caption":"Figure: Yukihiro Matsumoto","alt":"Matz-san","nro":38,"url":"http://image.gihyo.co.jp/assets/images/dev/serial/01/software_designers/0034/0034-01.JPG","index":1,"caption_template":"Figure: _CAPTION_","label":"Yukihiro Matsumoto","attributes":{},"title":"Yukihiro Matsumoto","skip":false,"key":"1.8.2.1"},{"backlink":"06-ruby-rails/rails-intro/index.html#fig1.9.1.1","level":"1.9.1","list_caption":"Figure: MVC Diagram","alt":"MVC Diagram","nro":39,"url":"http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png","index":1,"caption_template":"Figure: _CAPTION_","label":"MVC Diagram","attributes":{},"skip":false,"key":"1.9.1.1"},{"backlink":"06-ruby-rails/rails-intro/index.html#fig1.9.1.2","level":"1.9.1","list_caption":"Figure: Rails File Structure","alt":"Rails File Structure","nro":40,"url":"http://i.imgur.com/whOL4DQ.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Rails File Structure","attributes":{},"skip":false,"key":"1.9.1.2"},{"backlink":"06-ruby-rails/active-record/index.html#fig1.9.5.1","level":"1.9.5","list_caption":"Figure: ORM-ActiveRecord","alt":"ORM-ActiveRecord","nro":41,"url":"https://github.com/wdi-sg/activerecord-intro/blob/master/orm.jpg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"ORM-ActiveRecord","attributes":{},"skip":false,"key":"1.9.5.1"},{"backlink":"06-ruby-rails/additional-topics/rails-oauth/index.html#fig1.9.10.2.1","level":"1.9.10.2","list_caption":"Figure: OAuth from Oracle","alt":"OAuth from Oracle","nro":42,"url":"https://docs.oracle.com/cd/E50612_01/doc.11122/oauth_guide/content/images/oauth/oauth_overview.png","index":1,"caption_template":"Figure: _CAPTION_","label":"OAuth from Oracle","attributes":{},"skip":false,"key":"1.9.10.2.1"},{"backlink":"10-react/index.html#fig1.10.1","level":"1.10","list_caption":"Figure: ReactJS","alt":"ReactJS","nro":43,"url":"https://facebook.github.io/react/img/logo_og.png","index":1,"caption_template":"Figure: _CAPTION_","label":"ReactJS","attributes":{},"skip":false,"key":"1.10.1"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.1","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","alt":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","nro":44,"url":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","attributes":{},"skip":false,"key":"1.10.2.1"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.2","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","nro":45,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","attributes":{},"skip":false,"key":"1.10.2.2"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.3","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","nro":46,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","attributes":{},"skip":false,"key":"1.10.2.3"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.4","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","nro":47,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":4,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","attributes":{},"skip":false,"key":"1.10.2.4"},{"backlink":"10-react/react-intro/state.html#fig1.10.4.1","level":"1.10.4","list_caption":"Figure: https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","alt":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","nro":48,"url":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","index":1,"caption_template":"Figure: _CAPTION_","label":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","attributes":{},"skip":false,"key":"1.10.4.1"},{"backlink":"10-react/react-intro/state.html#fig1.10.4.2","level":"1.10.4","list_caption":"Figure: https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","alt":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","nro":49,"url":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","index":2,"caption_template":"Figure: _CAPTION_","label":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","attributes":{},"skip":false,"key":"1.10.4.2"},{"backlink":"10-react/react-intro/lifting.html#fig1.10.6.1","level":"1.10.6","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","nro":50,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","attributes":{},"skip":false,"key":"1.10.6.1"},{"backlink":"10-react/additional-topics/lifecycle.html#fig1.10.9.1.1","level":"1.10.9.1","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","nro":51,"url":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","attributes":{},"skip":false,"key":"1.10.9.1.1"},{"backlink":"11-groups/00branching.html#fig1.12.1.1","level":"1.12.1","list_caption":"Figure: Git Branch Diagram","alt":"Git Branch Diagram","nro":52,"url":"https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/branching.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Git Branch Diagram","attributes":{},"skip":false,"key":"1.12.1.1"},{"backlink":"11-groups/00branching.html#fig1.12.1.2","level":"1.12.1","list_caption":"Figure: before-merge","alt":"before-merge","nro":53,"url":"https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/merging.png","index":2,"caption_template":"Figure: _CAPTION_","label":"before-merge","attributes":{},"skip":false,"key":"1.12.1.2"},{"backlink":"11-groups/01index.html#fig1.12.2.1","level":"1.12.2","list_caption":"Figure: Github Workflows","alt":"Github Workflows","nro":54,"url":"https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/github_workflows.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"Github Workflows","attributes":{},"skip":false,"key":"1.12.2.1"},{"backlink":"11-groups/03rolestools.html#fig1.12.3.1","level":"1.12.3","list_caption":"Figure: Kanban","alt":"Kanban","nro":55,"url":"https://olemortenamundsen.files.wordpress.com/2010/03/kanban_illustration.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Kanban","attributes":{},"skip":false,"key":"1.12.3.1"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.1","level":"1.13.3","list_caption":"Figure: https://i.imgur.com/NUNBEwW.png","alt":"https://i.imgur.com/NUNBEwW.png","nro":56,"url":"https://i.imgur.com/NUNBEwW.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://i.imgur.com/NUNBEwW.png","attributes":{},"skip":false,"key":"1.13.3.1"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.2","level":"1.13.3","list_caption":"Figure: Waterfall model","alt":"Waterfall model","nro":57,"url":"https://i.imgur.com/yJMVO91.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Waterfall model","attributes":{},"skip":false,"key":"1.13.3.2"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.3","level":"1.13.3","list_caption":"Figure: Youtube Balsamiq","alt":"Youtube Balsamiq","nro":58,"url":"http://3.bp.blogspot.com/-8e_J8hkX_kM/TbSz0jywljI/AAAAAAAAAY4/Nei-hnfPGaI/s1600/Balsamiq+myTube+example.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"Youtube Balsamiq","attributes":{},"skip":false,"key":"1.13.3.3"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.4","level":"1.13.3","list_caption":"Figure: Youtube actual","alt":"Youtube actual","nro":59,"url":"https://make.wordpress.org/support/wp-content/blogs.dir/21/files/2012/10/embed-youtube-page.jpg","index":4,"caption_template":"Figure: _CAPTION_","label":"Youtube actual","attributes":{},"skip":false,"key":"1.13.3.4"},{"backlink":"01-workflow/user-stories-wireframing/game-exercise.html#fig1.13.3.2.1","level":"1.13.3.2","list_caption":"Figure: https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","alt":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","nro":60,"url":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","attributes":{},"skip":false,"key":"1.13.3.2.1"},{"backlink":"01-workflow/user-stories-wireframing/game-exercise.html#fig1.13.3.2.2","level":"1.13.3.2","list_caption":"Figure: https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","alt":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","nro":61,"url":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","index":2,"caption_template":"Figure: _CAPTION_","label":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","attributes":{},"skip":false,"key":"1.13.3.2.2"},{"backlink":"01-workflow/review.html#fig1.13.5.1","level":"1.13.5","list_caption":"Figure: https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","alt":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","nro":62,"url":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","attributes":{},"skip":false,"key":"1.13.5.1"},{"backlink":"01-workflow/js-styleguide.html#fig1.13.6.1","level":"1.13.6","list_caption":"Figure: Gitter","alt":"Gitter","nro":63,"url":"https://badges.gitter.im/Join Chat.svg","index":1,"caption_template":"Figure: _CAPTION_","label":"Gitter","attributes":{},"skip":false,"key":"1.13.6.1"}]},"plugins":["advanced-emoji","toggle-chapters","codeblock-disable-glossary","youtube","image-captions"],"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"image-captions":{"variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10-react/react-intro/bind.md","mtime":"2018-05-04T02:58:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T07:07:30.458Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Router","level":"1.10.8.3","depth":3,"next":{"title":"Installfest","level":"1.11","depth":1,"path":"00-config-deployment/installfest/readme.md","ref":"00-config-deployment/installfest/readme.md","articles":[{"title":"Mac OSX - 1","level":"1.11.1","depth":2,"path":"00-config-deployment/installfest/osx/readme.md","ref":"00-config-deployment/installfest/osx/readme.md","articles":[]},{"title":"Mac OSX - 2","level":"1.11.2","depth":2,"path":"00-config-deployment/installfest/osx/install2.md","ref":"00-config-deployment/installfest/osx/install2.md","articles":[]},{"title":"Mac OSX - 3","level":"1.11.3","depth":2,"path":"00-config-deployment/installfest/osx/install3.md","ref":"00-config-deployment/installfest/osx/install3.md","articles":[]},{"title":"Windows","level":"1.11.4","depth":2,"path":"00-config-deployment/installfest/windows/readme.md","ref":"00-config-deployment/installfest/windows/readme.md","articles":[]},{"title":"Windows - 2","level":"1.11.5","depth":2,"path":"00-config-deployment/installfest/windows/install2.md","ref":"00-config-deployment/installfest/windows/install2.md","articles":[]},{"title":"Windows - 3","level":"1.11.6","depth":2,"path":"00-config-deployment/installfest/windows/install3.md","ref":"00-config-deployment/installfest/windows/install3.md","articles":[]},{"title":"Linux","level":"1.11.7","depth":2,"path":"00-config-deployment/installfest/linux/readme.md","ref":"00-config-deployment/installfest/linux/readme.md","articles":[]}]},"previous":{"title":"Lifecycle","level":"1.10.8.2","depth":3,"path":"10-react/additional-topics/lifecycle.md","ref":"10-react/additional-topics/lifecycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"01-tools/command-line/02intro-terminal.html#fig1.2.1.1.1","level":"1.2.1.1","list_caption":"Figure: Terminal Window","alt":"Terminal Window","nro":1,"url":"http://i.stack.imgur.com/DjFOZ.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Terminal Window","attributes":{},"skip":false,"key":"1.2.1.1.1"},{"backlink":"01-tools/command-line/03navigating.html#fig1.2.1.2.1","level":"1.2.1.2","list_caption":"Figure: Filesystem image","alt":"Filesystem image","nro":2,"url":"http://www.qnx.com/developers/docs/qnx_4.25_docs/qnx4/user_guide/images/files.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"Filesystem image","attributes":{},"skip":false,"key":"1.2.1.2.1"},{"backlink":"01-tools/intro-git/02vcs.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: DVCS diagram","alt":"DVCS diagram","nro":3,"url":"http://git-scm.com/figures/18333fig0103-tn.png","index":1,"caption_template":"Figure: _CAPTION_","label":"DVCS diagram","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"01-tools/intro-git/04remotegit.html#fig1.2.3.3.1","level":"1.2.3.3","list_caption":"Figure: https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","alt":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","nro":4,"url":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","index":1,"caption_template":"Figure: _CAPTION_","label":"https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963","attributes":{},"skip":false,"key":"1.2.3.3.1"},{"backlink":"01-tools/chrome-dev-tools/index.html#fig1.2.4.1","level":"1.2.4","list_caption":"Figure: screenshot","alt":"screenshot","nro":5,"url":"https://i.imgur.com/5ruzGhc.png","index":1,"caption_template":"Figure: _CAPTION_","label":"screenshot","attributes":{},"skip":false,"key":"1.2.4.1"},{"backlink":"03-html-css/positioning/02box-model.html#fig1.3.3.1.1","level":"1.3.3.1","list_caption":"Figure: box-model","alt":"box-model","nro":6,"url":"http://s6.postimg.org/gi8r6c341/css_box_model.png","index":1,"caption_template":"Figure: _CAPTION_","label":"box-model","attributes":{},"skip":false,"key":"1.3.3.1.1"},{"backlink":"03-html-css/positioning/03display-positioning.html#fig1.3.3.2.1","level":"1.3.3.2","list_caption":"Figure: https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","alt":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","nro":7,"url":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"https://media.giphy.com/media/13yeYZJuM4LpjW/giphy.gif","attributes":{},"skip":false,"key":"1.3.3.2.1"},{"backlink":"03-html-css/positioning/03display-positioning.html#fig1.3.3.2.2","level":"1.3.3.2","list_caption":"Figure: Imgur","alt":"Imgur","nro":8,"url":"https://i.imgur.com/I22mFsc.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.3.2.2"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.1","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","nro":9,"url":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/GA.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.1"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.2","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","nro":10,"url":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/master/images/GA-b.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.2"},{"backlink":"03-html-css/positioning/07layout.html#fig1.3.3.4.3","level":"1.3.3.4","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","nro":11,"url":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/e91332410ceabb969dea3cddca611811fbe29678/images/airbnb.png?raw=true","attributes":{},"skip":false,"key":"1.3.3.4.3"},{"backlink":"03-html-css/positioning/02responsivedesign.html#fig1.3.3.5.1","level":"1.3.3.5","list_caption":"Figure: No Viewport Meta Tag","alt":"No Viewport Meta Tag","nro":12,"url":"http://developers.google.com/speed/docs/insights/images/viewport/iphone_no_viewport.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"No Viewport Meta Tag","attributes":{},"skip":false,"key":"1.3.3.5.1"},{"backlink":"03-html-css/positioning/02responsivedesign.html#fig1.3.3.5.2","level":"1.3.3.5","list_caption":"Figure: Viewport Meta Tag","alt":"Viewport Meta Tag","nro":13,"url":"https://developers.google.com/speed/docs/insights/images/viewport/iphone_viewport.jpg","index":2,"caption_template":"Figure: _CAPTION_","label":"Viewport Meta Tag","attributes":{},"skip":false,"key":"1.3.3.5.2"},{"backlink":"03-html-css/css-bootstrap/bootstrap.html#fig1.3.4.1","level":"1.3.4","list_caption":"Figure: Imgur","alt":"Imgur","nro":14,"url":"https://i.imgur.com/6IcKOjZ.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.4.1"},{"backlink":"03-html-css/css-bootstrap/bootstrap.html#fig1.3.4.2","level":"1.3.4","list_caption":"Figure: Imgur","alt":"Imgur","nro":15,"url":"https://i.imgur.com/cnaI0rc.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Imgur","attributes":{},"skip":false,"key":"1.3.4.2"},{"backlink":"02-js/js-intro/js-control-flow/03booleans-and-conditionals.html#fig1.4.3.1.1","level":"1.4.3.1","list_caption":"Figure: control flow wd40","alt":"control flow wd40","nro":16,"url":"https://i.imgur.com/v4W1xwD.png","index":1,"caption_template":"Figure: _CAPTION_","label":"control flow wd40","attributes":{},"skip":false,"key":"1.4.3.1.1"},{"backlink":"02-js/js-intro/js-control-flow/04loops.html#fig1.4.3.2.1","level":"1.4.3.2","list_caption":"Figure: control flow wd40","alt":"control flow wd40","nro":17,"url":"https://i.imgur.com/v4W1xwD.png","index":1,"caption_template":"Figure: _CAPTION_","label":"control flow wd40","attributes":{},"skip":false,"key":"1.4.3.2.1"},{"backlink":"04-server/00node.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","nro":18,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png","attributes":{},"skip":false,"key":"1.5.1.1"},{"backlink":"04-server/01npm.html#fig1.5.4.1","level":"1.5.4","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","nro":19,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png","attributes":{},"skip":false,"key":"1.5.4.1"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.1","level":"1.5.6","list_caption":"Figure: https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","alt":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","nro":20,"url":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg","attributes":{},"skip":false,"key":"1.5.6.1"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.2","level":"1.5.6","list_caption":"Figure: http://www.escotal.com/Images/Network%20parts/osi.gif","alt":"http://www.escotal.com/Images/Network%20parts/osi.gif","nro":21,"url":"http://www.escotal.com/Images/Network%20parts/osi.gif","index":2,"caption_template":"Figure: _CAPTION_","label":"http://www.escotal.com/Images/Network%20parts/osi.gif","attributes":{},"skip":false,"key":"1.5.6.2"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.3","level":"1.5.6","list_caption":"Figure: http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","alt":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","nro":22,"url":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"http://1.bp.blogspot.com/-VU8FEIDWXlc/Tk-hPTxzDdI/AAAAAAAAAHw/UGDZ2hFx4PQ/s1600/memes-the-internet-is.jpg","attributes":{},"skip":false,"key":"1.5.6.3"},{"backlink":"04-server/how-the-internet-works.html#fig1.5.6.4","level":"1.5.6","list_caption":"Figure: http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","alt":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","nro":23,"url":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","index":4,"caption_template":"Figure: _CAPTION_","label":"http://www.conceptdraw.com/How-To-Guide/picture/Computer-and-networks-Local-area-network-diagram.png","attributes":{},"skip":false,"key":"1.5.6.4"},{"backlink":"05-express/index.html#fig1.6.1","level":"1.6","list_caption":"Figure: 3-Tier Express Application","alt":"3-Tier Express Application","nro":24,"url":"images/3-tier-application.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"3-Tier Express Application","attributes":{},"skip":false,"key":"1.6.1"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.1","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","alt":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","nro":25,"url":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","attributes":{},"skip":false,"key":"1.6.1.5.1"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.2","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","nro":26,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","attributes":{},"skip":false,"key":"1.6.1.5.2"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.3","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","nro":27,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","attributes":{},"skip":false,"key":"1.6.1.5.3"},{"backlink":"05-express/express-intro/components.html#fig1.6.1.5.4","level":"1.6.1.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","nro":28,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":4,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","attributes":{},"skip":false,"key":"1.6.1.5.4"},{"backlink":"05-express/express-auth/cookies.html#fig1.6.3.1.1","level":"1.6.3.1","list_caption":"Figure: https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","alt":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","nro":29,"url":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","index":1,"caption_template":"Figure: _CAPTION_","label":"https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif","attributes":{},"skip":false,"key":"1.6.3.1.1"},{"backlink":"05-express/express-auth/password2.html#fig1.6.3.3.1","level":"1.6.3.3","list_caption":"Figure: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","alt":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","nro":30,"url":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/750px-Cryptographic_Hash_Function.svg.png","attributes":{},"skip":false,"key":"1.6.3.3.1"},{"backlink":"05-express/additional-topics/express-socket-io/index.html#fig1.6.8.4.1","level":"1.6.8.4","list_caption":"Figure: Websockets","alt":"Websockets","nro":31,"url":"./sockets.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Websockets","attributes":{},"skip":false,"key":"1.6.8.4.1"},{"backlink":"04-databases/sql-intro/additional-topics/sql-advanced.html#fig1.7.1.2.1.1","level":"1.7.1.2.1","list_caption":"Figure: SQL Joins","alt":"SQL Joins","nro":32,"url":"http://www.dofactory.com/Images/sql-joins.png","index":1,"caption_template":"Figure: _CAPTION_","label":"SQL Joins","attributes":{},"skip":false,"key":"1.7.1.2.1.1"},{"backlink":"04-databases/postgres/index.html#fig1.7.2.1","level":"1.7.2","list_caption":"Figure: https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","alt":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","nro":33,"url":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","index":1,"caption_template":"Figure: _CAPTION_","label":"https://image.slidesharecdn.com/GettoknowPostgreSQL-123559698726-phpapp02/95/get-to-know-postgresql-55-728.jpg?cb=1235575493","attributes":{},"skip":false,"key":"1.7.2.1"},{"backlink":"04-databases/postgres/index.html#fig1.7.2.2","level":"1.7.2","list_caption":"Figure: image","alt":"image","nro":34,"url":"Postgres.png","index":2,"caption_template":"Figure: _CAPTION_","label":"image","attributes":{},"skip":false,"key":"1.7.2.2"},{"backlink":"04-databases/postgres/additional-topics/sqlcheatsheet.html#fig1.7.2.4.2.1","level":"1.7.2.4.2","list_caption":"Figure: SQL Joins","alt":"SQL Joins","nro":35,"url":"http://www.dofactory.com/Images/sql-joins.png","index":1,"caption_template":"Figure: _CAPTION_","label":"SQL Joins","attributes":{},"skip":false,"key":"1.7.2.4.2.1"},{"backlink":"04-databases/postgres/CRUD-postgres.html#fig1.7.3.1","level":"1.7.3","list_caption":"Figure: 3-Tier Express Application","alt":"3-Tier Express Application","nro":36,"url":"https://wdi-sg.github.io/gitbook-2019/05-express/images/3-tier-application.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"3-Tier Express Application","attributes":{},"skip":false,"key":"1.7.3.1"},{"backlink":"04-databases/additional-topics/mongo-intro/intro-nosql.html#fig1.7.5.1.1","level":"1.7.5.1","list_caption":"Figure: MongoDB vs Relational Databases","alt":"MongoDB vs Relational Databases","nro":37,"url":"http://4.bp.blogspot.com/-edz2_QrFvCE/UnzBhKZE3FI/AAAAAAAAAEs/bTEsqnZFTXw/s1600/SQL-MongoDB+Correspondence.PNG","index":1,"caption_template":"Figure: _CAPTION_","label":"MongoDB vs Relational Databases","attributes":{},"skip":false,"key":"1.7.5.1.1"},{"backlink":"06-ruby-rails/ruby-intro/index.html#fig1.8.2.1","level":"1.8.2","list_caption":"Figure: Yukihiro Matsumoto","alt":"Matz-san","nro":38,"url":"http://image.gihyo.co.jp/assets/images/dev/serial/01/software_designers/0034/0034-01.JPG","index":1,"caption_template":"Figure: _CAPTION_","label":"Yukihiro Matsumoto","attributes":{},"title":"Yukihiro Matsumoto","skip":false,"key":"1.8.2.1"},{"backlink":"06-ruby-rails/rails-intro/index.html#fig1.9.1.1","level":"1.9.1","list_caption":"Figure: MVC Diagram","alt":"MVC Diagram","nro":39,"url":"http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png","index":1,"caption_template":"Figure: _CAPTION_","label":"MVC Diagram","attributes":{},"skip":false,"key":"1.9.1.1"},{"backlink":"06-ruby-rails/rails-intro/index.html#fig1.9.1.2","level":"1.9.1","list_caption":"Figure: Rails File Structure","alt":"Rails File Structure","nro":40,"url":"http://i.imgur.com/whOL4DQ.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Rails File Structure","attributes":{},"skip":false,"key":"1.9.1.2"},{"backlink":"06-ruby-rails/active-record/index.html#fig1.9.5.1","level":"1.9.5","list_caption":"Figure: ORM-ActiveRecord","alt":"ORM-ActiveRecord","nro":41,"url":"https://github.com/wdi-sg/activerecord-intro/blob/master/orm.jpg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"ORM-ActiveRecord","attributes":{},"skip":false,"key":"1.9.5.1"},{"backlink":"06-ruby-rails/additional-topics/rails-oauth/index.html#fig1.9.10.2.1","level":"1.9.10.2","list_caption":"Figure: OAuth from Oracle","alt":"OAuth from Oracle","nro":42,"url":"https://docs.oracle.com/cd/E50612_01/doc.11122/oauth_guide/content/images/oauth/oauth_overview.png","index":1,"caption_template":"Figure: _CAPTION_","label":"OAuth from Oracle","attributes":{},"skip":false,"key":"1.9.10.2.1"},{"backlink":"10-react/index.html#fig1.10.1","level":"1.10","list_caption":"Figure: ReactJS","alt":"ReactJS","nro":43,"url":"https://facebook.github.io/react/img/logo_og.png","index":1,"caption_template":"Figure: _CAPTION_","label":"ReactJS","attributes":{},"skip":false,"key":"1.10.1"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.1","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","alt":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","nro":44,"url":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png","attributes":{},"skip":false,"key":"1.10.2.1"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.2","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","nro":45,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true","index":2,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png","attributes":{},"skip":false,"key":"1.10.2.2"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.3","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","nro":46,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true","index":3,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png","attributes":{},"skip":false,"key":"1.10.2.3"},{"backlink":"10-react/react-intro/components.html#fig1.10.2.4","level":"1.10.2","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","nro":47,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":4,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png","attributes":{},"skip":false,"key":"1.10.2.4"},{"backlink":"10-react/react-intro/state.html#fig1.10.3.1","level":"1.10.3","list_caption":"Figure: https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","alt":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","nro":48,"url":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","index":1,"caption_template":"Figure: _CAPTION_","label":"https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229","attributes":{},"skip":false,"key":"1.10.3.1"},{"backlink":"10-react/react-intro/state.html#fig1.10.3.2","level":"1.10.3","list_caption":"Figure: https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","alt":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","nro":49,"url":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","index":2,"caption_template":"Figure: _CAPTION_","label":"https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png","attributes":{},"skip":false,"key":"1.10.3.2"},{"backlink":"10-react/react-intro/lifting.html#fig1.10.5.1","level":"1.10.5","list_caption":"Figure: https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","alt":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","nro":50,"url":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true","attributes":{},"skip":false,"key":"1.10.5.1"},{"backlink":"10-react/additional-topics/lifecycle.html#fig1.10.8.2.1","level":"1.10.8.2","list_caption":"Figure: https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","alt":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","nro":51,"url":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","index":1,"caption_template":"Figure: _CAPTION_","label":"https://github.com/wdi-sg/gitbook-2018/blob/8001ca2ffc95d1bc20152ca197f3fd808f06491f/react-lifecycle.jpeg?raw=true","attributes":{},"skip":false,"key":"1.10.8.2.1"},{"backlink":"11-groups/00branching.html#fig1.12.1.1","level":"1.12.1","list_caption":"Figure: Git Branch Diagram","alt":"Git Branch Diagram","nro":52,"url":"https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/branching.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Git Branch Diagram","attributes":{},"skip":false,"key":"1.12.1.1"},{"backlink":"11-groups/00branching.html#fig1.12.1.2","level":"1.12.1","list_caption":"Figure: before-merge","alt":"before-merge","nro":53,"url":"https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/merging.png","index":2,"caption_template":"Figure: _CAPTION_","label":"before-merge","attributes":{},"skip":false,"key":"1.12.1.2"},{"backlink":"11-groups/01index.html#fig1.12.2.1","level":"1.12.2","list_caption":"Figure: Github Workflows","alt":"Github Workflows","nro":54,"url":"https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/images/github_workflows.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"Github Workflows","attributes":{},"skip":false,"key":"1.12.2.1"},{"backlink":"11-groups/03rolestools.html#fig1.12.3.1","level":"1.12.3","list_caption":"Figure: Kanban","alt":"Kanban","nro":55,"url":"https://olemortenamundsen.files.wordpress.com/2010/03/kanban_illustration.png","index":1,"caption_template":"Figure: _CAPTION_","label":"Kanban","attributes":{},"skip":false,"key":"1.12.3.1"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.1","level":"1.13.3","list_caption":"Figure: https://i.imgur.com/NUNBEwW.png","alt":"https://i.imgur.com/NUNBEwW.png","nro":56,"url":"https://i.imgur.com/NUNBEwW.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://i.imgur.com/NUNBEwW.png","attributes":{},"skip":false,"key":"1.13.3.1"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.2","level":"1.13.3","list_caption":"Figure: Waterfall model","alt":"Waterfall model","nro":57,"url":"https://i.imgur.com/yJMVO91.png","index":2,"caption_template":"Figure: _CAPTION_","label":"Waterfall model","attributes":{},"skip":false,"key":"1.13.3.2"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.3","level":"1.13.3","list_caption":"Figure: Youtube Balsamiq","alt":"Youtube Balsamiq","nro":58,"url":"http://3.bp.blogspot.com/-8e_J8hkX_kM/TbSz0jywljI/AAAAAAAAAY4/Nei-hnfPGaI/s1600/Balsamiq+myTube+example.jpg","index":3,"caption_template":"Figure: _CAPTION_","label":"Youtube Balsamiq","attributes":{},"skip":false,"key":"1.13.3.3"},{"backlink":"01-workflow/user-stories-wireframing/index.html#fig1.13.3.4","level":"1.13.3","list_caption":"Figure: Youtube actual","alt":"Youtube actual","nro":59,"url":"https://make.wordpress.org/support/wp-content/blogs.dir/21/files/2012/10/embed-youtube-page.jpg","index":4,"caption_template":"Figure: _CAPTION_","label":"Youtube actual","attributes":{},"skip":false,"key":"1.13.3.4"},{"backlink":"01-workflow/user-stories-wireframing/game-exercise.html#fig1.13.3.2.1","level":"1.13.3.2","list_caption":"Figure: https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","alt":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","nro":60,"url":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","index":1,"caption_template":"Figure: _CAPTION_","label":"https://3.bp.blogspot.com/-NNmtXgzh7mc/VwPpBV_dCfI/AAAAAAAADTU/UwJsiZPwcFIx_UOPrWOJ4wvj1yU-52Ptw/s1600/overview.png","attributes":{},"skip":false,"key":"1.13.3.2.1"},{"backlink":"01-workflow/user-stories-wireframing/game-exercise.html#fig1.13.3.2.2","level":"1.13.3.2","list_caption":"Figure: https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","alt":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","nro":61,"url":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","index":2,"caption_template":"Figure: _CAPTION_","label":"https://4.bp.blogspot.com/-WihSYL5mk60/VwPZ_dvIdeI/AAAAAAAADSs/5WbmnbOSBAQkLNG3iZy0jvTJbh_I5AtRQ/s400/narrative%2Bbar.png","attributes":{},"skip":false,"key":"1.13.3.2.2"},{"backlink":"01-workflow/review.html#fig1.13.5.1","level":"1.13.5","list_caption":"Figure: https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","alt":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","nro":62,"url":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","index":1,"caption_template":"Figure: _CAPTION_","label":"https://d.justpo.st/media/images/2013/03/463e4e4f4acb9afc185a067b7f360321.jpg","attributes":{},"skip":false,"key":"1.13.5.1"},{"backlink":"01-workflow/js-styleguide.html#fig1.13.6.1","level":"1.13.6","list_caption":"Figure: Gitter","alt":"Gitter","nro":63,"url":"https://badges.gitter.im/Join Chat.svg","index":1,"caption_template":"Figure: _CAPTION_","label":"Gitter","attributes":{},"skip":false,"key":"1.13.6.1"}]},"plugins":["advanced-emoji","toggle-chapters","codeblock-disable-glossary","youtube","image-captions"],"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"image-captions":{"variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10-react/additional-topics/router.md","mtime":"2019-05-13T08:46:41.025Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T08:50:39.567Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
