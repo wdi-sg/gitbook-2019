@@ -7,10 +7,9 @@ Let's change the button to a form input.
 ```
 constructor(){
   super()
-}
-
-state = {
-  word : ""
+  this.state = {
+    word : ""
+  }
 }
 
 changeHandler(event){

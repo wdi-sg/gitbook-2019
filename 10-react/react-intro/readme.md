@@ -18,12 +18,17 @@ It's back-end equivalent would be more expresss than rails.
 
 We will see that the professional react "stack" is quite complicated and includes some new tools and ways of working.
 
----
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/trello.png?raw=true)
+
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/fb.jpg?raw=true)
+
+![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/gmail.jpg?raw=true)
+
 ## What is reactjs
 The react library itself is just a rendering layer to easily render elements onto an HTML page in the browser.
 
 The wider react ecosystem allows you to build complex js single page applications.
----
+
 
 ### Top 3 React Whys:
 
@@ -31,7 +36,7 @@ The wider react ecosystem allows you to build complex js single page application
 2. Explicit data flow. No more global variables. Logic reacts as data flows.
 3. Component library ecosystem.
 
----
+
 
 
 ## Hello World Example
@@ -42,7 +47,7 @@ Given we've included the right libraries:
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 ```
 
----
+
 
 We have this main section:
 ```
@@ -54,19 +59,20 @@ ReactDOM.render(
 );
 </script>
 ```
----
+
 
 ## How does this work?
----
+
 
 ### 1. Babel
 Babel is a *javascript transpiler*. It takes code and spits out new code. In fact, when we write react we are going to be working with an extension of the javascript language called JSX.
 
 Babel is the tool we will use to *transpile* JSX to javascript.
----
+
 
 #### 1.1 How Babel works
 ```
+<!-- NOTE THAT THIS IS A DIFFERENT BABEL LIBRARY THAN ABOVE -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
 <script>
 
@@ -94,7 +100,7 @@ ReactDOM.render(React.createElement(
 ), document.getElementById('root'));
 ```
 
----
+
 
 Specifically Babel is looking for `<p>` and transforming it into `React.createElement`.
 
@@ -102,7 +108,7 @@ Specifically Babel is looking for `<p>` and transforming it into `React.createEl
 - JSX to ES5
 - ES6 to ES5
 - typescript to ES5
----
+
 
 
 #### 1.2 Javascript `eval`
@@ -115,7 +121,7 @@ eval(foo);
 
 Babel takes the entire transpiled string and executes it for us.
 
----
+
 
 ### 2. ReactDOM
 Now that we understand the magic behind this new `JSX` syntax, let's look at the example again.
@@ -140,7 +146,7 @@ ReactDOM.render(element, document.getElementById('root'));
 
 Let's take out babel and the old code and paste that in.
 
----
+
 
 ## Rendering with Javascript
 
@@ -164,7 +170,7 @@ ReactDOM.render(
 Does this syntax look familiar? It works just like every rendering layer we've seen so far, in express and rails.
 
 You can do anything you did in express and rails templates in JSX.
----
+
 
 Conditional rendering:
 ```
@@ -181,7 +187,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
----
+
 
 ### Pairing Exercise: Render JSX with react and babel
 
