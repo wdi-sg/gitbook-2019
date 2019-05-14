@@ -1,5 +1,23 @@
 # React Render Timing / State
 
+#### Click Handlers
+
+```
+clickHandler(){
+  console.log("clicking");
+}
+
+render() {
+    console.log("rendering");
+    return (
+      <div className="item">
+        <button onClick={()=>{this.clickHandler()}}>YAY</button>
+      </div>
+    );
+}
+```
+
+## React State
 Now we have a button that can be clicked.
 
 Let's change some attribute of the class, a counter that gets incremented.
@@ -33,7 +51,7 @@ This code increments the value, but what happens when we try to output it?
 
 We can see that the class attribute gets incremented, but the screen doesn't change.
 
-## React Rendering
+### React Rendering
 
 Now we can talk about the real differentiation of the react library.
 
@@ -47,7 +65,6 @@ The real work of building a react app is understanding this rendering cycle.
 
 ![https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png](https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png)
 
-## React State
 
 So we know about React properties, and how they relate to our component's data.
 * The thing is, `props` represent data that will be the same every time our component is rendered. What about data in our application that may change depending on user action?
