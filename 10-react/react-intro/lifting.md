@@ -59,22 +59,12 @@ class App extends React.Component{
 }
 
 class Line extends React.Component{
-	constructor(){
-		super();
-		this.doStuff = this.doStuff.bind( this );
-	}
-
-
-
-  doStuff(){
-    this.props.setCurrentStation("paddington")
-  }
 
   render(){
     return (
       <div>
         <h1>{this.props.station}</h1>
-        <button onClick={this.doStuff}/>
+        <button onClick={this.props.setCurrentStation}/>
       </div>
     );
   }
