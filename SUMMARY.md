@@ -156,6 +156,7 @@
   * [State](10-react/react-intro/state.md)
   * [Forms](10-react/react-intro/forms.md)
   * [Lifting Functions](10-react/react-intro/lifting.md)
+  * [ES6 Spread / Destructure](10-react/react-intro/es6-spread.md)
   * [webpack](10-react/react-webpack/readme.md)
   * [rails-webpack](10-react/react-webpack/webpacker.md)
   * [Additional Topics](10-react/additional-topics/readme.md)
