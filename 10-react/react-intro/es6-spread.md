@@ -42,30 +42,6 @@ this.setState({monkey: {[keyName]: stuff, ...this.state.monkey}});
 
 See some more ES6 destructuring techniques [here.](https://medium.freecodecamp.org/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)
 
-## pure react functions
-You may get this [error.](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-)
-If yout component doesn't deal with props or state, use this syntax:
-```js
-const App = () => (
-  <div>
-    <Main />
-  </div>
-);
-
-export default App;
-```
-This is more efficient because it prevents react from having to check this component for changes to render.
-
-### More Resources:
-Do you want asset pipeline-like controls over asset urls? Check out the webpack [`file-loader`](https://github.com/webpack-contrib/file-loader)
-
-Webpack sass: [https://github.com/webpack-contrib/sass-loader](https://github.com/webpack-contrib/sass-loader)
-
-### Simplified starting app template:
-A less opinionated express / webpack / react starting app:
-[https://github.com/wdi-sg/react-express](https://github.com/wdi-sg/react-express)
-
 ### Exercise: ES6 destructuring
 Run these code snippets:
 
