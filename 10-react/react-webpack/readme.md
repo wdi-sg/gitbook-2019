@@ -198,4 +198,12 @@ Webpack sass: [https://github.com/webpack-contrib/sass-loader](https://github.co
 
 
 ### pairing exercise
-Clone the starter code repo and 
+Clone the starter code repo and add one component into the app:
+
+  - create a folder in the app for the component in `/components`
+  - add the component jsx file
+  - import it in another component to use it
+
+#### further
+Add CSS to the component
+

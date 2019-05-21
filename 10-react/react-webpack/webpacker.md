@@ -17,7 +17,8 @@ gem install webpacker
 
 Create and initialize the app: (this one includes all the models and views)
 ```
-rails new blog --webpack=react -d postgresql
+rails new blog --webpack=react -d postgresql --skip-turbolinks --skip--coffee
+
 cd blog
 rails generate scaffold Post name:string title:string content:text
 rails db:create
