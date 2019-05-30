@@ -96,7 +96,7 @@ hello_react.jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import App from './components/app'
+import App from '../components/app'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Make a directory that will contain the rest of your react app.
 ```
-cd app/javascripts
+cd app/javascript
 mkdir components
 touch app.jsx
 ```
@@ -161,11 +161,9 @@ You can get rails to send back json instead of rendering the view by doing `.jso
 http://localhost:3000/posts/1.json
 ```
 
-In your react code, add a button or a `componentDidMount` method that makes an ajax request to that route. When the response comes back, render it.
+In your react code, add a button that makes an ajax request to that route. When the response comes back, render it.
 
 ```
-componentDidMount() {
-
   var reactThis = this;
 
   var responseHandler = () => {
@@ -180,7 +178,6 @@ componentDidMount() {
   request.open("GET", "http://localhost:3000/posts/1.json");
 
   request.send();
-}
 ```
 
 #### further

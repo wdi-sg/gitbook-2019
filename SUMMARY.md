@@ -163,6 +163,7 @@
     * [Click Events / Bind](10-react/additional-topics/bind.md)
     * [Lifecycle](10-react/additional-topics/lifecycle.md)
     * [Router](10-react/additional-topics/router.md)
+    * [Other Component Types](10-react/additional-topics/other-components.md)
 
 * [Installfest](00-config-deployment/installfest/readme.md)
   * [Mac OSX - 1](00-config-deployment/installfest/osx/readme.md)
