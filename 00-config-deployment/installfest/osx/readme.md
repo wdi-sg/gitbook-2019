@@ -73,7 +73,7 @@ Download and install the latest version [https://www.sublimetext.com/](https://w
 
 Find the location of your copy of sublime from the terminal:
 ```
-ls -la /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl`
+ls -la /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
 ```
 
 Should run without errors.
