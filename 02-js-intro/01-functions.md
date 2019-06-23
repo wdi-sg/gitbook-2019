@@ -1,3 +1,65 @@
+day 1
+(fixed size data)
+command line, operations, conditionals, css box model
+
+pokedex html
+
+day 2
+
+cli murder
+
+git
+functions
+interactive template
+float display positioning
+
+temperature converted
+
+
+day 3
+
+ios
+
+github
+layout
+program design
+
+
+day 4
+
+wendy bite
+
+
+objects
+virtual pet??
+
+day 5
+
+hippy portfolio
+
+(arbitrary size data)
+arrays
+loops (while loop only)
+
+choose your own adventure
+
+???
+
+w2 d1
+
+w2 d2
+
+w2 d3
+
+w2 d4
+
+
+
+
+
+
+
+
 ##### operations
 The most basic computation is an operation:
 
@@ -136,9 +198,6 @@ batch processing
 
 interactive
 
-
-
-
 ## word problems
 
 Programmers are rarely handed mathematical expressions to turn into programs.
@@ -170,30 +229,104 @@ In order to build programs that represent the real world like the problem statem
 
 We can be explicit about using `numbers`, `booleans` and `strings` to represent the data our programs capture and process.
 
-Once we are explicit about these things we can design our programs to deal with these underlying basic types while representing our data clearly.
+Once we are explicit about these things we can design our programs to deal with these underlying basic types while representing our data clearly. Simply by naming the data represented in our programs (variables, functions and parameters ) we are describing the kind of data these represent.
 
 ## state data reperesentation
 User types "right" or "left".
 
+Temperature is a number type, but *represents* a temperature.
+
+Question: what kind of operations are suggested by this *TYPE* of data?
+
+Use a conditional to determine which state produces which data.
+
+```
+if( feeling === "ok" ){
+  return "me too!";
+}else if( feeling === "terrible" ){
+  return "ouch, sorry bout that!";
+}
+```
+
 ## range data representation
 User types number between 2 and 6.
+
+Example:
+Altitude. What kind of operations are suggested by this kind of data?
+Human breathable range, negative numbers, max and min conditions.
+
+Use a conditional to determine what data is produced from which range.
+
+```
+if( temperature < 0 ){
+  return "below freezing! we suggest 2 layers";
+}else if(temperature >= 0 && temperature < 10 ){
+  return "pretty cold. try our Warm Tech Fleece";
+}else{
+  return "try our warmer clothing sections";
+}
+```
 
 ## data outside these 2 types:
 `null` is the representation of non-value in js. we can use this native type as a value that represents the non-value of data for either state data or range data.
 
-
 Example:
 
 ```
-var wordEntered = ...
-// user entered no characters
-// use null to represent this input
+var square1 = null;
+// the game starts with each square being unmarked - neither X or O.
 ```
+
+Note that this `null` type *is not* the same as the IDEA of a non-data data.
 
 ## finite state programs
 
 Finite state programs represent a set number of states of a given system.
 
-### traffic lights
+![dog fsm]()
 
-### door open, locked or shut
+### traffic lights
+A traffic light turns from one state to the other in a specific order.
+
+- when its green, turn it yellow.
+- when its yellow, turn it red
+- when its red, turn it green
+
+### pairing exercise
+Implement a choose your own adventure game with HTML pages.
+
+Suggestions:
+```
+
+                          You are in a red room.
+                          Do you want to go left or right?
+                                    /         \
+                                left          right
+          You are in a blue room.            You are in a greenhouse.
+          Do you want to go left or right?   Do you want to go left or right?
+            /               \                                 /     \
+Goes to greenhouse.     You were eaten by a grue.         You win!    Goes to red room.
+```
+
+### pairing exercise
+Implement a choose your own adventure. Let the user enter things as input.
+
+1. Data Description
+
+2. Data Examples
+
+3. Function Signature
+
+4. Function Purpose
+
+5. Function Header
+
+6. Functional Examples
+
+7. Function Template
+
+8. Code
+
+9. Test
+
+10. Review & Refactor
