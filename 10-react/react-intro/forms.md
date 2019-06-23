@@ -7,6 +7,7 @@ Let's change the button to a form input.
 ```
 constructor(){
   super()
+
   this.state = {
     word : ""
   }
