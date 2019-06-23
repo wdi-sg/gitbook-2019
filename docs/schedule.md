@@ -6,45 +6,59 @@
 ##### Topics
 [Command Line](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/01readme.html)
 [Command Line Lab](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/command-line-lab.html)
-[JS Data Types](https://wdi-sg.github.io/gitbook-2019/02-js/js-intro/data-type-and-collections.html)
-[JS Primitives](https://github.com/wdi-sg/js-primitives)
-[Pseudo Code](https://wdi-sg.github.io/gitbook-2019/01-tools/pseudocode/pseudocode-highlevel.html)
-##### Assignment
-[Blog Simple](https://github.com/wdi-sg/blog-simple) |
-#### Day 2
-##### Morning Exercise
-[Command Line Murder Mystery](https://github.com/wdi-sg/command-line-murder-mystery)
-##### Topics
-[JS Conditionals and Booleans](https://wdi-sg.github.io/gitbook-2019/02-js/js-intro/js-control-flow/03booleans-and-conditionals.html)
-[Low Level Pseudo Code](https://wdi-sg.github.io/gitbook-2019/01-tools/pseudocode/pseudocode-lowlevel.html)
-[JS Loops](https://wdi-sg.github.io/gitbook-2019/02-js/js-intro/js-control-flow/04loops.html)
-[Remote Git](https://wdi-sg.github.io/gitbook-2019/01-tools/intro-git/04remotegit.html)
-##### Assignment
-[Temperature Converter](https://github.com/wdi-sg/temperature_converter) |
-#### Day 3
-##### Morning Exercise
-[Morse Code](https://github.com/wdi-sg/morse-code/)
+[js operations](https://wdi-sg.github.io/gitbook-2019/02-js-intro/01-operations.html)
+[js conditionals](https://wdi-sg.github.io/gitbook-2019/02-js-intro/02-conditionals.html)
 
-##### Topics
-[Chrome Dev Tools](https://wdi-sg.github.io/gitbook-2019/02-js/js-intro/js-control-flow/05chrome-dev-tools.html)
-[Array Iteration](https://wdi-sg.github.io/gitbook-2019/02-js/js-intro/js-control-flow/06-iterating-over-arrays.html)
 [CSS Box Model](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02box-model.html)
 [Box Model Lab](https://github.com/wdi-sg/box-model-lab)
 
 
 ##### Assignment
-[Assignment-git cheatsheet](https://github.com/wdi-sg/gitbook-2019/blob/master/01-tools/intro-git/06remotefork.md)
-[Google Shopping Conditionals Loops](https://github.com/wdi-sg/google-shopping-conditionals-loops)
+[pokedex html](https://github.com/wdi-sg/pokedex-html)
+
+#### Day 2
+
+##### Morning Exercise
+[Command Line Murder Mystery](https://github.com/wdi-sg/command-line-murder-mystery)
+
+##### Topics
+[local git](https://wdi-sg.github.io/gitbook-2019/01-tools/intro-git/readme.html)
+
+[functions](https://wdi-sg.github.io/gitbook-2019/02-js-intro/03-functions.html)
+[js template](https://wdi-sg.github.io/gitbook-2019/02-js-intro/04-template.html)
+
+[CSS Display / Positioning](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/03display-positioning.html)
+
+##### Assignment
+[Temperature Converter](https://github.com/wdi-sg/temperature_converter) |
+
+#### Day 3
+
+##### Morning Exercise
+[CSS iOS](https://github.com/wdi-sg/css-ios)
+
+##### Topics
+
+[Remote Git](https://wdi-sg.github.io/gitbook-2019/01-tools/intro-git/04remotegit.html)
+[git cheatsheet](https://github.com/wdi-sg/gitbook-2019/blob/master/01-tools/intro-git/06remotefork.md)
+[CSS Layout](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/07layout.html)
+
+[how to design](https://wdi-sg.github.io/gitbook-2019/02-js-intro/05-design.html)
+
+##### Assignment
+
+
 
 #### Day 4
 
 ##### Morning Exercise
-[atbash cypher](https://github.com/wdi-sg/atbash_cipher)
+[Wendy Bite](https://github.com/wdi-sg/wendy-bite)
 
 ##### Topics
-[JS Functions](https://wdi-sg.github.io/gitbook-2019/02-js/js-functions/readme.html)
-[CSS Display / Positioning](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/03display-positioning.html)
+[js objects](https://wdi-sg.github.io/gitbook-2019/02-js-intro/06-objects.html)
+[js loops](https://wdi-sg.github.io/gitbook-2019/02-js-intro/07-arrays-loops.html)
 
+[CSS Responsive](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02responsivedesign.html)
 
 ##### Assignment
 [Google Shopping Functions](https://github.com/wdi-sg/google-shopping-functions)
@@ -52,13 +66,13 @@
 #### Day 5
 
 ##### Morning Exercise
-[CSS iOS](https://github.com/wdi-sg/css-ios)
+[Hippy Portfolio](https://github.com/wdi-sg/hippy-portfolio)
 
 ##### Topics
+[js iteration](https://wdi-sg.github.io/gitbook-2019/02-js-intro/08-iteration.html)
 
-[JS Iterators](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/readme.html)
-[CSS Positioning](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/07layout.html)
-
+[CSS Flex Box](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/08layout-flexbox.html)
+[Flexbox Froggy](https://flexboxfroggy.com/)
 [Code Review Ex](https://wdi-sg.github.io/gitbook-2019/01-workflow/code-review.html)
 
 ##### Assignment
@@ -68,23 +82,22 @@
 ### Week 2
 #### Day 1
 ##### Morning Exercise
-[Wendy Bite](https://github.com/wdi-sg/wendy-bite)
+
+[CSS Airbnb](https://github.com/wdi-sg/css-airbnb)
 ##### Topics
 [Browser JS](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/readme.html)
 [JS DOM](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation.html)
-[CSS Responsive](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02responsivedesign.html)
+[CSS Bootstrap](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-bootstrap/bootstrap.html)
 
 ##### Assignment
 [Fellowship of the DOM](https://github.com/wdi-sg/fellowship-of-the-dom)
 
 #### Day 2
 ##### Morning Exercise
-[Hippy Portfolio](https://github.com/wdi-sg/hippy-portfolio)
+[CSS Airbnb Bootstrap](https://github.com/wdi-sg/css-airbnb-bootstrap)
 
 ##### Topics
 [JS DOM Events](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-events.html)
-[CSS Flex Box](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/08layout-flexbox.html)
-[Flexbox Froggy](https://flexboxfroggy.com/)
 
 
 ##### Assignment
@@ -93,21 +106,21 @@
 #### Day 3
 
 ##### Morning Exercise
-[CSS Airbnb](https://github.com/wdi-sg/css-airbnb)
+[CSS css pos](https://github.com/wdi-sg/css-positioning)
 
 ##### Topics
 [JS Browser Scope](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/scope.html)
-[CSS Bootstrap](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-bootstrap/bootstrap.html)
-
 
 ##### Assignment
 
 
 #### Day 4
 ##### Morning Exercise
-[CSS Airbnb Bootstrap](https://github.com/wdi-sg/css-airbnb-bootstrap)
+[CSS Pokedex](https://github.com/wdi-sg/pokedex-css)
+
 ##### Topics
 [AJAX](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/ajax.html)
+
 ##### Assignment
 [TV Browser](https://github.com/wdi-sg/tv-browser)
 
@@ -125,7 +138,6 @@ Code Review
 ### Week 1
 #### Day 1
 ##### Morning Exercise
-[CSS css pos](https://github.com/wdi-sg/css-positioning)
 ##### Topics
 [node](https://wdi-sg.github.io/gitbook-2019/04-server/00node.html)
 [ES6](https://wdi-sg.github.io/gitbook-2019/04-server/00es6.html)
@@ -138,7 +150,6 @@ Code Review
 
 #### Day 2
 ##### Morning Exercise
-[CSS Pokedex](https://github.com/wdi-sg/pokedex-css)
 
 ##### Topics
 [Internet Lab](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab.html)
