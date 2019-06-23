@@ -33,6 +33,10 @@ Make changes to the code as you see fit.
 
 If possible try to work on these three areas- they are listed in order of importance.
 
+#### Documentation
+
+Is each function propery documented? Is the documentation accurate?
+
 #### Errors
 
 Does the code have any errors?
