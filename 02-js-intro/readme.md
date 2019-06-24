@@ -63,3 +63,38 @@ What does it do?
   4. Then it (**L**)oops back to the beginning, ready to (**R**)ead the next line of code we feed it. It 'listens' for new code.
 
 > In Chrome, `⌘ + ⌥ + i` opens the chrome dev tools. Here you can do a bunch of stuff like inspect elements and see HTML, CSS and scripts the page has loaded. It allows you to access the console which interacts with the JS that the page has loaded. In our case we'll see that interaction with the code below
+
+---
+
+#### Create `index.html` and `script.js` Files
+
+Creating a JS intro directory that contains an `index.html` and `script.js` file. If you already have a `wdi` directory with contains a `sandbox` directory, you can run the below Terminal commands...
+
+```bash
+cd ~/wdi/sandbox
+touch index.html script.js
+```
+
+The `index.html` and `script.js` files should contain the following...
+
+```html
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is the Title</title>
+  </head>
+  <body>
+  <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```js
+// script.js
+
+console.log("hello world")
+```
+
+
