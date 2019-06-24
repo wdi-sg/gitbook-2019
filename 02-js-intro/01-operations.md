@@ -1,5 +1,5 @@
 # data operations
-The most basic computation is an operation. These happend between 2 pieces of data, and you get another piece of data out.
+The most basic computation is an operation. These happen between 2 pieces of data and then you get another piece of data out.
 
 Javascript defines certain specific *types* of data and the kinds of operations you can do on it.
 
