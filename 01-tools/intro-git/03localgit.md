@@ -55,8 +55,10 @@ The second command will add everything in the current working directory. But try
 Let's say you're happy with your work and want to save a version. This is called **committing**:
 
 ```
+#Usually you use `git add -u` before `git commit`
 git commit
 ```
+Often used after `git add <someFileName>` - if you are doing `git commit` without any `git add` then you should check your steps.
 
 This should open your editor. Save the screen you see and it should put you back into the terminal.
 
@@ -226,7 +228,8 @@ git status
 
 Commit your changes:
 ```
-git commit
+git add -u  #Puts the files (currently not staged yet) into the Staging Area
+git commit  #Puts the Staged Files (from Staging Area) into the Commit Area
 ```
 
 Let's make some new changes:

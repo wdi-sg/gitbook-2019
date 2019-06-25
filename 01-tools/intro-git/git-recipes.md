@@ -29,6 +29,11 @@ rm -rf .git
 git reset (file)
 ```
 
+## Add tracked files into the Staging Area
+```
+git add -u
+```
+
 ## See the status of staged files
 
 ```
@@ -38,7 +43,8 @@ git status
 ## Commit all staged files
 
 ```
-git commit -m "(Add your commit message here)"
+#git add -u #Always use it before `git commit` to put files into the Staging Area
+git commit  #Puts the Staged Files (from Staging Area) into the Commit Area
 ```
 
 ### Important note!
@@ -121,7 +127,7 @@ git clone http://www.github.com/YOUR_GITHUB_USERNAME/js-functions
 4. You'll now have the repo running on your local machine! Awesome! After making changes to the files, run the following commands to commit and push your changes to github:
 ```
 git add -A
-git commit -m "your awesome commit message"
+git commit
 git push -u origin master
 ```
 5. Your code is now on your repo on github!
@@ -146,7 +152,7 @@ git remote add origin YOUR_GITHUB_REPO_URL
 4. Your local repo is now linked to your github repo. To push your code to github, run the message commands as before:
 ```
 git add -A
-git commit -m "your awesome commit message"
+git commit
 git push -u origin master
 ```
 5. Done! Remember to run step 4 (add, commit, push) regularly!
