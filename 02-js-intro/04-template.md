@@ -72,7 +72,7 @@ var inputValid = function( input ){
 
   var parsedInput = parseInt( input );
 
-  if( parsedInput === NaN ){
+  if( isNaN( parseInput ) ){
     return false
   }else{
 
@@ -128,6 +128,8 @@ var inputHappened = function(input){
 ```
 
 ### pairing exercise
+Use the empty template here: [https://github.com/wdi-sg/unit1-template](https://github.com/wdi-sg/unit1-template)
+
 Repeat all of the above steps.
 
 ### further
