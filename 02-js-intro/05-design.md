@@ -128,7 +128,7 @@ Today, we'll add a new step, the `function template`.
 When we have more complicated functions that contain other control structures or data, we need a way to keep track of what we want to compute.
 
 
-1. Data Description
+`1.` Data Description
 
 Describe what data your function deals with
 
@@ -137,57 +137,120 @@ hourlyRate - the rate earned per hour
 hoursWorked - number of hours worked
 ```
 
-2. Data Examples
+`2.` Data Examples
 
 Write actual examples.
 ```
 var hoursWorked = 5;
 ```
 
-3. Function Signature
+`3.` Function Signature
 ```
 hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
 ```
 
-4. Function Purpose
+`4.` Function Purpose
 To calculate the monthly wage of a worker given a rate and the hours worked.
 
-5. Function Header
+`5.` Function Header
 calculateWage( hourlyRate, hoursWorked )
-
-6. Functional Examples
-var monthlyWage = calculateWage( 15, 40 ); // will equal 600
 
 ## new step
 
-7. Function Template
+`6.` Function Template
 Write the conditionals you might need into the body of the function.
 
 Use a short hand to stand in for what you want:
 
 ```
 if hoursWorked more than 40
-  take off the amount that represents the amount over 40 hours:
+
+  // take off the amount that represents the amount over 40 hours:
+
   // define new data here
-  fullWeek = 40
-  overtime = hours worked - 40
+  full week = 40
+
+  overtime = hours worked - full week
+
   // do the normal calculation here
-  pay = wage * 40
+
+  pay = wage * full week
+
   overtime pay = overtime * wage * 1.5;
+
   pay = pay + overtime pay
 ```
 
 <hr/>
 
-8. Code
+`7.` Code
 Make it work.
 
-9. Test
+`8.` Functional Examples
+```
+var monthlyWage = calculateWage( 15, 40 ); // will equal 600
+```
+
+`9.` Test
 Run the examples yourself.
 
-10. Review & Refactor
+`10.` Review & Refactor
 If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
 
+
+```
+
+/*
+ * hoursWorked - number of hours worked
+ *
+ * input = 23
+ *
+ * hoursWorked (number) --> monthlyWage (number)
+ *
+ * calculate a wage given the number of hours worked.
+ * if it's over time, rate is time and a half.
+ *
+ * calculateWage( hoursWorked )
+ *
+ * var monthlyWage = calculateWage( 40 ); // will equal 600
+ *
+ */
+
+var calculateWage = function(hoursWorked){
+
+    var wagePerHour = 15;
+
+    var overtimePay = 0;
+
+    if( hoursWorked > 40 ){
+
+      // set a number of overtime hours
+      var overtimeHours = hoursWorked - 40;
+
+      overtimePay = overtimeHours * ( wagePerHour * 1.5 );
+
+      // reset the number of hours worked to below overtime
+      hoursWorked = hoursWorked - 40;
+
+      // make the mutiplication calculation
+      var monthlyWage = wagePerHour * hoursWorked;
+
+      // make the mutiplication calculation
+      var monthlyWage = wagePerHour * hoursWorked;
+
+      monthlyWage = monthlyWage + overtimePay;
+
+    }else{
+
+      var monthlyWage = wagePerHour * hoursWorked;
+
+    }
+
+    var output = "Bob got paid "+monthlyWage;
+
+    return output;
+};
+```
 
 ### pairing exercise
 Implement the wage calculation example with overtime like in the example above.

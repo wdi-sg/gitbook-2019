@@ -1,15 +1,17 @@
-# template
+# interactive template
 This template isolates your running code to this one function. It takes in a user input parameter and at the end calls `display`, passing the output value.
 
 This design is how we will setup all of our programs in unit 1.
 
 Now we'll make some changes to this file:
 
-1. Change the function to output the `input` parameter instead of "WOW SOMETHING HAPPENED" - that is, pass somethin different into the `display` function.
+1. Change the function to output the `input` parameter instead of "WOW SOMETHING HAPPENED" - that is, pass something different into the `display` function.
 
-2. Use `toUpperCase` to change what was typed in to all upper case in the output.
+2. Make the output display whatever the user typed in.
 
-3. Write a conditional for the input. If the input is "ducks", output "quack". Otherwise the program should run as it was before.
+3. To every output, add the words "the best!" to then end.
+
+4. Write a conditional for the input. If the input is "ducks", output "quack". Otherwise the program should run as it was before.
 
 #### input types
 

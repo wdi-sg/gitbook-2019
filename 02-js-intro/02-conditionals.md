@@ -47,7 +47,9 @@ if( sunny === true ){
 ```
 
 ## Not
+
 - `!` **not** sometimes called a 'bang': changes Boolean value to its opposite.
+
 ```
 var score = 8;
 
