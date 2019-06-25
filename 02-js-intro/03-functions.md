@@ -126,7 +126,7 @@ We made a couple of program design descisions here:
 
 We will be implementing a specific process for translating our word problems into functions that run on data.
 
-1. Data Description
+ 1. Data Description
 
 Describe what data your function deals with
 
@@ -135,36 +135,63 @@ hourlyRate - the rate earned per hour
 hoursWorked - number of hours worked
 ```
 
-2. Data Examples
+ 2. Data Examples
 
 Write actual examples.
 ```
 var hoursWorked = 5;
 ```
 
-3. Function Signature
+ 3. Function Signature
 ```
 hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
 ```
 
-4. Function Purpose
+ 4. Function Purpose
 To calculate the monthly wage of a worker given a rate and the hours worked.
 
-5. Function Header
+ 5. Function Header
 calculateWage( hourlyRate, hoursWorked )
 
-6. Functional Examples
-var monthlyWage = calculateWage( 15, 40 ); // will equal 600
-
-7. Code
+ 6. Code
 Make it work.
 
-8. Test
+ 7. Functional Examples
+var monthlyWage = calculateWage( 15, 40 ); // will equal 600
+
+ 8. Test
 Run the examples yourself.
 
-9. Review & Refactor
+ 9. Review & Refactor
 If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
 
+A completed example:
+```
+// calculateWage
+
+// data description
+// hourlyRate - the rate earned per hour
+// hoursWorked - number of hours worked
+
+// input example
+// var hoursWorked = 5;
+
+// function signature
+// hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
+
+// function purpose
+// To calculate the monthly wage of a worker given a rate and the hours worked.
+
+// function header
+//calculateWage( hourlyRate, hoursWorked )
+
+// functional examples
+// var monthlyWage = calculateWage( 15, 40 ); // will equal 600
+
+var calculateWage = function( hourlyRate, hoursWorked ){
+  return hourlyRate * hoursWorked;
+};
+```
 
 ### pairing exercises
 
