@@ -256,9 +256,23 @@ var calculateWage = function(hoursWorked){
 Implement the wage calculation example with overtime like in the example above.
 
 ### further
-Implement a program that sells airline tickets. When the plane is empty a seat is $50. A plane has 10 seats.
+Create a program that adds numbers together.
 
-Use a global dynamic value to keep track of how many seats are sold. At the beggining show the current ticket price to the user.
+Use a global world value to keep track of the running total of numbers added.
 
-For each seat sold the ticket price goes up 50%.
+When the user enters in a number in the input, add that number to the total.
 
+### further
+Add the ability to do other operations to the current number.
+
+When the user types in "multiply", "subtract" or "divide" and hits enter, the *next* number entered uses that operation on the number entered and the running total.
+
+Use a global world value to keep track of the operation.
+
+### further
+Add features to the calculator.
+
+Add the ability to calculate the volume of a rectangular shape. Add the command to tell the calculator to do this.
+
+### further
+Add the ability to calculate the volume of a pyramid.
