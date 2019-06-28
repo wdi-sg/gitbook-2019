@@ -33,7 +33,8 @@ Paste this code into your `script.js`
 Answer the questions below.
 ```
 var num = 0;
-for (var i = 0; i < 5; i++) {
+var i =0;
+while (i < 5){
   console.log("i is " + i);
 
   num = num + 13;
@@ -41,11 +42,14 @@ for (var i = 0; i < 5; i++) {
   num = num / 2;
   console.log("num is " + num);
 
+  i = i + 1;
 }
 ```
 
 1.What is the value of `num` when `i` is 3?
 1.What is the value of `num` when `i` is 4, and before num is divided by 2?
 
-#### Further:
-Run the debugger to investigate the value of all the variables at each iteration of the loop for the examples in the loop page: [06-iterating-over-arrays.md](06-iterating-over-arrays.md)
+### further
+Go back to the previous loops exercises and run the debugger on them.
+
+Use the breakpoint functionality to see what the values are at each step.
