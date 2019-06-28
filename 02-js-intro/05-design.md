@@ -213,6 +213,7 @@ If your code is sloppy or could be changed to be more abstract, make those chang
  * calculateWage( hoursWorked )
  *
  * var monthlyWage = calculateWage( 40 ); // will equal 600
+ * var monthlyWage = calculateWage( 41 ); // will equal 622.5
  *
  */
 
@@ -220,23 +221,15 @@ var calculateWage = function(hoursWorked){
 
     var wagePerHour = 15;
 
-    var overtimePay = 0;
-
     if( hoursWorked > 40 ){
 
       // set a number of overtime hours
       var overtimeHours = hoursWorked - 40;
 
-      overtimePay = overtimeHours * ( wagePerHour * 1.5 );
-
-      // reset the number of hours worked to below overtime
-      hoursWorked = hoursWorked - 40;
+      var overtimePay = overtimeHours * ( wagePerHour * 1.5 );
 
       // make the mutiplication calculation
-      var monthlyWage = wagePerHour * hoursWorked;
-
-      // make the mutiplication calculation
-      var monthlyWage = wagePerHour * hoursWorked;
+      var monthlyWage = wagePerHour * 40;
 
       monthlyWage = monthlyWage + overtimePay;
 

@@ -45,8 +45,12 @@ Notice that this for loop correctly won't print anything out for an empty array.
 ```js
 var a = [1,4,2,3,6];
 
-for (var i = 0; i < a.length; i++) {
-  console.log(a[i]);
+var i = 0;
+while( i < a.length ){
+
+  console.log( a[i] )
+
+  i = i + 1;
 }
 ```
 
@@ -67,53 +71,19 @@ number of times the product occurs in the array.
 
   var tally = 0;
 
-  for (var i = 0; i < inventory.length; i++) {
+  var i = 0;
+
+  while( i < a.length ){
+
     if (inventory[i] === product) {
       tally++;
     }
+    i = i + 1;
   }
 
   console.log( tally );
 ```
 
-### Array of Objects
-
-Accessing each nested value whether it's an array or an object works similarly.
-
-```js
-
-var cats = [
-  {
-    name: 'fluffy',
-    weight: 12,
-    allergies : ['feathers', 'chocolate']
-  },
-  {
-    name: 'susan chan',
-    weight: 13,
-    allergies : ['tea', 'dust']
-  },
-  {
-    name: 'chee kean',
-    weight: 8,
-    allergies : ['dairy']
-  }
-];
-
-for( var i=0; i<cats.length; i++){
-  var saying = cats[i].name + ' is ' + cats[i].weight + ' kilos.'
-  console.log( saying );
-
-  // use a nested for loop to print out the allergies
-
-  var allergies = cats[i].allergies;
-
-  for( var j=0; j<allergies.length; j++ ){
-    console.log( cats[i].name + ' has an allergy to: ' + allergies[j] );
-  }
-
-}
-```
 
 ### Fencepost Problems
 
@@ -130,9 +100,14 @@ each piece of fence?
 Consider this psuedo code that tries to place four pieces of fence:
 
 ```js
-for (var i = 0; i < 4; i++) {
+var i = 0;
+
+while( i < 4 ){
+
   console.log("=");
   console.log("|");
+
+  i = i + 1;
 }
 ```
 
@@ -143,9 +118,14 @@ If we switch the order of calling the `placeFence` and `placePost` methods then
 we end up missing a fence post at the end of the fence.
 
 ```js
-for (var i = 0; i < 4; i++) {
+var i = 0;
+
+while( i < 4 ){
+
   console.log("|");
   console.log("=");
+
+  i = i + 1;
 }
 ```
 
@@ -159,10 +139,15 @@ or after the for loop.
 ```js
 console.log("|");
 console.log("=");
-for (var i = 0; i < 4; i++) {
+
+var i = 0;
+
+while( i < 4 ){
 
   console.log("=");
   console.log("|");
+
+  i = i + 1;
 }
 ```
 
@@ -182,11 +167,15 @@ when certain conditions are met.
 ```js
   var a = [3,4,5,6,1,2];
   var largest = 0;
+  var i = 0;
 
-  for (var i = 0; i < a.length; i++) {
+  while( i < a.length ){
+
     if (a[i] > largest) {
       largest = a[i];
     }
+
+    i = i + 1;
   }
 
   console.log( largest );
@@ -212,11 +201,18 @@ Set up a variable outside the for loop to keep track of the final result.
 
   var result = "";
 
-  for (var i = s.length; i >= 0; i--) {
+
+  var i = 0;
+
+  while( i < a.length ){
     result += s.charAt(i);
+
+
+    i = i + 1;
   }
 
   console.log( result );
+
 ```
 
 ### Reversing an Array
@@ -224,15 +220,34 @@ The same idea can be applied to reverse an array. Create a new empty array
 and push elements into it.
 
 ```
-  var a = [7,8,9,10,11];
+var a = [7,8,9,10,11];
 
-  var result = [];
+var result = [];
 
-  for (var i = a.length - 1; i >= 0; i--) {
-    result.push(a[i]);
-  }
+var a = [1,2,3];
 
-  console.log( result );
+var i=a.length;
+
+while (i > 0) {
+
+  i--;
+
+  result.push(a[i]);
+
+  console.log("i is " + a[i]);
+}
+
+console.log( result );
+```
+
+### More Array Structures
+```
+// You can also place arrays within arrays.
+var letters = [ ["a","b","c"], ["d","e","f"], ["g","h","i"] ]
+
+// How would we go about accessing the letter "f" in the above array?
+letters[1][2]
+// => "f"
 ```
 
 ### Double For Loops / Nested For Loops
@@ -265,6 +280,62 @@ are common for loop variable names.
       }
     }
   }
+```
+
+### Array of Objects
+
+Accessing each nested value whether it's an array or an object works similarly.
+
+```js
+
+var cats = [
+  {
+    name: 'fluffy',
+    weight: 12,
+    allergies : ['feathers', 'chocolate']
+  },
+  {
+    name: 'susan chan',
+    weight: 13,
+    allergies : ['tea', 'dust']
+  },
+  {
+    name: 'chee kean',
+    weight: 8,
+    allergies : ['dairy']
+  }
+];
+
+var i = 0;
+
+while( i < cats.length ){
+
+  var saying = cats[i].name + ' is ' + cats[i].weight + ' kilos.'
+  console.log( saying );
+
+  // use a nested for loop to print out the allergies
+
+  var allergies = cats[i].allergies;
+
+  var j = 0;
+
+  while( j < allergies.length ){
+    console.log( cats[i].name + ' has an allergy to: ' + allergies[j] );
+    j = j + 1;
+  }
+
+  i = i + 1;
+}
+```
+
+### For Loop
+For loop is a syntax that takes a while loop condition and combines it with iteration into one structure.
+
+```
+for( var i=0; i<10; i++ ){
+
+  console.log( i + " times" );
+}
 ```
 
 ### Exercise 1:

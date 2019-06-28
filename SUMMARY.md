@@ -44,7 +44,6 @@
   * [Objects](02-js-intro/06-objects.md)
   * [Arrays and Loops](02-js-intro/07-arrays-loops.md)
   * [Iteration](02-js-intro/08-iteration.md)
-  * [Iteration](02-js-intro/08-iteration.md)
   * [Chrome Dev Tools](02-js-intro/09-chrome-dev-tools.md)
   * [Browser Side Javascript](02-js/browser-js/readme.md)
     * [DOM Manipulation](02-js/browser-js/js-dom-manipulation.md)

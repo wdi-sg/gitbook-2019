@@ -1,22 +1,15 @@
-# Loops
+# Loops and Arrays - Arbitrary Length Data
 
-## Framing
-- after conditionals loops are the other piece of control flow in any basic program. Every language you will write in the future will have some kind of loop in it.
-- many times in our programs we need to specify a task to happen more than once. Loops help us do that.
-
-![control flow wd40](https://i.imgur.com/v4W1xwD.png)
-
+After conditionals and functions, loops are the other piece of control flow in any basic program. Every language you will write in the future will have some kind of loop in it.
 
 ### Arrays
 
-Arrays are ordered collection of related data types and are organized by index.
-- Indexing begins at 0 (e.g., first element in an array has an index of 0, the second has an index of 1, and so on).
+An array is a list of data. If a variable is the simplest way to store a value, a bucket, an array is a bucket of buckets.
 
+Each item in an array can be accessed individually by it's location, or *index*. Indexes start at zero.
 
-We instantiate an array like this...
 
 ```js
-// Instantiate with an array literal.
 var mountRushmore = [ "Washington", "Jefferson", "Roosevelt" ]
 ```
 
@@ -38,26 +31,103 @@ mountRushmore.push("Lincoln")
 mountRushmore[3]
 // => "Lincoln"
 
-// You can also place arrays within arrays.
-var letters = [ ["a","b","c"], ["d","e","f"], ["g","h","i"] ]
-
-// How would we go about accessing the letter "f" in the above array?
-letters[1][2]
-// => "f"
 ```
+
+Further examples:
+```
+var numbers = [3,5,7,8,9];
+
+numbers[0] // 3
+numbers[4] // 9
+```
+
+```
+var  = [true,false,false,true];
+
+numbers[0] // true
+numbers[3] // true
+```
+
+```
+var height1 = 12;
+var height2 = 2;
+var height3 = 112;
+var heights = [height1, height2, height3];
+
+height[0] // 12
+height[2] // 112
+```
+
+### Arrays as Data
+Arrays represent lists of the same kind of data.
+
+The also suggest an order of data, as in an ordered / ranked list.
+
+They can be of "fixed" length, or they can be variable length.
+
+```
+var singaporeTemperaturesThisMonth = [30,31,38,37,35,28 ... ]
+singaporeTemperatures[3] // last month on the 4th day the temp was: 37
+```
+
+```
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+alphabet[3] // d
+```
+
+Again, the naming and format of that data determine what operations you want to do on the data.
 
 ### Array Methods
 
-There are a lot of useful methods that come with Javascript we can use to inspect and modify arrays. To learn what some of them are...
 * `.length`
-* `.push`
-* `.indexOf`
 
-> There are many more, but these are the most widely-used.
+* `.push` put something on the end of the array
+* `.pop` take something off the end of the array
+
+* `.shift` put something on the beggining of the array
+* `.unshift` take off the first thing in the array
+
+> There are many more, but these are the essential ones
+
+##### length
+
+```
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+alphabet.length // 26
+```
+
+##### push
+
+Put something on the end of an array.
+
+```
+var singaporeTemperaturesThisMonth = [30,31,38,37,35,28];
+// singaporeTemperaturesThisMonth[0] gets the temp for the first day of the month
+singaporeTemperaturesThisMonth.push( 32 ); // add todays temp
+```
+
+##### pop
+
+Take something off the end of the array.
+
+```
+var cardDeck = ['ace', 'one of clubs', 'two of clubs', ... ]
+// deal a card
+var topCard = cardDeck.pop();
+```
+
+##### shift and unshift
+Are the opposites of push and pop.
+
+## Loops
 
 #### `while`
 
 A **while loop** repeatedly executes a code block as long as a specified condition is true.
+
+Some condition inside the code block will change, making the condition true.
 
 ```js
 var i = 0;
@@ -106,6 +176,10 @@ while(true){
 
 ### arrays and loops
 
+Arrays suggest order of data, and also have a specific *integer* location for each piece of data in the list- the index.
+
+We can use these ideas as complements to visit every location in the list.
+
 ```
 var i=0;
 
@@ -118,8 +192,6 @@ while (i < 5) {
   i++;
 }
 ```
-
-
 
 ## Backwards Loops
 
