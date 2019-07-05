@@ -293,5 +293,21 @@ Your final page should naturally collapse down when the browser size gets narrow
 
 ![Imgur](https://i.imgur.com/cnaI0rc.png)
 
-If you get done with that, try adding more columns and rows, and then change the responsive breakpoint. (sm, md, lg, etc.)
+#### further
+Nest 2 rows inside the right column of your layout. Give them both a different background color.
 
+Then in the top row, create 2 nested equal width columns.
+
+#### further
+Use the breakpoint classes e.g., (`col-sm-6`) to collapse the layout to 2 columns and the third column 100% width underneath when the screen is medium size.
+
+The original behaviour should stay the same.
+
+#### further
+Research the column size `offset` on the bootstrap documentation website. Use column offset to add a 1 column margin to the left side of your page.
+
+#### further
+Add a `navbar` and footer to your page.
+
+#### further
+Make sure the bootstrap javascript is included on your page. Add a bootstrap modal to the page.
