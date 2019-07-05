@@ -1,27 +1,23 @@
 # Intro to Bootstrap
 
----
-
 ## Objectives
 
 * Understand what front-end CSS frameworks are
 * Utilize a front-end grid system for mobile and desktop layout
 * Comprehend documentation and implement an unfamiliar framework
 
----
-
 
 ## Bootstrap
 
 A little while back, a couple wonderful folks at Twitter created a front end framework called Bootstrap to make responsive web development much easier. Bootstrap is extremely popular and knowledge of at least one CSS framework is a very valuable skill to have. Bootstrap comes with a ton of features including a responsive grid system, buttons, icons and some very nifty JavaScript plugins.
 
----
 
 ### How to include it
 
 You can include Bootstrap multiple ways, the easiest to start is a CDN. As we get to use Rails and more robust tooling, we can also use package managers. Our current setup won't support this, but we'll use it in time!
 
-1. CDN (content delivery network - someone else hosts the library/framework and you access it via a URL) 
+##### CDN (content delivery network - someone else hosts the library/framework and you access it via a URL) 
+
 ```
 Stylesheet
 
@@ -34,11 +30,11 @@ Scripts for Bootstrap animations (order is important)
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 ```
-2. Include the actual CSS and JS files - great for offline development
 
----
+##### Include the actual CSS and JS files - great for offline development
 
 ## Starter Template
+
 ```
 <!doctype html>
 <html lang="en">
@@ -116,7 +112,6 @@ You can also offset and nest your columns. When you offset a column, you add a c
 </div>
 ```
 
----
 
 Here is an example of nesting columns (putting one row inside another)
 
@@ -136,8 +131,6 @@ Here is an example of nesting columns (putting one row inside another)
 </div>
 ```
 
----
-
 ### Buttons/positioning
 
 To align text, use these classes.
@@ -149,8 +142,6 @@ To align text, use these classes.
 <p class="text-justify">Justified text.</p>
 <p class="text-nowrap">No wrap text.</p>
 ```
-
----
 
 ### Typography (lead, muted, warning/error/success/info, small>cite attr -> cite title = "test")
 
@@ -165,8 +156,6 @@ Bootstrap also comes with some nice styles to improve the quality of your typogr
 <p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">Capitalized text.</p>
 ```
-
----
 
 ### lists (unstyled class removed padding and bullets class inline to display on the same line")
 
@@ -189,13 +178,11 @@ You can also style them to be inline (good for navigation)
 </ul>
 ```
 
----
 
 ### Tables
 
 Bootstrap is really awesome at formatting tables for you and with only a couple classes you can have some spiffy looking tables. Add `class="table"` to your table tag to include this and if you would like a striped design include the class `table-striped` to your table tag. The table-striped will only add stripes to whatever is in your `tbody` tag. If you would like borders as well include `table-bordered` in your table tag.
 
----
 
 ### Buttons (link, xs, sm, lg, block, disabled)
 
@@ -226,19 +213,16 @@ Bootstrap comes with quite a few button default sizes and colors, to add these m
 
 You can also add .btn-lg, .btn-sm, or .btn-xs for additional sizes.
 
----
 
 ### Images (img-rounded, img-responsive, img-circle)
 
 Bootstrap helps you format images using img-rounded (rounds the corners), img-circle (makes the image a circle) and img-thumbnail (adds a border). You can also add a class of img-responsive to your image to make it scale well when the screen size changes (this sets its max-width to 100% and the height to auto)
 
----
 
 ### Forms
 
 Bootstrap is also very helpful when you need to style your forms. All textual `<input>, <textarea>, and <select>` elements with `.form-control `are set to width: 100%; by default. Wrap labels and controls in .form-group for optimum spacing. You can create horizontal and inline forms and style each of your inputs and validations as well. Read more about form styling [here](http://getbootstrap.com/css/#forms)
 
----
 
 ### JavaScript + Bootstrap
 
@@ -248,6 +232,7 @@ Bootstrap can also do some nifty things for you with it's JavaScript plugins. Th
 [https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849](https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849)
 
 ### Pairing Exercise:
+
 Using this HTML:
 
 
