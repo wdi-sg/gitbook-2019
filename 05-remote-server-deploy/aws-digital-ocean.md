@@ -126,13 +126,13 @@ A. Jump onto the Command Line - the Terminal - again
 #Command
 echo '' >> ~/.bash_profile
 echo '#Digital Ocean' >> ~/.bash_profile
-echo 'dgcn_addr=987.654.321.987' >> ~/.bash_profile
+echo 'digitalocean_addr=987.654.321.987' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
 ```bash
 #Command
-echo alias oceanssh='ssh root@$dgcn_addr' >> ~/.bash_profile
+echo alias oceanssh='ssh root@$digitalocean_addr' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
