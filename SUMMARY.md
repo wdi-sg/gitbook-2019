@@ -89,8 +89,10 @@
     * [Controllers](05-express/express-mvc/controllers.md)
     * [Models](05-express/express-mvc/models.md)
   * [AJAX](05-express/ajax.md)
-  * [Deploy - AWS](05-express/ec2-deploy.md)
-  * [Deploy - Node](05-express/node-deploy.md)
+  * [Deploy - DigitalOcean](05-remote-server-deploy/aws-digital-ocean.md)
+    * Alternative:
+      * [Deploy - AWS](05-express/ec2-deploy.md)
+      * [Deploy - Heroku](05-express/node-deploy.md)
   * [Additional Topics](05-express/additional-topics/readme.md)
     * [APIs with Express](05-express/additional-topics/express-apis/03apis.md)
     * [Geocoding and Google Maps](05-express/additional-topics/express-geocode/readme.md)
