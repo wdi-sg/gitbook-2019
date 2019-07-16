@@ -35,6 +35,7 @@ B. Click on the Sign Up button
 C. You will be brought to the next page.
 
 Near the top, it should say:
+
 ![](aws-digital-ocean/1.png)
 
 If you saw no such message, please ask someone for assistance right now:
@@ -72,6 +73,7 @@ D. Do not touch anything on this page. Do the next step now.
 A. Click this link <https://cloud.digitalocean.com/account/billing>
 
 B. It should show:
+
 ![](aws-digital-ocean/3.png)
 
 
@@ -94,6 +96,7 @@ B. Some options to set:
     - 1 Droplet
 
 ![](aws-digital-ocean/4-1.png)
+
 ![](aws-digital-ocean/4-2.png)
 
 About SSH Key: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
@@ -139,5 +142,6 @@ After that, since we chose the Password method above, we will need to paste the 
 
 
 C. After you submit, you should see this:
+
 ![](aws-digital-ocean/6.png)
 
