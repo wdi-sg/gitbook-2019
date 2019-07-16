@@ -1,6 +1,7 @@
 # Beforehand
 
-Prepare a payment method - card or paypal (you will get free credits but the website registration will require those details)
+1. Prepare a payment method - card or paypal
+  (you will get free credits but the website registration will require those details)
 
 # We will mainly look at
 * DigitalOcean (2011)
@@ -36,7 +37,8 @@ C. You will be brought to the next page.
 
 Near the top, it should say:
 
-![](aws-digital-ocean/1.png)
+<!-- ![](aws-digital-ocean/1.png) -->
+<img src='aws-digital-ocean/1.png' style="width:25rem;"/>
 
 If you saw no such message, please ask someone for assistance right now:
 
@@ -70,11 +72,12 @@ D. Do not touch anything on this page. Do the next step now.
 
 ### 3. Free Credits!
 
-A. Click this link <https://cloud.digitalocean.com/account/billing>
+A. [Click this link](https://cloud.digitalocean.com/account/billing) to see it!
 
 B. It should show:
 
-![](aws-digital-ocean/3.png)
+<!-- ![](aws-digital-ocean/3.png) -->
+<img src='aws-digital-ocean/3.png' style="width:50rem;"/>
 
 
 
@@ -82,7 +85,7 @@ B. It should show:
 
 ### 4. Create Droplet
 
-A. Use [this link](https://cloud.digitalocean.com/droplets/new?appId=48826207&size=s-1vcpu-1gb)
+A. Create by using [this link - click here](https://cloud.digitalocean.com/droplets/new?appId=48826207&size=s-1vcpu-1gb)
 
 B. Some options to set:
 
@@ -95,9 +98,11 @@ B. Some options to set:
   * How many Droplets?
     - 1 Droplet
 
-![](aws-digital-ocean/4-1.png)
+<!-- ![](aws-digital-ocean/4-1.png) -->
+<img src='aws-digital-ocean/4-1.png' style="width:39rem;"/>
 
-![](aws-digital-ocean/4-2.png)
+<!-- ![](aws-digital-ocean/4-2.png) -->
+<img src='aws-digital-ocean/4-2.png' style="width:39rem;"/>
 
 About SSH Key: https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
@@ -135,8 +140,8 @@ B. Time to do the real SSH
 ```bash
 #SSH
 #ssh root@987.654.321.987
-#ssh root@${digitalocean_addr} #Use This
-oceanssh                       #`(Useful)`
+ssh root@${digitalocean_addr} #Use This `(My Best Practice)`
+#oceanssh                     #Useful but use the above for now `(Useful)`
 ```
 After that, since we chose the Password method above, we will need to paste the password.
 
