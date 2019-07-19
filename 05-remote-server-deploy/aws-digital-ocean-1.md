@@ -1,6 +1,7 @@
 # Beforehand
 
 1. Prepare a payment method - card or paypal
+
   (you will get free credits but the website registration will require those details)
 
 # We will mainly look at
@@ -10,6 +11,8 @@ Other
 
 * Amazon Web Services (AWS)
 * Heroku (2007)
+
+
 
 1. Is NodeJS available
 2. How difficult is it to set up
@@ -114,34 +117,17 @@ About SSH Key: https://help.github.com/en/articles/generating-a-new-ssh-key-and-
 
 A. See your email for the details on IP Address and Password.
 
-
+eg 987.654.321.987
 
 
 
 ### 6. SSH
 A. Jump onto the Command Line - the Terminal - again
 
-
-```bash
-#Command
-echo '' >> ~/.bash_profile
-echo '#Digital Ocean' >> ~/.bash_profile
-echo 'digitalocean_addr=987.654.321.987' >> ~/.bash_profile
-source ~/.bash_profile
-```
-
-```bash
-#Command
-echo alias oceanssh='ssh root@$digitalocean_addr' >> ~/.bash_profile
-source ~/.bash_profile
-```
-
 B. Time to do the real SSH
 ```bash
 #SSH
-#ssh root@987.654.321.987
-ssh root@${digitalocean_addr} #Use This `(My Best Practice)`
-#oceanssh                     #Useful but use the above for now `(Useful)`
+ssh root@987.654.321.987
 ```
 After that, since we chose the Password method above, we will need to paste the password.
 
@@ -149,4 +135,71 @@ After that, since we chose the Password method above, we will need to paste the 
 C. After you submit, you should see this:
 
 ![](aws-digital-ocean/6.png)
+
+
+
+
+
+### 7. Final
+
+```bash
+cd ~
+git clone git@github.com:wdi-sg/express-basic.git
+cd express-basic
+npm install
+npm start
+```
+
+
+
+
+
+### 8. `🚦(My Best Practice)🚦` - Server
+
+
+ 6. `🚦(My Best Practice)🚦`
+```bash
+echo '' >> ~/.bash_profile
+echo '#Digital Ocean' >> ~/.bash_profile
+echo 'digitalocean_addr=987.654.321.987' >> ~/.bash_profile
+source ~/.bash_profile
+```
+```bash
+echo alias oceanssh='ssh root@$digitalocean_addr' >> ~/.bash_profile
+source ~/.bash_profile
+```
+```bash
+#Time to do the real SSH
+#SSH
+#ssh root@987.654.321.987
+ssh root@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
+#oceanssh                     #Useful but use the above for now `(Useful)`
+```
+
+
+ 7. `🚦(My Best Practice)🚦`
+```bash
+adduser bossdog
+```
+Then
+```bash
+su - bossdog
+```
+Then
+```bash
+cd ~
+git clone git@github.com:wdi-sg/express-basic.git
+cd express-basic
+npm install
+npm start
+```
+
+
+ 4. `🚦(My Best Practice)🚦`
+```bash
+#SSH Keys
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+It will be best [to read here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
 
