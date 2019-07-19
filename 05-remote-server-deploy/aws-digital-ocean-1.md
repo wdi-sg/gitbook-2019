@@ -191,7 +191,7 @@ Now you can use the variables
 #Time to do the real SSH
 
 
-# ssh root@987.654.321.987
+# ssh root@987.654.321.987    #Numbers numbers...
 
 
 ssh root@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
