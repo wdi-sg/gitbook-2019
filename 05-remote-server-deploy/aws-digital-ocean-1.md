@@ -203,7 +203,14 @@ ssh root@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
 
 # oceanssh                     #Useful but use the above for now `(Useful)`
 ```
+Then
+```bash
+#After 7 below:
+# ssh bossdog@987.654.321.987    #Numbers numbers...
 
+
+ssh bossdog@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
+```
 
 -7. `🚦(My Best Practice)🚦`
 
@@ -223,11 +230,33 @@ cd express-basic
 npm install
 npm start
 ```
+And
+```bash
+# ssh bossdog@987.654.321.987    #Numbers numbers...
+
+
+ssh bossdog@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
+```
+
+
+FURTHER
+
+Different user account - Different owner
+```bash
+cd ~
+cd express-basic
+ls -la
+```
+
 
 -9. `🚦(My Best Practice)🚦`
 
 * Managing NodeJS installation
+  * Sometimes we need to go to a different version of NodeJS
+    * Different projects
+    * Sometimes in a different project maybe something needs NodeJS version 5
 * Managing scripts
+  * You want your script to run while you are no longer there
 
 Brew + NVM + NodeJS + Nodemon or PM2
 ```bash
