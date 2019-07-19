@@ -202,6 +202,7 @@ ssh root@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
 
 
 -7. `🚦(My Best Practice)🚦`
+
 Limited admin powers on server
 ```bash
 adduser bossdog
@@ -260,9 +261,9 @@ pm2 start index.js --name 'MyExpressBasic'
 
 -4. `🚦(My Best Practice)🚦`
 ```bash
-#SSH Keys
+#Make SSH Keys
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-It will be best [to read here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+For SSH Keys - It will be best [to read here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
