@@ -194,6 +194,39 @@ npm install
 npm start
 ```
 
+9. `🚦(My Best Practice)🚦`
+```bash
+#Brew
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+hostnamectl
+
+
+#NVM
+brew install nvm
+mkdir ~/.nvm
+echo ''                                   >> ~/.profile
+echo '#NVM'                               >> ~/.profile
+echo 'export NVM_DIR=~/.nvm'              >> ~/.profile
+echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.profile
+source ~/.profile
+
+nvm -v
+
+
+#NodeJS
+nvm install --lts
+nvm use --lts
+
+node
+
+
+#PM2
+npm install --global pm2
+#PM2
+cd ~/express-basic
+pm2 start index.js --name 'MyExpressBasic'
+```
+
 
  4. `🚦(My Best Practice)🚦`
 ```bash
