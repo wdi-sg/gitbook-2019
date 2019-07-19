@@ -1,3 +1,11 @@
+#Why we are doing this exercise
+Computers connect to other computers on the Internet.
+
+We want to get a computer in the cloud so that other people can connect to our special computer to see our content.
+
+We also need to connect to our computer in the cloud to upload the content.
+
+
 # Beforehand
 
 1. Prepare a payment method - card or paypal
@@ -153,11 +161,18 @@ npm start
 
 
 
+# FURTHER
 
-### 8. `🚦(My Best Practice)🚦` - Server
+### 8. `🚦(My Best Practice)🚦` - for Server
 
 
- 6. `🚦(My Best Practice)🚦`
+-6. `🚦(My Best Practice)🚦`
+
+Special commands on the command line for IP Address
+
+Before:
+
+Sets up the variables
 ```bash
 echo '' >> ~/.bash_profile
 echo '#Digital Ocean' >> ~/.bash_profile
@@ -168,16 +183,26 @@ source ~/.bash_profile
 echo alias oceanssh='ssh root@$digitalocean_addr' >> ~/.bash_profile
 source ~/.bash_profile
 ```
+
+After:
+
+Now you can use the variables
 ```bash
 #Time to do the real SSH
-#SSH
-#ssh root@987.654.321.987
+
+
+# ssh root@987.654.321.987
+
+
 ssh root@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
-#oceanssh                     #Useful but use the above for now `(Useful)`
+
+
+# oceanssh                     #Useful but use the above for now `(Useful)`
 ```
 
 
- 7. `🚦(My Best Practice)🚦`
+-7. `🚦(My Best Practice)🚦`
+Limited admin powers on server
 ```bash
 adduser bossdog
 ```
@@ -194,7 +219,12 @@ npm install
 npm start
 ```
 
-9. `🚦(My Best Practice)🚦`
+-9. `🚦(My Best Practice)🚦`
+
+* Managing NodeJS installation
+* Managing scripts
+
+Brew + NVM + NodeJS + Nodemon or PM2
 ```bash
 #Brew
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -228,7 +258,7 @@ pm2 start index.js --name 'MyExpressBasic'
 ```
 
 
- 4. `🚦(My Best Practice)🚦`
+-4. `🚦(My Best Practice)🚦`
 ```bash
 #SSH Keys
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
