@@ -166,9 +166,13 @@ npm start
 ### 8. `🚦(My Best Practice)🚦` - for Server
 
 
+
 -6. `🚦(My Best Practice)🚦`
 
 Special commands on the command line for IP Address
+
+<!-- ![](aws-digital-ocean/360q86.jpg) -->
+<img src='aws-digital-ocean/360q86.jpg' style="width:35rem;"/>
 
 Before:
 
