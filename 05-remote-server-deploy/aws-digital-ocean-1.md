@@ -211,6 +211,7 @@ Then
 
 ssh bossdog@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
 ```
+![](aws-digital-ocean/FloweryUnhappyCoelacanth-max-1mb.gif)
 
 -7. `🚦(My Best Practice)🚦`
 
