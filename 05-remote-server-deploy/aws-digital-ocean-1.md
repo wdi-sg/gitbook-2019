@@ -14,6 +14,7 @@ We also need to connect to our computer in the cloud to upload the content.
 
 # We will mainly look at
 * DigitalOcean (2011)
+* GitHub Pages (GitHub.io) (2008)
 
 Other
 

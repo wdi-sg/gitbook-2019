@@ -93,7 +93,6 @@
     * Alternative:
     * [Deploy - AWS](05-express/ec2-deploy.md)
     * [Deploy - Heroku](05-express/node-deploy.md)
-  * [Deploy - PM2 NodeJS Express](05-remote-server-deploy/aws-digital-ocean-2.md)
   * [Additional Topics](05-express/additional-topics/readme.md)
     * [APIs with Express](05-express/additional-topics/express-apis/03apis.md)
     * [Geocoding and Google Maps](05-express/additional-topics/express-geocode/readme.md)
