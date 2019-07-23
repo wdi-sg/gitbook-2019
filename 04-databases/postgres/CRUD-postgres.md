@@ -33,7 +33,7 @@ const config = {
   host: '127.0.0.1',
   database: 'pokemons',
   port: 5432,
-});
+};
 
 const pool = new pg.Pool(config);
 

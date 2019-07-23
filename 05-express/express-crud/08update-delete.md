@@ -11,7 +11,7 @@ We aren't adding any new concepts when we add the rest of CRUD / rest of the HTT
 * That requested form already has each piece of data for that record pre-filled in the form:
 
 ```js
-'<form method="POST" action="/pokemon/'+pokemon.id+'?_method=PUT">'+
+'<form method="POST" action="/pokemon/'+pokemon.id+'?_method=put">'+
   '<div class="pokemon-attribute">'+
     'id: <input name="id" type="text" value="'+pokemon.id+'"/>'+
     'name: <input name="name" type="text" value="'+pokemon.name+'"/>'+
@@ -65,7 +65,7 @@ Then, in your HTML page, you will have to specify `_method=<VERB>`, where VERB c
 **edit**
 
 ```html
-'<form method="POST" action="/'+pokemon.id+'?_method=PUT">'+
+'<form method="POST" action="/'+pokemon.id+'?_method=put">'+
   '<div class="pokemon-attribute">'+
     'id: <input name="id" type="text" value="'+pokemon.id+'"/>'+
   '</div>'+
@@ -104,7 +104,7 @@ Add the get route form that creates the request:
 
 app.get('/editsomething',(request, response) => {
 
-  let html = '<form method="POST" action="/putrequest?_method=delete">'+
+  let html = '<form method="POST" action="/putrequest?_method=put">'+
       '<input name="id" type="hidden" value="something"/>'+
       '<input type="submit" value="delete this"/>'+
   '</form>';
@@ -125,7 +125,7 @@ app.put("/putrequest", (request, response) => {
 #### Further
 Add in some pretend data to edit:
 
-1. install and use `jsonfile`
+1. install and use `jsonfile` npm library
 2. put some fake data in your `data.json`: `{"name":"susan chan"}`
 3. render this data in your form
 4. use a put request to change the data stored in the json file
