@@ -13,3 +13,5 @@ Build book from root
 ```
 gitbook build . docs
 ```
+
+The build process may take some time.
