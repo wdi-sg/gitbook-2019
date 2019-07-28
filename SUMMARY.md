@@ -88,6 +88,7 @@
     * [Routes](05-express/express-mvc/routes.md)
     * [Controllers](05-express/express-mvc/controllers.md)
     * [Models](05-express/express-mvc/models.md)
+  * [Full Stack](05-express/ajax0.md)
   * [AJAX](05-express/ajax.md)
   * [Deploy - DigitalOcean](05-remote-server-deploy/aws-digital-ocean-1.md)
     * Alternative:
@@ -146,6 +147,7 @@
   * [Deploy - Rails](06-ruby-rails/rails-deploy.md)
   * [Additional Topics](06-ruby-rails/additional-topics/readme.md)
     * [Rails Auth and 1-M](06-ruby-rails/additional-topics/rails-auth-1-M/readme.md)
+    * [Advanced Active Record Relationships](06-ruby-rails/active-record/rails-M-M/advanced-M-M.md)
     * [oAuth](06-ruby-rails/additional-topics/rails-oauth/readme.md)
     * [Rails Mailers](06-ruby-rails/additional-topics/rails-mailers.md)
     * [Cloudinary](06-ruby-rails/additional-topics/rails-cloudinary.md)

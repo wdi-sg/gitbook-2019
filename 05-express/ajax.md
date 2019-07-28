@@ -1,133 +1,3 @@
-# AJAX & express
-
-Create an express app:
-
-
-```
-mkdir express-ajax
-cd express-ajax
-mkdir views
-npm init
-npm install express
-npm install express-react-views react react-dom
-touch index.js
-touch views/hello.jsx
-```
-
-
-index.js
-```
-console.log("about to require express");
-const express = require('express');
-
-const app = express();
-console.log("done creating app");
-
-// this line below, sets a layout look to your express project
-const reactEngine = require('express-react-views').createEngine();
-app.engine('jsx', reactEngine);
-
-// this tells express where to look for the view files
-app.set('views', __dirname + '/views');
-
-// this line sets react to be the default view engine
-app.set('view engine', 'jsx');
-
-
-app.get('/hello', (request, response) => {
-  console.log('waffles');
-  response.render('hello');
-})
-
-const port = 3000;
-console.log("start listening");
-app.listen(port)
-console.log("done listening");
-```
-
-hello.jsx
-```
-var React = require('react');
-
-class Hello extends React.Component {
-
-  render() {
-    console.log('sushi');
-
-    return (
-              <html>
-                <body>
-                  <h1>hello AJAX</h1>
-                </body>
-              </html>
-    );
-  }
-}
-
-module.exports = Hello;
-```
-
-
-#### Run the app
-
-[http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
-
-#### Create some javascript that runs in the browser
-
-Allow express to serve static files from the `public` directory.
-
-index.js
-```
-app.use(express.static('public'))
-```
-
-```shell
-mkdir public
-```
-
-Make a js file:
-```
-cd public
-touch script.js
-```
-
-script.js
-```
-console.log('chicken');
-console.log("we are in the browser");
-```
-
-##### Change hello.jsx
-```html
-<script src="/script.js"></script>
-```
-
-##### Open the chrome dev tools
-
-##### Run the app again
-
-[http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
-
-#### WHERE DOES THIS RUN??
-
-Note that is is *very* important to understand the order and context of the execution of all of this code.
-
-Make sure that you can answer all of these questions.
-
-
-- Where and when does the `waffles` `console.log` above happen?
-- Where and when does the `sushi` `console.log` above happen?
-- Where and when does the `chicken` `console.log` above happen?
-- Where do you look for each `console.log` and why?
-- What happens if you `console.log` `window` instead of `waffles`?
-- What happens if you `console.log` `process` instead of `waffles`?
-- What happens if you `console.log` `window` instead of `chicken`?
-- What happens if you `console.log` `process` instead of `chicken`?
-- How does the `script.js` file get from the `public` folder to the browser?
-- When does it get there?
-- Find all of the relevant requests in the chrome dev tools network tab.
-
-
 ## AJAX
 
 We've covered an app from before unit 1, up to the beggining of unit 1.
@@ -208,9 +78,24 @@ Install `pg` and make the `pool` variable. Hook the route `banana` up to a DB `S
 
 ##### further
 
-Change the query to the DB to be dynamic depending on what was requested by the user:
+Add likes:
 
-- collect input from the user using an event in the DOM. (input event?)
-- get this input and put it in the AJAX request
-- use that part of the request to make your SQL query dynamic
-- send the result back to the browser in the response and render it in the DOM
+Use one of your previous assignments that has user login.
+
+A like is a join table from a resource (tweet, post, song, etc.) and a user.
+
+Create the table for likes.
+
+Create a route that will create a like.
+
+- collect input from the user using an event in the DOM. (click event) the user clicks on a button or heart image
+- get this input and put it in the AJAX request (the resouce id and the user id)
+- use that part of the request to make your INSERT SQL query
+- send the result back to the browser in the response
+- when the response gets back to the bropwser, set the heart image to be filled in / change or give feedback in some way
+
+#### further
+Add comments (to songs, tweets, etc.) using AJAX.
+
+#### further
+Add editing of the resource using AJAX (PUT request)
