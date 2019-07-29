@@ -2,7 +2,6 @@
 
 Create an express app:
 
-
 ```
 mkdir express-fulls
 cd express-fulls
@@ -102,11 +101,41 @@ console.log("we are in the browser");
 <script src="/script.js"></script>
 ```
 
+#### pairing exercise
+
+### Request from different perspectives:
+What does the request look like:
+  - leaving the browser, in the network tab of chrome
+  - directly from the terminal
+  - from outside your computer
+
 ##### Open the chrome dev tools
 
-##### Run the app again
+##### Run the app
 
 [http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
+
+
+##### run curl
+
+On the terminal:
+
+```bash
+curl 127.0.0.1:3000/hello
+```
+
+##### request from another computer
+
+On the terminal, find your pair's IP address:
+```bash
+ifconfig
+```
+
+Use that to make a request to their server, e.g.:
+
+```
+curl 143.21.2.1:3000/hello
+```
 
 #### WHERE DOES THIS RUN??
 
@@ -126,9 +155,7 @@ Make sure that you can answer all of these questions.
 - When does it get there?
 - Find all of the relevant requests in the chrome dev tools network tab.
 
-#### pairing exercise
 
-Run the above code.
 
 #### further
 Add to your `script.js`.
