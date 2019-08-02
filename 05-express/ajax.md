@@ -94,6 +94,26 @@ Create a route that will create a like.
 - send the result back to the browser in the response
 - when the response gets back to the bropwser, set the heart image to be filled in / change or give feedback in some way
 
+
+A post request with AJAX looks like this:
+
+```js
+var data = { "email": "khai@user.com", "phone": "345678655"};
+
+var request = new XMLHttpRequest();   // new HttpRequest instance
+
+request.addEventListener("load", function(){
+
+  console.log("DONE");
+  console.log( this.responseText );
+});
+
+request.open("POST", '/students');
+request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+request.send(JSON.stringify(data));
+```
+
 #### further
 Add comments (to songs, tweets, etc.) using AJAX.
 

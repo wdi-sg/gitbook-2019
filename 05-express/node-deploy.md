@@ -189,19 +189,6 @@ Checkout heroku's postgres documentation: [https://devcenter.heroku.com/articles
 **Download a copy of your db in the cloud and put it into your local DB:**
 [https://devcenter.heroku.com/articles/heroku-postgres-import-export](https://devcenter.heroku.com/articles/heroku-postgres-import-export)
 
-
-### Heroku Add-ons
-Heroku Add-ons are an easy way to install and link applications to setup. For instance, if you're using MongoDB, then you'll want to provision an Mlab add-on. Using Cloudinary for image-uploads, then there is an add-on for that.
-
-Since you'll be doing lots of debugging, you should definitely install Papertrail so that you can easily view and search logs and errors on your App (remember once your code is deployed your error messages won't just popup in your terminal).
-
-```
-heroku addons:create papertrail:choklad
-```
-
-You can also do this via the Heroku Dashboard for you App.
-
-
 ### Don't forget to commit & push
 Anytime you make changes you need to remember to git add, git commit and git push to heroku.
 
@@ -228,17 +215,7 @@ https://devcenter.heroku.com/articles/getting-started-with-nodejs
 
 Some interesting (and free) addons you can add to your app:
 
-* [New Relic](https://elements.heroku.com/addons/newrelic)
-  * Application monitoring
-* [Papertrail](https://elements.heroku.com/addons/papertrail)
-  * Logging management
-* [Loader.io](https://elements.heroku.com/addons/loaderio)
-  * Load testing for web applications
-* [Deploy Hooks](https://elements.heroku.com/addons/deployhooks)
-  * Send messages to Slack, Email, or an HTTP endpoint on deployment
-* [Heroku Scheduler](https://elements.heroku.com/addons/scheduler)
-  * Schedule tasks, similar to `cron`
-* [Mailgun](https://elements.heroku.com/addons/mailgun)
-  * API for sending emails
+* [sendgrid](https://elements.heroku.com/addons/sendgrid)
+  * Email
 * [Cloudinary](https://elements.heroku.com/addons/cloudinary)
   * API for image uploads and delivery
