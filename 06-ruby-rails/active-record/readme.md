@@ -126,47 +126,39 @@ Before we discuss the concept as a class, take 30 seconds to think about what th
 
 Obeying the naming conventions in Active Record saves you a good deal of headaches.
 
-
-
 # Coding Time!
 
-
-
-### Gemfiles
-To install ruby library packages, we use `gem`. The `gem` command is equivalent to `npm install`.
-
-Gemfiles are equivalent to `package.json`. You'll notice that we will also have a Gemfile.lock just like we had a `yarn.lock` file.
-
-To install gems using a file we use the `bundle install` command. This is equivalent to `yarn add`.
-
-Your gemfile is simply named `Gemfile`. Uppercase, no file extension.
-
-It should contain:
-```ruby
-source "https://rubygems.org"
-
-gem "pg"  # this gem allows ruby to talk to postgres
-gem "activerecord"  # this gem provides a connection between your ruby classes to relational database tables
-gem "byebug"  # this gem allows access to REPL
-```
-
-Install all the gems specified in the gem file with the command:
-```
-bundle install
-```
-
-
-#### Defining our Models
+#### Defining a Model
 
 In the `artist.rb` file, we define our `artist` model:
 
 ```ruby
-class Artist < ActiveRecord::Base
+class Artist < ApplicationRecord
   # AR classes are singular and capitalized by convention
 end
 ```
 
-> In this Ruby file, we create a class of Artist that inherits from `ActiveRecord::Base`. Essentially, when we inherit from `ActiveRecord::Base`, it gives this class a whole bunch of functionality that maps the Ruby `Artist` class to the `artists` table in Postgres.
+#### artist table
+
+In the `song.rb` file, we define our `song` model:
+
+```ruby
+class Artist  < ApplicationRecord
+  # AR classes are singular and capitalized by convention
+end
+```
+
+> In this Ruby file, we create a class of Artist that inherits from `ApplicationRecord`. Essentially, when we inherit from `ApplicationRecord`, it gives this class a whole bunch of functionality that maps the Ruby `Artist` class to the `artists` table in Postgres.
+
+
+```ruby
+create_table :artists do |t|
+  t.string :name
+  t.string :photo_url
+  t.string :nationality
+  t.timestamps
+end
+```
 
 
 
@@ -174,138 +166,38 @@ end
 ## Inheritance
 We are using this stntax for ruby inheritance:
 ```
-class Artist < ActiveRecord::Base
+class Artist < ApplicationRecord
 ```
 
 This means we can use Artist class in much the same way we would use an ActiveRecord class. Except that we can add in all our Artist class stuff. The code looks clean and isn't cluttered by active record code, and we don't care how the active record methods we get for free *actually* work.
 
 If you want a bit more detail on inheritance in ruby check the [gitbook.](../../ruby-inheritance/readme.html)
 
-
-
-### app.rb
-Let's setup the main file.
-
-We need to use require a bunch of times to gather together all the libs.
-
-
-```
-require "bundler/setup" # require all the gems we'll be using for this app from the Gemfile. Obviates the need for `bundle exec`
-require "pg" # postgres db library
-require "active_record" # the ORM
-require "byebug" # for debugging
-
-
-# initialize a connection to the database
-ActiveRecord::Base.establish_connection(
-  :adapter => "postgresql",
-  :database => "tunr_db"
-)
-
-require_relative "artist" # require the Artist class definition that we defined in the artist.rb file
-
-byebug
-
-puts "end of application"
-```
-
-
-<details>
-<summary>Did you get an error from <code>bundle install</code>?</summary>
-If you get an error message like this one:
-
-```
-An error occurred while installing json (1.8.3), and Bundler cannot continue.
-Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
-```
-
-Then run this command: `$ bundle update`
-</details>
-
-
-
-
 ### Setting up the db
 
+#### migrations
+We will generate a migration as normal.
 
-
-### schema.sql
-In rails `tables.sql` is called `schema.sql`
-
-(We will see tomorrow that there is more to the rails system of db manegement)
-
-
-```sql
-DROP TABLE IF EXISTS songs;
-DROP TABLE IF EXISTS artists;
-
-CREATE TABLE artists(
-  id SERIAL PRIMARY KEY,
-  name TEXT,
-  photo_url TEXT,
-  nationality TEXT
-);
-
-CREATE TABLE songs(
-  id SERIAL PRIMARY KEY,
-  title TEXT,
-  album TEXT,
-  preview_url TEXT,
-  artist_id INT
-);
-```
-
-
-
-### seeds.sql
-Is the same as it was before. It contains sql for each row.
-(we will be getting rid of this format for seed soon)
-
-
+### seeds.rb
+To seed the db, we use ruby instead of sql.
 
 ### running the db configs:
 
-Continue with the following `bash` commands:
-
 ```bash
-createdb tunr_db
-psql -d tunr_db < schema.sql
-psql -d tunr_db < seeds.sql
+rails db:create
+rails db:migrate
 ```
-
-Check you did everything correctly.
-
-
 
 ## Using Active Record
 
-- Run your program(`$ ruby app.rb`)
-- When you see the `byebug` REPL, run this ruby code: `Artist.first`
+- Run it (`$ rails console`)
 
 Your output should be something like this (it won't be the same letters and numbers next to `#<Artist:`)
 ```bash
-pry(main)> pry(main)> Artist.first
-=> #<Artist:0x007ff851821bc0
- id: 1,
- name: "Weird Al Yankovich",
- photo_url: "http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg",
- nationality: "American">
+>> Article.first
+  Article Load (0.5ms)  SELECT  "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1  [["LIMIT", 1]]
+#<Article id: 1, title: "some title", text: "some text stuff", created_at: "2019-08-08 03:47:51", updated_at: "2019-08-08 06:02:40">
 ```
-
-
-
-Great! We've got everything done that we need to get setup with single model CRUD in our application. Let's run it in the terminal:
-
-```bash
-$ ruby app.rb
-```
-
-If we want to see the output of the active record class as it works, we can drop this line into our `app.rb` file:
-```
-ActiveRecord::Base.logger = Logger.new(STDOUT)
-```
-
-
 
 When we run this app, we can see that it drops us into byebug. Let's write some code in byebug to update our database... **IN REALTIME!!!**
 
@@ -424,18 +316,50 @@ kanye.destroy
 
 > This is exciting stuff by the way, imagine, while we do these things, that our artists model is instead a post on Facebook, or a comment on Facebook. So the next time you comment on someone's Facebook page you have an idea now of whats happening on the database layer. Maybe not the whole picture, but you have an idea. We're going to build on that idea in the coming week and half, and thats really exciting.
 
-### You Do: Methods - Tunr (15 min / 1:30)
 
-We will use `byebug` in your ruby app to test out ActiveRecord class and instance methods.
+### Pairing Exercise
 
-> Don't forget to require 'byebug' when you want to use `byebug` in your program.
+We will use `rails console` in your rails app to test out ActiveRecord class and instance methods.
 
-[Part 1.1 - Use Your Artist Model](https://github.com/wdi-sg/activerecord-intro-exercise#part-11---use-your-artist-model)
+Create a migration file with: 
+
+```bash
+rails generate migration artists
+```
+
+put this inside:
+```ruby
+create_table :artists do |t|
+  t.string :name
+  t.string :photo_url
+  t.string :nationality
+  t.timestamps
+end
+```
+
+seeds.rb
+```ruby
+w_al = Artist.create(
+  :name => 'Weird Al Yankovich', :photo_url => 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :nationality => 'American'
+)
+
+kiss = Artist.create(
+  :name => 'Kiss', :photo_url => 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :nationality => 'American'
+)
+
+gwar = Artist.create(
+  :name => 'Gwar', :photo_url => 'http://www.heavymetal.com/v2/wp-content/uploads/2014/08/gwar_promo.jpg', :nationality => 'American'
+)
+```
+
+Run the active record code above from `rails console`.
+
+#### Further
+Use the links to the rails documentation below to call other methods of active record.
 
 ### Resources
 - [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
 - [Active Record Query Interface](http://guides.rubyonrails.org/active_record_querying.html)
-- [Tunr - Solution Code (zip)](https://github.com/ga-wdi-exercises/tunr-active-record/archive/v1.2.zip)
 
 ### Appendix
 
@@ -457,12 +381,9 @@ We will use `byebug` in your ruby app to test out ActiveRecord class and instanc
 
 ---
 
-#### Conventions in AR
+#### Some Conventions in AR
 |description      | Rule    |
 |-----------------|---------|
 |table names      |snake case and plural|
 |model file names |snake case and singular|
 |model definition |Camel case and singular|
-|argument for has_many| snake case and plural|
-|argument for belongs_to| snake case and singular|
-|more to follow....|||

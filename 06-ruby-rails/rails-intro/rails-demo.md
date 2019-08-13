@@ -143,7 +143,7 @@ rails db:migrate
 
 touch app/models/article.rb (model filenames are singular)
 ```
-class Article < ActiveRecord::Base
+class Article < ApplicationRecord
   # AR classes are singular and capitalized by convention
 end
 ```
