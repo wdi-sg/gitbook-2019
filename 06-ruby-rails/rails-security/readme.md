@@ -87,7 +87,7 @@ What does the saved thing look like when you look at it in the show route?
 Rails uses "html escaping" to clean up the stuff you finally see on the screen.
 
 
-String sanitization in javascript is hard: [http://www.jazcash.com/a-javascript-journey-with-only-six-characters/](http://www.jazcash.com/a-javascript-journey-with-only-six-characters/)
+String sanitization in javascript is hard: [https://hackerfall.com/story/you-can-do-anything-in-javascript-with-only-an](https://hackerfall.com/story/you-can-do-anything-in-javascript-with-only-an)
 
 
 ### Don't use string interpolation with where

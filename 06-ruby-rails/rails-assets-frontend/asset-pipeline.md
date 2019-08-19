@@ -112,9 +112,10 @@ body{
 Import it in `application.scss`
 
 ```
-@import 'stuff.scss'
+@import 'stuff'
 ```
 
+> Warning: you can't use the file extention of the sass file in your import
 > Warning: the order of the import statements matter.
 
 

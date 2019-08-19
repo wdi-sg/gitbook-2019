@@ -6,7 +6,7 @@ On your projects at GA, you will all be Full-Stack developers and forced to work
 
 ####Git Master (Maintainer)
 
-Commonly known as the repository maintainer, but known in WDI as the "git master", the git master's job is to handle incoming pull requests and merge them appropriately. Their job is to handle the **state of the repo** and make sure that everything goes smoothly. Be prepared for merge conflicts if necessary.
+Commonly known as the repository maintainer, but known in SEI as the "git master", the git master's job is to handle incoming pull requests and merge them appropriately. Their job is to handle the **state of the repo** and make sure that everything goes smoothly. Be prepared for merge conflicts if necessary.
 
 ##Kanban Boards
 

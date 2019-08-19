@@ -199,8 +199,6 @@ Your output should be something like this (it won't be the same letters and numb
 #<Article id: 1, title: "some title", text: "some text stuff", created_at: "2019-08-08 03:47:51", updated_at: "2019-08-08 06:02:40">
 ```
 
-When we run this app, we can see that it drops us into byebug. Let's write some code in byebug to update our database... **IN REALTIME!!!**
-
 We'll create an instance of the `Artist` object on the Ruby side:
 
 > **Note** the syntax for creating a new instance.
@@ -214,8 +212,6 @@ To save our instance to the database we use `.save`:
 ```ruby
 kanye.save
 ```
-
-
 
 If we want to initialize an instance of an object AND save it to the database we use `.create`:
 
@@ -249,7 +245,6 @@ kanye.save
 ```
 
 > **Note:** Should be noted that when we set the attribute using a setter, it doesn't automatically save to the database, it's not until we call `.save` on the object that it saves to the database
-
 
 
 To get all of the artists we use `.all`:
