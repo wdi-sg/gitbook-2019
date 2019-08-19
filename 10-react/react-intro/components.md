@@ -75,7 +75,7 @@ ReactDOM.render(
 - a component has certain methods like `render` that allow you to control it
 
 
-[What does 'render(){}' mean? - Click here](https://dpdive.github.io/qq?q=ReactJS+:+render\(\))
+[What does 'render(){}' mean? - Click here](https://dpdive.github.io/qq?q=ReactJS+:+render%28%29)
 
 
 ---
