@@ -53,6 +53,20 @@ As soon as you commit and push a change, you can open a Pull Request. People use
 
 It's good practice to even make a pull request for branches in your own repository and merge it yourself to get more comfortable with PRs!
 
+#### Merge Master into Branch
+If you are working on a branch for a while, while major changes are being made to the code base, it's a good idea to keep your branch "clean" and updated with the latest changes from the `master` branch.
+
+```bash
+ $ git checkout my-branch
+ $ git merge master
+ # fix any merge issues
+```
+
+You can merge master **into** your branch in order to keep up to date with changes.
+
+You can also use this technique top fix any merge conflicts that you are aware of, *before* you make your pull request. This way you don't make your teammates responsible for the merge conflicts from your branch.
+
+
 ## Make a PR from a Branch (15 min, 1:30)
 
 Building off the previous exercise, work through the following:
