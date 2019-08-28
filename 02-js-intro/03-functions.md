@@ -126,49 +126,61 @@ We made a couple of program design descisions here:
 
 We will be implementing a specific process for translating our word problems into functions that run on data.
 
- `1.` Data Description
+ `1.` Function Purpose
+An english description of what the entire function is for:
 
-Describe what data your function deals with
+To calculate the monthly wage of a worker given a rate and the hours worked.
+
+ `2.` Input Data Description
+
+In english, describe what data your function deals with.
+
+Name the parameters after what data they represent.
 
 ```
 hourlyRate - the rate earned per hour
 hoursWorked - number of hours worked
 ```
 
- `2.` Data Examples
+ `3.` Data Examples
 
-Write actual examples.
+Write actual examples for the input data.
+
+You should think about a range of examples. What are the possible input values? Give examples.
+
 ```
 var hoursWorked = 5;
 ```
 
- `3.` Function Signature
+ `4.` Function Signature
+
+Describe the *javascript* language data types your function deals with.
 ```
 hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
 ```
 
- `4.` Function Purpose
-To calculate the monthly wage of a worker given a rate and the hours worked.
+ `5.` Code
 
- `5.` Function Header
-calculateWage( hourlyRate, hoursWorked )
+You're ready to start coding. Write the actual javascript that fits the behavior you described above.
 
- `6.` Code
 Make it work.
 
- `7.` Functional Examples
+ `6.` Functional Examples
 var monthlyWage = calculateWage( 15, 40 ); // will equal 600
 
- `8.` Test
+ `7.` Test
 Run the examples yourself.
 
- `9.` Review & Refactor
+ `8.` Review & Refactor
 If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
 
 A completed example:
 ```
 /*
  * calculateWage
+ *
+ * function purpose
+ * To calculate the monthly wage of a worker given a rate and the hours worked.
  *
  * data description
  * hourlyRate - the rate earned per hour
@@ -179,12 +191,6 @@ A completed example:
  *
  * function signature
  * hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
- *
- * function purpose
- * To calculate the monthly wage of a worker given a rate and the hours worked.
- *
- * function header
- * calculateWage( hourlyRate, hoursWorked )
  *
  * functional examples
  * var monthlyWage = calculateWage( 15, 40 ); // will equal 600
