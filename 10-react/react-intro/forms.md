@@ -75,7 +75,7 @@ Example: User's input can't be longer than 6 characters. After 6 characters, app
 
 ```
 .warning{
-  border 1px solid red;
+  border: 1px solid red;
 }
 ```
 
