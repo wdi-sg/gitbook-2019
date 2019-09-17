@@ -5,7 +5,8 @@
 ### Lesson Objectives
 _After this lesson, students will be able to:_
 
-- Explain why we would use 'control flow' in our programs
+- explain why we would use 'control flow' in our programs
+- use conditionals to create a boolean value
 - Write a simple if statement
 - Write an if / else statement
 
@@ -57,42 +58,6 @@ if( score !== 10 ){
   alert( "imperfect!" );
 }
 ```
-
-## Truthiness
-
-**All** values in JavaScript have an implicit 'truthiness'. They can be evaluated as either true or false. In effect, every value in Javascript is converted into a Boolean when it is checked as an expression of truth.
-
-##### All of the following become false when converted to a Boolean
-
-- `false`
-- `0`
-- `""` (empty string)
-- `NaN`
-- `null`
-- `undefined`
-
-<br>
-
-JavaScript has a built-way to convert things to Booleans: `Boolean()`. Put the following inside the parenthesis of `console.log()` to see the result.
-
-```
-Boolean("");
-Boolean(null);
-Boolean(0);
-```
-<br>
-
-
-##### All other values are implicitly true
-
-```
-Boolean("hi");
-Boolean(1);
-Boolean(true);
-```
-
-<br>
-<hr>
 
 
 ## Comparison Operators
@@ -192,34 +157,6 @@ x || y
 ```
 
 
-### Boolean order of evaluation
-
-0. `()`
-1. `>, <, >=, <=`
-2. `==, ===`
-3. `&&`
-4. `||`
-
-<br>
-
-### Let's Practice :computer:
-
-Try to guess the result before you check it. If it is not what you expected, try to find out why not
-
-* Check: `!false && true`
-* Check: `false || true`
-
-```
-var a = true;
-var b = false;
-```
-* Check: `a && a == b`
-* Check: `!true || !false && !false`
-* Check: `8 > 1 && true || false`
-
-<br>
-<hr>
-
 ## IF Statements
 
 Basic if statement
@@ -242,10 +179,7 @@ if (number === 10){
 }
 ```
 
-### Let's Practice Together :computer:
-
-#### Reporting for Duty
-_Strings as conditionals_
+#### Strings as conditionals
 
 1) Make a variable called `name` and save a name to it.
 
@@ -271,8 +205,7 @@ if (name === "Kermit") {
 <br>
 <hr>
 
-#### Have a Drink
-_Numbers as conditionals_
+#### Numbers as conditionals
 
 ```
 var age = 21;
@@ -281,20 +214,6 @@ if (age >= 21) {
     console.log ('You are allowed to buy beer');
 }
 ```
-
-#### Oddball
-_Modulus as conditionals_
-
-`%`
-
-Check for odd numbers:
-```
-if (5 % 2 == 0) {
-    console.log('number is even);
-}
-```
-
-**Let's add an `else` to our `if` statement**
 
 ### If / else
 
@@ -316,6 +235,7 @@ if (number >= 15) {
     console.log('Number is 3 or less');
 }
 ```
+
 
 ### Pairing Exercise:
 
@@ -369,5 +289,122 @@ console.log("chocolate");
   - write a conditional with an if else statement- `console.log` `curry` if `monkey` is more than 9, but, if `monkey` is equal to 4, `console.log` `future`. Otherwise `console.log` `orchid`.
 
   - write a conditional that will `console.log` `danube` if `monkey` is less than 6 or `johnathan` is less than 3, but, if `monkey` is more than 7 and `johnathan` is equal to 9, `console.log` `trumpet`. Otherwise `console.log` `brains`
+
+## Extra: combining boolean statements together without parentheses:
+
+### Boolean order of evaluation
+
+0. `()`
+1. `>, <, >=, <=`
+2. `==, ===`
+3. `&&`
+4. `||`
+
+<br>
+
+* Check: `!false && true`
+* Check: `false || true`
+
+```
+var a = true;
+var b = false;
+```
+
+* Check: `a && a == b`
+* Check: `!true || !false && !false`
+* Check: `8 > 1 && true || false`
+
+<br>
+<hr>
+
+## Extra: data type mismatches
+
+### Truthiness
+
+**All** values in JavaScript have an implicit 'truthiness'. They can be evaluated as either true or false. In effect, every value in Javascript is converted into a Boolean when it is checked as an expression of truth.
+
+##### All of the following become false when converted to a Boolean
+
+- `false`
+- `0`
+- `""` (empty string)
+- `NaN`
+- `null`
+- `undefined`
+
+<br>
+
+JavaScript has a built-way to convert things to Booleans: `Boolean()`. Put the following inside the parenthesis of `console.log()` to see the result.
+
+```
+Boolean("");
+Boolean(null);
+Boolean(0);
+```
+<br>
+
+
+##### All other values are implicitly true
+
+```
+Boolean("hi");
+Boolean(1);
+Boolean(true);
+```
+
+### Data Type Coercion
+
+Types mean that each of the kinds of data described above is distinct. As far as the computer is concerned `2` and `"2"` are different and unrelated values. The programmer has to tell javascript to relate two values of different data types.
+
+Javascript will try to make sense of any strange operations you throw at it.
+- Examples of "strange": subtracting a number from a string, multiplying `null` by 100
+- It does this by converting data types using a process called "type coercion"
+
+You might encounter this when dealing with numerical values but for whatever reason some of them are in string form.
+
+```js
+// In some cases Javascript is helpful and converts strings to numbers in the correct way.
+"3" - "2"
+// => 1
+
+// ...but sometimes it doesn't. In this example, the + operator acts as if it's concatenating two strings.
+"3" + "2"
+// => 32
+
+// And this?
+"five" * 5
+// => NaN
+```
+
+When in doubt, convert data types that should be numbers using `parseInt()`.
+
+```js
+parseInt("3")
+// => 3
+// parseInt converts a string to a number value, if available.
+
+parseInt("burrito")
+// => NaN, because "burrito" cannot be converted into a number
+```
+
+There are other examples of type coercion, but the point here isn't to remember them all. Just be aware that sometimes Javascript will fire weird results back at you with no explanation. Sometimes, type coercion might be the culprit.
+
+
+### Check for odd numbers
+_Modulus as conditionals_
+
+`%`
+
+Check for odd numbers:
+```
+if (5 % 2 == 0) {
+    console.log('number is even);
+}
+```
+
+**Let's add an `else` to our `if` statement**
+
+
+
 
 

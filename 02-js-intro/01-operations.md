@@ -3,6 +3,11 @@ The most basic computation is an operation. These happen between 2 pieces of dat
 
 Javascript defines certain specific *types* of data and the kinds of operations you can do on it.
 
+#### Types of data:
+- numbers
+- booleans
+- strings
+
 ##### operations on numbers
 Numbers are: 1,2,3,45.6, -6.7 etc.
 
@@ -30,22 +35,6 @@ Like normal math, Javascript follows the traditional order of operations: P.E.M.
 (8 / 4 * 2) + 1
 // => (2 * 2) + 1
 // => 5
-```
-
-### NaN ("Not a number")
-
-A special number...that's not a number?
-
-```js
-typeof NaN
-// => Number
-```
-
-You usually get `NaN` when the result of a math operation is not real (e.g., dividing 0 by 0, multiplying strings together).
-
-```js
-0/0
-// => NaN
 ```
 
 ##### operations on booleans
@@ -89,46 +78,126 @@ You can't, however, use other math operators on strings...
 // => NaN
 ```
 
-## Type Coercion
+### NaN ("Not a number")
 
-Types mean that each of the kinds of data described above is distinct. As far as the computer is concerned `2` and `"2"` are different and unrelated values. The programmer has to tell javascript to relate two values of different data types.
-
-Javascript will try to make sense of any strange operations you throw at it.
-- Examples of "strange": subtracting a number from a string, multiplying `null` by 100
-- It does this by converting data types using a process called "type coercion"
-
-You might encounter this when dealing with numerical values but for whatever reason some of them are in string form.
+A special number...that's not a number?
 
 ```js
-// In some cases Javascript is helpful and converts strings to numbers in the correct way.
-"3" - "2"
-// => 1
+typeof NaN
+// => Number
+```
 
-// ...but sometimes it doesn't. In this example, the + operator acts as if it's concatenating two strings.
-"3" + "2"
-// => 32
+You usually get `NaN` when the result of a math operation is not real (e.g., dividing 0 by 0, multiplying strings together).
 
-// And this?
-"five" * 5
+```js
+0/0
 // => NaN
 ```
 
-
-When in doubt, convert data types that should be numbers using `parseInt()`.
-
-```js
-parseInt("3")
-// => 3
-// parseInt converts a string to a number value, if available.
-
-parseInt("burrito")
-// => NaN, because "burrito" cannot be converted into a number
-```
-
-There are other examples of type coercion, but the point here isn't to remember them all. Just be aware that sometimes Javascript will fire weird results back at you with no explanation. Sometimes, type coercion might be the culprit.
-
 #### Non-Values
 `null` is a value that indicates the lack of a meaningful value. There are no operations you can do *to* a `null` value.
+
+
+#### Variables
+
+We can assign values to variables using the assignment operator `=`.
+
+```javascript
+var phrase = 'In my room is a chair and a table';
+```
+
+we can use that variable as a stand-in for the original value:
+
+```javascript
+console.log(phrase);
+```
+
+**phrase** can be anything we want (with some syntactical caveats), **sentence** for example, whatever makes semantic sense.
+
+```javascript
+var phrase = 'In my room is a chair and a table';
+var sum = 99 + 1;
+```
+
+```javascript
+console.log(phrase);
+console.log(phrase);
+console.log(phrase);
+console.log(phrase);
+```
+
+```javascript
+console.log(sum);
+console.log(sum);
+console.log(sum);
+console.log(sum);
+```
+
+>x4 => "In my room is a chair and a table"
+
+>x4 => 100
+
+##### Variable names
+
+- cannot begin with a number or include special character
+- camelCase
+	- `thisVariable` NOT `this_variable`
+- case sensitive
+	- `thisVariable` is not the same as `ThisVariable`
+
+##### Semicolons
+
+- The interpreter needs the semicolons.  **DO NOT FORGET THEM!**
+
+##### Variable re-assignment
+
+```javascript
+var item = 'chair';
+
+item = 'eclair';
+
+console.log(item);
+```
+
+> => "eclair"
+
+#### Variables as Data
+
+The *purpose* of a variable is:
+
+###### to represent it's **literal** value in a name that defines what it means.
+###### contain dynamic data that changes but always represents the same thing. ex. `var temperatureToday = 34;`
+
+Naming a variable for what it represents is a very hard problem.
+
+###### One of your main tasks as a programmer is to come up with the most accurate, succinct name possible.
+
+## Read error messages
+
+Error messages are good. They are not adversarial! They are there to help you.
+
+Error messages are **clues** that you learn to read. You should be able to read these clues on your own.
+
+Create a new html file: `touch error.html`
+
+Create a new js file: `touch error.js`
+
+Link them together in your HTML file: `<script src="error.js"></script>`
+
+Put this example in:
+```
+console.log('hello world);
+```
+
+The error that is created is typical. It looks intimidating and weird, but if you pry, you will find valuable clues. For example:
+
+Error messages will tell you a **specific line number** where in the code the error occurred. This tells me the error is on line 1: `script.js:1`
+
+Errors will often tell you what **type** of error. `SyntaxError: Unexpected token ILLEGAL`
+
+You have to learn to sort the 'wheat from the chaff' so to speak. This will come with practice.
+
+Errors are a **growth opportunity**. When you receive an error, yes it is an obstacle, but with a little patience it will turn you into a more informed, better developer.
 
 ### pairing exercises
 Open the chrome console.
