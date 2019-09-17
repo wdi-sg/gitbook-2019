@@ -118,7 +118,7 @@ app.jsx
 ```
 import React from 'react'
 
-export default class App extends React.Component{
+class App extends React.Component{
 
   render(){
     return(<div>
@@ -126,6 +126,8 @@ export default class App extends React.Component{
           </div>);
   }
 }
+
+export default App;
 ```
 
 `app.jsx` is the place where you start writing your actual react app.
@@ -166,7 +168,7 @@ In your react code, add a button that makes an ajax request to that route. When 
 ```
   var reactThis = this;
 
-  var responseHandler = () => {
+  var responseHandler = function(){
       var response = JSON.parse( this.responseText );
       reactThis.setState({stuff: response});
   };

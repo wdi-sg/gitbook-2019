@@ -1,56 +1,5 @@
 # React Render Timing / State
 
-#### Click Handlers
-
-```
-clickHandler(){
-  console.log("clicking");
-}
-
-render() {
-    console.log("rendering");
-    return (
-      <div className="item">
-        <button onClick={()=>{this.clickHandler()}}>YAY</button>
-      </div>
-    );
-}
-```
-
-## React State
-Now we have a button that can be clicked.
-
-Let's change some attribute of the class, a counter that gets incremented.
-
-```
-constructor(){
-  super()
-  this.counter = 0;
-}
-
-clickHandler(){
-  console.log("clicking", this.counter);
-  this.counter++;
-}
-
-render() {
-    console.log("rendering");
-    return (
-      <div className="item">
-        <button onClick={()=>{this.clickHandler()}}>YAY</button>
-      </div>
-    );
-}
-```
-
-This code increments the value, but what happens when we try to output it?
-
-```
-<p>{this.counter}</p>
-```
-
-We can see that the class attribute gets incremented, but the screen doesn't change.
-
 ### React Rendering
 
 Now we can talk about the real differentiation of the react library.
@@ -64,7 +13,6 @@ The real work of building a react app is understanding this rendering cycle.
 ![https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229](https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229)
 
 ![https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png](https://calendar.perfplanet.com/wp-content/uploads/2013/12/vjeux/4.png)
-
 
 So we know about React properties, and how they relate to our component's data.
 * The thing is, `props` represent data that will be the same every time our component is rendered. What about data in our application that may change depending on user action?
@@ -83,12 +31,13 @@ class Item extends React.Component {
 
     //initialize the component
     constructor(){
-      console.log("constructing");
       super()
-    }
+      console.log("constructing");
 
-    state = {
-      counter : 0
+      this.state = {
+        counter : 0
+      }
+
     }
 
     // our click method
@@ -119,39 +68,87 @@ ReactDOM.render(
 );
 ```
 
-### Props vs. State
-- props don't change within the component.
-- props "come from above" (or are set in the constructor)
-- state is changed within the component itself
+### Immutability
+When we give values to `setState`, look carefully- these are actually new values.
 
-### Re-rendering with props
-If we have a sub component that takes in a changing prop, that component also gets rerendered:
-Let's put our span inside it's own component:
-```
-<span>{this.state.counter}</span>
-```
-changes into:
-```
-<Count counter={this.state.counter}/>
-```
-```
-class Count extends React.Component {
+React calls the render function of each component again in order to recieve the current "DOM" of each component.
 
+When we are mutating an array we use spread operators so that the thing we pass to `setState` is a new thing. We do not use push, which would transofrm the array in place.
+
+```js
+class Item extends React.Component {
+
+    //initialize the component
+    constructor(){
+      super()
+      console.log("constructing");
+
+      this.state = {
+        numbers : []
+      }
+
+    }
+
+    // our click method
+    handleClick(){
+      let currentValue = Math.random();
+
+      console.log("clicking", currentValue);
+
+      // set the state of this component
+      this.setState( { numbers: [currentValue, ...this.state.numbers] } );
+    }
+
+    // what happens when the component renders
     render() {
-        console.log("rendering count component");
+
+        const numbers = this.state.numbers.map((number)=>{
+          return <p>{number}</p>;
+        });
+
+        console.log("rendering");
         return (
           <div>
-            <span>{this.props.counter}</span>
+            <button onClick={()=>{this.handleClick()}}>click me!</button>
+            {numbers}
           </div>
         );
     }
 }
+
+ReactDOM.render(
+    <Item />,
+    document.getElementById('root')
+);
 ```
 
-### Exercise
-Build the above counter increment.
+### Virtual DOM
+Under the hood, react keeps track of which elements have changed and which have not.
 
-Watch the console to see when clicking and rendering happen.
+Even though it seems like *every* DOM element is re-rendered using the `render` function, actually react is smart enough to figure out which elements are being changed.
+
+
+Assume this component gets props from it's parent:
+```
+<Display item={this.state.counter}/>
+```
+
+When a new piece of data is passed, we can see if the whole component changes on the screen, or just the appropriate parts:
+
+(inside of `Display`)
+```
+<div>
+  <p>{this.props.item}</p>
+  <p>
+    <input/>
+  </p>
+</div>
+```
+
+If we type in the input, the users value should get refreshed by react, and go away.
+
+### Exercise
+Run the above code. See the virtual dom leave certain parts of the page alone as it changes others.
 
 Don't forget to include the 3 libraries you need:
 ```
@@ -160,10 +157,24 @@ Don't forget to include the 3 libraries you need:
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
-#### Further
-Build the counter display into it's own component.
+### further
+Build some regular javascript code that manipulates the dom in a loop.
 
-#### Further
-Make a second and third button that increments by 2 and 3. Send those props to the display component.
+How long does it take?
 
-Display the current count and an array of previous values in the display component.
+How long does it take if you build the equivalent code in react?
+
+```
+for( var i=0; i<1000; i++ ){
+
+  var p = document.createElement('p');
+  p.innerHTML = Math.random();
+  document.body.append(p);
+}
+
+// manipulate the dom
+var ps = document.querySelectorAll('p');
+ps.map((paragraph)=>{
+  paragraph.innerHTML = Math.random();
+});
+```
