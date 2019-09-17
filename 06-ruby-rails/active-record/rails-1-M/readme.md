@@ -12,7 +12,7 @@ Rails gives us a few tools to make associations easy inside the controllers and 
 
 ## Create the app:
 ```bash
-rails new parklist -d postgresql --skip-turbolinks --skip-coffee
+rails _5.2.3_ new parklist -d postgresql --skip-turbolinks --skip-coffee
 ```
 
 ## What we need

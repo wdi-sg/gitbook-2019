@@ -1,7 +1,7 @@
 ## Install Rails
 ```
 gem install rails
-rails new blog -d postgresql --skip-turbolinks --skip--coffee
+rails _5.2.3_ new parklist -d postgresql --skip-turbolinks --skip-coffee
 cd blog
 rails db:create
 ```
