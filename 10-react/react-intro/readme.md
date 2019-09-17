@@ -1,45 +1,14 @@
-# Intro to React
+# Browser Side React
+
+We will repeat many of the actions and patterns we did with basic javascript and CSS.
+
+First is the creation of DOM elements using react with `jsx`.
+
+### Setup
 
 
-## Framing
-In unit 1 we build relatively complex apps in javascript.
+Setup an `index.html` and `script.js`.
 
-Now we are going to see how javascript apps get built in the real world.
-
-Just like in express and Rails, we are going to enforce some structure in the way that our javascript renders things in the DOM and also structure for the logic of our javascript as well.
-
-We will be seeing some professional-level tools for running and storing our JS code.
-
-React.js is a javascript library that basically tightly controls the rendering of HTML within the DOM.
-
-Further, it is a javascript ecosystem for creating single page apps in javascript.
-
-It's back-end equivalent would be more expresss than rails.
-
-We will see that the professional react "stack" is quite complicated and includes some new tools and ways of working.
-
-![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/trello.png?raw=true)
-
-![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/fb.jpg?raw=true)
-
-![](https://github.com/wdi-sg/gitbook-2019/blob/master/images/gmail.jpg?raw=true)
-
-## What is reactjs
-The react library itself is just a rendering layer to easily render elements onto an HTML page in the browser.
-
-The wider react ecosystem allows you to build complex js single page applications.
-
-
-### Top 3 React Whys:
-
-1. Efficent and clean DOM rendering
-2. Explicit data flow. No more global variables. Logic reacts as data flows.
-3. Component library ecosystem.
-
-
-
-
-## Hello World Example
 Given we've included the right libraries:
 ```
 <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
