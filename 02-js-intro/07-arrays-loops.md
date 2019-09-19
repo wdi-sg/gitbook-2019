@@ -1,8 +1,15 @@
-# Loops and Arrays - Arbitrary Length Data
+# Arrays - Arbitrary Length Data
 
-After conditionals and functions, loops are the other piece of control flow in any basic program. Every language you will write in the future will have some kind of loop in it.
+## Arbitrary Sized Data
 
-### Arrays
+So far our programs have dealt with a single set of data that we control completely.
+
+Real-life data usually isn't like that.
+
+Most data has an arbitrary length.
+
+Arrays are collections of the **same** kind of data, in a list format.
+
 
 An array is a list of data. If a variable is the simplest way to store a value, a bucket, an array is a bucket of buckets.
 
@@ -78,6 +85,25 @@ alphabet[3] // d
 
 Again, the naming and format of that data determine what operations you want to do on the data.
 
+
+### More Array Structures
+
+Simply given a new *structure* we can store different kinds of data- like coordinates.
+
+```
+// You can also place arrays within arrays.
+var bingo = [
+  [null,true,null],
+  [null,null,null],
+  [true,null,null]
+];
+
+// How would we go about accessing the letter "f" in the above array?
+bingo[1][2]
+// => null
+```
+
+
 ### Array Methods
 
 * `.length`
@@ -85,8 +111,6 @@ Again, the naming and format of that data determine what operations you want to 
 * `.push` put something on the end of the array
 * `.pop` take something off the end of the array
 
-* `.shift` put something on the beggining of the array
-* `.unshift` take off the first thing in the array
 
 > There are many more, but these are the essential ones
 
@@ -121,113 +145,38 @@ var topCard = cardDeck.pop();
 ##### shift and unshift
 Are the opposites of push and pop.
 
-## Loops
+* `.shift` put something on the beggining of the array
+* `.unshift` take off the first thing in the array
 
-#### `while`
+### Pairing Exercise
+Use the unit 1 template starter code.
 
-A **while loop** repeatedly executes a code block as long as a specified condition is true.
 
-Some condition inside the code block will change, making the condition true.
+###### Part 0
+Copy and try out the code examples above.
 
-```js
-var i = 0;
-while (i < 5) {
-  console.log("i is " + i);
-  i++;
-}
+###### Part 1
 
-// Will print out:
-// >i is 0
-// >i is 1
-// >i is 2
-// >i is 3
-// >i is 4
+Put this array at the top of your script.js file.
+```
+var mountRushmore = [ "Washington", "Jefferson", "Roosevelt", "Lincoln" ];
 ```
 
----
+When the user enters *anything*, take one item out of the array (`pop`) and display it.
 
-**The parts of a while loop**
+###### Part 2
 
+Start back with the default starter code.
+
+Put this array at the top of your script.js file.
 ```
-while (CONDITION) {
-  //CODE
-}
-```
-
-```
-var i=0;
-
-while (i < 5) {
-
-  console.log("i is " + i);
-
-  i++;
-}
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 ```
 
----
+When the user enters in *any* number between 0-25, show them the corresponding letter of the alphabet.
 
-Loop that runs forever
-```
-while(true){
-  //CODE
-}
-```
+### further
+When the user enters anything in the input, put it into the array.
 
-### arrays and loops
+`console.log` the array to see the current set of values inside.
 
-Arrays suggest order of data, and also have a specific *integer* location for each piece of data in the list- the index.
-
-We can use these ideas as complements to visit every location in the list.
-
-```
-var i=0;
-
-var a = [1,2,3];
-
-while (i < 5) {
-
-  console.log("i is " + a[i]);
-
-  i++;
-}
-```
-
-## Backwards Loops
-
-It's totally possible to run the loop backwards. We need to do three things:
-
-1. Instead of starting i at zero
-simply start it at `var i = a.length`. We have to subtract one from the length
-of the array to access the index of the last element to account for zero-based
-indexing.
-2. Change the test condition to run the for loop while `i > 0`
-3. Change the step instruction to `i--`
-
-```
-var a = [1,2,3];
-
-var i=a.length;
-
-while (i > 0) {
-
-  i--;
-
-  console.log("i is " + a[i]);
-}
-```
-
-
-### Exercise: Run some loops (10 mins)
-
-- Setup Your Files (html / script)
-- Copy the above code examples
-- Change the value of i to something bigger
-- Change the condition from *less than* to *less than or equal to* - what happens?
-- Change the starting value of i to something else. What happens?
-- Make a while loop that runs 1000 times and console.logs out `i`.
-- Make a while loop that runs 1000 times and console.logs out `hello`
-- Make a backwards loop
-- Make a loop that increments more than one (counting forwards and backwards) 
-- Make a loop that runs a random amount of times (up to a reasonable number) - just google how to create a random integer in javascript if you don't know how.
-- Crash your chrome browser tab by running a while loop that console.logs something and goes on forever.

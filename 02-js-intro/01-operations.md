@@ -172,6 +172,28 @@ Naming a variable for what it represents is a very hard problem.
 
 ###### One of your main tasks as a programmer is to come up with the most accurate, succinct name possible.
 
+#### Operations on variables
+
+```
+var number = 3;
+var square = number * number;
+var cube = square *  number;
+```
+
+```
+var distance = 100;
+var startTime = 0;
+var endTime = 100;
+var totalTime = endTime = startTime;
+var speed = distance / totalTime;
+```
+
+```
+var pi = 3.14;
+var radius = 3;
+var area = pi * radius * radius;
+```
+
 ## Read error messages
 
 Error messages are good. They are not adversarial! They are there to help you.

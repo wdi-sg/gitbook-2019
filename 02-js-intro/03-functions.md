@@ -55,7 +55,7 @@ To do that, we will be trying to make a series of functions that rely upon each 
 
 We'll call this function composition.
 
-Example:
+##### Area of Ring
 
 We want to know the area of a ring instead of a disk.
 
@@ -70,14 +70,15 @@ var areaOfRing = function(d1, d2){
 ```
 
 ### functions built into the language
-We've already seen `parseInt`. What does parseInt return?
 
-There are some other functions we already know how to call:
+Functions we've already seen:
 
 ```
 console.log()
 alert()
 ```
+
+What do these do? Do they have return values?
 
 Some others are:
 ```

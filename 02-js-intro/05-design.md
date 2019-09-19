@@ -263,7 +263,7 @@ Add the ability to do other operations to the current number.
 
 When the user types in "multiply", "subtract" or "divide" and hits enter, the *next* number entered uses that operation on the number entered and the running total.
 
-Use a global world value to keep track of the operation.
+Use a global world value to keep track of which operation the user selected.
 
 ### further
 Add features to the calculator.
