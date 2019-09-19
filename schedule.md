@@ -9,6 +9,8 @@
 [js operations](https://wdi-sg.github.io/gitbook-2019/02-js-intro/01-operations.html)
 [js conditionals](https://wdi-sg.github.io/gitbook-2019/02-js-intro/02-conditionals.html)
 
+[CSS Selectors](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-selectors/readme.html)
+
 [CSS Box Model](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02box-model.html)
 [Box Model Lab](https://github.com/wdi-sg/box-model-lab)
 
@@ -46,7 +48,7 @@
 [how to design](https://wdi-sg.github.io/gitbook-2019/02-js-intro/05-design.html)
 
 ##### Assignment
-
+[airline seats](https://github.com/wdi-sg/seats)
 
 
 #### Day 4
@@ -61,6 +63,7 @@
 [CSS Responsive](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02responsivedesign.html)
 
 ##### Assignment
+[table flip](https://github.com/wdi-sg/table-flip)
 [Google Shopping Functions](https://github.com/wdi-sg/google-shopping-functions)
 
 #### Day 5
