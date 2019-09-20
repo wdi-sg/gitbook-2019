@@ -83,6 +83,21 @@ var singaporeTemperaturesThisMonth = [30,31,38,37,35,28];
 
 Write code that averages the numbers.
 
-### Further
+### Further:
 
 Look at the above array in the reverse order.
+
+### Further:
+
+Use the interactive template. When the user enters a number, put it into an array.
+Average the numbers in the array and show the number to the user.
+
+### Further:
+
+Using the code above, make some changes:
+
+Show all the values in the array to the user.
+
+The user will enter in a number corresponding to the index of the array. They have selected this value from in the array.
+
+Then the user will enter in a number. Add together the number and the value they selected and show it to the user.

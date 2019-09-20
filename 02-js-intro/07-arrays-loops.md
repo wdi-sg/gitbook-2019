@@ -145,8 +145,8 @@ var topCard = cardDeck.pop();
 ##### shift and unshift
 Are the opposites of push and pop.
 
-* `.shift` put something on the beggining of the array
-* `.unshift` take off the first thing in the array
+* `.unshift` put something on the beggining of the array
+* `.shift` take off the first thing in the array
 
 ### Pairing Exercise
 Use the unit 1 template starter code.
@@ -180,3 +180,23 @@ When the user enters anything in the input, put it into the array.
 
 `console.log` the array to see the current set of values inside.
 
+### further
+
+Use `shift`
+
+```js
+var numbers = [12,23,12,45,32,43];
+```
+When the user enters a number into the input, put it into the beggining of the array. (`shift`)
+
+Take the last thing out of the array (`pop`). Add this number to the number that was entered into the input. Show that number to the user.
+
+### further
+
+Alter the program above.
+
+The first number the user enters, do a multiplication instead of addition.
+
+The second time, do an addition.
+
+The third time, switch back to multiplication and so on.

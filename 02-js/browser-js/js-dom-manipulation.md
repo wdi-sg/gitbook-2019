@@ -2,12 +2,12 @@
 
 ## DOM Manipulation
 
----
+
 
 ## Objectives
 * Select elements from the DOM using selectors
 
----
+
 
 ## DOM Manipulation with JavaScript
 
@@ -19,7 +19,7 @@ Go to Developer Console. Look at DOM in *Elements*, then look at the DOM in *Con
 
 Review [DOM on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 
----
+
 
 Now, inspect a few properties, for example:
 
@@ -29,14 +29,14 @@ document.head
 document.links (what does it return?)
 ```
 
----
+
 
 How to change the DOM? Select elements and manipulate them.
 
 **Select by tag id:**
 
 ```js
-var searchForm = document.getElementById("home-q");
+var searchForm = document.querySelector("#home-q");
 ```
 
 What's inside?
@@ -47,7 +47,7 @@ searchForm.innerHTML;
 
 Also, try `textContent` too! (you may also see this as `innerText`, but this is not supported by all browsers)
 
----
+
 
 Change styling:
 
@@ -57,24 +57,24 @@ searchForm.style.color = "red";
 searchForm.style.height = "100px";
 ```
 
----
+
 
 Properties can be a getter and setter. What does this mean?
 
 **Select by class**
 
 ```js
-var content_div = document.getElementsByClassName("center");
+var content_div = document.querySelectorAll(".center");
 ```
 
 **Select by tag name**
 ```js
-var allListElements = document.getElementsByTagName("li")
+var allListElements = document.querySelector("li")
 ```
 
----
 
-**Preferred: select using CSS selectors**
+
+**Select using ANY CSS selectors**
 
 Get elements by tag name or class is very unspecific. You can go after specific CSS selectors, just like you would in stylesheets:
 
@@ -84,38 +84,42 @@ document.querySelectorAll("li.nav-main-item");
 document.querySelectorAll(".center > h1");
 ```
 
----
+
 
 **Accessing and changing element attributes**
 
 There are 2 ways to get and set attributes of a DOM element. You can access the properties directly or use use get/setAttribute methods. It's important that you know both exist, but generally accessing the properties directly is more consistent across browsers.
 
+```html
+<a id="stuff" href="http://www.yahoo.com">click me</a>
+```
+
 ```js
 //set using property
-document.querySelector("a").href = ' http://www.google.com';
+document.querySelector("#stuff").href = ' http://www.google.com';
 
 //get using property
-var href = document.querySelector("a").href;
+var href = document.querySelector("#stuff").href;
 
 //get using getAttribute method
-var href = document.querySelector("a").getAttribute("href");
+var href = document.querySelector("#stuff").getAttribute("href");
 
 //set using setAttribute method
-document.querySelector("a").setAttribute("href","http://www.google.com")
+document.querySelector("#stuff").setAttribute("href","http://www.google.com")
 ```
----
+
 
 ## CSS Classes
 
 Acessing, getting, setting CSS classes is slightly different than other properties.
 
----
+
 
 ## className
 
 First you can directly access the class attribute by using the `className` property of a DOM element. This works fine, but since elements can have multiple classes (separated by spaces) this often leads to needing to do some string parsing.
 
----
+
 
 ## classList
 
@@ -127,7 +131,7 @@ Additionally, the classList attribute has some special methods attached to it.
 * remove - removes a class
 * contains - checks if an item has a class
 
----
+
 
 **Usage**
 
@@ -144,7 +148,7 @@ item.classList.remove('my-new-class');
 //check if an item has a class (returns true or false)
 item.classList.contains('my-new-class');
 ```
----
+
 
 ## Compare and Contrast
 
@@ -156,7 +160,7 @@ Compare and contrast the following selectors. Why can't we use querySelector/que
 * querySelector
 * querySelectorAll
 
----
+
 
 ### Pairing Exercise (15 minutes)
 
@@ -165,7 +169,7 @@ Compare and contrast the following selectors. Why can't we use querySelector/que
 - Create a set of styles for a header tag: `<h1>` that you create with javascript. (example: font-size, color, background color)
 - Use `setTimeout` to apply those styles 4 seconds later. (add the class to the element)
 
----
+
 ## DOM - Creation and Deletion
 
 So far we've only seen examples of how to change properties of the DOM
@@ -180,7 +184,7 @@ and do things like:
 We haven't seen the true power of DOM manipulation. The power to create and
 destroy DOM elements!!
 
----
+
 
 ## Creating DOM Elements
 The DOM allows us to create elements (make and add new HTML elements to our page).
@@ -195,7 +199,7 @@ To create any new element we follow three basic steps:
 
 Let's look at an example of how to create a new element in JavaScript and add it to a page.
 
----
+
 
 ### Adding A New Link to the Bottom of a Page
 
@@ -207,7 +211,7 @@ a.textContent = "thefair.com";
 document.body.appendChild(a);
 ```
 
----
+
 
 
 First, we use `document.createElement` and pass a string representing the tag we
@@ -222,14 +226,14 @@ set the link and display text.
 Finally, we add the new anchor tag to the `<body>` with `document.body.appendChild`.
 This adds the anchor to the bottom of the page.
 
----
+
 
 #### .appendChild()
 The `appendChild()` function exists for all HTML elements. It's easy to show how to
 add things to the end of the body of the page because body is a property on the
 global document variable.
 
----
+
 
 In order to append a new element to any other element, simply obtain a reference
 to it first. Here's an example showing how to add a new list item to an unordered
@@ -257,77 +261,6 @@ newMovie.textContent = "Pirates of Silicon Valley";
 list.appendChild(newMovie);
 ```
 
----
-
-#### .insertBefore()
-
-```
- ____________
-|            |
-|  [=====]   |
-|  [=====]   |
-|  [=====]   |
-|          <=|==== append
- ------------
-
-```
-
-```
-parent node
- ____________
-|            |
-|  [=====]   |
-|          <=|==== insertBefore
-|  [=====] <=|==== reference node
-|  [=====]   |
-|  [=====]   |
-|            |
- ------------
-```
-
-It's easy to add things to the end of the body, at the bottom of a div, or at the
-end of a list. We have to do slightly more work if we want to add a new element
-at the beginning or in the middle of an existing element.
-
----
-
-Use the following syntax:
-
-```js
-var insertedNode = parentNode.insertBefore(newNode, referenceNode);
-```
-
-* `parentNode` refers to the container (like body, or a div, or a list)
-* `newNode` refers to the element we're adding
-* `referenceNode` referes to an element that already exists in the `parentNode`
-
-We can obtain a reference to all of the elements attached to a `parentNode`
-by accessing the `children` property.
-
----
-
-Here's what it looks like all together:
-
-```js
-var list = document.getElementById("my-favorite-movies");
-
-var newMovie = document.createElement("li");
-newMovie.textContent = "Dr. Strangelove";
-
-// get a reference to the first element inside the list
-var first = list.children[0];
-
-// use insertBefore to add newMovie just before the first element.
-list.insertBefore(newMovie, first);
-```
-
----
-
-Of course, you can choose any of the children of an element as a `referenceNode`
-for `insertBefore`. The new element will simply be added in the spot just before
-whatever you choose.
-
----
 
 ## Creating Complex DOM Elements
 It's possible to build up complex arrangements of HTML elements in JavaScript
@@ -344,7 +277,7 @@ and add them to the page.
 </div>
 ```
 
----
+
 
 ```js
 // create a new div for each container div
@@ -388,7 +321,7 @@ var parent = document.getElementById("some-container");
 parent.appendChild(chat);
 ```
 
----
+
 
 ## Destroying DOM Elements
 
@@ -408,7 +341,7 @@ may choose to save this to a variable or not. If you save a removed
 element to a variable then you have access to it and can add it to
 somewhere else on the page.
 
----
+
 
 From the examples above:
 
@@ -416,7 +349,7 @@ From the examples above:
 info.removeChild(time);
 ```
 
----
+
 
 ## Moving Elements
 
@@ -444,7 +377,7 @@ if there's nothing left in the breakfast list.
 </ul>
 ```
 
----
+
 
 ### Optimization to `DOMContentLoaded` : `window.onload`
 
@@ -460,14 +393,86 @@ window.onload = function(){
 };
 ```
 
----
+
 ## [DOM Manipulation Reference](#reference):
 - document.createElement("a");
 - document.body.appendChild(a);
 - element.appendChild(newElement);
-- var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 - parent.removeChild(child);
 
 ## Pairing Exercise:
 - Begin with an HTML file with an empty `body` tag. Create and include a `script.js` file.
 - Repeat all of the DOM manipulation examples shown.
+
+
+### Extra
+
+#### .insertBefore()
+
+```
+ ____________
+|            |
+|  [=====]   |
+|  [=====]   |
+|  [=====]   |
+|          <=|==== append
+ ------------
+
+```
+
+```
+parent node
+ ____________
+|            |
+|  [=====]   |
+|          <=|==== insertBefore
+|  [=====] <=|==== reference node
+|  [=====]   |
+|  [=====]   |
+|            |
+ ------------
+```
+
+It's easy to add things to the end of the body, at the bottom of a div, or at the
+end of a list. We have to do slightly more work if we want to add a new element
+at the beginning or in the middle of an existing element.
+
+
+
+Use the following syntax:
+
+```js
+var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```
+
+* `parentNode` refers to the container (like body, or a div, or a list)
+* `newNode` refers to the element we're adding
+* `referenceNode` referes to an element that already exists in the `parentNode`
+
+We can obtain a reference to all of the elements attached to a `parentNode`
+by accessing the `children` property.
+
+
+
+Here's what it looks like all together:
+
+```js
+var list = document.getElementById("my-favorite-movies");
+
+var newMovie = document.createElement("li");
+newMovie.textContent = "Dr. Strangelove";
+
+// get a reference to the first element inside the list
+var first = list.children[0];
+
+// use insertBefore to add newMovie just before the first element.
+list.insertBefore(newMovie, first);
+```
+
+
+
+Of course, you can choose any of the children of an element as a `referenceNode`
+for `insertBefore`. The new element will simply be added in the spot just before
+whatever you choose.
+
+

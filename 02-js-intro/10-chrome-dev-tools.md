@@ -30,7 +30,6 @@ Run the debugger to see the values of each variable at each *iteration* of the l
 
 Paste this code into your `script.js`
 
-Answer the questions below.
 ```
 var num = 0;
 var i =0;
@@ -46,8 +45,10 @@ while (i < 5){
 }
 ```
 
-1.What is the value of `num` when `i` is 3?
-1.What is the value of `num` when `i` is 4, and before num is divided by 2?
+Use the debugger so that you can know the exact values within a loop at a particular time:
+
+1. What is the value of `num` when `i` is 3?
+1. What is the value of `num` when `i` is 4, and before num is divided by 2?
 
 ### further
 Go back to the previous loops exercises and run the debugger on them.
