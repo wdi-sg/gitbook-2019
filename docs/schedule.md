@@ -63,7 +63,8 @@
 [CSS Responsive](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02responsivedesign.html)
 
 ##### Assignment
-[table flip](https://github.com/wdi-sg/table-flip)
+
+
 [Google Shopping Functions](https://github.com/wdi-sg/google-shopping-functions)
 
 #### Day 5
@@ -93,7 +94,10 @@
 [CSS Bootstrap](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-bootstrap/bootstrap.html)
 
 ##### Assignment
+
 [Fellowship of the DOM](https://github.com/wdi-sg/fellowship-of-the-dom)
+
+[table flip](https://github.com/wdi-sg/table-flip)
 
 #### Day 2
 ##### Morning Exercise
