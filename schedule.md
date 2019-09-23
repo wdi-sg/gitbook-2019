@@ -76,7 +76,9 @@
 [js iteration](https://wdi-sg.github.io/gitbook-2019/02-js-intro/08-iteration.html)
 
 [CSS Flex Box](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/08layout-flexbox.html)
+
 [Flexbox Froggy](https://flexboxfroggy.com/)
+
 [Code Review Ex](https://wdi-sg.github.io/gitbook-2019/01-workflow/code-review.html)
 
 ##### Assignment
@@ -89,10 +91,15 @@
 
 [CSS Airbnb](https://github.com/wdi-sg/css-airbnb)
 ##### Topics
+
 [Browser JS](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/readme.html)
+
 [JS DOM](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation.html)
+
 [callbacks](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/readme.html)
+
 [CSS Bootstrap](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-bootstrap/bootstrap.html)
+
 
 ##### Assignment
 
@@ -101,10 +108,13 @@
 [table flip](https://github.com/wdi-sg/table-flip)
 
 #### Day 2
+
 ##### Morning Exercise
+
 [CSS Airbnb Bootstrap](https://github.com/wdi-sg/css-airbnb-bootstrap)
 
 ##### Topics
+
 [JS DOM Events](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-events.html)
 
 
