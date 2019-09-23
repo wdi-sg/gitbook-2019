@@ -135,8 +135,12 @@ setTimeout(firstThing, 2000);
 
 7. write code that console.logs something once a second 10 times.
 
-8. prompt the user to enter a number. console.log something every second the number of times the user entered
+8. Use the interactive template. The user will enter a number. console.log something every second the number of times the user entered
 
 9. if the user enters a number that's larger than 10, reduce the amount of time between console.logs
 
-10. Set a proportional interval so that no matter what, all of the console.logs happen within 30 seconds max.
+10. the next time the user enters *anything*, stop the console.log
+
+11. change the console.log to change what's on the screen / output the number each time the interval runs
+
+11. Set a proportional interval so that no matter what, all of the console.logs happen within 30 seconds max.
