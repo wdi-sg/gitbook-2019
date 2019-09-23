@@ -91,6 +91,7 @@
 ##### Topics
 [Browser JS](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/readme.html)
 [JS DOM](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation.html)
+[callbacks](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/readme.html)
 [CSS Bootstrap](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-bootstrap/bootstrap.html)
 
 ##### Assignment
