@@ -5,7 +5,7 @@ Events are **functions** that get executed by the browser when the user does som
 ## Objectives
 * Add events to elements in the DOM
 
-[async programming can be hard](https://twitter.com/julia_asterisk/status/829045121933000708)
+### Context
 
 Now that we know how to select DOM elements, we can **attach** events to them:
 

@@ -36,10 +36,9 @@ Set up HTML:
 
 * Add the **array of objects**
 
-**app.js**
 
 ```javascript
-const contacts = [
+var contacts = [
   { name: "Megatron", address: "Cybertron", coWorker : true },
   { name: "Some guy", address: "Some street", coWorker : false },
   { name: "Grace Hopper", address: "Arlington, Virginia", coWorker : false },
@@ -72,8 +71,8 @@ while(i<contacts.length){
 
 ```javascript
 
-var buildTable = function(){
-  const info = document.createElement('ul');
+var buildTable = function(contacts){
+  var info = document.createElement('ul');
 
   var i=0;
 
@@ -86,7 +85,7 @@ var buildTable = function(){
 
 };
 
-buildTable();
+buildTable(contacts);
 ```
 
 * Add in the row and name, whose text comes from the array. Give it a class we can adjust later.
@@ -111,8 +110,8 @@ addresssParagraph.innerText = contact.address;
 
 
 ```js
-infoRow.append(name, address);
-info.append(infoRow);
+infoRow.appendChild(name, address);
+info.appendChild(infoRow);
 ```
 
 Outside of the for loop (why?):
@@ -125,8 +124,8 @@ document.body.appendChild(info);
 Finished result
 
 ```javascript
-var buildTable = function(){
-  const info = document.createElement('ul');
+var buildTable = function(contacts){
+  var info = document.createElement('ul');
 
   var i=0;
 
@@ -145,8 +144,8 @@ var buildTable = function(){
     addressParagraph.classList.add('address');
     addresssParagraph.innerText = contact.address;
 
-    infoRow.append(nameParagraph, addressParagraph);
-    info.append(infoRow);
+    infoRow.appendChild(nameParagraph, addressParagraph);
+    info.appendChild(infoRow);
 
     i = i + 1;
   }
@@ -155,7 +154,7 @@ var buildTable = function(){
 
 };
 
-buildTable();
+buildTable(contacts);
 ```
 
 ### Adding data
@@ -166,28 +165,55 @@ buildTable();
 
 
 ```javascript
-const addData = function(name, address, coWorker) => {
+var addData = function(name, address, coWorker) {
   contacts.push({ name: name, address: address, coWorker:coWorker })
-  buildTable()
+  buildTable(contacts)
 };
 
-buildTable();
+buildTable(contacts);
 addData('Karolin', 'NY', true);
 ```
 
 The function 'doubles' the information. To fix this, we should clear out the old information before it populates. `$('body').empty()`
 
 ```javascript
-const addData = (name, address) => {
+var addData = (name, address) {
   contacts.push({ name: name, address: address, coWorker:coWorker })
   document.body.innerHTML = "";
-  buildTable();
+  buildTable(contacts);
 }
 
-buildTable();
+buildTable(contacts);
 addData('Karolin', 'NY', true);
 ```
 
-### Optional Activity
+### Pairing Exercise
+
+Run the above code.
+
+### Further
+
+Make the code intertactive. When the page loads, create the table.
+
+Add a button and three inputs:
+
+
+```html
+<input id="name"/>
+<input id="address"/>
+<input id="coworker"/>
+<button id="add">click to add</button>
+```
+
+The user will type ion the three inputs.
+
+When they click the button, get the data from the inputs and put it into the contacts array.
+
+### Further
 
 See if you can figure out how to create a removeData function that takes a name of a person you want to remove, removes them from the `data` array, then refreshes the rolodex.
+
+### Further
+Start with an empty page.
+
+When the page loads, create the starting elements in the DOM and add them to the page.
