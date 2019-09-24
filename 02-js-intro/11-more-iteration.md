@@ -15,7 +15,7 @@ number of times the product occurs in the array.
 
   var i = 0;
 
-  while( i < a.length ){
+  while( i < inventory.length ){
 
     if (inventory[i] === product) {
       tally++;

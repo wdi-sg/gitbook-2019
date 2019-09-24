@@ -50,6 +50,8 @@
   * [Browser Side Javascript](02-js/browser-js/readme.md)
     * [DOM Manipulation](02-js/browser-js/js-dom-manipulation.md)
     * [DOM and Events](02-js/browser-js/js-dom-events.md)
+    * [DOM Data](02-js/browser-js/dom-with-data.md)
+    * [DOM and CSS Classes](02-js/browser-js/dynamic-style.md)
     * [Fixing Scope Errors](02-js/browser-js/scope.md)
     * [AJAX](02-js/browser-js/ajax.md)
   * [Callbacks](02-js/js-callbacks-iterators/readme.md)

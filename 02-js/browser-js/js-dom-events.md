@@ -1,8 +1,9 @@
 # Events
 
+Events are **functions** that get executed by the browser when the user does some action.
+
 ## Objectives
 * Add events to elements in the DOM
-
 
 [async programming can be hard](https://twitter.com/julia_asterisk/status/829045121933000708)
 
@@ -52,12 +53,12 @@ console.log("done setting handler");
 With the tools we have now we can do this:
 
 ```
-document.getElementById("user-input")
+document.querySelector("#user-input")
         .addEventListener('change',function(){
           // we have a click event
 
           // re-get the element that was clicked on
-          var input = document.getElementById('user-input');
+          var input = document.querySelector('#user-input');
         });
 ```
 
@@ -84,7 +85,7 @@ If you have this HTML:
 
 You can write this in your javascript:
 ```
-document.getElementById("user-input")
+document.querySelector("#user-input")
         .addEventListener('change',function(event){
 
           // event is the DOM context for the event
@@ -120,7 +121,7 @@ Obviously we would treat our motorbike div differently, but what if we have the 
 ```
 var dealWithProduce = function(){
   // How do we complete the string?
-  // alert(' are yummy!!!');
+  // console.log(' are yummy!!!');
 };
 ```
 
@@ -174,35 +175,6 @@ for(var i = 0; i < items.length; i++){
 }
 ```
 
-##### Note: Method Chaining
-
-* For DOM methods and events we can use the method chaining syntax so that we don't have to capture return values and call methods on those assigned values.
-
-Without method chaining:
-```
-var element = document.getElementById("myDiv");
-
-element.addEventListener("click", function(event) {
-	//Your code here
-});
-```
-
-With method chaining
-```
-document.getElementById("myDiv").addEventListener("click", function(event) {
-	//Your code here
-});
-```
-
-Another syntax
-```
-document.getElementById("myDiv")
-        .addEventListener("click", function(event) {
-          //Your code here
-        });
-        // be sure to indent the dot method to the previous one
-```
-
 
 ### Pairing Exercise: (15 minutes)
 
@@ -213,7 +185,7 @@ Create a new html and javascript file.
 Using this function:
 ```
 var saySomething = function(){
-  alert("YES!");
+  console.log("YES!");
 };
 ```
 
@@ -240,3 +212,35 @@ And this HTML:
 - Add new elements
 - Add a class to the li elements, change selector to class name, run it again
 - Add a non-li element with the same class name, run it again
+
+
+### Extra: Method Chaining
+
+* For DOM methods and events we can use the method chaining syntax so that we don't have to capture return values and call methods on those assigned values.
+
+Without method chaining:
+```
+var element = document.querySelector("#myDiv");
+
+element.addEventListener("click", function(event) {
+	//Your code here
+});
+```
+
+With method chaining
+```
+document.querySelector("#myDiv").addEventListener("click", function(event) {
+	//Your code here
+});
+```
+
+Another syntax
+```
+document.querySelector("#myDiv")
+        .addEventListener("click", function(event) {
+          //Your code here
+        });
+        // be sure to indent the dot method to the previous one
+```
+
+
