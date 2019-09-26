@@ -91,3 +91,32 @@ Show something
 item.classList.remove('hide');
 item.classList.add('normal');
 ```
+
+### Pairing Exercise
+Begin with an empty `index.html` `script.js` and `style.css`
+
+Create a button and a display div
+
+```HTML
+<div class="display normal">wow</div>
+<button id="my-button">click here</button>
+```
+
+When the button gets clicked, make the display div exciting by adding the class above.
+
+When it is clicked again, make the display div normal. (use a world state value to keep track of the current state)
+
+### Further
+
+Add another div
+```HTML
+<div id="message" class="display message">
+  exciting mode
+</div>
+```
+
+When the button is clicked, also make this div appear. When you click again, make it dissapear.
+
+### Further
+
+Add a third state, `very-exciting`. When the button is clicked for a 3rd time, change to this state. On the next click, turn it normal again.

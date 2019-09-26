@@ -167,7 +167,7 @@ Most of the time, `min-width` and `max-width` will be your bread and butter. You
 ### Exercise
 Redo the layout pairing exercise.
 
-Add the media queries so that when the screen width is below 720px, the columns collapse into a single column.
+Add the media queries so that when the screen width is above 720px, the rows split into two columns.
 
 #### further
 Add a third column to your desktop width layout. When the browser is over 1080px it should be 3 columns. When it is 720px to 481px, it should be two columns, with the third column moving below. When it is 480px or below it should be one column.
