@@ -8,9 +8,9 @@ Everyone will get a chance to **be creative**, and work through some really **to
 
 **You will be working individually for this project**, but we'll be guiding you along the process and helping as you go. Show us what you've got!
 
-We will approve your project before you begin. Please prepare the [pre-project materials.](pre-project-exercise.md)
+We will approve your project before you begin. Please prepare the [pre-project materials.](p1-project-exercise.md)
 
-We will be doing an app [soft launch](/soft-launch.md) two days before the project due date.
+We will be doing a [soft launch](/soft-launch.md) two days before the project due date.
 
 ### Technical Requirements
 
@@ -18,7 +18,7 @@ Your app needs to:
 * **Display a game in the browser**
 * be interactive
 * **Include separate HTML / CSS / JavaScript files**
-* Use **Javascript** for **DOM manipulation**
+* Use **Javascript** for **DOM manipulation** that is triggered by a **browser event**
 
 ### Required Deliverables
 
@@ -32,7 +32,7 @@ Your app needs to:
 
 ### Motivations
 
-*Any* game will satisfy the basic technical requirements of the project.
+Almost *any* game will satisfy the basic technical requirements of the project.
 
 One choice you must make in choosing *which* game to make is your goal and motivation for choosing that game, and if you can accomplish that goal within the given time.
 
