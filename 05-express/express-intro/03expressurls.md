@@ -52,8 +52,31 @@ Query parameters are used to tell the server that you have a query for the resou
 
 Notice that these are keys and values. `hello` becomes a key in the `query` object.
 
+```js
+app.get('/test-a-query', (request, response) => {
+  console.log("QUERY:"+request.query.hello);
+  response.send('hello brian')
+});
+```
+
 ### Pairing Exercise:
 - Add each of the routes above into your app. Copy each one separately!
 - `console.log` the value of request
 - Try changing the `:name` of the url parameter to see the key change
 - Try putting in a query string in addition to the URL parameters
+- Use curl to make a request from your terminal to the express server.
+
+#### Further
+
+Temperature converter:
+
+Build a server that converts temperature.
+
+If the user requests `/c/34/f`, convert the temperature 34 from celcius to farenheit.
+If the user requests `/f/34/c`, convert the temperature 34 from farenheit to celcius.
+
+Allow the user to make a similar kind of converion to/from kelvin.
+
+#### Further
+
+Implement the rest of the code from the temperature converter assignment.

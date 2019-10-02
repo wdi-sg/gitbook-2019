@@ -44,6 +44,14 @@ Go to your localhost address and see your files: [http://127.0.0.1:8080](http://
 
 Take a minute to browse around and see what's there.
 
+Run a command to make this request **from your terminal**
+
+```bash
+curl 127.0.0.1:8000
+```
+
+Why do you get this result?
+
 ### Step 3: Bypass the local network.
 Now, bypass this local network so that you have an IP on the public internet.
 
@@ -85,7 +93,15 @@ Example: `http://0362a557.ngrok.io/bird.jpeg`
 ### Step 3.6: Create text files to serve
 Create a `.txt` file in that directory using sublime.
 
-Serve the file. (test it at `http://127.0.0.1:8080/file.txt`)
+Serve the file. 
+
+Test it at [http://127.0.0.1:8080/file.txt](http://127.0.0.1:8080/file.txt)
+
+Try it on the command line.
+
+```bash
+curl 127.0.0.1:8000/file.txt
+```
 
 ### Step 3.7: Create HTML files to serve
 Create an HTML file in that directory. (It could be your unit 1 project !?)
@@ -97,6 +113,7 @@ Serve the file.
 1. Open the URL on your cell phone's data connection ( a connection from the outside internet )
 1. Send it to friends outside of class.
 1. Browse the files in that directory.
+1. Try it with the `curl` command.
 
 ### Step 5: Ports
 1. Open a new terminal (leave the other one open)

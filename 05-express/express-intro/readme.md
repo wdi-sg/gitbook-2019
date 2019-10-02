@@ -43,7 +43,8 @@ app.get('*', (request, response) => {
 app.listen(3000);
 ```
 
-### Serving things based on request in express
+## Conditional Response
+
 ```
 const express = require('express');
 const app = express();
@@ -69,36 +70,37 @@ if( request.path == '/foo' ){
 }
 ```
 
-### Installing nodemon
-```bash
-npm install -g nodemon
-```
-
-If we just ran `node nameOfFile.js`, node will not update if we make changes to the file. Nodemon solves this problem by updating the file once changes have been made. Install nodemon (only have to do this once), we will run our apps using the syntax
-
-```bash
-nodemon nameOfFile.js
-```
-
 ## Pairing Exercises:
 
-#### Express Server on the Internet
+#### Curl
 
-Create an express server and put it on the internet using `ngrok`.
+Use `curl` to make a request to express from the terminal.
+
+#### Request and Response Objects
 
 See what else is in the request parameter by `console.log`ing it.
 
 See what else is in the response parameter by `console.log`ing it.
 
+#### Local Network
+Find your IP address. Put the address into your browser and request your server through the local network. Ex. `168.4.3.1:3000/foo`
+
+#### Express Server on the Internet
+
+Create an express server and put it on the internet using `ngrok`.
+
+#### HTML Response
+
 Put HTML in `response.send`:
 
 ```
-response.send("<html><body><h1>Hello</h1></body></html>");
+response.send('<html><body><h1>Hello</h1><a href="#">wow</a></body></html>');
 ```
 
 What happens?
 
 #### Ports
+
 Create another directory and express server.
 
 Listen on a different port.
@@ -111,4 +113,10 @@ Try to listen on the same port.
 
 If the user requests bananas in the path, send back bananas.
 
-If the user requests apples in the path, return strawberries.
+If the user requests apples in the path, send back strawberries.
+
+#### Further
+
+If the user requests `/charizard`, send back information about charizard.
+If the user requests `/pikachu`, send back information about pikachu.
+If the user requests `/squirtle`, send back information about squirtle.

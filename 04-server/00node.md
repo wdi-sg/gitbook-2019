@@ -212,7 +212,7 @@ What happens when you run this:
 node index.js noodles
 ```
 
-##### Further:
+##### Exercise 3:
 
 What is the value of `process.argv[0]` and `process.argv[1]`?
 
@@ -222,4 +222,10 @@ What is the value of `process.argv[0]` and `process.argv[1]`?
 
 1. Create a nodejs command line program that takes 2 arguments and adds them together.
 
+##### Further:
+
 1. Create a nodejs command line program that takes arguments and adds them all together.
+
+1. Create a nodejs command line program that takes arguments and averages them out.
+
+1. Create a nodejs command line program that takes arguments, adds a random number and averages them out.
