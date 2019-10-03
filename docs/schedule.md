@@ -1,11 +1,18 @@
 # Unit 1
 
+EXTRA CSS: https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee/wiki/HTML-CSS-Review-Videos#recommended-projects
+
 ### Week 1
+
 #### Day 1
+
 ##### Morning Exercise
+
 ##### Topics
+
 [Command Line](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/01readme.html)
 [Command Line Lab](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/command-line-lab.html)
+
 [js operations](https://wdi-sg.github.io/gitbook-2019/02-js-intro/01-operations.html)
 [js conditionals](https://wdi-sg.github.io/gitbook-2019/02-js-intro/02-conditionals.html)
 
@@ -37,6 +44,7 @@
 #### Day 3
 
 ##### Morning Exercise
+[css diner]
 [CSS iOS](https://github.com/wdi-sg/css-ios)
 
 ##### Topics
@@ -133,6 +141,7 @@
 
 
 #### Day 4
+
 ##### Morning Exercise
 [CSS Pokedex](https://github.com/wdi-sg/pokedex-css)
 
@@ -153,32 +162,53 @@ Code Review
 [InstallFest](https://wdi-sg.github.io/gitbook-2019/00-config-deployment/installfest/osx/install2.html)
 
 # Unit 2
+
 ### Week 1
+
 #### Day 1
+
+
 ##### Morning Exercise
+
 ##### Topics
 [node](https://wdi-sg.github.io/gitbook-2019/04-server/00node.html)
 [ES6](https://wdi-sg.github.io/gitbook-2019/04-server/00es6.html)
 [Node Modules](https://wdi-sg.github.io/gitbook-2019/04-server/01modules.html)
-[Server](https://wdi-sg.github.io/gitbook-2019/04-server/01npm.html)
+
+##### Assignment
+
+
+
+
+
+
+#### Day 2
+[NPM](https://wdi-sg.github.io/gitbook-2019/04-server/01npm.html)
 [FlatFile](https://wdi-sg.github.io/gitbook-2019/04-server/02flatfile.html)
+[Internet Lab](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab.html)
+[Internet Lab 2](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab-2.html)
+
 
 ##### Assignment
 [CLI Todo](https://github.com/wdi-sg/cli-todo)
 
-#### Day 2
+
+### Week 2
+
+
+#### Day 1
+
 ##### Morning Exercise
 
 ##### Topics
-[Internet Lab](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab.html)
-[Internet Lab 2](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab-2.html)
+
 [Express Intro](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/readme.html)
 [Express URL](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/03expressurls.html)
 
 ##### Assignment
 [Pokedex Express](https://github.com/wdi-sg/pokedex-express)
 
-#### Day 3
+#### Day 2
 
 ##### Morning Exercise
 [CSS Vegetables](https://github.com/wdi-sg/vegetables)
@@ -189,33 +219,53 @@ Code Review
 ##### Assignment
 [Pokedex Express POST](https://github.com/wdi-sg/pokedex-express-post)
 
-#### Day 4
+#### Day 3
+
 ##### Morning Exercise
-[CSS Fashiojn Blog](https://github.com/wdi-sg/fashion-blog)
+[CSS Fashion Blog](https://github.com/wdi-sg/fashion-blog)
 
 ##### Topics
-[Express Update Delete](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/08update-delete.html)
 [Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
 
 ##### Assignment
 [Pokedex Express POST Part 2](https://github.com/wdi-sg/pokedex-express-post/blob/master/part-2.md)
 
+
+#### Day 4
+
+
+##### Morning Exercise
+
+##### Topics
+
+[Express Update Delete](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/08update-delete.html)
+
+[JS OOP](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+
+
+##### Assignment
+
+[recipie keeper](https://github.com/wdi-sg/recipe-keeper)
+
 #### Day 5
+
+##### Morning Exercise
+
 
 ##### Topics
 [Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
-[JS OOP](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
 [JS Testing](https://wdi-sg.github.io/gitbook-2019/02-js/js-testing/readme.html)
 
-##### Morning Exercise
-[Hyrule Potion Shop](https://github.com/wdi-sg/hyrule_potion_shop)
-[DB Design]()
+
+
 
 ##### Assignment
 [recipie keeper](https://github.com/wdi-sg/recipe-keeper)
 
 [SQL Install Fest](https://wdi-sg.github.io/gitbook-2019/00-config-deployment/installfest/osx/install2.html)
-### Week 2
+
+
+### Week 3
 
 #### Day 1
 
@@ -284,7 +334,7 @@ Code Review
 
 
 
-### Week 3
+### Week 4
 
 #### Day 1
 
@@ -442,3 +492,10 @@ Code Review
 
 ##### Assignment
 [shopping react](https://github.com/wdi-sg/shopping-react)
+
+EXTRA CSS:
+https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/eCardly
+https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/Supply_CSS_Mockup_Lab
+https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/Oscar_CSS_Mockup
+https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/Brook_Lyn_CSS_Mockup
+
