@@ -187,6 +187,43 @@ Should enter psql terminal and have no error.
 \q
 ```
 
+### Passwordless Postgres
+
+Set no-password on postgres for your computer, so that it's easier to work with.
+
+
+Edit postgres configuration file:
+
+```
+sudo sublime /etc/postgresql/POSTGRE_VERSION/main/pg_hba.conf
+```
+
+The file will look like this:
+
+Change all configuration access to:
+
+```
+ # Database administrative login by Unix domain socket
+ local   all             all                                     trust
+
+ # TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+ # "local" is for Unix domain socket connections only
+ local   all             all                                     trust
+ # IPv4 local connections:
+ host    all             all             127.0.0.1/32            trust
+ # IPv6 local connections:
+ host    all             all             ::1/128                 trust
+
+```
+Restart postgres server
+
+```
+
+ sudo /etc/init.d/postgresql restart
+
+```
+
 ##Installing Ruby on Rails
 
 ####Install dependencies

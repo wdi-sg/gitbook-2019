@@ -1,20 +1,17 @@
 # Views and Templates
 
-### Views
-
 We cannot keep using `response.send` to send a response. Ultimately, we'll want to send HTML files back to the client.
 
 We want to have this page's HTML be different for each request. How do we do this??
 
 
-
-### Templating with React
+## Templating with React
 
 If we want to customize what's on the page? We're going to set up a template engine with **[React](http://reactjs.org)** and use that instead.
 
 React is used on the front end of lots of sites, but it's __JSX__ component can also be used to simply create HTML.
 
-##### Note: the server-side react is not the same as browser-side react. Be careful when googling. If a resouce makes reference to DOM or browser events then it is discussing browser react, and may or may not be helpful.
+### Note: the server-side react is not the same as browser-side react. Be careful when googling. If a resouce makes reference to DOM or browser events then it is discussing browser react, and may or may not be helpful.
 
 We need to do a couple steps to get the template engine working:
 
@@ -147,11 +144,11 @@ module.exports = Home;
 The JavaScript being embedded is enclosed by the `{ }` tags.
 
 
-### Pairing Exercise:
+## Pairing Exercise:
 
 Start from scratch.
 
-#### Create your app
+### Create your app
 
 ```
 mkdir react-v
@@ -174,11 +171,27 @@ Add more keys into the object: `weight: 12324`.
 
 Output the name as well as the weight.
 
-### further With Data
+### Further: With Google Data
 
-Paste the google shopping variable / object into the top of your file: [https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js](https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js)
+#### Import some practice data
 
-You should be able to access the data from anywhere.
+Create a module.
+
+```
+touch googleProducts.js
+```
+
+```
+module.exports =
+```
+
+Paste the google shopping object into the module file: [https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js](https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js)
+
+Require the module and assign it to a variable:
+
+```
+const products = require('googleProducts');
+```
 
 Make sure it worked ok, put this in your app.get:
 ```
@@ -193,132 +206,15 @@ Implement an express route `/first` - it creates an HTML page with the first use
 
 This template should display at least 2 data fields for this item.
 
-##### further
+#### further
 Implement a route with params:  `/items/:id`
 
 Use `:id` to get the user according to it's index in the array
 
-##### further
+#### further
 Change your code so that the param will be used to get the item by it's `googleId`.
 
 For example: (127.0.0.1/items/11180453840663864493)[127.0.0.1/items/11180453840663864493]
 
-### Rendering With Logic
-
-#### Conditional Rendering
-Sometimes we want to decide to render something based on a variable.
-
-We can put this code directly above the return statement, or we could also write it in another function.
-```
-var React = require('react');
-
-class Home extends React.Component {
-  render() {
-
-    let message = "welcome!";
-
-    if( name.length > 5 ){
-      messgae = "welcome! What a long name you have!";
-    }
-
-    return (
-      <div>
-        <h1>Hello, { this.props.name }!</h1>
-        <h1>{ message }</h1>
-      </div>
-    );
-  }
-}
-
-module.exports = Home;
-```
-
-#### Map
-The ES6 array method `map` allows us to return an array.
-
-We can use `map` to create HTML in a loop.
-
-Say we have the following `context` given to our `jsx` template.
-```js
-var context = {
-  people: [
-    "Yehuda Katz",
-    "Alan Johnson",
-    "Charles Jolley"
-  ]
-}
-```
-
-```
-var React = require('react');
-
-class Home extends React.Component {
-
-  render() {
-
-    const people = this.props.people.map( person => {
-      return <li>{person}</li>
-    });
-
-    return (
-      <div>
-        <ul>
-        {people}
-        </ul>
-      </div>
-    );
-  }
-}
-
-module.exports = Home;
-```
 
 
-### HTML Attributes
-
-HTML attributes in react are written without the quotes by default:
-
-```
-<img src={pokemon.img} />
-```
-
-If you need to do string interpolation, create another variable:
-```
-let formAction = '/pokemon/' + pokemon.id;
-```
-
-```
-<form action={formAction}>
-```
-
-CSS class names are set with `className` instead of `class`
-```
-<p className="banana">yes</p>
-```
-
-
-## Pairing Exercise
-
-Use the above to render items:
-
-##### Render Multiple Items in a Loop
-
-Implement an express route `/items` - it creates an HTML page with all of the items.
-
-This will be a `<ul>` with an `<li>` for each item.
-
-Use the `map` syntax above to render the list.
-
-This template should display the title for each item.
-
-##### Render More Data
-Display the title, description and the inventory stock availability.
-
-##### Conditionals
-Also display the tax of the stock availablity:
-
-```
-<p>Tax: {tax}</p>
-```
-
-Some of the `inventories` records will not have a tax field. If the inventory is missing the `tax` field, don't render the `p` tag at all.

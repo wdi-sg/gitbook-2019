@@ -17,6 +17,22 @@ The only official way that we've seen to store data is when you press Command-S 
 
 ---
 
+#### Asynchronous
+
+One of the big differences is that Node.js is designed to be _event-driven_ and _asynchronous_. While earlier frameworks can only do one thing at a time, Node purposefully sends nearly everything to the background and keeps going.
+
+Just like a click event is something that is designated to happen at another time, we will see that server side processing of a request follows a similar pattern- one where we actaully have no idea when or any control over when we can successfully send a response to the request.
+
+Relative "distances" are actually quite far when in the context of executing a program. (In other words, this metaphor is to scale in the mathematical sense)
+![https://blog.codinghorror.com/content/images/2014/May/storage-latency-how-far-away-is-the-data.png](https://blog.codinghorror.com/content/images/2014/May/storage-latency-how-far-away-is-the-data.png)
+
+[https://blog.codinghorror.com/the-infinite-space-between-words/](https://blog.codinghorror.com/the-infinite-space-between-words/)
+
+
+
+
+---
+
 ### We can write node.js programs that store data to our disk.
 
 We will be using the `jsonfile` node package to write plain JSON text to our disk. This will come in handy later when we need to store info in our web applications.

@@ -76,6 +76,7 @@
     * [HTTP URLs](05-express/express-intro/02internet.md)
     * [Express URLs](05-express/express-intro/03expressurls.md)
     * [Views](05-express/express-intro/04views.md)
+    * [Views 2](05-express/express-intro/05views-2.md)
     * [Layout Components](05-express/express-intro/components.md)
     * [Layout Views](05-express/express-intro/06views-advanced.md)
   * [CRUD in Express](05-express/express-crud/readme.md)

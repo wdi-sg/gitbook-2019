@@ -34,36 +34,39 @@ We will install the Linux version of NodeJS into WSL without any version manager
 		- Press the Win key and type `services`. Press enter.
 		- Look for the PostgreSQL 10 Server service, right-click on it, and ensure that the `Startup type:` is set to `Automatic`.
 
-- __HeidiSQL__
-  - Go to the Microsoft Store, search for and install `HeidiSQL`. This is a much more user friendly graphical SQL client. Originally meant for MySQL installations (another type of SQL server), it now works for PostgreSQL as well.
+### Passwordless Postgres
+
+Set no-password on postgres for your computer, so that it's easier to work with.
 
 
-#### Addendum: Installing NodeJS using the Node Version Manager (nvm)
-This method allows you to use different versions of NodeJS if required, but incurs a WSL performance penalty as the NVM takes some time to start up each time you open a WSL window.
-- Run the following commands in order at the WSL terminal.
-	- `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
-	- `nvm install node` (may take very long if your computer has to compile node)
+Edit postgres configuration file:
 
-#### Addendum: Installing MongoDB
-- Get and install MongoDB Community Edition from (https://www.mongodb.com/download-center#community). Optionally, grab the MongoDB Compass, a GUI frontend for MongoDB, from (https://www.mongodb.com/download-center#compass) and install it __after__ all the steps here are done.
-- We need to create the directories for MongoDB to store data and logs in.
-	- Press the Windows key and type `cmd.exe` and press `Ctrl-Shift-Enter` to run it as an administrator. Run the following commands.
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mkdir c:\data\db`
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mkdir c:\data\log`
-	- Use Explorer to navigate to `C:\Program Files\MongoDB\Server\3.6\` and create a file called `mongod.cfg`. Open it with notepad and type the following:
-		`systemLog:`
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `destination: file`
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `path: c:\data\log\mongod.log`
-		`storage:`
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `dbPath: c:\data\db`
-	- Return to the Command Prompt and run the following.
-		- `"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\3.6\mongod.cfg" --install`
-		- `net start MongoDB`
-	- Open WSL and run the following commands
-		- `sudo apt-get update && sudo apt-get upgrade`
-		- `sudo apt-get install mongodb-clients mongodb-tools`
-		- `mongo` to check that everything runs. Type `quit()` to exit the client.
-	- If you want MongoDB to start automatically on boot, i.e. you won't have to type `net start MongoDB` each time you want to start on your dev session, do the following.
-		- Press the Win key and type `services`. Press enter.
-		- Look for the MongoDB service, right-click on it, and ensure that the `Startup type:` is set to `Automatic`.
+```
+sudo sublime /etc/postgresql/POSTGRE_VERSION/main/pg_hba.conf
+```
 
+The file will look like this:
+
+Change all configuration access to:
+
+```
+ # Database administrative login by Unix domain socket
+ local   all             all                                     trust
+
+ # TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+ # "local" is for Unix domain socket connections only
+ local   all             all                                     trust
+ # IPv4 local connections:
+ host    all             all             127.0.0.1/32            trust
+ # IPv6 local connections:
+ host    all             all             ::1/128                 trust
+
+```
+Restart postgres server
+
+```
+
+ sudo /etc/init.d/postgresql restart
+
+```
