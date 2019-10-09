@@ -225,7 +225,10 @@ Code Review
 [CSS Fashion Blog](https://github.com/wdi-sg/fashion-blog)
 
 ##### Topics
+[JS iterators (map)](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/callbacks2.html)
 [Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
+[Express Update Delete](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/08update-delete.html)
+
 
 ##### Assignment
 [Pokedex Express POST Part 2](https://github.com/wdi-sg/pokedex-express-post/blob/master/part-2.md)
@@ -237,15 +240,17 @@ Code Review
 ##### Morning Exercise
 
 ##### Topics
+[git branching](https://wdi-sg.github.io/gitbook-2019/11-groups/00branching.html)
+[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
 
-[Express Update Delete](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/08update-delete.html)
 
-[JS OOP](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
 
 
 ##### Assignment
 
-[recipie keeper](https://github.com/wdi-sg/recipe-keeper)
+code reading
+
+
 
 #### Day 5
 
@@ -253,14 +258,18 @@ Code Review
 
 
 ##### Topics
-[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
+
 [JS Testing](https://wdi-sg.github.io/gitbook-2019/02-js/js-testing/readme.html)
+[JS OOP](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+
+[sql intro](https://wdi-sg.github.io/gitbook-2019/04-databases/sql-intro/sql.html)
 
 
 
 
 ##### Assignment
 [recipie keeper](https://github.com/wdi-sg/recipe-keeper)
+
 
 [SQL Install Fest](https://wdi-sg.github.io/gitbook-2019/00-config-deployment/installfest/osx/install2.html)
 
@@ -274,7 +283,6 @@ Code Review
 [CS - Big O](https://my.generalassemb.ly/activities/511)
 
 ##### Topics
-[SQL Intro](https://wdi-sg.github.io/gitbook-2019/04-databases/sql-intro/sql.html)
 [Postgres](https://wdi-sg.github.io/gitbook-2019/04-databases/postgres/readme.html)
 [SQL Node](https://wdi-sg.github.io/gitbook-2019/04-databases/postgres/sql-node.html)
 
