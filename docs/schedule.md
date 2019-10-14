@@ -218,6 +218,8 @@ Code Review
 
 ##### Assignment
 [Pokedex Express POST](https://github.com/wdi-sg/pokedex-express-post)
+[Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
+
 
 #### Day 3
 
@@ -226,7 +228,9 @@ Code Review
 
 ##### Topics
 [JS iterators (map)](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/callbacks2.html)
-[Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
+
+[Express Views 2](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/05views-2.html)
+
 [Express Update Delete](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/08update-delete.html)
 
 
