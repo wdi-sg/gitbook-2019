@@ -96,10 +96,9 @@
   * [Full Stack](05-express/ajax0.md)
   * [AJAX](05-express/ajax.md)
   * [Deploy - DigitalOcean](05-remote-server-deploy/aws-digital-ocean-1.md)
-    * Alternative:
-    * [Deploy - AWS](05-express/ec2-deploy.md)
-    * [Deploy - Heroku](05-express/node-deploy.md)
+  * [Deploy - Heroku](05-express/node-deploy.md)
   * [Additional Topics](05-express/additional-topics/readme.md)
+    * [Deploy - AWS](05-express/ec2-deploy.md)
     * [APIs with Express](05-express/additional-topics/express-apis/03apis.md)
     * [Geocoding and Google Maps](05-express/additional-topics/express-geocode/readme.md)
     * [Cloudinary](05-express/additional-topics/express-cloudinary/readme.md)

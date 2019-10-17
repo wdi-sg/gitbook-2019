@@ -23,7 +23,7 @@ When the user has registered or logged in:
 
 Create a cookie that is a hashed value.
 ```
-let currentSessionCookie = sha256( user_id + 'logged_id' + SALT );
+let currentSessionCookie = sha256( user_id + 'logged' + SALT );
 
 response.cookie('logged_in', currentSessionCookie);
 ```
@@ -32,7 +32,7 @@ When the user makes a request where they are supposed to be logged in:
 
 Verify the cookie by simply hashing some values and then compare.
 ```
-if( sha256( request.cookies["user_id"] + 'logged_in' + SALT ) === request.cookies["logged_id"] ){
+if( sha256( request.cookies["user_id"] + 'logged' + SALT ) === request.cookies["logged_in"] ){
 
   // you know that the user is logged in
 }

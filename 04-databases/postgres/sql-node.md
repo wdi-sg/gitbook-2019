@@ -134,3 +134,15 @@ npm init
 npm install pg
 touch index.js
 ```
+
+### Further
+
+Using the command line, take in a command to put values into the database
+
+```bash
+$ node index.js kenny 2342342 kenny@wow.com
+```
+
+### Further
+
+Add the ability to run the other SQL queries from the command line as well. (SELECT, UPDATE, DELETE)

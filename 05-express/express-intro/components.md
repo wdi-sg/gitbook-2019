@@ -85,7 +85,11 @@ const listOfItems = [
   "pineapple"
 ];
 
-<List items={listOfItems} />,
+```
+
+Inside the return use the component with an  array like the one specified above.
+```
+<List items={listOfItems} />
 ```
 
 

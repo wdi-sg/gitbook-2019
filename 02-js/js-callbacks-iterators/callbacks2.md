@@ -48,7 +48,7 @@ for (var i = 0; i < friends.length; i++) {
 }
 
 // cool new way, with the .forEach iterator
-friends.forEach(function (buddy) {
+friends.forEach( buddy =>{
   console.log("Hello, " + buddy + "!");
 });
 
@@ -113,7 +113,7 @@ for (var i = 0; i < names.length; i++) {
 console.log(cased);
 
 // new way with `map`
-var cased = names.map(function (person) {
+var cased = names.map( person => {
   return person.toUpperCase();
 });
 console.log(cased);
@@ -133,10 +133,10 @@ included in the new array, otherwise it is excluded.
 ```js
 var names = ["tim", "ilias", "elie", "markus"];
 
-var isEven = function (name) {
+var isEven = name => {
   return name.length % 2 === 0;
 };
-var isOdd = function (name) {
+var isOdd = name => {
   return name.length % 2 !== 0;
 };
 
@@ -158,7 +158,7 @@ value. In some other languages it is called `fold`.
 
 ```js
 var nums = [1,2,3,4];
-var add = function (a, b) {
+var add = (a, b) => {
   return a + b;
 };
 
@@ -176,7 +176,7 @@ with the first two values in the array.
 
 ```js
 var nums = [1,2,3,4];
-var add = function (a, b) {
+var add = (a, b) => {
   return a + b;
 };
 
@@ -192,7 +192,7 @@ console.log(sum);
 
 
 ```
-items.sort(function(a, b) {
+items.sort((a, b) => {
 
   if (a < b) {
     return -1;
@@ -237,17 +237,17 @@ Here are some good blog posts that break down `map`, `filter`, and `reduce`.
 We can write a function that does something we can specify outside the function.
 
 ```
-var alertFiveTimes = function(stringCallback){
+var alertFiveTimes = (stringCallback) => {
   for( var i=0; i<5; i++){
     alert( stringCallback() );
   }
 };
 
-var encouraging = function(){
+var encouraging = () => {
   return "awesome!!";
 };
 
-var jerk = function(){
+var jerk = () => {
   return "ewww, gross";
 };
 
@@ -260,14 +260,14 @@ A more complete example is one that can do a generic operation - in this case on
 The individual operation we can define somewhere else.
 
 ```
-var add = function(a,b){
+var add = (a,b) =>{
   return a + b;
 };
 
 var listOfNumbers = [91,52,53,54,5,6,7,8];
 var listOfNumbers = [1,1,1,1];
 
-var repeatOperation = function(numbers, callback){
+var repeatOperation = (numbers, callback)=>{
 
   var currentResult = 0;
 
@@ -287,7 +287,7 @@ var total = repeatOperation(listOfNumbers, add);
 This makes the function we wrote flexible, because it can accomplish more than one kind of task
 
 ```
-var subtract = function(a,b){
+var subtract = (a,b)=>{
   return a - b;
 };
 
@@ -303,7 +303,7 @@ You can probably guess by now how to return a function from a
 function:
 
 ```js
-var drinkMaker = function(drinkType) {
+var drinkMaker = (drinkType)=> {
   return function(drinkVolume) {
     return {
       drink: drinkType,
@@ -332,7 +332,7 @@ Functional programming is a popular topic in the context of js, so we'll be seei
 
 Given:
 ```
-var add = function(a,b){
+var add = (a,b)=>{
   return a + b;
 };
 ```

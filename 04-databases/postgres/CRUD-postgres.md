@@ -97,11 +97,12 @@ touch tables.sql
 ```
 
 ```
-CREATE TABLE IF NOT EXISTS pokemons (
+CREATE TABLE IF NOT EXISTS pokemon (
     id SERIAL PRIMARY KEY,
     name TEXT,
-    phone VARCHAR(15),
-    email TEXT
+    img TEXT,
+    weight TEXT,
+    number TEXT
 );
 ```
 
