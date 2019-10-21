@@ -43,9 +43,17 @@ Add one route  to the routes file. `/students`
 
 Add one method to the pokemon controller file for this route.
 
-Set the method as a callback of the route.
+Don't forget to make a key for the method at the bottom of the file.
+
+Set the method as a callback of the `app.get` route.
+
+Put `response.send` in and test it.
 
 Create a new method in the pokemon model file.
+
+Copy the pattern of the method that's already in there.
+
+Don't forget to make a key for the method at the bottom of the file.
 
 Have it run a query against the `students` DB table:
 
@@ -59,7 +67,6 @@ Execute the callback from the pokemon model method.
 
 Pass the `queryResult.rows` back to the callback, and send it in response.send.
 
-
 #### Further
 
 In the above exercise, you added methods to the files that already exist.
@@ -68,11 +75,66 @@ This is not how you would normally do it, because you will have **one** controll
 
 Now add a new model, `classes`.
 
+You must add the `require` of this model file in `db.js`
+
+You must require the file and call it, passing in the variable `pool`.
+
+You must export it at the bottom of `db.js`
+
+```js
+const someModelFunc = require('./models/someModel');
+const someModel = someModelFunc( pool );
+
+...
+module.exports = {
+
+  ...
+  someModel: someModel
+};
+
+```
+
+An empty model looks like this:
+
+```js
+module.exports = (dbPoolInstance) => {
+
+  let something = (callback)=>{
+    //query
+  };
+
+  return {
+    something:something,
+  };
+}
+```
+
+Add a controller file. It must be required in the `routes.js` file.
+
+You must pass the variable called `allModels` to the require.
+
+```js
+const something = require('./controllers/something')(allModels);
+app.get('/banana', something.stuff);
+```
+
+An empty controller looks like this:
+
+```js
+module.exports = (db) => {
+
+  const index = (request, response) => {
+  };
+
+  return {
+    index: index,
+  };
+}
+```
+
 Add a get route to render a form to create a single class (`GET /classes/new`)
 
-Add a `classes` model.
-
-Add a model method to take in the `POST` request this form creates.
+Add a model method to take in the `POST` request this form creates. This is a new controller file.
 
 
 #### Further

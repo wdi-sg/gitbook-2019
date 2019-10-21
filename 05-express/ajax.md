@@ -68,9 +68,25 @@ app.get('/banana', (request, response) => {
 
 Run the above code.
 
+Pick a route in your express app that renders jsx. Run `curl` to see the response of your server to html
+
+```bash
+curl localhost:3000/somehtml
+```
+
+Run `curl` to see the JSON response.
+
+```bash
+curl localhost:3000/banana
+```
+
+Get the IP address of your partner and make the curl request to them.
+
+See their AJAX page in your browser.
+
 ##### further
 
-Render the response of the request in the browser using DOM manipulation.
+Change your browser side javascript. Render the response of the AJAX request in the browser using DOM manipulation.
 
 ##### further
 
