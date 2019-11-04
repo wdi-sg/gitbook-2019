@@ -395,22 +395,14 @@ code reading
 ##### Assignment
 [Instagram](https://github.com/wdi-sg/WDInstagram_rails)
 
-#### Day 3
+
+### Week 2
+
+
+#### Day 1
 
 ##### Morning Exercise
 [CS - Search Algo - binary search recursive](https://my.generalassemb.ly/activities/633)
-
-##### Topics
-Code Review
-
-##### Assignment
-
-#### Day 4
-
-##### Morning Exercise
-
-[CS - Intro to Data Structures](https://my.generalassemb.ly/activities/878)
-[CS - Linked List](https://my.generalassemb.ly/activities/379)
 
 ##### Topics
 [Rails 1-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-1-M/readme.html)
@@ -419,44 +411,71 @@ Code Review
 ##### Assignment
 [kopi tracker](https://github.com/wdi-sg/kopi-tracker)
 
-#### Day 5
+
+#### Day 2
 
 ##### Morning Exercise
-[CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)
+
+[CS - Intro to Data Structures](https://my.generalassemb.ly/activities/878)
+[CS - Linked List](https://my.generalassemb.ly/activities/379)
 
 ##### Topics
 [Devise](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-security/devise.html)
-[M-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-M-M/readme.html)
 
 ##### Assignment
 
 [kopi tracker part 2](https://github.com/wdi-sg/kopi-tracker/blob/master/part2.md)
 
-### Week 2
-#### Day 1
+#### Day 3
+
+##### Morning Exercise
+[CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)
+
+##### Topics
+[M-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-M-M/readme.html)
+
+
+
+##### Assignment
+[kopi tracker part 3](https://github.com/wdi-sg/kopi-tracker/blob/master/part3.md)
+
+
+
+#### Day 4
 ##### Morning Exercise
 [CS - Hash Tables 1 - reading only](https://my.generalassemb.ly/activities/512)
 [CS - Hash Tables 2 - reading only](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
-[Asset Pipeline](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-assets-frontend/sass.html)
 [Security](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-security/readme.html)
 [Model Validations](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-validation/readme.html)
 
-##### Assignment
-[kopi tracker part 3](https://github.com/wdi-sg/kopi-tracker/blob/master/part3.md)
-
-#### Day 2
+#### Day 5
 
 ##### Morning Exercise
 [CS - Hash Tables 2 - coding](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
+[Asset Pipeline](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-assets-frontend/sass.html)
+
 [Git Branches]()
 [Git Workflow]()
 [Team Workflow / Process]()
 
 ##### Assignment
+
+### Week 3
+
+##### Morning Exercise
+
+##### Topics
+
+[Git Branches]()
+[Git Workflow]()
+[UX Ideation]()
+[Team Workflow / Process]()
+
+
 
 # Unit 4
 
