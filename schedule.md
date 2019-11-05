@@ -264,7 +264,6 @@ code reading
 ##### Topics
 
 [JS Testing](https://wdi-sg.github.io/gitbook-2019/02-js/js-testing/readme.html)
-[JS OOP](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
 
 [sql intro](https://wdi-sg.github.io/gitbook-2019/04-databases/sql-intro/sql.html)
 
@@ -381,6 +380,9 @@ code reading
 [Ruby for Begginers email class](http://ruby-for-beginners.rubymonstas.org/exercises/email.html)
 [Ruby OOP](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/ruby-classes/oop.html)
 
+[JS OOP??? - redo ruby OOP??](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+
+
 ##### Assignment
 [Ruby Cards](https://github.com/wdi-sg/ruby-oop-cards)
 
@@ -407,6 +409,9 @@ code reading
 ##### Topics
 [Rails 1-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-1-M/readme.html)
 [Rails Active Record Review](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/readme.html)
+
+[JS OOP???](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+
 
 ##### Assignment
 [kopi tracker](https://github.com/wdi-sg/kopi-tracker)
