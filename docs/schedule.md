@@ -264,7 +264,6 @@ code reading
 ##### Topics
 
 [JS Testing](https://wdi-sg.github.io/gitbook-2019/02-js/js-testing/readme.html)
-[JS OOP](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
 
 [sql intro](https://wdi-sg.github.io/gitbook-2019/04-databases/sql-intro/sql.html)
 
@@ -381,6 +380,9 @@ code reading
 [Ruby for Begginers email class](http://ruby-for-beginners.rubymonstas.org/exercises/email.html)
 [Ruby OOP](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/ruby-classes/oop.html)
 
+[JS OOP??? - redo ruby OOP??](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+
+
 ##### Assignment
 [Ruby Cards](https://github.com/wdi-sg/ruby-oop-cards)
 
@@ -395,17 +397,27 @@ code reading
 ##### Assignment
 [Instagram](https://github.com/wdi-sg/WDInstagram_rails)
 
-#### Day 3
+
+### Week 2
+
+
+#### Day 1
 
 ##### Morning Exercise
 [CS - Search Algo - binary search recursive](https://my.generalassemb.ly/activities/633)
 
 ##### Topics
-Code Review
+[Rails 1-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-1-M/readme.html)
+[Rails Active Record Review](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/readme.html)
+
+[JS OOP???](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+
 
 ##### Assignment
+[kopi tracker](https://github.com/wdi-sg/kopi-tracker)
 
-#### Day 4
+
+#### Day 2
 
 ##### Morning Exercise
 
@@ -413,50 +425,62 @@ Code Review
 [CS - Linked List](https://my.generalassemb.ly/activities/379)
 
 ##### Topics
-[Rails 1-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-1-M/readme.html)
-[Rails Active Record Review](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/readme.html)
-
-##### Assignment
-[kopi tracker](https://github.com/wdi-sg/kopi-tracker)
-
-#### Day 5
-
-##### Morning Exercise
-[CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)
-
-##### Topics
 [Devise](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-security/devise.html)
-[M-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-M-M/readme.html)
 
 ##### Assignment
 
 [kopi tracker part 2](https://github.com/wdi-sg/kopi-tracker/blob/master/part2.md)
 
-### Week 2
-#### Day 1
+#### Day 3
+
+##### Morning Exercise
+[CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)
+
+##### Topics
+[M-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-M-M/readme.html)
+
+
+
+##### Assignment
+[kopi tracker part 3](https://github.com/wdi-sg/kopi-tracker/blob/master/part3.md)
+
+
+
+#### Day 4
 ##### Morning Exercise
 [CS - Hash Tables 1 - reading only](https://my.generalassemb.ly/activities/512)
 [CS - Hash Tables 2 - reading only](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
-[Asset Pipeline](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-assets-frontend/sass.html)
 [Security](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-security/readme.html)
 [Model Validations](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-validation/readme.html)
 
-##### Assignment
-[kopi tracker part 3](https://github.com/wdi-sg/kopi-tracker/blob/master/part3.md)
-
-#### Day 2
+#### Day 5
 
 ##### Morning Exercise
 [CS - Hash Tables 2 - coding](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
+[Asset Pipeline](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-assets-frontend/sass.html)
+
 [Git Branches]()
 [Git Workflow]()
 [Team Workflow / Process]()
 
 ##### Assignment
+
+### Week 3
+
+##### Morning Exercise
+
+##### Topics
+
+[Git Branches]()
+[Git Workflow]()
+[UX Ideation]()
+[Team Workflow / Process]()
+
+
 
 # Unit 4
 
@@ -468,9 +492,9 @@ Code Review
 [CS - Binary Trees - reading](https://my.generalassemb.ly/activities/263)
 
 ##### Topics
-[React Intro (babel)](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/readme.html)
+[Intro to Webpack](10-react/webpack-intro/readme.md)
+[Intro to React](10-react/react-intro/intro.md)
 [React Component Review](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/components.html)
-[React State](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/state.html)
 
 ##### Assignment
 [React Tictactoe](https://github.com/wdi-sg/tictactoe-react)
@@ -480,7 +504,10 @@ Code Review
 [CS - Binary Trees - coding](https://my.generalassemb.ly/activities/263)
 
 ##### Topics
-[React Controlled Forms](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/forms.html)
+[hot loading](10-react/react-intro/hot-loading.md)
+[State](10-react/react-intro/dynamic.md)
+[Forms](10-react/react-intro/forms.md)
+
 
 ##### Assignment
 [React todo](https://github.com/wdi-sg/todo-react/blob/master/README.md)
@@ -490,20 +517,30 @@ Code Review
 [CS - Graphs](https://my.generalassemb.ly/activities/403)
 
 ##### Topics
+[react sass](10-react/react-intro/react-sass.md)
 [Lifting Functions](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/lifting.html)
 [ES6 destructure](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/es6-spread.html)
 
 ##### Assignment
 [todo part 2](https://github.com/wdi-sg/todo-react/blob/master/part2.md)
 
-#### Day 4
+### Week 2
+
+#### Day 1
 ##### Morning Exercise
 
 ##### Topics
-[webpack](https://wdi-sg.github.io/gitbook-2019/10-react/react-webpack/readme.html)
+[webpacker]()
 
 ##### Assignment
 [shopping react](https://github.com/wdi-sg/shopping-react)
+
+#### Day 2
+##### Morning Exercise
+
+##### Topics
+
+##### Assignment
 
 EXTRA CSS:
 https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/eCardly
