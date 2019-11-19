@@ -29,24 +29,6 @@ These are the sepearate logical pieces of any page.
 - T testable
 
 
-### Babel standalone
-Before we move to writing code, let's talk about the default tool we'll use until we learn the React build tools.
-
-```
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<script type="text/babel">
- ReactDOM.render(
-    <p>hello world!</p>,
-    document.getElementById('root')
- );
-</script>
-```
-
-`babel-standalone` relies on a script tag type text/babel. It ingests everything inside that script tag, transpiles it and evals it.
-
-
-If we pasted the jsx code above into the chrome dev tools console, without letting babel run first, we would get a syntax error.
-
 ## Writing a component
 ```
 class List extends React.Component {
@@ -68,14 +50,12 @@ ReactDOM.render(
 - `List` is a js "class" that inherits from React
 - a component has certain methods like `render` that allow you to control it
 
-
 ### Component Properties
 In react, a component takes data in and renders itself based on that data.
 
 The data is passed from above in the parent component.
 
 Let's start rendering a real list from data coming from outside the list itself.
-
 
 ```
 class List extends React.Component {
@@ -104,7 +84,6 @@ ReactDOM.render(
 );
 ```
 
-
 #### Props
 Props are the react way of passing data into your component.
 
@@ -114,7 +93,6 @@ When you specify your component you specify it's `props` just like an HTML attri
 ```
 
 You can then access them from within the component using `this.props`
-
 
 ### Nesting Components
 We mentioned that it's the nested structure of components using components that really makes react special.
@@ -205,23 +183,6 @@ Add a second prop:
 ```
 
 How do you access this inside the component?
-
-##### Getting started:
-
-Don't forget to include the 3 libraries you need:
-```
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-```
-
-Create a separate jsx file to put your code in and create a script tag to go with it.
-```
-<script src="script.jsx" type="text/babel"></script>
-```
-
-Chrome will require that you get your file from the network (localhost) - so you will have to run `http-server` in your current directory in order to get the file to be loaded and executed from the script tag.
-
 
 #### Further
 Run the above code: create a component that gets rendered multiple times by passing in props.

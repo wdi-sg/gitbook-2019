@@ -58,16 +58,6 @@ changeHandler(event){
 ### Exercise
 Implement the above form in react.
 
-Don't forget to use `http-server`
-
-Don't forget to include the required libraries:
-
-```
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-```
-
 #### further
 Create validation on the form. Use the react `className` to set a css class on the form that tells the user that their input is invalid.
 

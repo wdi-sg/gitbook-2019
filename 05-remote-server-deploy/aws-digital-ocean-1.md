@@ -135,14 +135,62 @@ C. After you submit, you should see this:
 
 ![](aws-digital-ocean/6.png)
 
+### 7. This is a computer
+Do some terminal commands on this computer to see how it works.
 
-### 7. Final
+
+```bash
+ls -la
+```
+
+```bash
+curl google.com
+```
+```bash
+ping google.com
+```
+
+```bash
+touch hello.txt
+```
+
+##### Do some more terminal commands
+[https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/command-line-lab.html](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/command-line-lab.html)
+
+### 8. Make a server
+
+```bash
+npm install -g http-server
+```
+
+Allow connections on that port in the droplet
+```bash
+sudo ufw allow 8080
+```
+
+```bash
+mkdir mystuff
+```
+
+```bash
+cd mystuff
+```
+
+```bash
+echo "wow my name" >> myname.txt
+```
+
+```bash
+http-server
+```
+
+### 8. Final
 
 
 #### Deploy Code
 ```bash
 cd ~
-git clone git@github.com:wdi-sg/express-basic.git
+git clone https://github.com/wdi-sg/express-basic.git
 cd express-basic
 npm install
 npm start
@@ -160,6 +208,25 @@ Visit your site in the browser. (using the IP address)
 Send the address to your app to your partner in slack.
 
 ### FURTHER
+
+### permanently run your server
+
+```
+npm start &
+```
+
+You can now log out of the server with exit and it stull runs: `exit`
+
+stop it
+```
+ps -ax | grep node
+```
+
+find the process id- the number in the far left column
+
+```
+kill -9 <process id>
+```
 
 ### Project Deployment
 

@@ -28,14 +28,6 @@ request.open("GET", url);
 request.send();
 ```
 
-Note that this is from the [gitbook](/gitbook-2019/02-js/browser-js/ajax.html)
-
-##### Run the app again
-
-[http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
-
-
-
 ### AJAX to our own express server
 
 Change the `url` variable in `script.js` to something else:
@@ -43,10 +35,6 @@ Change the `url` variable in `script.js` to something else:
 ```
 var url = "http://127.0.0.1:3000/banana";
 ```
-
-Run the app again. [http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
-
-What happens?
 
 ##### Create a route that accepts this request:
 
@@ -64,7 +52,25 @@ app.get('/banana', (request, response) => {
 });
 ```
 
+##### See it in the Browser:
+
+[http://localhost:3000/banana](http://localhost:3000/banana)
+
+Now, make the request from ajax in the browser.
+
 #### pairing exercise
+
+Set up your express app.
+
+Create a route `/somehtml` that renders a jsx file.
+
+Add a `script` tag to your jsx.
+
+```html
+<script src="/something.js"></script>
+```
+
+Create `something.js` in your public folder.
 
 Run the above code.
 

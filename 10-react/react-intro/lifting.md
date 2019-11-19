@@ -107,16 +107,6 @@ This component contains the logic / formula to convert from `sgd` to yen.
 
 `Form` component contains an input that the user enters an amount of sgd in.
 
-Don't forget to use `http-server`
-
-Don't forget to include the required libraries:
-
-```
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-```
-
 ##### further
 Implement components for other currencies. (US Dollars, Ringet, Thai Baht, etc.)
 

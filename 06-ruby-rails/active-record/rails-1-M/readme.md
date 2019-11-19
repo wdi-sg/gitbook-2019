@@ -295,7 +295,7 @@ end
 Repeat the steps above.
 
 #### Further:
-Implement the display logic for the nested new route: `/parks/:id/rangers/new` and the nested show route `/parks/:id/rangers/:id`
+Implement the display logic for the nested new route: `/parks/:id/rangers/new` and the nested show route `/parks/:id/rangers/:ranger_id`
 
 #### Further:
 Implement the display logic for the nested index route: /parks/:id/rangers

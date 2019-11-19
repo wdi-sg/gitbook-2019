@@ -37,15 +37,13 @@ Now we have a button that can be clicked.
 Let's change some attribute of the class, a counter that gets incremented.
 
 ```
-constructor(){
-  super()
-  console.log("constructing");
-  this.counter = 0;
-}
-
 clickHandler(){
   console.log("clicking", this.counter);
-  this.counter++;
+  if( this.counter === undefined ){
+    this.counter = 1;
+  }else{
+    this.counter++;
+  }
 }
 
 render() {
@@ -65,26 +63,25 @@ This code increments the value, but what happens when we try to output it?
 ```
 
 We can see that the class attribute gets incremented, but the screen doesn't change.
+
 ### Dynamic React Rendering
 
 
 ```js
 class Item extends React.Component {
 
-    //initialize the component
-    constructor(){
-      super()
-      console.log("constructing");
-
-      this.state = {
-        counter : 0
-      }
-
-    }
-
     // our click method
     handleClick(){
-      let currentValue = this.state.counter + 1;
+
+      var currentValue;
+
+      if( this.state.counter === undefined ){
+        currentValue = 0;
+      }else{
+        currentValue = this.state.counter + 1;
+      }
+
+
 
       console.log("clicking", currentValue);
 
@@ -184,6 +181,21 @@ class Count extends React.Component {
         );
     }
 }
+```
+
+### Default Data
+
+```
+//initialize the component
+constructor(){
+  super()
+  console.log("constructing");
+
+  this.state = {
+    counter : 0
+  }
+
+  }
 ```
 
 ### Exercise

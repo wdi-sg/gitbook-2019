@@ -150,13 +150,6 @@ If we type in the input, the users value should get refreshed by react, and go a
 ### Exercise
 Run the above code. See the virtual dom leave certain parts of the page alone as it changes others.
 
-Don't forget to include the 3 libraries you need:
-```
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-```
-
 ### further
 Build some regular javascript code that manipulates the dom in a loop.
 
