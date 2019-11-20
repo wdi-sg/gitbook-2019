@@ -198,17 +198,23 @@ constructor(){
   }
 ```
 
-### Exercise
+### Pairing Exercise
+
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git:webpack-intro .
+```
+
+Check out the hot laoding branch:
+
+```bash
+$ git checkout 3-react-hotload
+```
+
 Build the above counter increment.
 
 Watch the console to see when clicking and rendering happen.
-
-Don't forget to include the 3 libraries you need:
-```
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-```
 
 #### Further
 Build the counter display into it's own component.

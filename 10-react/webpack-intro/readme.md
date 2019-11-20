@@ -53,6 +53,17 @@ Look inside the `main.js` file. What's changed?
 
 Basically `require` was invented with `nodejs` and expanded from there. `import` is meant to be agnostic.
 
+### Pairing Exercise
+
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git:webpack-intro .
+```
+
+Repeat the above.
+
+
 #### Further
 Just like in unit 2, create a `module` and `import` it in the `src/client/index.js` file.
 

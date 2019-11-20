@@ -1,6 +1,6 @@
 # React Hot Loader
 
-nodemon for the front-end
+Nodemon for the front-end
 
 
 ### Getting started
@@ -31,4 +31,20 @@ Build the production files. `npm run build`
 Run the server. `npm run start` Visit [http://localhost:3000](http://localhost:3000)
 
 Open the generated `main.js` file.
+
+### Pairing Exercise
+
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git:hotloading-react .
+```
+
+Check out the hot laoding branch:
+
+```bash
+$ git checkout 3-react-hotload
+```
+
+Repeat the above.
 

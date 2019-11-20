@@ -135,8 +135,21 @@ ReactDOM.render(
 ```
 
 
-### Exercise
-Run this code:
+### Pairing Exercise
+
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git:jsx-intro .
+```
+
+Check out the jsx branch:
+
+```bash
+$ git checkout 2-react-jsx-intro
+```
+
+Paste this code into `index.jsx`
 
 ```
 class Banana extends React.Component {
@@ -186,6 +199,9 @@ How do you access this inside the component?
 
 #### Further
 Run the above code: create a component that gets rendered multiple times by passing in props.
+
+#### Further
+Make a separate file for a react component. Import that component in `index.jsx`
 
 #### Further
 Have the list item class render 2 components: `ItemId` which will use the map `index` (from the above example) as the id, and `Item` which will render the text of the item. Pass data into these two components as props.

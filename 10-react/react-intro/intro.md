@@ -46,6 +46,22 @@ Run the example app: `npm run build` `node index.js` Visit [http://localhost:300
 
 Add one new element in the div: `<p>wow</p>`. Rerun the build command. How does that change the main.js file?
 
+### Pairing Exercise
+
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git:jsx-intro .
+```
+
+Check out the jsx branch:
+
+```bash
+$ git checkout 2-react-jsx-intro
+```
+
+Repeat the above.
+
 #### Further
 
 In the return, create more complicated elements by adding them one at a time:
@@ -64,6 +80,7 @@ In the return, create more complicated elements by adding them one at a time:
 ```
 
 How does this affect main.js?
+
 
 #### Further
 
