@@ -140,7 +140,7 @@ ReactDOM.render(
 Clone the react repo into a named folder:
 
 ```bash
-$ git clone https://github.com/wdi-sg/react-reference.git:jsx-intro .
+$ git clone https://github.com/wdi-sg/react-reference.git components
 ```
 
 Check out the jsx branch:

@@ -203,7 +203,7 @@ constructor(){
 Clone the react repo into a named folder:
 
 ```bash
-$ git clone https://github.com/wdi-sg/react-reference.git:webpack-intro .
+$ git clone https://github.com/wdi-sg/react-reference.git state
 ```
 
 Check out the hot laoding branch:

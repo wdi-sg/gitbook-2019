@@ -58,7 +58,7 @@ Basically `require` was invented with `nodejs` and expanded from there. `import`
 Clone the react repo into a named folder:
 
 ```bash
-$ git clone https://github.com/wdi-sg/react-reference.git:webpack-intro .
+$ git clone https://github.com/wdi-sg/react-reference.git webpack-intro
 ```
 
 Repeat the above.

@@ -51,7 +51,7 @@ Add one new element in the div: `<p>wow</p>`. Rerun the build command. How does 
 Clone the react repo into a named folder:
 
 ```bash
-$ git clone https://github.com/wdi-sg/react-reference.git:jsx-intro .
+$ git clone https://github.com/wdi-sg/react-reference.git jsx-intro
 ```
 
 Check out the jsx branch:
