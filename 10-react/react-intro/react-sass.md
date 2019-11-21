@@ -24,3 +24,19 @@ We are using `classnames` to manage the list of classes we set on an element.
 In this case whether or not we do that depends on `state`, specifically a boolean value.
 
 `classnames` will take the boolean and produce the class string with the class name in it when it recieves a true value.
+
+### Pairing Exercise
+
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git sass
+```
+
+Check out the hot laoding branch:
+
+```bash
+$ git checkout 4-react-sass
+```
+
+

@@ -37,7 +37,7 @@ Open the generated `main.js` file.
 Clone the react repo into a named folder:
 
 ```bash
-$ git clone https://github.com/wdi-sg/react-reference.git:hotloading-react .
+$ git clone https://github.com/wdi-sg/react-reference.git hotloading-react
 ```
 
 Check out the hot laoding branch:
