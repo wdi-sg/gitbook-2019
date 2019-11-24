@@ -9,6 +9,13 @@ bundle add devise
 ```
 rails generate devise:install
 rails generate devise user
+```
+
+```
+rails db:migrate
+```
+
+```
 rails g devise:views
 ```
 
@@ -17,13 +24,13 @@ Scaffold the post:
 rails generate scaffold Post title:string content:text user:belongs_to
 ```
 
-Lock down the entire controller
-```
-before_action :authenticate_user!
-```
-
 ```
 rails db:migrate
+```
+
+Add the association to the user model:
+```
+has_many :post
 ```
 
 Check out your app:
@@ -48,20 +55,16 @@ bundle add ffaker
 
 In seeds.rb
 ```
-user1 = User.new({email: 'kenny@testing.com', password: 'password', password_confirmation: 'password'})
-user1.confirm!
+user1 = User.new({email: FFaker::Internet.email, password: 'password', password_confirmation: 'password'})
 user1.save
 
-user2 = User.new({email: 'cheekean@testing.com', password: 'password', password_confirmation: 'password'})
-user2.confirm!
+user2 = User.new({email: FFaker::Internet.email, password: 'password', password_confirmation: 'password'})
 user2.save
 
-user3 = User.new({email: 'susan@testing.com', password: 'password', password_confirmation: 'password'})
-user3.confirm!
+user3 = User.new({email: FFaker::Internet.email, password: 'password', password_confirmation: 'password'})
 user3.save
 
-user4 = User.new({email: 'john@testing.com', password: 'password', password_confirmation: 'password'})
-user4.confirm!
+user4 = User.new({email: FFaker::Internet.email, password: 'password', password_confirmation: 'password'})
 user4.save
 
 users = [user1,user2,user3,user4]
@@ -72,6 +75,17 @@ users.each do |user|
   end
 end
 ```
+
+### Logged in React
+We want to limit this react page to only users who are logged in.
+
+Lock down the entire controller:
+
+```
+before_action :authenticate_user!
+```
+
+(You can do this to the posts controller as well)
 
 ### AJAX from React
 
@@ -103,7 +117,9 @@ import axios from 'axios';
 Add a button to your component:
 
 ```
-<button onClick={()=>{ this.getPosts() }}
+<button onClick={()=>{ this.getPosts() }}>
+  Click to See Posts
+</button>
 ```
 
 Write `getPosts` method *inside* your component:
@@ -138,6 +154,21 @@ const posts = this.state.posts.map((post, index)=>{
     <p>{post.content}</p>
   </div>);
 });
+```
+
+### Extra
+
+Add the user model to the posts:
+
+```
+respond_to do |format|
+  format.json {
+      render :json => @posts,
+      include: :user
+  }
+
+  format.html
+end
 ```
 
 ### Pairing Exercise

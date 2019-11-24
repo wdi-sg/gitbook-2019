@@ -49,7 +49,7 @@ rails g controller onepage index
 
 Set the root route in `config/routes.rb` to be the controller you just created:
 ```
-root 'onepage#index'
+get '/react' => 'onepaage#react'
 ```
 
 Create the script tag for them in your view file `app/views/onepage/index.html.erb`:
