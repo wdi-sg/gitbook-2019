@@ -85,6 +85,20 @@ class Trains extends React.Component{
 ### Exercise
 Implement a currency exchange form in react.
 
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git lifting
+```
+
+Check out the hot laoding branch:
+
+```bash
+$ git checkout 4-react-sass
+```
+
+##### Features
+
 For a number of Singapore dollars it shows the amount of other denominations of another currency.
 
 This form exists in a `Form` component.

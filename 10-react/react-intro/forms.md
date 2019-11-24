@@ -58,6 +58,18 @@ changeHandler(event){
 ### Exercise
 Implement the above form in react.
 
+Clone the react repo into a named folder:
+
+```bash
+$ git clone https://github.com/wdi-sg/react-reference.git forms
+```
+
+Check out the hot loading branch:
+
+```bash
+$ git checkout 4-react-sass
+```
+
 #### further
 Create validation on the form. Use the react `className` to set a css class on the form that tells the user that their input is invalid.
 

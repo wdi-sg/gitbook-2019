@@ -12,17 +12,14 @@ From the official webpacker documentation: [https://github.com/rails/webpacker](
 Install the libraries you need:
 ```
 brew install yarn
-gem install webpacker
 ```
 
 Create and initialize the app: (this one includes all the models and views)
 ```
-rails new blog --webpack=react -d postgresql --skip-turbolinks --skip--coffee
+rails _6.0.1_ new react-blog --webpack=react -d postgresql --skip-turbolinks --skip--coffee
 
-cd blog
-rails generate scaffold Post name:string title:string content:text
+cd react-blog
 rails db:create
-rails db:migrate
 ```
 
 Check out your app:
@@ -84,58 +81,6 @@ Open up *two* terminals:
 rails server
 ```
 
-
-### Start a complete react app:
-
-In order to mimic what we had in the react setup we can have one file for `ReactDOM.render` and another containing our root component `App`.
-
-Change `hello_react.jsx` to import the an `App` component.
-
-hello_react.jsx
-```
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-import App from '../components/app'
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <App/>,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
-
-```
-
-Make a directory that will contain the rest of your react app.
-```
-cd app/javascript
-mkdir components
-touch app.jsx
-```
-
-app.jsx
-```
-import React from 'react'
-
-class App extends React.Component{
-
-  render(){
-    return(<div>
-            <h1>APPPPPPP!</h1>
-          </div>);
-  }
-}
-
-export default App;
-```
-
-`app.jsx` is the place where you start writing your actual react app.
-
-All other parts of your react app will go in the `components` directory. `packs` is just for the very top level files.
-
-### Other Notes
-
 #### Other assets in the rails asset pipeline:
 Refer to this page of the webpacker docs: [https://github.com/rails/webpacker/blob/master/docs/assets.md](https://github.com/rails/webpacker/blob/master/docs/assets.md)
 
@@ -152,35 +97,23 @@ ls -la public/packs
 ### Pairing Exercise
 Create and run a react app inside a rails app, as above.
 
-#### further
-*Use ajax with rails:*
+##### Standard React Setup:
 
-Create a post using the rails form.
+Create a components directory
 
-You can get rails to send back json instead of rendering the view by doing `.json` at the end of the url.
-
-```
-http://localhost:3000/posts/1.json
+```bash
+mkdir app/javascript/components
 ```
 
-In your react code, add a button that makes an ajax request to that route. When the response comes back, render it.
+Create a new component called `app` in the `components` directory
 
-```
-  var reactThis = this;
+Create a new component called `form` in the `components` directory
 
-  var responseHandler = function(){
-      var response = JSON.parse( this.responseText );
-      reactThis.setState({stuff: response});
-  };
+Use `form` component in `app`
 
-  var request = new XMLHttpRequest();
+#### Further
+Copy your previous assignment react code into the rails app.
 
-  request.addEventListener("load", responseHandler);
+#### Further
+Create a second react app in this rails app.
 
-  request.open("GET", "http://localhost:3000/posts/1.json");
-
-  request.send();
-```
-
-#### further
-Create a series of inputs and a button in your react app to make an AJAX call that will *create* a new post.

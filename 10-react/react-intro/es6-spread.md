@@ -89,6 +89,20 @@ let {[key]: foo} = {z: 'bar'};
 console.log(foo); // "bar"
 ```
 
+### Pairing Exercise
+
+Repeat the above examples. (you can just do this in the chrome dev tools console)
+
+#### Further
+Build a button in react. On each click, a random number is added into an array in `state`. Display this array with `map`.
+
+When this array is altered, use destructure syntax to set state:
+
+```js
+let randomAmount = Math.random();
+this.setState({randomNumberList:[randomAmount, ...this.state.randomNumberList]});
+```
+
 See also: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 Also: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
