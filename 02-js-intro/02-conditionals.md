@@ -39,28 +39,69 @@ if (BOOLEAN EXPRESSION){
 ```
 If the boolean expression within our condition is `true`, a branch will execute. If it is `false`, it will not execute. This is an example of `control flow`.
 
-```
-var sunny = true;
+## IF Statements
 
-if( sunny === true ){
-  alert( "wow, noice day!" );
+Basic if statement
+
+```
+if (BOOLEAN EXPRESSION) {
+  // run this code
 }
 ```
 
-## Not
+The curly braces denote a `block`. The `block` will run if the `BOOLEAN EXPRESSION` evaluates to `true`.
 
-- `!` **not** sometimes called a 'bang': changes Boolean value to its opposite.
+**Example**
 
 ```
-var score = 8;
+// number represents a value that's an input to our program
+var number = 10;
+```
 
-if( score !== 10 ){
-  alert( "imperfect!" );
+```
+// compare the value **in the variable** with the literal value
+if (number === 10){
+  console.log("The number is 10!")
 }
 ```
 
+#### Strings as conditionals
 
-## Comparison Operators
+1) Make a variable called `name` and save a name to it.
+
+3) Log the variable to confirm what you've stored.<br>
+`console.log(name);`
+
+4)Add a basic **if statement** to add control flow depending on the input.
+
+```
+if (name === "Kermit") {
+  console.log("Hi ho! Kermit the frog here.");
+}
+```
+
+- If the input name is `Kermit`, the code is run. Otherwise, the code never runs.
+
+- Control flow with conditionals means that not every line is run. The code in front of us is separate from the process going on behind the scenes.
+
+- Lines of code will be excluded during execution in order to take us on a particular 'branch'
+
+- Which lines are excluded depends on Boolean values, and whether expressions evaluate to `true` or `false`
+
+<br>
+<hr>
+
+## Numbers as conditionals
+
+```
+var age = 21;
+
+if (age >= 21) {
+    console.log ('You are allowed to buy beer');
+}
+```
+
+### Comparison Operators
 
 [Comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`. These work for both strings and numbers. This is both useful, and can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers the way that JavaScript does.
 
@@ -101,7 +142,14 @@ if( score !== 10 ){
 ```
 
 
-## Logical operators
+
+## Conditions with several cases:
+
+```
+If the bag weighs over 8 kg, charge $20 per kilo. If the bag is over 50kg, it is unacceptable. Otherwise the bag is free.
+```
+
+### Logical operators
 
 `&&`, `||`
 
@@ -154,65 +202,6 @@ var y = false
 
 x || y
 => false
-```
-
-
-## IF Statements
-
-Basic if statement
-
-```
-if (BOOLEAN EXPRESSION) {
-  // run this code
-}
-```
-
-The curly braces denote a `block`. The `block` will run if the `BOOLEAN EXPRESSION` evaluates to `true`.
-
-**Example**
-
-```
-var number = 10;
-
-if (number === 10){
-  console.log("The number is 10!")
-}
-```
-
-#### Strings as conditionals
-
-1) Make a variable called `name` and save a name to it.
-
-3) Log the variable to confirm what you've stored.<br>
-`console.log(name);`
-
-4)Add a basic **if statement** to add control flow depending on the input.
-
-```
-if (name === "Kermit") {
-  console.log("Hi ho! Kermit the frog here.");
-}
-```
-
-- If the input name is `Kermit`, the code is run. Otherwise, the code never runs.
-
-- Control flow with conditionals means that not every line is run. The code in front of us is separate from the process going on behind the scenes.
-
-- Lines of code will be excluded during execution in order to take us on a particular 'branch'
-
-- Which lines are excluded depends on Boolean values, and whether expressions evaluate to `true` or `false`
-
-<br>
-<hr>
-
-#### Numbers as conditionals
-
-```
-var age = 21;
-
-if (age >= 21) {
-    console.log ('You are allowed to buy beer');
-}
 ```
 
 ### If / else
@@ -408,6 +397,26 @@ if (5 % 2 == 0) {
 
 **Let's add an `else` to our `if` statement**
 
+
+
+
+
+
+
+
+
+
+## Not
+
+- `!` **not** sometimes called a 'bang': changes Boolean value to its opposite.
+
+```
+var score = 8;
+
+if( score !== 10 ){
+  alert( "imperfect!" );
+}
+```
 
 
 

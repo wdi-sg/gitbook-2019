@@ -106,6 +106,11 @@ function profilerefresh() {
 }
 ```
 
+Run this on your terminal:
+```
+echo '[[ -s ~/.profile ]] && source ~/.profile' >> ~/.zprofile
+```
+
 **Testing**
 Open a *NEW* Terminal window and run:
 ```

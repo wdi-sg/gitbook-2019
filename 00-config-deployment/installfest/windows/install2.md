@@ -16,23 +16,61 @@ We will install the Linux version of NodeJS into WSL without any version manager
 	- `npm -v` (Checks the installed version of npm)
 
 ## Installing PostgreSQL
-- Any database system contains at least 2 parts: the database server itself, and the database client. As WSL does not officially support GUI tools, for our convenience, we will install database servers on Windows, and use command line clients in WSL. This allows us to optionally install GUI clients in Windows for more convenient data visualization.
-
-- __Installing the PostgreSQL server__
-	- Download and install the latest version for Windows x86-64 from (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). This will also install PGAdmin.
-	- Use pgAdmin 4 to create a `Login/Group Role` for your server with the __same name as your WSL username__. Ensure that under the `Privileges` tab, the options for `login` and `create databases` are turned on.
-	- Use pgAdmin 4 to create a `Database` with the __same name as your WSL username__, and set its owner to the user that you just created.
+- Any database system contains at least 2 parts: the database server itself, and the database client.
 
 - __Installing the PostgreSQL client__
-	- Open a WSL terminal and run the following commands in order.
-	- `sudo apt-get update && sudo apt-get upgrade`
-	- `sudo apt-get install postgresql-client-10 postgresql-client-common` (Change the version after -client- to the version of PostgreSQL that you installed)
-	- `echo 'export PGHOST=localhost' >> ~/.bashrc`
-	- Either `source ~/.bashrc` or restart WSL to reload the config
-	- `psql` to check that everything runs. Type `\l` to see a list of databases. Hit `q` to exit the list if needed, and type `\q` to exit the client.
-	- If you want PostgreSQL to start automatically on boot, do the following.
-		- Press the Win key and type `services`. Press enter.
-		- Look for the PostgreSQL 10 Server service, right-click on it, and ensure that the `Startup type:` is set to `Automatic`.
+- Open a WSL terminal and run the following commands in order.
+- `sudo apt-get install postgresql-client postgresql postgresql-contrib postgresql-client-common`
+
+### Configure Postgres User
+
+You'll also need to configure a user for your Postgres database.
+
+```
+sudo -u postgres psql postgres
+
+\password postgres
+
+```
+
+Choose an easy to remember password then type `\quit` to exit psql. MAKE SURE YOU REMEMBER THIS PASSWORD YOU WILL NEED IT LATER.
+
+### Create a Postgres Alias
+
+To make it easier to start postgres we're going to create a couple aliases. Edit your bashrc file by typing `subl ~/.bashrc` add these lines to the bottom of the file:
+
+```
+alias psql="sudo -u postgres psql"
+alias pgserver="sudo -u postgres service postgresql start"
+```
+
+**pgserver** will be used to start the postgres server
+
+**psql** will be used to access the psql termainal
+
+### Testing Postgres Setup
+
+Quit terminal and reopen it before testing.
+
+**Start Server**
+
+```
+pgserver
+```
+
+**enter psql terminal**
+
+```
+psql
+```
+
+Should enter psql terminal and have no error.
+
+**exit psql**
+
+```
+\q
+```
 
 ### Passwordless Postgres
 

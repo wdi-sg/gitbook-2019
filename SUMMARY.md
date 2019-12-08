@@ -49,6 +49,7 @@
   * [More Iteration](02-js-intro/11-more-iteration.md)
   * [Browser Side Javascript](02-js/browser-js/readme.md)
     * [DOM Manipulation](02-js/browser-js/js-dom-manipulation.md)
+    * [DOM Creation](02-js/browser-js/js-dom-manipulation-creation.md)
     * [DOM and Events](02-js/browser-js/js-dom-events.md)
     * [DOM Data](02-js/browser-js/dom-with-data.md)
     * [DOM and CSS Classes](02-js/browser-js/dynamic-style.md)
