@@ -1,6 +1,5 @@
 # Unit 1
 
-EXTRA CSS: https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee/wiki/HTML-CSS-Review-Videos#recommended-projects
 
 ### Week 1
 
@@ -543,8 +542,15 @@ code reading
 ##### Assignment
 
 EXTRA CSS:
-https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/eCardly
-https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/Supply_CSS_Mockup_Lab
-https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/Oscar_CSS_Mockup
-https://git.generalassemb.ly/software-engineering-immersive/SEI-Course-Materials/tree/master/8_hw_and_solutions/unit_1/Brook_Lyn_CSS_Mockup
+
+https://github.com/wdi-sg/vssl
+
+https://github.com/wdi-sg/brook-and-lyn
+
+https://github.com/wdi-sg/oscar
+
+https://github.com/wdi-sg/supply
+
+https://github.com/wdi-sg/ecardly
+
 
