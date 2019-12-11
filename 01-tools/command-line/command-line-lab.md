@@ -18,7 +18,7 @@ From your root directory, create a folder called "my-favorite-things"; you'll us
   - in the "my-favorite-things" folder, create a folder called "books"
   - create a folder in books named after your favorite author (e.g. "mark-twain", or "john-grisham", but avoid spaces!)
   - create files named after some of the author's books in the author's folder
-  - open the books folder in Atom/Sublime
+  - open the books folder in Sublime
   - to each book file, add a brief description of the book
 
 
@@ -29,7 +29,7 @@ From your root directory, create a folder called "my-favorite-things"; you'll us
   - create a folder in the actor folder named after the actor's breakthrough movie
   - create a text file named after the actor's character in the breakthrough movie in the top level "movies" directory
   - move the text file to the breakthrough movie's folder
-  - open the file in Sublime/Atom and edit that text file with a description of the character's role in the movie
+  - open the file in Sublime and edit that text file with a description of the character's role in the movie
 
 
 - Organize your favorite music

@@ -50,7 +50,7 @@ You can also set your own environment variables in your shell's configuration fi
 If you want to create a temporary environment variable, here's an example:
 
 ```
-export MY_SETTING='subl .'
+export MY_SETTING='sublime .'
 ```
 
 To access the variable:

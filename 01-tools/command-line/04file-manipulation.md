@@ -39,7 +39,7 @@ Creating a file can be done by using the `touch` command. Then, the file can be 
 
 ```
 touch books.txt
-subl books.txt
+sublime books.txt
 ```
 
 Add a few books, copy and paste the section below so we all have some books in common, and save the file.  Make sure the books you add are in the same format: `<author_given_name>, <author_last_name>:<title>`.

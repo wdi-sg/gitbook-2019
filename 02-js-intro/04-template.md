@@ -36,10 +36,7 @@ var inputHappened = function(input){
   // make the mutiplication calculation
   var monthlyWage = wagePerHour * hoursWorked;
 
-  // output something
-  var output = "Bob got paid "+monthlyWage;
-
-  return output;
+  return monthlyWage;
 }
 ```
 
@@ -72,11 +69,9 @@ var calculateWage = function(input){
     var hoursWorked = parseInt( input );
 
     // make the mutiplication calculation
-    var monthlyWage = wagePerHour * hoursWorked;
+    var result = wagePerHour * hoursWorked;
 
-    var output = "Bob got paid "+monthlyWage;
-
-    return output;
+    return result;
 };
 
 var inputHappened = function(input){
@@ -85,7 +80,7 @@ var inputHappened = function(input){
   var output = calculateWage( input );
 
   // output something
-  return output;
+  return output+" hours were worked";
 }
 ```
 

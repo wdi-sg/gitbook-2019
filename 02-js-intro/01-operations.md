@@ -40,21 +40,14 @@ Like normal math, Javascript follows the traditional order of operations: P.E.M.
 ##### operations on booleans
 A boolean is `true` or `false`
 
+```
+var userCreated = true;
+```
+
 A boolean operation produces a **new** boolean value.
 
 ```
-true +== true // results in a new boolean value: true
-```
-
-###### comparison operators on numbers
-We can use comparison operators to get a boolean value:
-
-```
-< > >= <=
-```
-
-```
-1 < 2 // results in a new boolean value: true
+true === true // results in a new boolean value: true
 ```
 
 ##### operations on strings

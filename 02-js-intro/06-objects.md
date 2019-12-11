@@ -69,7 +69,41 @@ employee["contact"]["phone"]
 // Chee Keans house unit
 employee["contact"]["address"]["unit"]
 ```
+### Objects as Input Data
 
+```js
+var totalShapeSurface = function( shape1Height, shape1Width, shape1Depth, shape2Height, shape2Width, shape2Depth ){
+  var totalHeight = shape1Height + shape2Height;
+  // ... calculate other stuff
+};
+```
+
+```js
+totalShapeSurface( 12, 34, 12, 46, 67, 66 );
+```
+
+Or:
+
+
+```js
+var totalShapeSurface = function(shape1, shape2){
+
+  var totalHeight = shape1.height + shape2.height;
+  // ... calculate other stuff
+};
+
+```
+
+```js
+
+var shape1 = {
+  height:12,
+  width:30,
+  depth:30,
+};
+
+totalShapeSurface( shape1, shape2 );
+```
 ### pairing exercise
 Run the above examples.
 
