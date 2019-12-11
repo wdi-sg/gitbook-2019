@@ -72,13 +72,15 @@
 
 ##### Topics
 
-[CSS Layout](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/07layout.html)
 
 [js loops](https://wdi-sg.github.io/gitbook-2019/02-js-intro/07-arrays-loops.html)
 
 [js objects](https://wdi-sg.github.io/gitbook-2019/02-js-intro/06-objects.html)
 
 [how to design](https://wdi-sg.github.io/gitbook-2019/02-js-intro/05-design.html)
+
+[CSS Display / Positioning](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/03display-positioning.html)
+
 
 ##### Assignment
 [airline seats](https://github.com/wdi-sg/seats)
@@ -95,8 +97,9 @@
 [how to program]
 
 [js iteration](https://wdi-sg.github.io/gitbook-2019/02-js-intro/09-iteration.html)
+[CSS Layout](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/07layout.html)
 
-[CSS Display / Positioning](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/03display-positioning.html)
+
 
 
 [dev tools](https://wdi-sg.github.io/gitbook-2019/02-js-intro/10-chrome-dev-tools.html)
