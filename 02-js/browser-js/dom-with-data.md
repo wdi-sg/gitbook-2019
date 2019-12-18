@@ -144,7 +144,8 @@ var buildTable = function(contacts){
     addressParagraph.classList.add('address');
     addresssParagraph.innerText = contact.address;
 
-    infoRow.appendChild(nameParagraph, addressParagraph);
+    infoRow.appendChild(nameParagraph);
+		infoRow.appendChild(addressParagraph);
     info.appendChild(infoRow);
 
     i = i + 1;
@@ -177,7 +178,7 @@ addData('Karolin', 'NY', true);
 The function 'doubles' the information. To fix this, we should clear out the old information before it populates. `$('body').empty()`
 
 ```javascript
-var addData = (name, address) {
+var addData = function(name, address) {
   contacts.push({ name: name, address: address, coWorker:coWorker })
   document.body.innerHTML = "";
   buildTable(contacts);
