@@ -40,7 +40,7 @@ for (var i=0; i<5; i++) {
   link.innerHTML = "Link " + i;
 
   link.addEventListener('click', function() {
-    alert(i);
+    console.log(i);
   });
 
   document.body.appendChild(link);
@@ -70,7 +70,7 @@ links.forEach(function(link, i){
   link.innerHTML = "Link " + i;
 
   link.addEventListener('click', function () {
-    alert(i);
+    console.log(i);
   });
 
   document.body.appendChild(link);
@@ -88,7 +88,7 @@ var setLink = function(i){
   link.innerHTML = "Link " + i;
 
   link.addEventListener('click', function () {
-    alert(i);
+    console.log(i);
   });
 
   document.body.appendChild(link);
@@ -113,7 +113,7 @@ for (var i=0; i<5; i++) {
     link.innerHTML = "Link " + i;
 
     link.addEventListener('click', function () {
-      alert(i);
+      console.log(i);
     });
 
     document.body.appendChild(link);
