@@ -194,7 +194,7 @@ Run the above code.
 
 ### Further
 
-Make the code intertactive. When the page loads, create the table.
+Make the code interactive. When the page loads, create the table.
 
 Add a button and three inputs:
 
