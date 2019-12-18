@@ -145,6 +145,8 @@
 
 [JS DOM](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation.html)
 
+[JS DOM CREATION](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation-creation.html)
+
 
 [CSS Flex Box](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/08layout-flexbox.html)
 
