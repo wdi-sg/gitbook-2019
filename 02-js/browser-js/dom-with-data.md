@@ -145,7 +145,7 @@ var buildTable = function(contacts){
     addresssParagraph.innerText = contact.address;
 
     infoRow.appendChild(nameParagraph);
-		infoRow.appendChild(addressParagraph);
+    infoRow.appendChild(addressParagraph);
     info.appendChild(infoRow);
 
     i = i + 1;
@@ -206,7 +206,7 @@ Add a button and three inputs:
 <button id="add">click to add</button>
 ```
 
-The user will type ion the three inputs.
+The user will type in the three inputs.
 
 When they click the button, get the data from the inputs and put it into the contacts array.
 
