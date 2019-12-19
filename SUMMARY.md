@@ -54,6 +54,7 @@
     * [DOM Data](02-js/browser-js/dom-with-data.md)
     * [DOM and CSS Classes](02-js/browser-js/dynamic-style.md)
     * [Fixing Scope Errors](02-js/browser-js/scope.md)
+    * [Browser Requests](02-js/browser-js/browser-request.md)
     * [AJAX](02-js/browser-js/ajax.md)
   * [Callbacks](02-js/js-callbacks-iterators/readme.md)
     * [Callbacks and Iterators](02-js/js-callbacks-iterators/callbacks2.md)
