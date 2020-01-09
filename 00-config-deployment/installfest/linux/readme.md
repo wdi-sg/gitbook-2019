@@ -103,20 +103,17 @@ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/Shared
 
 ## Node
 
-```
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+- Run the following commands in order in the terminal. Wait for each to complete before running the next.
+	- `sudo apt-get update && sudo apt-get upgrade`
+	- `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+	- `sudo apt-get install -y nodejs`
+  - `mkdir ~/.npm`
+  - `npm config set prefix '~/.npm'`
+  - `echo 'export PATH="$HOME/.npm/bin:$PATH"' >> ~/.bashrc`
+  - `source ~/.bashrc`
+	- `node -v` (Checks the installed version of NodeJS)
+	- `npm -v` (Checks the installed version of npm)
 
-sudo apt-get install -y build-essential nodejs
-```
-
-Verify the installation afterwards by running
-
-```
-node -v
-npm -v
-```
-
-The above should display without any errors.
 
 To finish up your installation, run this command to allow for global installations of npm tools.
 
@@ -128,13 +125,14 @@ sudo chown -R $USER /usr/local/lib
 
 ## Postgres
 
-### Install Postgres
+## Installing PostgreSQL
+- Any database system contains at least 2 parts: the database server itself, and the database client.
 
-We will be using a relational database called Postgres for Node and Rails portion our class. Download by running:
+- __Installing the PostgreSQL client__
+- Open a WSL terminal and run the following commands in order.
+- `sudo apt-get install postgresql-client postgresql postgresql-contrib postgresql-client-common`
 
-```
-sudo apt-get install postgresql-client postgresql postgresql-contrib
-```
+
 
 ### Configure Postgres User
 

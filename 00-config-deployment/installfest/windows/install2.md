@@ -6,7 +6,7 @@ We will install the Linux version of NodeJS into WSL without any version manager
 
 - Run the following commands in order in the WSL terminal. Wait for each to complete before running the next.
 	- `sudo apt-get update && sudo apt-get upgrade`
-	- `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
+	- `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
 	- `sudo apt-get install -y nodejs`
   - `mkdir ~/.npm`
   - `npm config set prefix '~/.npm'`
