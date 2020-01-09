@@ -34,7 +34,7 @@ Luckily node provides a way to use external libraries.
 
 ```
 // the jquery library is actually all contained in the variable $
-const myOtherCode = require('script2.js');
+var myOtherCode = require('script2.js');
 ```
 
 Let's see how this works:
@@ -48,7 +48,7 @@ For example, let's make two files: `touch my-module.js main.js`
 `my-module.js`:
 ```js
 // declare a variable in the file
-const number = 7;
+var number = 7;
 
 // add a key and a string to the exports object
 module.exports.name = "Kenaniah";
@@ -74,7 +74,7 @@ console.log("End of my-module.js file")
 `main.js`:
 ```js
 // here we're grabbing everything that's "exported" in our other file, and storing it a variable called 'my'
-const my = require('./my-module')
+var my = require('./my-module')
 
 // Variables and such that were not exported aren't in scope
 console.log("number is " + typeof number) // undefined
