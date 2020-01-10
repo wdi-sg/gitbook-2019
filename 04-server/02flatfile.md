@@ -181,3 +181,10 @@ jsonfile.readFile(file, (err, obj) => {
 
 ##### Further
 Take 2 command line arguments and write them as key and value into the JSON.
+
+Ex: `node index.js add bananaCount 3`
+
+##### Further
+Add each command the user does to a *list* in the JSON file. (Also keep the previous functionality)
+
+Ex: `node index.js addToList banana`
