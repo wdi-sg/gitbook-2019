@@ -11,7 +11,7 @@ If we want to customize what's on the page? We're going to set up a template eng
 
 React is used on the front end of lots of sites, but it's __JSX__ component can also be used to simply create HTML.
 
-### Note: the server-side react is not the same as browser-side react. Be careful when googling. If a resouce makes reference to DOM or browser events then it is discussing browser react, and may or may not be helpful.
+#### Note: the server-side react is not the same as browser-side react. Be careful when googling. If a resouce makes reference to DOM or browser events then it is discussing browser react, and may or may not be helpful.
 
 We need to do a couple steps to get the template engine working:
 
@@ -175,27 +175,18 @@ Output the name as well as the weight.
 
 #### Import some practice data
 
-Create a module.
-
 ```
-touch googleProducts.js
+touch google.json
 ```
 
-```
-module.exports =
-```
-
-Paste the google shopping object into the module file: [https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js](https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js)
-
-Require the module and assign it to a variable:
-
-```
-const products = require('googleProducts');
-```
+Paste the google shopping object into the module file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
 
 Make sure it worked ok, put this in your app.get:
 ```
-console.log( products.items[0].id );
+jsonfile.readFile('google.json', (err, obj) => {
+  console.log("OBJ ITEM ID~~: "+ obj.items[0].id );
+  // put render here
+})
 ```
 
 Which should log an item id for you out to the terminal. This ensures you have proper access to the products.

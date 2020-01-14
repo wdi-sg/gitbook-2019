@@ -85,19 +85,44 @@ See what else is in the response parameter by `console.log`ing it.
 #### Local Network
 Find your IP address. Put the address into your browser and request your server through the local network. Ex. `168.4.3.1:3000/foo`
 
+Change the address of your server with your pair.
+
+Put your server address into the class slack channel.
+
 #### Express Server on the Internet
 
-Create an express server and put it on the internet using `ngrok`.
+Create an express server and put it on the internet using `ngrok`:
+
+Run express:
+
+```bash
+node index.js
+```
+
+Open a new terminal window and start `ngrok` (what directory you are in doesn't matter)
+
+```
+cd my-ngrok-download-directory
+./ngrok http 3000
+```
+
+Put your ngrok server address into the class slack channel.
 
 #### HTML Response
 
 Put HTML in `response.send`:
 
+Paste this above the `app.get('*'` 
+
 ```
-response.send('<html><body><h1>Hello</h1><a href="#">wow</a></body></html>');
+app.get('/papaya', (request, response) => {
+  response.send('<html><body><h1>Hello</h1><a href="#">wow</a></body></html>');
+});
 ```
 
-What happens?
+What happens when you visit it using curl? `curl localhost:3000/papaya`
+
+What happens when you visit it in the browser?
 
 #### Ports
 
@@ -120,3 +145,5 @@ If the user requests apples in the path, send back strawberries.
 If the user requests `/charizard`, send back information about charizard.
 If the user requests `/pikachu`, send back information about pikachu.
 If the user requests `/squirtle`, send back information about squirtle.
+
+
