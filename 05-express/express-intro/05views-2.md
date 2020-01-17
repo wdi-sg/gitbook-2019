@@ -108,27 +108,18 @@ touch views/home.jsx
 
 #### Import some practice data
 
-Create a module.
-
 ```
-touch googleProducts.js
+touch google.json
 ```
 
-```
-module.exports =
-```
-
-Paste the google shopping object into the module file: [https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js](https://raw.githubusercontent.com/wdi-sg/google-shopping-conditionals-loops/master/products.js)
-
-Require the module and assign it to a variable:
-
-```
-const products = require('googleProducts');
-```
+Paste the google shopping object into the json file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
 
 Make sure it worked ok, put this in your app.get:
 ```
-console.log( products.items[0].id );
+jsonfile.readFile('google.json', (err, obj) => {
+  console.log("OBJ ITEM ID~~: "+ obj.items[0].id );
+  // put render here
+})
 ```
 
 Which should log an item id for you out to the terminal. This ensures you have proper access to the products.

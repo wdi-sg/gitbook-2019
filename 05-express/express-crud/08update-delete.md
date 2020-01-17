@@ -122,6 +122,14 @@ app.put("/putrequest", (request, response) => {
 });
 ```
 
+##### PUT with CURL
+Use a CURL command to make a POST request to your server. (remember PUT is interpreted in express!)
+
+(We can use CURL to create the request, without having to construct anything else)
+```
+curl -d "monkey=banana&koala=eucalyptus" -X POST http://localhost:3000/putrequest?_method=put
+```
+
 #### Further
 Add in some pretend data to edit:
 

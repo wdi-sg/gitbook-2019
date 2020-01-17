@@ -269,3 +269,7 @@ We could also use compound statements here:
 ```sql
 DELETE FROM movies WHERE id < 9 AND rating = 2;
 ```
+
+### Further
+
+Continue with the w3schools sql exercises: [https://www.w3schools.com/sql/default.asp](https://www.w3schools.com/sql/default.asp)

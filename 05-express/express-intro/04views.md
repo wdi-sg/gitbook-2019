@@ -179,7 +179,7 @@ Output the name as well as the weight.
 touch google.json
 ```
 
-Paste the google shopping object into the module file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
+Paste the google shopping object into the json file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
 
 Make sure it worked ok, put this in your app.get:
 ```
@@ -193,7 +193,7 @@ Which should log an item id for you out to the terminal. This ensures you have p
 
 #### Render a single product object in react
 
-Implement an express route `/first` - it creates an HTML page with the first user in the array `products.items[0]`.
+Implement an express route `/first` - it creates an HTML page with the first product in the array `obj.items[0]`.
 
 This template should display at least 2 data fields for this item.
 

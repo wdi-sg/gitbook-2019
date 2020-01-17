@@ -220,3 +220,32 @@ Write the html form to make the post request:
 - try out your form
 
 - watch the network tab to see the request go out.
+
+##### Further
+
+Create a route `add` that adds 2 numbers together.
+
+`/add/3/4` will send 7 back in the response.
+
+Save the numbers and the sum in the json file. The below object should represent one record in an array of records.
+
+```js
+{
+  sum: 7,
+  numA : 3,
+  numB : 4
+}
+```
+
+##### Further
+
+Create a route that gets the sum results: `/results/0` will send back one of the above objects
+
+##### Further
+Create a route that gets the sum *of* results: `/addresults/0/1` will send back the sum of two results
+
+##### Further
+Create a route that gives the highest sum `/stats/highest`
+
+##### Further
+Create a route that gives the average sum `/stats/average`

@@ -34,39 +34,126 @@ These are the sepearate logical pieces of any page.
 
 
 ## Writing a component
+
+Begin with `home.jsx` view file:
+
+```
+var React = require('react');
+
+class Home extends React.Component {
+  render() {
+
+    return (
+      <div>
+        <h1>Hello, { this.props.name }!</h1>
+        <div>
+          <ul>
+            <li>Hello world</li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
+
+module.exports = Home;
+```
+
+We'll replace the `ul` with a component that represents the list:
+
 ```
 class List extends React.Component {
     render() {
         return (
-          <ul>
-            <li>Hello world</li>
-          </ul>
+          <div>
+            <ul>
+              <li>Hello world</li>
+            </ul>
+          </div>
         );
     }
 }
 ```
 
-- `List` is a js "class" that inherits from React
-- a component has certain methods like `render` that allow you to control it
+Now put it in place of the `ul` tag:
 
+```
+return (
+  <div>
+    <h1>Hello, { this.props.name }!</h1>
+    <List/>
+  </div>
+);
+```
 
-
-### Component Properties
+### Props - Component Properties
 In react, a component takes data in and renders itself based on that data.
 
-The data is passed from above in the parent component.
+The data is passed from above in the parent component and becomes `this.props`
+
+Let's pass one piece of data to the `List` component.
+
+```
+<List title="my list"/>
+```
+
+Use it inside the component:
+
+```
+class List extends React.Component {
+    render() {
+        return (
+          <div>
+            <h4>{this.props.title}</h4>
+            <ul>
+              <li>Hello world</li>
+            </ul>
+          </div>
+        );
+    }
+}
+```
+
+#### props variables and data
+
+```
+let titleVariable = "wow title";
+
+return (
+  <div>
+    <h1>Hello, { this.props.name }!</h1>
+    <List title={titleVariable}/>
+  </div>
+);
+```
 
 Let's start rendering a real list from data coming from outside the list itself.
 
+Specify the list like this:
+```
+const listOfItems = [
+  "apples",
+  "bananas",
+  "pineapple"
+];
+```
 
+Pass it into `List`:
 
+```
+<List title="my list" items={listOfItems}/>
+```
+
+Use it in the component:
 ```
 class List extends React.Component {
 
     render() {
+
         let itemsElements = this.props.items.map(item => {
-                              return <li>{item}</li>
-                            });
+          return <li>{item}</li>
+        });
+
         return (
           <ul>
             {itemsElements}
@@ -75,35 +162,6 @@ class List extends React.Component {
     }
 }
 ```
-
-Specify the property like this:
-
-```
-const listOfItems = [
-  "apples",
-  "bananas",
-  "pineapple"
-];
-
-```
-
-Inside the return use the component with an  array like the one specified above.
-```
-<List items={listOfItems} />
-```
-
-
-
-#### Props
-Props are the react way of passing data into your component.
-
-When you specify your component you specify it's `props` just like an HTML attribute.
-```
-<List items={listOfItems} />
-```
-
-You can then access them from within the component using `this.props`
-
 
 
 ### Nesting Components
@@ -124,7 +182,7 @@ class List extends React.Component {
 
     render() {
         let itemsElements = this.props.items.map( (item, index) => {
-                              return <ListItem item={item}></ListItem>;
+                              return <ListItem item={item}/>;
                             });
         return (
           <ul>
@@ -133,18 +191,6 @@ class List extends React.Component {
         );
     }
 }
-```
-
-Use it:
-
-```
-const listOfItems = [
-  "apples",
-  "bananas",
-  "pineapple"
-];
-
-<List items={listOfItems} />,
 ```
 
 ### Separate Files with require
@@ -186,42 +232,81 @@ module.exports = HelloMessage;
 
 ### Exercise
 
-Run the above code:
+Use components with one of your apps.
 
-For a file you currently have, put in the components above and render them. Pass in props.
+Create a new jsx file:
 
-#### Further
-
-Have the list item class render 2 components: `ItemId` which will use the map `index` (from the above example) as the id, and `Item` which will render the text of the item. Pass data into these two components as props.
-
-#### Further
-
+```bash
+touch views/papaya.jsx
 ```
-var fruits = [
-  {
-    name:"apple",
-    weight:23,
-    colors : [
-      "red","green","yellow"
-    ]
-  },
-  {
-    name:"mango",
-    weight:13,
-    colors : [
-      "green","yellow"
-    ]
-  },
-  {
-    name:"avocado",
-    weight:3,
-    colors : [
-      "green","brown"
-    ]
+
+```html
+var React = require('react');
+class Papaya extends React.Component {
+  render() {
+    return (
+      <html>
+        <head>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+        </head>
+        <body>
+          <div> 
+            <h1>Hello, { this.props.name }!</h1>
+          </div>
+        </body>
+      </html>
+    );
   }
-];
+}
+
+module.exports = Papaya;
 ```
 
-Create react code that renders this array of objects.
 
-Use at least 2 separate components.
+```
+Paste a new route into an express app:
+```js
+app.get('/papaya', (request, response) => {
+
+  const data = {name: "Sterling Archer"};
+
+  response.render('papaya', data);
+});
+```
+
+### Further
+
+#### Import some practice data
+
+```
+touch google.json
+```
+
+Paste the google shopping object into the json file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
+
+Make sure it worked ok, put this in your app.get:
+```
+jsonfile.readFile('google.json', (err, obj) => {
+  console.log("OBJ ITEM ID~~: "+ obj.items[0].id );
+  // put render here
+})
+```
+
+Render a list of items with a separate `GoogleItem` component.
+
+```
+render() {
+    let itemsElements = this.props.googleItems.map( (item, index) => {
+                          return <GoogleItem item={item}/>;
+                        });
+    return (
+      <div>
+        {itemsElements}
+      </div>
+    );
+}
+```
+
+#### Further
+
+Inside the `GoogleItem` component create separate components for keys like: `product`, `inventory`, `author`, etc.

@@ -1,15 +1,28 @@
 # Reading Code
 
+## repos setup
 
-## Run
-
-Run the code. See the output and what the code does and how it runs.
+#### Get the code
 
 - go to the pull requests page for this assignment
 - find your partner's pull request
 - click into their profile to find their repo
-- click on the repo address so that you can clone it `git clone {copied address}`
+- click on the repo address so that you can clone it `git clone {copied address}` (note: you are `clone`ing not `fork`ing!)
 - make sure that you run the command *outside* of where you have your own forked repo
+
+
+#### Become a collaborator
+
+- invite your partner as a collaborator to your own repo
+    - go to the settings tab of your repo
+    - on the left-hand bar click "collaborators"
+    - enter their github username
+
+- recieve your repo collaboration invite (check your github email)
+
+## Run
+
+Run the code. See the output and what the code does and how it runs.
 
 ## Read
 
@@ -28,6 +41,8 @@ Note any questions you have about how the code works or what the reasoning is be
 Meet with the person who wrote the code and ask them the questions you have, *or* if you are still not clear on how it works, ask them to explain it to you.
 
 ## Changing the Code
+
+Make a branch for the changes you're going to make: `git branch yourbranchname`
 
 Make changes to the code as you see fit.
 
@@ -57,3 +72,9 @@ Add code from today's lesson into this code.
 
 ### Comment
 - go to your partner's pull request. Make at least one comment on one of their commits.
+
+## Pull Request
+
+`git push origin yourbranchname`
+
+Make a new pull request with your changes so that we can see it.
