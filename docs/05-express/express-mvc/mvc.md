@@ -171,11 +171,11 @@ module.exports = (db) => {
 
    // Export controller functions as a module
   return {
-    get,
-    updateForm,
-    update,
-    createForm,
-    create
+    get: get,
+    updateForm:updateForm,
+    update:update,
+    createForm:createForm,
+    create:create
   };
 
 }
