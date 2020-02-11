@@ -13,6 +13,8 @@ We will be using this app as a reference:  [https://github.com/wdi-sg/mvc-templa
 
 Clone the MVC template repo.
 
+##### db setup
+
 Make sure `db.js` has the correct configuration for your DB (db name, user name).
 
 Make sure you have a table called students:
@@ -21,9 +23,12 @@ Make sure you have a table called students:
 CREATE TABLE IF NOT EXISTS students (
     id SERIAL PRIMARY KEY,
     name TEXT,
+    phone TEXT,
     email TEXT
 );
 ```
+
+##### db seed
 
 Add some students into your DB, if you don't have any:
 
@@ -39,33 +44,93 @@ VALUES
 ('Bob Jones', '(415)555-5555', 'bob@example.com');
 ```
 
+
+##### routes
+
 Add one route  to the routes file. `/students`
+
+Assume you will have a new method in pokemon: `pokemons.students`
+
+routes.js
+```js
+app.get('/students', pokemons.students);
+```
+
+##### controllers
 
 Add one method to the pokemon controller file for this route.
 
 Don't forget to make a key for the method at the bottom of the file.
 
-Set the method as a callback of the `app.get` route.
+Use `response.send('banana')` to test it.
 
-Put `response.send` in and test it.
+##### models
 
-Create a new method in the pokemon model file.
+Create a new method `getStudent` in the pokemon model file that queries for a single student by name.
 
-Copy the pattern of the method that's already in there.
+```
+const getStudent = (name) => {
+```
+
+It runs this query (change the below to be dynamic)
+
+```
+SELECT * FROM students WHERE name='kevin';
+```
+
+- the method has to take the student name as a parameter to put in the WHERE clause
+- console.log the result in the model
 
 Don't forget to make a key for the method at the bottom of the file.
 
-Have it run a query against the `students` DB table:
+##### call model from controller
+
+Call your model method from your controller
 
 ```
-SELECT * FROM students;
+db.pokemon.getStudent(name)
 ```
 
-Now, in the controller create the callback that will be run when the query is finished. Pass it into the pokemon model method.
+Watch for the console.log
 
-Execute the callback from the pokemon model method.
+##### pass callback to model
 
-Pass the `queryResult.rows` back to the callback, and send it in response.send.
+Change your controller to define and pass a callback to the model.
+
+```
+const whenDoneInModel = (err, result)=>{
+  console.log("wow, done");
+};
+
+db.pokemon.getStudent(name, whenDoneInModel);
+```
+
+##### Run the callback
+
+Change the function signature in the model.
+
+models/pokemon.js
+
+```
+const getStudent = (name, callback) => {
+  // run the query
+  ...
+    // when the query is done, call the callback
+
+    // pass the result of the query
+    callback(err, results.rows)
+```
+
+##### respond with the model result
+
+```
+const whenDoneInModel = (err, result)=>{
+  console.log("wow, done");
+  response.send( result )
+};
+
+db.pokemon.getStudent(name, whenDoneInModel);
+```
 
 #### Further
 
@@ -136,47 +201,9 @@ Add a get route to render a form to create a single class (`GET /classes/new`)
 
 Add a model method to take in the `POST` request this form creates. This is a new controller file.
 
-
 #### Further
 
-Create a relationship between student and classes. Student has many classes.
-
-Create a `student_id` foreign key inside of the `classes` table.
-
-Add the page (route and controller) for a single student (`GET /student/:id`).
-
-Add the model for the single student. The model should execute this query: (`SELECT * FROM students WHERE id=`);
-
-On the student page, list all of that student's classes.
-
-You can do this by composing two queries together for student with the query for classes:
-
-```js
-// controller for /students/:id
-let studentControllerCallback = (request, response) => {
-
-  db.students.get(1, (student)=>{
-    //  inside the callback, now that you have the student
-    //  get the list of classes
-
-    let student_id = student.id;
-
-    db.classes.getByStudent(student_id, (classes)=>{
-
-      const data = {
-        studentKey : student,
-        classesKey : classes
-      };
-
-      response.render('student' data );
-
-
-    });
-
-  });
-
-};
-```
+In the model, check `result.rows`. If it's empty, don't give back `result.rows`, instead give back an error and check for it in the controller.
 
 #### Further
 

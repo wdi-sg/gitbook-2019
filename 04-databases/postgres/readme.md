@@ -185,3 +185,7 @@ Watch them run in `psql`.
 
 Once you're satisfied that the table is there, get rid of it using the DROP TABLE command. Use \dt again to make sure that the table has been dropped.
 
+#### Further
+
+Repeat SQL from the previous exercise. See the output in `psql`.
+

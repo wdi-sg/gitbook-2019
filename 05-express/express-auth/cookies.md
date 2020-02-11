@@ -82,11 +82,27 @@ response.cookie('visits', visits);
 
 ##### part 1
 
+Open an incognito window.
+
+Open the dev tools.
+
 Pick a site and go to it in your browser.
-Look at some cookies for a site.
-Erase some cookies in your browser.
+
+Look in the network tab for the **RESPONSE** headers for the cookie to be **SET**.
+
+Look at the application tab to see the cookies set from the header.
+
+Open a new incognito tab and open the dev tools.
+
+Visit the same site.
+
+Look in the network tab to see the **REQUEST** headers to see the cookie being **SENT**.
+
+Erase the cookie in the dev tools application tab.
+
 Make a new request to that page.
-Look at your network tab. What cookies are in the response header, that the site is telling your browser to store.
+
+Look at your network tab- what cookies are in the request header, are cookies being set in the response header?
 
 ---
 
@@ -129,10 +145,42 @@ Set the configuration to tell express to use the cookie parser.
 app.use(cookieParser());
 ```
 
-Follow the other code examples above.
+Set cookies in the **RESPONSE**.
 
-`console.log` the values of `request.cookies`
+Look for those cookies in the network tab.
 
-Look at the cookie values in the network tab.
+Create another `app.get('/banana')`
 
-Look at the cookie values in the `application` tab.
+Make a request from the browser for `/banana`
+
+Look in the network tab to see the cookies in the **REQUEST** header.
+
+`console.log` the values of `request.cookies` in the `app.get`
+
+#### Further
+
+Set the expiration of the cookie.
+
+#### Further
+
+Visit a site like Straights Times or New York Times or Media Corp. What cookies are set? What are the domains of those cookies? Can you find a site that uses those same cookies from the same domains?
+
+#### Further
+
+Sava an object / JSON in the cookie instead. Get it out in the other route.
+
+#### Further
+
+Add react.
+
+Allow the user to save their name in the cookie using a form.
+
+Show the user their name on every page.
+
+#### Further
+
+Add a database.
+
+Allow the user to "add records" to their "cart" in a cookie. (an array) - show the contents on the cart in another page.
+
+

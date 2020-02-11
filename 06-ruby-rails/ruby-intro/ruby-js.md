@@ -470,6 +470,10 @@ puts "monkey: #{monkey}"
 #### npm
 In ruby, the functionality of `npm` is split into two different programs.
 
+```js
+npm install -g
+```
+
 ##### gem
 This is the system to install all libraries for any ruby program.
 
@@ -479,18 +483,38 @@ gem is the online repository for all ruby libraries that are publicly published.
 
 gem *does not* create a directory like `node_modules`. Your library files are stored in a central place on your computer.
 
-By default, when you install a gem, that code is available anywhere on your computer.
+By default, when you install a gem, that code is available anywhere on your computer, like `npm install -g`.
 
 ##### Gemfile
 `Gemfile` is the `package.json` of ruby.
 
-##### bundler
-In ruby you must manually add library dependencies you want in your projects to the `Gemfile`.
 
+##### bundler
+```js
+npm init
+```
+
+```ruby
+bundle init
+```
 Installing those libraries on your system runs through a different command, one just for projects using a `Gemfile`.
+
+```js
+npm install
+```
 
 ```
 bundle install
+```
+
+##### get one library
+
+```js
+npm install express
+```
+
+```ruby
+bundle add rails
 ```
 
 ### Pairing Exercise

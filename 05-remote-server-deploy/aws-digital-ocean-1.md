@@ -165,7 +165,7 @@ npm install -g http-server
 
 Allow connections on that port in the droplet
 ```bash
-sudo ufw allow 8080
+sudo ufw allow 3000
 ```
 
 ```bash
@@ -181,7 +181,15 @@ echo "wow my name" >> myname.txt
 ```
 
 ```bash
-http-server
+http-server -p 3000
+```
+
+Check to see if you can make requests to your server
+
+[987.654.321.987:8080/myname.txt](987.654.321.987:8080/myname.txt)
+
+```bash
+curl 987.654.321.987:8080/myname.txt
 ```
 
 ### 8. Final
@@ -193,7 +201,7 @@ cd ~
 git clone https://github.com/wdi-sg/express-basic.git
 cd express-basic
 npm install
-npm start
+node index.js 3000
 ```
 
 #### Visit
@@ -207,17 +215,19 @@ Visit your site in the browser. (using the IP address)
 
 Send the address to your app to your partner in slack.
 
-### FURTHER
+#### Further
 
-### permanently run your server
+##### permanently run your server
 
 ```
-npm start &
+node index.js &
 ```
+Puts the server in the background.
 
 You can now log out of the server with exit and it stull runs: `exit`
 
-stop it
+##### Stop it
+
 ```
 ps -ax | grep node
 ```
@@ -228,58 +238,11 @@ find the process id- the number in the far left column
 kill -9 <process id>
 ```
 
-### Project Deployment
+#### Project Deployment
 
 Take one of your unit 2 assignments. Deploy it to digital ocean.
 
 Begin by cloning the app into your droplet like the example above.
 
-Note: Depending on the assignment, you may need to use the terminal to **install** the postgres DB server.
+Note: Depending on the assignment, you may need to use the terminal to **install** the postgres DB server. Refer to the installation instructions in the gitbook for linux.
 
-### FURTHER
-
-#### Terminal Shorcuts
-
-
-Special commands on the command line for IP Address
-
-<!-- ![](aws-digital-ocean/360q86.jpg) -->
-<img src='aws-digital-ocean/360q86.jpg' style="width:35rem;"/>
-
-Before:
-
-Sets up the variables
-```bash
-echo '' >> ~/.bash_profile
-echo '#Digital Ocean' >> ~/.bash_profile
-echo 'digitalocean_addr=987.654.321.987' >> ~/.bash_profile
-source ~/.bash_profile
-```
-```bash
-echo alias oceanssh='ssh root@$digitalocean_addr' >> ~/.bash_profile
-source ~/.bash_profile
-```
-
-After:
-
-Now you can use the variables
-```bash
-#Time to do the real SSH
-
-
-# ssh root@987.654.321.987    #Numbers numbers...
-
-
-ssh root@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
-
-
-# oceanssh                     #Useful but use the above for now `(Useful)`
-```
-Then
-```bash
-#After 7 below:
-# ssh bossdog@987.654.321.987    #Numbers numbers...
-
-
-ssh bossdog@${digitalocean_addr} #Use This `🚦(My Best Practice)🚦`
-```

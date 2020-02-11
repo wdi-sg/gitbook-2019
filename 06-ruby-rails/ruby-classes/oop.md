@@ -278,7 +278,37 @@ panodol = Medication.new('panodol', bill)
 #### Over-fitting objects
 You can make everything an object in your system, but be careful, because each object you add also adds complexity. Can your data be a class attribute instead?
 
+### Pairing Exercise
+
+- Pick one or more of the following analyze what it primarily does & try to draw the tables & relationships. Don't try to model every single piece of data within the app. Start with the most important models and add on from there.
+
+  - DBS Bank
+  - Medical Clinic
+  - Restaurant
+  - Tutoring Center
 
 
+#### 1
+An ERD diagram, using crow's foot notation, of whatever app you choose.  For example:
+
+
+<p align="center">
+  <img src ="https://www.edrawsoft.com/images/examples/entity-relationship-diagram.png">
+</p>
+
+> Note: this example has "Items" as placeholders for the attributes.
+
+**Warning: DO NOT try to implement the entire app. That will be way too big. Start with the major features. Then move on to the next part (2).** If you get done with the below, come back and add to the ERD.
+
+#### 2
+Come up with some example data for each important part of the app.
+
+How are they represented in classes?
+
+What methods would you write to act on that data?
+
+Write the classes and methods and create the individual instances. Classe instances will contain other class instances.
+
+You might have calculations on that data such as `account.calculate_interest`, or you might have methods that send or do something: `student.send_session_reminder_email`- for such methods, simply assume you will write in this actual code later. Leave a comment or `puts` a message.
 
 

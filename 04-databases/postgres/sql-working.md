@@ -97,16 +97,12 @@ INSERT INTO movies (title, description, rating) VALUES('Cars', 'a movie', 9) RET
 When you set data type date in postgres, you get out a javascript Date object.
 
 ```
-var d = new Date(); // this is a javascript date object.
 ```
 
 Use `DEFAULT now()` to automatically have a `created_at` column in your database.
 
 ```
 const createTableText = `
-CREATE TEMP TABLE dates(
-  date_col DATE DEFAULT now(),
-  timestamp_col TIMESTAMP DEFAULT now(),
   timestamptz_col TIMESTAMPTZ DEFAULT now(),
   created_at TIMESTAMPTZ DEFAULT now()
 );

@@ -122,12 +122,12 @@ Create a command line app that hashes the argument:
 
 Create a new dir
 ```
-mkdir sha256
+mkdir hashing
 ```
 
 cd into it
 ```
-cd sha256
+cd hashing
 ```
 init a new package json
 ```
