@@ -591,6 +591,8 @@ code reading
 ##### Morning Exercise
 
 ##### Topics
+[full stack react](https://wdi-sg.github.io/gitbook-2019/10-react/react-webpack/webpacker-fullstack.html)
+
 [webpacker]()
 
 ##### Assignment
@@ -602,7 +604,6 @@ code reading
 
 ##### Topics
 
-[full stack react](https://wdi-sg.github.io/gitbook-2019/10-react/react-webpack/webpacker-fullstack.html)
 [virtual DOM](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/state.html)
 
 ##### Assignment
