@@ -587,6 +587,7 @@ code reading
 ### Week 2
 
 #### Day 1
+
 ##### Morning Exercise
 
 ##### Topics
@@ -596,9 +597,13 @@ code reading
 [shopping react](https://github.com/wdi-sg/shopping-react)
 
 #### Day 2
+
 ##### Morning Exercise
 
 ##### Topics
+
+[full stack react](https://wdi-sg.github.io/gitbook-2019/10-react/react-webpack/webpacker-fullstack.html)
+[virtual DOM](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/state.html)
 
 ##### Assignment
 
