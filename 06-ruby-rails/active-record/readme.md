@@ -9,24 +9,20 @@
 - Utilize Active Record to perform CRUD actions on a database
 - Differentiate between class and instance methods in Active Record classes/objects
 
-
-
-## Framing (5 min / 0:05)
+## Framing
 
 So far, we've learned principles of object-oriented programming and how to get data to persist in a database using SQL. However, we now need some way to connect the two. We need to be able to retrieve data from a SQL database and store it in Ruby objects that we can use in our application. While we could use the `pg` gem to write and execute SQL commands in our Ruby code, this process is onerous and can result in a lot of repetitive code. We would have to write very long SQL statements to do even simple CRUD actions.
 
 It'd be **really** nice if a bunch of genius programmers had already worked out some kind of way to interface between the database and our servers/applications in order to streamline the process of reading and writing data to and from a database. Enter **ORMs** and [The Active Record pattern](https://en.wikipedia.org/wiki/Active_record_pattern).
 
 
-
-## ORM's & Active Record (10 min / 0:20)
+## ORM's & Active Record
 
 - Object Relational Mapping: A programming technique for converting data between incompatible type systems in object-oriented programming languages - from [Wikipedia](https://en.wikipedia.org/wiki/Object-relational_mapping)
 
 We need a way to encapsulate the data from our databases into objects so that we can use them in our server applications. ORM's serve that purpose. Remember those tables we created in SQL? Well, now those rows of data are objects (instances of classes) on our server now. That's what ORM's do.
 
 ![ORM-ActiveRecord](https://github.com/wdi-sg/activerecord-intro/blob/master/orm.jpg?raw=true)
-
 
 More concretely ORM's:
 
@@ -41,8 +37,6 @@ It just so happens you will be learning one of the best ORM's on the market. It 
 
 
 > Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database. It is an implementation of the Active Record pattern which itself is a description of an Object Relational Mapping system. (from AR docs)
-
-
 
 ## Active Record
 
@@ -122,28 +116,16 @@ Before we discuss the concept as a class, take 30 seconds to think about what th
 
 
 
-#### If you don't follow the conventions, you're going to have a bad time.
+##### If you don't follow the conventions, you're going to have a bad time.
 
 Obeying the naming conventions in Active Record saves you a good deal of headaches.
 
-# Coding Time!
-
-#### Defining a Model
+### Defining a Model
 
 In the `artist.rb` file, we define our `artist` model:
 
 ```ruby
 class Artist < ApplicationRecord
-  # AR classes are singular and capitalized by convention
-end
-```
-
-#### artist table
-
-In the `song.rb` file, we define our `song` model:
-
-```ruby
-class Artist  < ApplicationRecord
   # AR classes are singular and capitalized by convention
 end
 ```
@@ -159,9 +141,6 @@ create_table :artists do |t|
   t.timestamps
 end
 ```
-
-
-
 
 ## Inheritance
 We are using this stntax for ruby inheritance:
@@ -186,6 +165,7 @@ To seed the db, we use ruby instead of sql.
 ```bash
 rails db:create
 rails db:migrate
+rails db:seed
 ```
 
 ## Using Active Record
@@ -347,6 +327,11 @@ gwar = Artist.create(
 )
 ```
 
+```bash
+rails db:migrate
+rails db:seed
+```
+
 Run the active record code above from `rails console`.
 
 #### Further
@@ -360,6 +345,7 @@ Use the links to the rails documentation below to call other methods of active r
 
 
 #### Instance vs Class Methods
+
 | method              | instance | class    |
 |---------------------|:--------:|:--------:|
 | .new                |          |     x    |
@@ -377,6 +363,7 @@ Use the links to the rails documentation below to call other methods of active r
 ---
 
 #### Some Conventions in AR
+
 |description      | Rule    |
 |-----------------|---------|
 |table names      |snake case and plural|

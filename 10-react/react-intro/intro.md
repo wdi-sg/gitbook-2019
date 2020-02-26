@@ -60,6 +60,22 @@ Check out the jsx branch:
 $ git checkout 2-react-jsx-intro
 ```
 
+
+Add a root element to the page
+
+```html
+<div id="root"></div>
+```
+
+Render the component
+
+```
+ReactDOM.render(
+    <Banana/>,
+    document.getElementById('root')
+);
+```
+
 Repeat the above.
 
 #### Further
