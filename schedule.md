@@ -557,7 +557,7 @@ code reading
 [React Component Review](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/components.html)
 
 ##### Assignment
-[React Tictactoe](https://github.com/wdi-sg/tictactoe-react)
+[React Tweet](https://github.com/wdi-sg/tweet-react)
 
 #### Day 2
 ##### Morning Exercise
@@ -587,18 +587,24 @@ code reading
 ### Week 2
 
 #### Day 1
+
 ##### Morning Exercise
 
 ##### Topics
+[full stack react](https://wdi-sg.github.io/gitbook-2019/10-react/react-webpack/webpacker-fullstack.html)
+
 [webpacker]()
 
 ##### Assignment
 [shopping react](https://github.com/wdi-sg/shopping-react)
 
 #### Day 2
+
 ##### Morning Exercise
 
 ##### Topics
+
+[virtual DOM](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/state.html)
 
 ##### Assignment
 
