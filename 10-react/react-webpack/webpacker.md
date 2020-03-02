@@ -16,9 +16,9 @@ brew install yarn
 
 Create and initialize the app: (this one includes all the models and views)
 ```
-rails _6.0.1_ new react-blog --webpack=react -d postgresql --skip-turbolinks --skip--coffee
+rails _6.0.2_ new react-webpacker-test --webpack=react -d postgresql --skip-turbolinks --skip--coffee
 
-cd react-blog
+cd react-webpacker-test
 rails db:create
 ```
 

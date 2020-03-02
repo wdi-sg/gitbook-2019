@@ -1,6 +1,33 @@
 # react / rails / webpacker
 
-Install devise:
+
+
+#### Generate a normal rails app, but with the required webpacker files:
+
+Install the libraries you need:
+```
+brew install yarn
+```
+
+Create and initialize the app: (this one includes all the models and views)
+```
+rails _6.0.2_ new react-blog --webpack=react -d postgresql --skip-turbolinks --skip--coffee
+
+cd react-blog
+rails db:create
+```
+
+Check out your app:
+```
+rails s
+```
+
+You should have a working rails CRUD app à la unit 3.
+
+### generate the rest of the app:
+
+
+#### Install devise:
 
 ```
 bundle add devise
@@ -19,7 +46,7 @@ rails db:migrate
 rails g devise:views
 ```
 
-Scaffold the post:
+#### Scaffold the post:
 ```
 rails generate scaffold Post title:string content:text user:belongs_to
 ```

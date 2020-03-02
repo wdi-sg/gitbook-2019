@@ -70,19 +70,21 @@ We can see that the class attribute gets incremented, but the screen doesn't cha
 ```js
 class Item extends React.Component {
 
+    constructor(){
+      super();
+
+      console.log("constructor");
+
+      // set the default value
+      this.state = {
+        counter:0
+      };
+    }
+
     // our click method
     handleClick(){
 
-      var currentValue;
-
-      if( this.state.counter === undefined ){
-        currentValue = 0;
-      }else{
-        currentValue = this.state.counter + 1;
-      }
-
-
-
+      var currentValue = this.state.counter + 1;
       console.log("clicking", currentValue);
 
       // set the state of this component
