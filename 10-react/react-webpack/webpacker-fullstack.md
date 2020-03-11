@@ -103,6 +103,21 @@ users.each do |user|
 end
 ```
 
+## Set up the rails react app
+
+Create the root controller and view:
+```
+rails g controller onepage index
+```
+
+Create the script tag for them in your view file `app/views/onepage/index.html.erb`:
+
+The argument to javascript_pack_tag corresponds to the file in the packs folder.
+
+```
+<%= javascript_pack_tag 'hello_react' %>
+```
+
 ### Logged in React
 We want to limit this react page to only users who are logged in.
 

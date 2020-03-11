@@ -18,7 +18,6 @@ Package Control allows you to add new functionality to sublime.
 
 [https://packagecontrol.io/installation](https://packagecontrol.io/installation)
 
-
 ### Get the `Preferences.sublime-settings` file:
 [https://raw.githubusercontent.com/wdi-sg/gitbook-2018/master/Preferences.sublime-settings](https://raw.githubusercontent.com/wdi-sg/gitbook-2018/master/Preferences.sublime-settings#)
 
@@ -31,15 +30,6 @@ On the right window (Preferences.sublime-settings), earse the current contents o
 [https://packagecontrol.io/docs/usage](https://packagecontrol.io/docs/usage)
 
 > Package Control is driven by the Command Palette. To open the palette, press `ctrl+shift+p` (Win, Linux) or `cmd+shift+p` (OS X). All Package Control commands begin with Package Control:, so start by typing Package.
-
-### Set Sublime to use `editorconfig` files
-- `cmd+shift+p` type in `Package Control: Install Package` (auto-complete will help you) and press return
-- type in `editorconfig` to install the package
-
-### Get the `.editorconfig` file:
-[https://raw.githubusercontent.com/wdi-sg/gitbook-2018/master/.editorconfig](https://raw.githubusercontent.com/wdi-sg/gitbook-2018/master/.editorconfig)
-
-Create a file named `.editorconfig` exactly, and save it in your home directory.
 
 ### Get the `.gitignore file`
 [https://raw.githubusercontent.com/wdi-sg/gitbook-2018/master/.gitignore](https://raw.githubusercontent.com/wdi-sg/gitbook-2018/master/.gitignore)
@@ -73,11 +63,11 @@ A 64-bit version of Windows 10 is absolutely needed here as we will be using the
 
 - Install your text editor of choice in Windows, e.g. Sublime Text (https://www.sublimetext.com/3) or VSCode (https://code.visualstudio.com/download). 
 
-- Create an alias for your text editor in WSL so that you can launch it from the WSL's CLI. For Sublime Text, if you had installed it at the default location, run `echo 'alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"' >> ~/.bashrc` at your WSL's CLI. Then, close and re-open WSL, or run `source ~/.bashrc` to reload the configuration, and test it out by typeing `subl` and pressing enter in WSL.
+- Create an alias for your text editor in WSL so that you can launch it from the WSL's CLI.
 
-## (Optional) Speeding up WSL's I/O Performance
+- check to make sure sublime is installed in the default location `ls -la /mnt/c/Program\ Files/Sublime\ Text\ 3/`
 
-WSL's disk I/O speeds are quite abysmal out-of-the-box as of this writing due to W10's real-time antivirus protection. However, this protection is fairly useless for Linux, so we can gain quite a bit of speed from disabling it for (only) WSL. Follow the instructions over at https://medium.com/@leandrw/speeding-up-wsl-i-o-up-than-5x-fast-saving-a-lot-of-battery-life-cpu-usage-c3537dd03c74 to do so. The performance improvement is most noticeable when developing with Rails.
+- For Sublime Text, if you had installed it at the default location, run `echo 'alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"' >> ~/.bashrc` at your WSL's CLI. Then, close and re-open WSL, or run `source ~/.bashrc` to reload the configuration, and test it out by typeing `subl` and pressing enter in WSL.
 
 #### GitHub
 Run the following commands in order in a WSL terminal.

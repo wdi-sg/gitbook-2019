@@ -186,3 +186,13 @@ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/Shared
   * Color Highlighter (visually displays colors for hex/rgb values)
   * GitGutter (shows git additions/deletions)
   * BracketHighlighter (highlight brackets and tabs)
+
+## Floobits
+
+Install the floobits sublime extension:
+
+- `cmd+shift+p` type in `Package Control: Install Package` (auto-complete will help you) and press return
+- type in `floobits` to install the package
+- click to automatically create an account
+- `cmd+shift+p` type in `Package Control: Install Package` (auto-complete will help you) and press return
+- type in `floobits complete sign up` this will take you to the floobits website and prompt you to sign up.
