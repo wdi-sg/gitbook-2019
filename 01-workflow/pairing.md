@@ -11,6 +11,19 @@ Person B is the **navigator** they are concerned with the direction of the code,
 
 Use floobits to manage the code across two users.
 
+Prequsite:
+Have a folder to open:
+
+```
+mkdir my-code
+cd my-code
+touch inde.html
+sublime .
+```
+
+Share the folder in floobits:
+`Share Directory (public)`
+
 User A:
 1. Go to the webpage for your current code: https://floobits.com/awongh/sei22/permissions
 2. Add your pair and give them the ability to edit.

@@ -240,8 +240,6 @@ Paste the above conditional statement examples into your js file one at a time.
 
 Use `console.log` to see what values you are getting.
 
-Also try playing with the examples in the chrome console.
-
 #### further
 
 Starting at the bottom of your js file, create a variable `speed`. write the contitional for a traffic stop. If speed is less than 10 `console.log` "I pulled you over because you were going too slow". If speed is more than 50 `console.log` "I pulled you over for going to fast".

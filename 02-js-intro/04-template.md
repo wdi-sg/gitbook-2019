@@ -92,4 +92,16 @@ Repeat all of the above steps.
 ### further
 Make a new set of files. Write a program that greets the user. When the user types in hello, have your program respond with a greeting. Make other greeting for other things the user could type. Have a default message if the program doesn't recognize anything the user entered.
 
+### further
+Make another copy of the template code. Create a copy of the `index.html` - but name it `index2.html`. Same for the javascript file- `script2.js`. Change the name of the reference in `index2.html`: `<script src="script2.js"></script>`
+
+The user will enter in an amount of SGD. Calulate it's value in USD and show it to the user.
+
+### further
+If the user enters in SGD below one dollar (cents) tell the user that the minimum is one dollar.
+
+If the user enters in SGD over 10000, tell them the max amount is 10000 dollars.
+
+### further
+If the user enters in an amount over 100000 calculate the amount but take off a 25000 commission.
 
