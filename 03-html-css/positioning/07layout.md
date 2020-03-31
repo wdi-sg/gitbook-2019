@@ -119,6 +119,9 @@ Some suggestions:
 - or you can just use [lorem ipsum](https://www.lipsum.com/)
 
 1. Create a 2 column floated layout using percentage widths.
+
+> Note that this example is only the structure of the divs - it **does not** show the exact measurements of the elements of the design.
+
 ![https://github.com/wdi-sg/gitbook-2018/blob/master/images/basic.png?raw=true](https://github.com/wdi-sg/gitbook-2018/blob/master/images/basic.png?raw=true)
 
 2. Add a header.

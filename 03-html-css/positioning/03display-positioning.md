@@ -135,6 +135,34 @@ Set a background-color and border on each div so you can see it's behavior.
 }
 ```
 
+##### Box model
+Change the size and area the box takes up by setting the `padding` `border` and margin of the boxes.
+
+Make the padding visible by putting one box inside of the other:
+
+```HTML
+<div>
+  <p>hello</p>
+</div>
+```
+
+```
+div{
+  padding:10px;
+  background-color:yellow;
+}
+
+p{
+  margin:10px;
+  padding:10px;
+  background-color:blue;
+}
+```
+
+Use the chrome dev tools to inspect the size of the boxes.
+
+Use the chrome dev tools to manipulate the amount of border, padding and margin.
+
 ##### Display Inline
 
 Create a series of divs as above and add the class `inline-demo`. In your CSS file set these divs to display inline.

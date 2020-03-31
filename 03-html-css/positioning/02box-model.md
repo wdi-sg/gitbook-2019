@@ -8,7 +8,7 @@ With CSS properties and values, it is possible to apply specific styles to each 
 
 ---
 
-![box-model](http://s6.postimg.org/gi8r6c341/css_box_model.png)
+![box-model](https://github.com/wdi-sg/gitbook-2019/blob/master/images/boxdim.png?raw=true)
 
 _From [www.theslate.org](http://www.theslate.org)_
 
