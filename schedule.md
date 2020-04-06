@@ -311,9 +311,10 @@ https://github.com/wdi-sg/cli-css
 ##### Morning Exercise
 
 ##### Topics
-[git branching](https://wdi-sg.github.io/gitbook-2019/11-groups/00branching.html)
-[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
 
+[git branching](https://wdi-sg.github.io/gitbook-2019/11-groups/00branching.html)
+
+[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
 
 
 
@@ -338,6 +339,7 @@ code reading
 
 
 ##### Assignment
+
 [recipie keeper](https://github.com/wdi-sg/recipe-keeper)
 
 
