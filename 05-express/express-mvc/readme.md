@@ -58,7 +58,7 @@ app.get('/students', pokemons.students);
 
 ##### controllers
 
-Add one method to the pokemon controller file for this route.
+Inside of `controllers/pokemon.js` add one method to the pokemon controller file for this route.
 
 Don't forget to make a key for the method at the bottom of the file.
 
@@ -66,7 +66,7 @@ Use `response.send('banana')` to test it.
 
 ##### models
 
-Create a new method `getStudent` in the pokemon model file that queries for a single student by name.
+Inside of `models/pokemon.js` create a new method `getStudent` in the pokemon model file that queries for a single student by name.
 
 ```
 const getStudent = (name) => {
@@ -81,7 +81,7 @@ SELECT * FROM students WHERE name='kevin';
 - the method has to take the student name as a parameter to put in the WHERE clause
 - console.log the result in the model
 
-Don't forget to make a key for the method at the bottom of the file.
+*Note:* don't forget to make a key for the method at the bottom of the file.
 
 ##### call model from controller
 
@@ -95,7 +95,7 @@ Watch for the console.log
 
 ##### pass callback to model
 
-Change your controller to define and pass a callback to the model.
+Inside of `conroller/pokemon.js` change your controller method to define and pass a callback to the model.
 
 ```
 const whenDoneInModel = (err, result)=>{
@@ -107,9 +107,8 @@ db.pokemon.getStudent(name, whenDoneInModel);
 
 ##### Run the callback
 
-Change the function signature in the model.
 
-models/pokemon.js
+In `models/pokemon.js` change the function signature in the model to use this new parameter. (i.e., the thing you pass in in the controller must match what you have in the model)
 
 ```
 const getStudent = (name, callback) => {
@@ -122,6 +121,8 @@ const getStudent = (name, callback) => {
 ```
 
 ##### respond with the model result
+
+Inside of `conroller/pokemon.js` move the `response.send` into the callback.
 
 ```
 const whenDoneInModel = (err, result)=>{
@@ -138,7 +139,7 @@ In the above exercise, you added methods to the files that already exist.
 
 This is not how you would normally do it, because you will have **one** controller and model *for each* type of data. (most likely one for each table, excluding some join tables)
 
-Now add a new model, `classes`.
+Now add a new model, `dogs`.
 
 You must add the `require` of this model file in `db.js`
 
@@ -147,14 +148,14 @@ You must require the file and call it, passing in the variable `pool`.
 You must export it at the bottom of `db.js`
 
 ```js
-const someModelFunc = require('./models/someModel');
-const someModel = someModelFunc( pool );
+const dogsModelFunc = require('./models/dogs.js');
+const dogsModel = dogsModelFunc( pool );
 
 ...
 module.exports = {
 
   ...
-  someModel: someModel
+  dogsModel: dogsModel
 };
 
 ```
@@ -179,8 +180,8 @@ Add a controller file. It must be required in the `routes.js` file.
 You must pass the variable called `allModels` to the require.
 
 ```js
-const something = require('./controllers/something')(allModels);
-app.get('/banana', something.stuff);
+const dogs = require('./controllers/dogs')(allModels);
+app.get('/dogs', something.getAllDogs);
 ```
 
 An empty controller looks like this:
@@ -197,9 +198,37 @@ module.exports = (db) => {
 }
 ```
 
-Add a get route to render a form to create a single class (`GET /classes/new`)
+Add a get route to render a form to create a single class (`GET /dogs/new`)
 
 Add a model method to take in the `POST` request this form creates. This is a new controller file.
+
+#### Further
+
+Add owners model and controller to this app. Don't create any view (jsx) files yet.
+
+Create:
+
+GET `/owners/new`
+POST `/owners`
+GET `/owners/:id`
+
+#### Further
+
+Add the `/dogs/:id` route.
+
+Show the dog's owner by making a nested query in the model using this syntax:
+
+```js
+db.dogs.getDog(request.params.id, (dogError, dog)=>{
+
+  let ownerId = dog.owner_id;
+
+  db.owners.getOwner(ownerId, (ownerError, owner)=>{
+    // response send goes here
+  })
+});
+```
+
 
 #### Further
 
@@ -207,7 +236,4 @@ In the model, check `result.rows`. If it's empty, don't give back `result.rows`,
 
 #### Further
 
-Fill in the rest of the `restful` routes for students and classes.
-
-Make students files instead of pokemon.
-
+Fill in the rest of the `restful` routes for dogs and owners.

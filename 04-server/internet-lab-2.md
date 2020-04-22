@@ -47,7 +47,7 @@ Take a minute to browse around and see what's there.
 Run a command to make this request **from your terminal**
 
 ```bash
-curl 127.0.0.1:8000
+curl 127.0.0.1:8080
 ```
 
 Why do you get this result?
