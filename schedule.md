@@ -538,6 +538,8 @@ code reading
 
 ##### Assignment
 
+[https://github.com/wdi-sg/pinspiration](https://github.com/wdi-sg/pinspiration)
+
 ### Week 3
 
 ##### Morning Exercise
