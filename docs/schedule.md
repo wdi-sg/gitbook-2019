@@ -271,22 +271,28 @@ https://github.com/wdi-sg/cli-css
 #### Day 2
 
 ##### Morning Exercise
+
 [CSS Vegetables](https://github.com/wdi-sg/vegetables)
 
 ##### Topics
+
+[Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
+
 [Express POST](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/post.html)
 
 ##### Assignment
+
 [Pokedex Express POST](https://github.com/wdi-sg/pokedex-express-post)
-[Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
 
 
 #### Day 3
 
 ##### Morning Exercise
+
 [CSS Fashion Blog](https://github.com/wdi-sg/fashion-blog)
 
 ##### Topics
+
 [JS iterators (map)](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/callbacks2.html)
 
 [Express Views 2](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/05views-2.html)
@@ -295,6 +301,7 @@ https://github.com/wdi-sg/cli-css
 
 
 ##### Assignment
+
 [Pokedex Express POST Part 2](https://github.com/wdi-sg/pokedex-express-post/blob/master/part-2.md)
 
 
@@ -304,9 +311,10 @@ https://github.com/wdi-sg/cli-css
 ##### Morning Exercise
 
 ##### Topics
-[git branching](https://wdi-sg.github.io/gitbook-2019/11-groups/00branching.html)
-[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
 
+[git branching](https://wdi-sg.github.io/gitbook-2019/11-groups/00branching.html)
+
+[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
 
 
 
@@ -331,6 +339,7 @@ code reading
 
 
 ##### Assignment
+
 [recipie keeper](https://github.com/wdi-sg/recipe-keeper)
 
 
