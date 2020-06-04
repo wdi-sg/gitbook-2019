@@ -205,6 +205,7 @@ https://github.com/wdi-sg/brook-and-lyn
 [CSS Pokedex](https://github.com/wdi-sg/pokedex-css)
 
 ##### Topics
+[internet requests](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/browser-request.html)
 [AJAX](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/ajax.html)
 
 ##### Assignment
